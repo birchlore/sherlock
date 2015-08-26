@@ -1,18 +1,18 @@
 <script type="text/javascript">
   ShopifyApp.ready(function(){
     ShopifyApp.Bar.initialize({
-      title: "Home",
-      icon: "<%= asset_path('faveicon.png') %>"
+      title: "Groupie - Discover your celebrity customers",
+      icon: "<%= asset_path('favicon.ico') %>"
     });
   });
 </script>
-<h3>Products</h3>
+<h3>Celebrity Customers</h3>
 <table>
   <tbody>
-    <% @products.each do |product| %>
+    <% @customers.each do |customer| %>
       <tr>
         <td>
-          <a href='https://<%="#{@shop_session.url}/admin/products/#{product.id}"%>' target="_blank"> <%= product.id %> </a>
+          <a href='https://<%="#{@shop_session.url}/admin/customers/#{customer.id}"%>' target="_blank"> <%= customer.id %> </a>
         </td>
       </tr>
     <% end %>
