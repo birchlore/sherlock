@@ -7,17 +7,20 @@ class Customer < ActiveRecord::Base
 
 
   def full_name
-    first_name + " " + last_name
+    first_name.titleize + " " + last_name.titleize
   end
 
   protected
 
 
   def check_celebrity_status
-    return if imdb_url && wikipedia_url && followers < 10000
-
-
-     ModelMailer.celebrity_notification("yay").deliver_now
+    
+    if imdb_url || wikipedia_url || followers > 10000
+      NotificationMailer.celebrity_notification(self).deliver_now
+    else
+      @self = self
+      @self.destroy
+    end
   end
 
   def get_imdb
@@ -54,10 +57,13 @@ class Customer < ActiveRecord::Base
 
   def get_followers
     source = "https://api.fullcontact.com/v2/person.json?email=" + self.email + "&apiKey=" + ENV['full_contact_api_key']
+    uri = URI.parse(source)
+    result = Net::HTTP.start(uri.host, uri.port) { |http| http.get(uri.path) }
+
+    return unless result.code == "200"
+
     data = open(source).read
     json = JSON.parse(data)
-
-    return unless json["status"] == 200
 
     profiles = json["socialProfiles"]
     twitter = profiles.select {|profile| profile["type"] == "twitter"}.first

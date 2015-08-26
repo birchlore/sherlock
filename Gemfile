@@ -28,6 +28,7 @@ gem 'therubyracer'
 gem 'fullcontact'
 gem 'pry-rails'
 gem 'figaro'
+gem "twitter-bootstrap-rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

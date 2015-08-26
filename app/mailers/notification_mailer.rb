@@ -1,4 +1,4 @@
-class ModelMailer < ApplicationMailer
+class NotificationMailer < ApplicationMailer
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -7,6 +7,8 @@ class ModelMailer < ApplicationMailer
   #
   def celebrity_notification(celebrity)
     @greeting = "Hi"
+    
+    @celebrity = celebrity
 
     mail to: "to@example.org"
   end

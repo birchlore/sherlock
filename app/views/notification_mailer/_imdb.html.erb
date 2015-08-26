@@ -1,0 +1,3 @@
+<% if @celebrity.imdb_description.present? %>
+  <p><%= @celebrity.imdb_description %> - from <%= link_to 'IMDB', @celebrity.imdb_url, :target=>"_blank" %></p>
+<% end %>
