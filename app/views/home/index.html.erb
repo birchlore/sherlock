@@ -6,15 +6,17 @@
     });
   });
 </script>
-<h3>Celebrity Customers</h3>
-<table>
-  <tbody>
-    <% @customers.each do |customer| %>
-      <tr>
-        <td>
-          <a href='https://<%="#{@shop_session.url}/admin/customers/#{customer.id}"%>' target="_blank"> <%= customer.id %> </a>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+
+  <h1 class="text-center"><%= image_tag('small-logo.jpg') %> Potential Celebrities</h1>
+  <div class="spacer"></div>
+
+      <% @customers.each do |customer| %>
+        <%= link_to "https://#{@shop_session.url}/admin/customers/#{customer.id}", :target=>"_blank" do %>
+          <div class="customer well">
+             <%= customer.first_name.titleize %> <%= customer.last_name.titleize %> - Movie Actor Run Lola Run
+          </div>
+        <% end %>
+      <% end %>
+   
+</div>
