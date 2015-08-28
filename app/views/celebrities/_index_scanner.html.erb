@@ -1,0 +1,29 @@
+ 
+    <div class="text-center scanner">
+       
+          <%= form_for @celebrity do |f| %>
+
+            <div class="row" style="width:90%; margin:0 auto;">
+              <div class="form-group col-sm-3">
+                <%= f.text_field :first_name, class:"form-control", placeholder: "first name" %>
+              </div>
+
+              <div class="form-group col-sm-3">
+                <%= f.text_field :last_name, class:"form-control", placeholder: "last name" %>
+              </div>
+
+              <div class="form-group col-sm-3">
+                <%= f.text_field :email, class:"form-control", placeholder: "email (optional)" %>
+              </div>
+          
+               <div class="form-group col-sm-3">
+                 <%= f.submit "Manual Scan", class:"btn btn-primary scan" %>
+               </div>
+            </div>
+          <% end %>
+      </div>
+    
+
+
+
+

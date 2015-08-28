@@ -2,8 +2,10 @@ require 'open-uri'
 require 'json'
 require 'pry'
 
-class Customer < ActiveRecord::Base
+class Celebrity < ActiveRecord::Base
   after_create :get_celebrity_stats
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 
 
   def full_name
@@ -13,7 +15,7 @@ class Customer < ActiveRecord::Base
   protected
 
 
-  def check_celebrity_status
+  def check_if_celebrity
     
     if imdb_url || wikipedia_url || followers > 10000
       NotificationMailer.celebrity_notification(self).deliver_now
@@ -84,7 +86,7 @@ class Customer < ActiveRecord::Base
     get_wikipedia
     get_followers
     self.save
-    check_celebrity_status
+    check_if_celebrity
   end
 
 end

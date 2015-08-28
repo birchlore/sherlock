@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825234440) do
+ActiveRecord::Schema.define(version: 20150828194939) do
 
-  create_table "customers", force: :cascade do |t|
+  create_table "celebrities", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
@@ -21,10 +21,20 @@ ActiveRecord::Schema.define(version: 20150825234440) do
     t.string   "wikipedia_url"
     t.integer  "followers",             default: 0
     t.string   "industry"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.string   "imdb_description"
     t.string   "wikipedia_description"
+    t.string   "status",                default: "active"
   end
+
+  create_table "shops", force: :cascade do |t|
+    t.string   "shopify_domain", null: false
+    t.string   "shopify_token",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "shops", ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true
 
 end

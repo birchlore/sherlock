@@ -1,5 +1,14 @@
 class HomeController < AuthenticatedController
+  layout 'embedded_app'
+  
   def index
-    @customers = ShopifyAPI::Customer.find(:all, :params => {:limit => 100})
+    @celebrities = Celebrity.all
+
+    if @celebrities.count < 1
+      redirect_to new_celebrity_path
+    else
+      redirect_to celebrities_path
+    end
   end
+
 end
