@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module Sherlock
   class Application < Rails::Application
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
+    config.assets.precompile += %w( *.svg *.eot *.woff *.ttf )
     config.action_dispatch.default_headers['P3P'] = 'CP="Not used"'
     config.action_dispatch.default_headers.delete('X-Frame-Options')
     config.web_console.whitelisted_ips = '23.227.55.111'

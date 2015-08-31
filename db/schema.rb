@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150828194939) do
+ActiveRecord::Schema.define(version: 20150828231817) do
 
   create_table "celebrities", force: :cascade do |t|
     t.string   "first_name"
@@ -26,13 +26,17 @@ ActiveRecord::Schema.define(version: 20150828194939) do
     t.string   "imdb_description"
     t.string   "wikipedia_description"
     t.string   "status",                default: "active"
+    t.integer  "shop_id"
   end
 
+  add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id"
+
   create_table "shops", force: :cascade do |t|
-    t.string   "shopify_domain", null: false
-    t.string   "shopify_token",  null: false
+    t.string   "shopify_domain",                             null: false
+    t.string   "shopify_token",                              null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "twitter_follower_threshold", default: 10000
   end
 
   add_index "shops", ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true

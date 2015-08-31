@@ -23,7 +23,7 @@
 
      <tbody>
         <% @celebrities.each do |celebrity| %>
-          <tr>
+          <tr class='celebrity-row'>
              <td>
                 <%= link_to celebrity_archive_path(celebrity) do %>
                   <i class="glyphicon glyphicon-remove"></i>

@@ -1,0 +1,1 @@
+Figaro.require_keys("full_contact_api_key", "shopify_api_key", "shopify_secret", "shopify_redirect_uri", "shopify_embedded_app")

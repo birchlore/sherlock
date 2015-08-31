@@ -17,10 +17,10 @@ module CelebritiesHelper
   end
 
   def twitter_followers(celebrity)
-    if celebrity.followers > 10000
+    if celebrity.followers > current_shop.twitter_follower_threshold
       celebrity.followers
     else
-      "N/A"
+      "< #{number_with_delimiter(current_shop.twitter_follower_threshold, :delimiter => ',')}"
     end
   end
 

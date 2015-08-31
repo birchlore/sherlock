@@ -1,0 +1,60 @@
+# VCR.use_cassette('login to shopify') do  
+  Given /^I am a logged in user$/ do
+    @shop = create(:shop)
+    visit root_path
+    fill_in :shop, :with => @shop.shopify_domain
+    click_button 'Install'
+    expect(page).to have_content("We'll automatically")
+  end
+# end
+
+
+
+Given /^the customer is a twitter celebrity$/ do
+  @customer = create(:celebrity, :shop => @shop, :email => 'samantha@samanthaettus.com')
+end
+
+Given "the customer has a wikipedia page" do
+  @customer = create(:celebrity, :shop=> @shop, :first_name=>"Noah", :last_name=>"Kagan")
+end
+
+Given "the customer has an IMDB page" do
+  @customer = create(:celebrity, :shop=> @shop, :first_name=>"Jackson", :last_name=>"Cunningham")
+end
+
+When /^I add the customer$/ do
+  fill_in :celebrity_email, :with => @customer.email
+  fill_in :celebrity_first_name, :with => @customer.first_name
+  fill_in :celebrity_last_name, :with => @customer.last_name
+  click_button 'Manual Scan'
+end
+
+
+Then /^I should see that the customer is a celebrity$/ do
+  expect(page).to have_css('.celebrity-row')
+end
+
+
+Given "the customer does not have a Wikipedia page, IMDB page, or Twitter following" do
+  @customer = create(:celebrity, :shop=> @shop, :first_name=>"Birglend", :last_name=>"Firglingham", :email=>"birglendfirglingham@gmail.com")
+end
+
+
+Then "I should not see that the customer is a celebrity" do
+  expect(page).not_to have_css('.celebrity-row')
+end
+
+
+
+
+
+
+
+
+
+
+
+When /^pry$/ do
+  expect(page).to have_css('body')
+  binding.pry
+end

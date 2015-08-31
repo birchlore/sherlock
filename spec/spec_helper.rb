@@ -16,6 +16,7 @@
 # users commonly want.
 #
 require "capybara/rspec"
+# require "features/vcr_setup"
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|

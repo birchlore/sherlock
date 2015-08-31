@@ -3,27 +3,32 @@ require 'json'
 require 'pry'
 
 class Celebrity < ActiveRecord::Base
-  after_create :get_celebrity_stats
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  belongs_to :shop, :inverse_of => :celebrities
+  validates_presence_of :first_name
+  validates_presence_of :last_name
 
+  validates_presence_of :shop
+  
+  before_validation :update_celebrity_stats
 
   def full_name
     first_name.titleize + " " + last_name.titleize
   end
 
+  def celebrity?
+    imdb_url || wikipedia_url || followers > self.shop.twitter_follower_threshold
+  end
+
   protected
 
-
-  def check_if_celebrity
-    
-    if imdb_url || wikipedia_url || followers > 10000
-      NotificationMailer.celebrity_notification(self).deliver_now
-    else
-      @self = self
-      @self.destroy
-    end
-  end
+  # def check_if_celebrity
+  #   if celebrity?
+  #     NotificationMailer.celebrity_notification(self).deliver_now
+  #   else
+  #     @self = self
+  #     @self.destroy
+  #   end
+  # end
 
   def get_imdb
     source = "http://www.imdb.com/xml/find?json=1&nr=1&nm=on&q="+ first_name + "+" + last_name
@@ -40,9 +45,6 @@ class Celebrity < ActiveRecord::Base
       self.imdb_url = "http://www.imdb.com/name/" + imdb_data["id"]
       self.imdb_description = imdb_data["description"]
     end
-
-    
-
   end
 
   def get_wikipedia
@@ -60,12 +62,14 @@ class Celebrity < ActiveRecord::Base
   def get_followers
     source = "https://api.fullcontact.com/v2/person.json?email=" + self.email + "&apiKey=" + ENV['full_contact_api_key']
     uri = URI.parse(source)
-    result = Net::HTTP.start(uri.host, uri.port) { |http| http.get(uri.path) }
+    res = Net::HTTP.get_response(uri)
 
-    return unless result.code == "200"
+    return unless res.is_a?(Net::HTTPSuccess)
 
-    data = open(source).read
-    json = JSON.parse(data)
+
+    json = JSON.parse(res.body)
+
+    return if json["message"] && json["message"].include?("Queued")
 
     profiles = json["socialProfiles"]
     twitter = profiles.select {|profile| profile["type"] == "twitter"}.first
@@ -76,17 +80,12 @@ class Celebrity < ActiveRecord::Base
 
   end
 
-  def get_industry
-  end
-
   private
 
-  def get_celebrity_stats
+  def update_celebrity_stats
     get_imdb
     get_wikipedia
     get_followers
-    self.save
-    check_if_celebrity
   end
 
 end

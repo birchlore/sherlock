@@ -6,7 +6,7 @@ class CelebritiesController < AuthenticatedController
   
   def index
     @celebrity = Celebrity.new
-    @celebrities = Celebrity.where(status: "active").reverse
+    @celebrities = Celebrity.where(status: "active").select { |c| c.celebrity? }.reverse
     @archived_celebrities = Celebrity.where(status: "archived").reverse
   end
 
@@ -26,13 +26,11 @@ class CelebritiesController < AuthenticatedController
   end
 
   def create
-    @celebrity = Celebrity.new(celebrity_params)
-
+    @celebrity = Celebrity.create(celebrity_params.merge(:shop => current_shop))
     if @celebrity.save
-      @celebrities = Celebrity.all.reverse
       redirect_to celebrities_path
     else
-      flash[:notice] = "Hmmmm... That didn't seem to work. Try again?"
+      flash[:notice] = "Hmmmm... That didn't seem to work: #{@celebrity.errors.full_messages}. Try again?"
       render :new
     end
   end
