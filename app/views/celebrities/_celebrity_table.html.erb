@@ -1,0 +1,27 @@
+
+  <div class="clearfix"></div>
+  <div class="spacer"></div>
+
+
+
+
+    <table class="table customers-container">
+     <thead>
+      <tr>
+         <th></th>
+         <th>Customer</th>
+         <th>Summary</th>
+         <th>Wikipedia</th>
+         <th>IMDB</th>
+         <th>Followers</th>
+      </tr>
+     </thead>
+
+     <tbody>
+        <% @celebrities.each do |celebrity| %>
+          <%= render 'celebrity_table_row', :celebrity=> celebrity %>
+       <% end %>
+     </tbody>
+    </table> 
+
+

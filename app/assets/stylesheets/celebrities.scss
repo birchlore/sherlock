@@ -1,0 +1,114 @@
+// Place all the styles related to the customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  background-color: #EAEDEF;
+  color: #1B1F25;
+  font-weight: 200;
+}
+
+.small-spacer {
+  margin: 10px 0;
+}
+
+.spacer {
+  margin: 50px 0;
+}
+
+#logo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+h5 {
+  font-weight: 200;
+}
+
+.headline, .customers-container {
+  background-color: white;
+  border: 1px solid #E1E4E6;
+}
+
+.nav-tabs li {
+  background-color: #F5F6F7;
+  border-top: 1px solid #E2E5E7;
+  border-right: 1px solid #E2E5E7;
+}
+
+.nav-tabs li:first-child {
+  border-left: 1px solid #E2E5E7;
+}
+
+li.active-tab {
+  background-color: #fff;
+}
+
+th {
+  color: #1B1F25;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+tr {
+  height: 50px;
+}
+
+.table>tbody>tr>td {
+  vertical-align: middle;
+}
+
+tbody, tbody a {
+  font-size: 13px;
+  color: #9797A5;
+}
+
+label {
+  font-weight: 400;
+}
+
+.scan {
+  width: 200px;
+  background-color: #429BD1;
+}
+
+.scan:hover {
+  background-color: #4293c2;
+}
+
+.container {
+  width: 90%;
+}
+
+.load-ajax{
+
+   display: none;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 400px;
+   height: 300px;
+   background: transparent;
+   margin-top: -150px; /* Half the height */
+   margin-left: -200px; /* Half the width */
+
+} 
+
+.blur {
+  -webkit-filter: blur(5px);
+}
+
+.invalid {
+  border: 1px solid red;
+}

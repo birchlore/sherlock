@@ -29,6 +29,8 @@ gem 'fullcontact'
 gem 'pry-rails'
 gem 'figaro'
 gem "twitter-bootstrap-rails"
+gem 'pry-nav'
+gem 'responders', '~> 2.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -39,6 +41,7 @@ gem "twitter-bootstrap-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -48,5 +51,20 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'better_errors'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'guard-rspec'
+  gem 'launchy'
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
 end
 

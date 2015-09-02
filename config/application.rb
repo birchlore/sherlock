@@ -6,8 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Sherlock
+module Groupie
   class Application < Rails::Application
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
+    config.assets.precompile += %w( *.svg *.eot *.woff *.ttf )
     config.action_dispatch.default_headers['P3P'] = 'CP="Not used"'
     config.action_dispatch.default_headers.delete('X-Frame-Options')
     config.web_console.whitelisted_ips = '23.227.55.111'
@@ -25,5 +27,17 @@ module Sherlock
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.generators do |g|
+        g.test_framework :rspec,
+        :fixtures => true,
+        :view_specs => false,
+        :helper_specs => false,
+        :routing_specs => true,
+        :controller_specs => true,
+        :request_specs => true
+         g.fixture_replacement :factory_girl, :dir => "spec/factories"
+    end
+
   end
 end

@@ -10,6 +10,6 @@ class NotificationMailer < ApplicationMailer
     
     @celebrity = celebrity
 
-    mail to: "to@example.org"
+    mail to: celebrity.shop.email
   end
 end

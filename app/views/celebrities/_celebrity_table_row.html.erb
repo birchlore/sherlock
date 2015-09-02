@@ -1,0 +1,14 @@
+<tr class='celebrity-row'>
+   <td>
+      <%= link_to celebrity_archive_path(celebrity), :remote=>"true" do %>
+        <i class="glyphicon glyphicon-remove"></i>
+      <% end %>
+
+        
+   </td>
+   <td><%= name(celebrity) %></td>
+   <td><%= description(celebrity) %></td>
+   <td><%= has_wikipedia?(celebrity) %></td>
+   <td><%= has_imdb?(celebrity) %></td>
+   <td><%= twitter_followers(celebrity) %></td>
+</tr>
