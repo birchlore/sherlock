@@ -2,7 +2,7 @@ module CelebritiesHelper
 
     def has_wikipedia?(celebrity)
      if celebrity.wikipedia_url.present?
-        link_to 'Yes', celebrity.wikipedia_url
+        link_to 'Yes', celebrity.wikipedia_url, :target=>"_blank"
       else
         "No"
       end
@@ -10,7 +10,7 @@ module CelebritiesHelper
 
   def has_imdb?(celebrity)
     if celebrity.imdb_url.present?
-      link_to 'Yes', celebrity.imdb_url
+      link_to 'Yes', celebrity.imdb_url, :target=>"_blank"
     else
       "No"
     end
@@ -23,6 +23,16 @@ module CelebritiesHelper
       "< #{number_with_delimiter(current_shop.twitter_follower_threshold, :delimiter => ',')}"
     end
   end
+
+  def name(celebrity)
+    if celebrity.shopify_url.present?
+      link_to celebrity.full_name, "https://" + celebrity.shopify_url, :target=>"_blank"
+    else
+     celebrity.full_name
+   end
+  end
+
+  
 
   def description(celebrity)
     if celebrity.wikipedia_description

@@ -1,20 +1,23 @@
 class CelebritiesController < AuthenticatedController
+  layout 'embedded_app'
 
   def new
-    @celebrity = Celebrity.new
+    @celebrity = current_shop.celebrities.new
   end
   
   def index
-    @celebrity = Celebrity.new
-    @celebrities = Celebrity.where(status: "active").select { |c| c.celebrity? }.reverse
-    @archived_celebrities = Celebrity.where(status: "archived").reverse
+    trigger_login
+    current_shop.init_webhooks unless current_shop.installed
+    current_shop.set_email unless current_shop.email
+    @celebrity = current_shop.celebrities.new
+    @celebrities = current_shop.celebrities.where(status: "active").select { |c| c.celebrity? }.reverse
   end
 
   def show
   end
 
   def destroy
-    @celebrity = Celebrity.find(params[:id])
+    @celebrity = current_shop.celebrities.find(params[:id])
     
     if @celebrity.destroy
       redirect_to celebrities_path
@@ -26,28 +29,33 @@ class CelebritiesController < AuthenticatedController
   end
 
   def create
-    @celebrity = Celebrity.create(celebrity_params.merge(:shop => current_shop))
-    if @celebrity.save
-      redirect_to celebrities_path
+
+    @customer = current_shop.celebrities.create(celebrity_params.merge(:shop => current_shop))
+    if @customer.save && @customer.celebrity?
+      @celebrity = @customer
+      render 'create.js.erb'
     else
-      flash[:notice] = "Hmmmm... That didn't seem to work: #{@celebrity.errors.full_messages}. Try again?"
-      render :new
+      flash.now[:notice] = "That ain't no celebrity, kid."
+      render 'not_a_celebrity.js'
     end
+
   end
 
 
   def archive
-    @celebrity = Celebrity.find(params[:id])
+
+    @celebrity = current_shop.celebrities.find(params[:id])
     @celebrity.status = "archived"
     if @celebrity.save
-      redirect_to celebrities_url
+      render :nothing => true, :status => 200
     else
-      render :index
+      render :nothing => true, :status => 404
+      flash[:notice] = "There was an error with your archive."
     end
   end
 
   def unarchive
-    @celebrity = Celebrity.find(params[:id])
+    @celebrity = current_shop.celebrities.find(params[:id])
     @celebrity.status = "active"
     if @celebrity.save
       redirect_to celebrities_url
@@ -71,5 +79,7 @@ class CelebritiesController < AuthenticatedController
     params.require(:celebrity).permit(
       :first_name, :last_name, :email)
   end
+
+
 
 end

@@ -1,12 +1,8 @@
-<div class="container">
 
   <div class="clearfix"></div>
   <div class="spacer"></div>
 
-   <ul class="nav nav-tabs">
-    <li role="presentation" class="active-tab"><a href="#">Current</a></li>
-    <li role="presentation"><a href="#">Archived (<%= @archived_celebrities.count %>)</a></li>
-  </ul>
+
 
 
     <table class="table customers-container">
@@ -23,26 +19,9 @@
 
      <tbody>
         <% @celebrities.each do |celebrity| %>
-          <tr class='celebrity-row'>
-             <td>
-                <%= link_to celebrity_archive_path(celebrity) do %>
-                  <i class="glyphicon glyphicon-remove"></i>
-                <% end %>
-
-                  
-             </td>
-             <td>
-        
-              <%= celebrity.first_name.titleize %> <%= celebrity.last_name.titleize %>
-            
-             </td>
-             <td><%= description(celebrity) %></td>
-             <td><%= has_wikipedia?(celebrity) %></td>
-             <td><%= has_imdb?(celebrity) %></td>
-             <td><%= twitter_followers(celebrity) %></td>
-          </tr>
+          <%= render 'celebrity_table_row', :celebrity=> celebrity %>
        <% end %>
      </tbody>
     </table> 
-</div>
+
 

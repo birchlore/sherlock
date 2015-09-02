@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Shopify Embedded Example App</title>
+
+  <title>Groupie - Discover your celebrity customers</title>
+
+  
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <%= javascript_include_tag 'application' %>
+
+  
 
   <script src="//cdn.shopify.com/s/assets/external/app.js?<%= Time.now.strftime('%Y%m%d%H') %>"></script>
   <script type="text/javascript">
@@ -26,11 +33,12 @@
 
   
   <%= stylesheet_link_tag 'application' %>
-  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 
 <body>
+  <%= render 'layouts/flash_messages' %>
   <%= yield %>
+  <%= render 'layouts/loader' %>
 </body>
 </html>

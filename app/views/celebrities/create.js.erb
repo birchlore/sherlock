@@ -1,3 +1,5 @@
-// console.log('create.js loaded')
-// $(".scanner").hide()
-// $('.container').append("<%= j render(:partial => 'celebrity_table') %>")
+$('.container').removeClass('blur');
+$('.load-ajax').hide()
+$('.form-control').val("")
+
+$('tbody').prepend("<%= j render(:partial => 'celebrity_table_row', :locals=> {:celebrity => @celebrity}) %>")

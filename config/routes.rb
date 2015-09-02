@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
 
-  resources :celebrities, :only=> [:index, :show, :new, :create, :destroy]
-  get '/celebrity/archive/:id' => 'celebrities#archive', as: :celebrity_archive
-  get '/celebrity/unarchive/:id' => 'celebrities#unarchive', as: :celebrity_unarchive
-
-  scope '/hooks', :controller => :hooks do
-    post :celebrity_created_callback
-  end
 
   root :to => 'celebrities#index'
   mount ShopifyApp::Engine, at: '/'
+
+  get '/celebrity/archive/:id' => 'celebrities#archive', as: :celebrity_archive
+  get '/celebrity/unarchive/:id' => 'celebrities#unarchive', as: :celebrity_unarchive
   
+  resources :celebrities, :only=> [:index, :show, :new, :create, :destroy]
+
+  scope '/hooks', :controller => :hooks do
+    post :new_customer_callback
+    post :app_uninstalled_callback
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

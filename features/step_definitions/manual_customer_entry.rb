@@ -22,6 +22,14 @@ Given "the customer has an IMDB page" do
   @customer = create(:celebrity, :shop=> @shop, :first_name=>"Jackson", :last_name=>"Cunningham")
 end
 
+Given "the customer is a celebrity with incorrect whitespaces" do
+  @customer = create(:celebrity, :shop=> @shop, :first_name=>"  Noah", :last_name=>"Kagan ")
+end
+
+Given "the customer is a celebrity with incorrect capitalization" do
+  @customer = create(:celebrity, :shop=> @shop, :first_name=>"hArRy", :last_name=>"tRUman")
+end
+
 When /^I add the customer$/ do
   fill_in :celebrity_email, :with => @customer.email
   fill_in :celebrity_first_name, :with => @customer.first_name
