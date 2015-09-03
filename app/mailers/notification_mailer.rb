@@ -12,4 +12,13 @@ class NotificationMailer < ApplicationMailer
 
     mail to: celebrity.shop.email
   end
+
+   def install_notification(shop)
+    @greeting = "Hi"
+    
+    @shop = shop
+
+    mail to: "jackson@pixelburst.co"
+  end
+
 end

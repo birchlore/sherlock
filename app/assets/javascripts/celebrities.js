@@ -32,7 +32,7 @@ $(function(){
 
     });
 
-     $('.customers-container').find('.glyphicon-remove').on('click', function(){
+     $('.customers-container').on('click', '.glyphicon-remove', function(){
         $(this).closest('tr').hide();
      });
 

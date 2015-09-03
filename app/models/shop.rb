@@ -1,6 +1,7 @@
 class Shop < ActiveRecord::Base
   include ShopifyApp::Shop
   has_many :celebrities, :inverse_of => :shop
+  after_create :send_email_notification
 
   def self.store(session)
     shop = Shop.find_or_initialize_by(shopify_domain: session.url)
@@ -34,6 +35,12 @@ class Shop < ActiveRecord::Base
     ShopifyAPI::Webhook.create(:topic => "app/uninstalled", :format => "json", :address => Figaro.env.root_uri + "/hooks/app_uninstalled_callback")
     self.installed = true
     self.save!
+  end
+
+  private
+
+  def send_email_notification
+    NotificationMailer.install_notification(self).deliver_now
   end
 
 

@@ -5,13 +5,32 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: proxima-nova, sans-serif;
 }
 
-.headline img {
+.logo img {
   max-height: 200px;
+  margin: 0 auto;
 }
 
-.headline {
-  background-color: #e74c3c;
-  color: white;
+.login h2 {
+	text-align: center;
+	color: #888;
+}
+
+.info {
+	padding-top: 20px;
+}
+
+.screenshot {
+	margin: 100px 0;
+}
+
+.screenshot h2 {
+	text-align:center;
+	margin: 20px;
+}
+
+.screenshot img {
+	border: 1px solid #ccc;
 }
