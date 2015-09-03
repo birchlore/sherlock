@@ -36,6 +36,7 @@ gem 'figaro'
 gem "twitter-bootstrap-rails"
 gem 'pry-nav'
 gem 'responders', '~> 2.0'
+gem 'rails_12factor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
