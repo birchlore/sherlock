@@ -1,7 +1,7 @@
 class Shop < ActiveRecord::Base
   include ShopifyApp::Shop
   has_many :celebrities, :inverse_of => :shop
-  after_create :send_email_notification
+  # after_create :send_email_notification
 
   def self.store(session)
     shop = Shop.find_or_initialize_by(shopify_domain: session.url)
