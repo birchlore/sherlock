@@ -173,6 +173,7 @@ GEM
       omniauth (~> 1.2)
     omniauth-shopify-oauth2 (1.1.10)
       omniauth-oauth2 (~> 1.2)
+    pg (0.18.2)
     plissken (0.2.0)
       symbolize (~> 4.2)
     pry (0.10.1)
@@ -325,6 +326,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   letter_opener
+  pg
   pry-nav
   pry-rails
   rails (= 4.2.1)
@@ -341,3 +343,6 @@ DEPENDENCIES
   twitter-bootstrap-rails
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.10.6
