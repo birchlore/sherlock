@@ -1,1 +1,1 @@
-Figaro.require_keys("full_contact_api_key", "shopify_api_key", "shopify_secret", "shopify_redirect_uri", "shopify_embedded_app", "mailgun_api_key", "mailgun_domain", "mailgun_password", "mailgun_username")
+Figaro.require_keys("full_contact_api_key", "shopify_api_key", "shopify_secret", "shopify_redirect_uri", "shopify_embedded_app")
