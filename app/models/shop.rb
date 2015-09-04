@@ -31,8 +31,8 @@ class Shop < ActiveRecord::Base
   end
 
   def init_webhooks
-    ShopifyAPI::Webhook.create(:topic => "customers/create", :format => "json", :address => Figaro.env.root_uri + "/hooks/new_customer_callback")
-    ShopifyAPI::Webhook.create(:topic => "app/uninstalled", :format => "json", :address => Figaro.env.root_uri + "/hooks/app_uninstalled_callback")
+    ShopifyAPI::Webhook.new(:topic => "customers/create", :format => "json", :address => Figaro.env.root_uri + "/hooks/new_customer_callback")
+    ShopifyAPI::Webhook.new(:topic => "app/uninstalled", :format => "json", :address => Figaro.env.root_uri + "/hooks/app_uninstalled_callback")
     self.installed = true
     self.save!
   end
