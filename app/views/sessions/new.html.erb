@@ -1,38 +1,91 @@
 
 
-<div class="headline row">
-    <div class="col-sm-8 col-sm-offset-2">
 
-      <div class="row">
-        <div class="logo col-sm-2">
-         <%= image_tag('logo.png', :class=>"img-responsive") %>
-        </div>
+<div class="container login">
+  <div class="spacer"></div>
 
-        <div class="col-sm-10">
-          <h2>Groupie - Get notified when a celebrity or influencer purchases from you</h2>
+  <%= render 'integration' %>
+   <h2>Automatically get notified when a celebrity or influencer purchases from you. It happens more often than you think.</h2>
+
+  <div class="spacer"></div>
+   
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="form">
+          <form method="GET" action="login" class="form">
+            <div class="form-group">
+              <label>Your shop name:</label>
+              <input type="text" name="shop" class="form-control" placeholder="example.myshopify.com"/>
+            </div>
+            <div class="form-group">
+              <button type='submit' class="form-control btn btn-success">Install</button>
+            </div>
+          </form>
         </div>
       </div>
-
     </div>
- </div>
 
-<div class="container">
-<div class="spacer"></div>
- 
-  <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-      <div class="form">
-        <form method="GET" action="login" class="form">
-          <div class="form-group">
-            <label>Your shop name:</label>
-            <input type="text" name="shop" class="form-control" placeholder="example.myshopify.com"/>
-          </div>
-          <div class="form-group">
-            <button type='submit' class="form-control btn btn-success">Install</button>
-          </div>
-        </form>
+    <div class="spacer"></div>
+
+  </div>
+
+  <div style="background-color:white;">
+
+    <div class="info text-center">
+      <h1>Here's how it works:</h1>
+    </div>
+
+   
+
+    <div class="screenshot row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe width="960" height="720" src="https://www.youtube.com/embed/3idy5-K4v_M" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
+
+
+     <div class="screenshot row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2>New customers will automatically be scanned but you can also scan a customer manually.</h2>
+        <%= image_tag('step2.jpg', :class=>"img-responsive") %>
+      </div>
+    </div>
+
+    
+     <div class="screenshot row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2>We'll automatically check to see if your customers have Wikipedia pages, IMDB pages, or big Twitter followings.</h2>
+        <%= image_tag('step4.jpg', :class=>"img-responsive") %>
+      </div>
+  </div>
+
+   <div class="screenshot row">
+    <div class="col-lg-8 col-lg-offset-2">
+    <h2>Concise email notifications when we find an influencer</h2>
+      <%= image_tag('step35.jpg', :class=>"img-responsive") %>
+    </div>
+  </div>
+
+   <div class="screenshot row">
+    <div class="col-lg-8 col-lg-offset-2">
+    <h2>Sit back and wait while we collect your influencers directly within Shopify</h2>
+      <%= image_tag('step5.jpg', :class=>"img-responsive") %>
+    </div>
+  </div>
+
+  <div class="screenshot row">
+    <div class="col-lg-8 col-lg-offset-2">
+    <h2>Reach out to ask for public endoresements or photos</h2>
+      <%= image_tag('step6.jpg', :class=>"img-responsive") %>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+   <div class="screenshot row">
+    <h2>Question? Email me at jackson@pixelburst.co</h2></div>
   </div>
 
 </div>
