@@ -31,6 +31,9 @@ class Shop < ActiveRecord::Base
   end
 
   def init_webhooks
+
+    # webhooks weren't working on shopify when I used Figaro.env.root_uri + "/hooks/new_customer_callback". Afraid to change this now without messing it up..
+
     new_customer = ShopifyAPI::Webhook.new(:topic => "customers/create", :format => "json", :address => "https://groupie.pixelburst.co/hooks/new_customer_callback")
     uninstall = ShopifyAPI::Webhook.new(:topic => "app/uninstalled", :format => "json", :address => "https://groupie.pixelburst.co/hooks/app_uninstalled_callback")
     
