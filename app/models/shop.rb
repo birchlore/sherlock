@@ -37,7 +37,7 @@ class Shop < ActiveRecord::Base
     new_customer.save
     uninstall.save
 
-    puts "saved" + new_customer + uninstall
+    puts "saved"
     self.installed = true
     self.save!
   
