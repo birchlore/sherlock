@@ -10,7 +10,7 @@ class CelebritiesController < AuthenticatedController
     current_shop.init_webhooks unless current_shop.installed
     current_shop.set_email unless current_shop.email
     @celebrity = current_shop.celebrities.new
-    @celebrities = current_shop.celebrities.where(status: "active").select { |c| c.celebrity? }.reverse
+    @celebrities = current_shop.celebrities.where(status: "active").select { |c| c.celebrity? }
   end
 
   def show
