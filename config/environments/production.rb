@@ -71,6 +71,8 @@ Rails.application.configure do
       :authentication => :plain,
     }
 
+    ActionMailer::Base.default :from => "Groupie <jackson@pixelburst.co>"
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
