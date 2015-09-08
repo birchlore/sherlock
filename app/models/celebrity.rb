@@ -9,6 +9,7 @@ class Celebrity < ActiveRecord::Base
   validates_presence_of :shop
   before_validation :sanitize
   after_validation :update_celebrity_stats
+  before_save :celebrity?
   after_create :send_email_notification
 
 

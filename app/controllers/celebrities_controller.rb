@@ -30,8 +30,8 @@ class CelebritiesController < AuthenticatedController
 
   def create
 
-    @customer = current_shop.celebrities.create(celebrity_params.merge(:shop => current_shop))
-    if @customer.save && @customer.celebrity?
+    @customer = current_shop.celebrities.new(celebrity_params)
+    if @customer.save
       @celebrity = @customer
       render 'create.js.erb'
     else
