@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :notifications
   root :to => 'celebrities#index'
   mount ShopifyApp::Engine, at: '/'
 

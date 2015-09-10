@@ -65,6 +65,7 @@ class CelebritiesController < AuthenticatedController
   end
 
 
+
   # helper_method :description
   # helper_method :has_wikipedia?
   # helper_method :has_imdb?
