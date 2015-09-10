@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem "letter_opener", :group => :development
+gem 'rails-bootstrap-toggle-buttons'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

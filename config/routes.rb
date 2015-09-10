@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
 
-  resources :notifications
   root :to => 'celebrities#index'
   mount ShopifyApp::Engine, at: '/'
 
@@ -9,6 +8,8 @@ Rails.application.routes.draw do
   get '/celebrity/unarchive/:id' => 'celebrities#unarchive', as: :celebrity_unarchive
   
   resources :celebrities, :only=> [:index, :show, :new, :create, :destroy]
+  resources :shops, :only=> [:edit, :update]
+
 
   scope '/hooks', :controller => :hooks do
     post :new_customer_callback

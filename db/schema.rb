@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150910173212) do
+ActiveRecord::Schema.define(version: 20150910184440) do
 
   create_table "celebrities", force: :cascade do |t|
     t.string   "first_name"
@@ -32,20 +32,17 @@ ActiveRecord::Schema.define(version: 20150910173212) do
 
   add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id"
 
-  create_table "notifications", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "shops", force: :cascade do |t|
     t.string   "shopify_domain",                             null: false
     t.string   "shopify_token",                              null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "twitter_follower_threshold", default: 10000
-    t.boolean  "notifications",              default: true
+    t.boolean  "email_notifications",        default: true
     t.boolean  "installed",                  default: false
     t.string   "email"
+    t.boolean  "wikipedia_notification",     default: true
+    t.boolean  "imdb_notification",          default: false
   end
 
   add_index "shops", ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true

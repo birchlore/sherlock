@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<div class="spacer"></div>
+<div class="col-sm-2 col-sm-offset-10">
+  <%= link_to "< Back to Groupie Home", celebrities_path %>
+ </div>
+  <h1 style="text-align:center;">Settings</h1>
+
+  <%= form_for @shop do |f| %>
+
+	  <h3>Email Notifications</h3>
+	  	Email Notifications: <%= f.check_box :email_notifications, :'data-toggle'=>"toggle" %>
+
+	  	<div class="spacer"></div>
+	  	
+	  <h3>What should we be looking for?</h3>
+	  <p>When customer has wikipedia page: <%= f.check_box :wikipedia_notification, :'data-toggle'=>"toggle" %></p>
+	  <p>When customer has IMDB page: <%= f.check_box :imdb_notification, :'data-toggle'=>"toggle" %></p>
+	  <p>When customer has Twitter follower count over 10,000: <%= f.check_box :twitter_follower_threshold, :'data-toggle'=>"toggle" %></p>
+	  <%= f.submit 'Update Settings', :class=>"btn btn-default" %>
+  <% end %>
+
+
+
+
+</div>
+
