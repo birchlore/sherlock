@@ -24,7 +24,7 @@ class Celebrity < ActiveRecord::Base
   protected
 
   def send_email_notification
-    if celebrity?
+    if celebrity? && self.shop.email_notifications
       NotificationMailer.celebrity_notification(self).deliver_now
     end
   end
