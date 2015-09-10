@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901193830) do
+ActiveRecord::Schema.define(version: 20150910173212) do
 
   create_table "celebrities", force: :cascade do |t|
     t.string   "first_name"
@@ -31,6 +31,11 @@ ActiveRecord::Schema.define(version: 20150901193830) do
   end
 
   add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id"
+
+  create_table "notifications", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "shops", force: :cascade do |t|
     t.string   "shopify_domain",                             null: false
