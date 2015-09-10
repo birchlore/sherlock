@@ -18,7 +18,7 @@ class Celebrity < ActiveRecord::Base
   end
 
   def celebrity?
-    imdb_url || wikipedia_url || followers > self.shop.twitter_follower_threshold
+    (imdb_url && self.shop.imdb_notification) || (wikipedia_url && self.shop.wikipedia_notification) || (followers > self.shop.twitter_follower_threshold)
   end
 
   protected

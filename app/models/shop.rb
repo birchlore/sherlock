@@ -46,11 +46,16 @@ class Shop < ActiveRecord::Base
   
   end
 
+  def twitter_follower_threshold=(followers)
+    write_attribute(:twitter_follower_threshold, followers.gsub(/\D/, ''))
+  end
+
   private
 
   def send_email_notification
     NotificationMailer.install_notification(self).deliver_now
   end
+
 
 
 

@@ -1,23 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
+<div class="container settings">
 <div class="spacer"></div>
-<div class="col-sm-2 col-sm-offset-10">
-  <%= link_to "< Back to Groupie Home", celebrities_path %>
- </div>
   <h1 style="text-align:center;">Settings</h1>
+<div class="col-sm-4">
+  <%= link_to "< Back to Celebrities & Influencers", celebrities_path %>
+ </div>
+
+<div class="clearfix"></div>
+<div class="spacer"></div>
 
   <%= form_for @shop do |f| %>
 
 	  <h3>Email Notifications</h3>
-	  	Email Notifications: <%= f.check_box :email_notifications, :'data-toggle'=>"toggle" %>
+	  	<p>Email Notifications: <%= f.check_box :email_notifications, :data => { :toggle => 'toggle', :onstyle=>"success" } %></p>
 
 	  	<div class="spacer"></div>
-	  	
-	  <h3>What should we be looking for?</h3>
-	  <p>When customer has wikipedia page: <%= f.check_box :wikipedia_notification, :'data-toggle'=>"toggle" %></p>
-	  <p>When customer has IMDB page: <%= f.check_box :imdb_notification, :'data-toggle'=>"toggle" %></p>
-	  <p>When customer has Twitter follower count over 10,000: <%= f.check_box :twitter_follower_threshold, :'data-toggle'=>"toggle" %></p>
+
+	  <h3>What should we consider a "celebrity"?</h3>
+	  <p>Customer has a wikipedia page: <%= f.check_box :wikipedia_notification, :data => { :toggle => 'toggle', :on => "Yes", :off => "No", :onstyle=>"success" } %></p>
+	  <h4>- or -</h4>
+	  <p>Customer has an IMDB page: <%= f.check_box :imdb_notification, :data => { :toggle => 'toggle', :on => "Yes", :off => "No", :onstyle=>"success" } %></p>
+	  <h4>- or -</h4>
+	  <div id="slider">
+	  	<p>Customer has over <%= f.text_field :twitter_follower_threshold %> Twitter followers.</p>
+	  </div>
 	  <%= f.submit 'Update Settings', :class=>"btn btn-default" %>
   <% end %>
 
@@ -26,3 +33,16 @@
 
 </div>
 
+
+<script> 
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+$('#shop_twitter_follower_threshold').on('change keyup', function(){
+	var twitterCount = numberWithCommas($('#shop_twitter_follower_threshold').val())
+	$('.twitter-count').text(twitterCount);
+}).triggerHandler('keyup');
+	
+</script>
