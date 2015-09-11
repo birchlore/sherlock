@@ -5,6 +5,7 @@
 # files.
 
 require 'cucumber/rails'
+# require File.expand_path("../../../spec/support/vcr_setup", __FILE__)
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
@@ -46,21 +47,12 @@ Capybara.javascript_driver = :chrome
 Capybara.default_max_wait_time = 5
 Capybara.server_port = 23456
 
-Before do
-  binding.pry
-end
 
-After do
-  binding.pry
-end
-
-
-Around do |scenario, block|
-  binding.pry
-  VCR.use_cassette(scenario.feature.name + " " + scenario.name) do
-    block.call
-  end
-end
+# Around do |scenario, block|
+#   VCR.use_cassette(scenario.feature.name + " " + scenario.name) do
+#     block.call
+#   end
+# end
 
 
 # You may also want to configure DatabaseCleaner to use different strategies for certain features and scenarios.

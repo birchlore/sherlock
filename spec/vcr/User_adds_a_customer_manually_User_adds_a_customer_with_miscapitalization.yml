@@ -1,0 +1,211 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Harry%20Truman
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 11 Sep 2015 22:40:27 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYj8I9yCmyWaZCU3cq19v5vCtEfhfG_RZdCsj1WZkdRJ1lL_66o1XaM3lxyIg-7oEucChqVTADbAKGPNUw2estlSSoPXq6WymKvjDcTqv97RoMKYvcG1IivPOb9xB_ZiBxxTm3um9pfB-5oTsf_c9uHNts-64T-ZLQ_EwR0OwlNpjA;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm5577744", "title":"", "name":"Harry Truman","description":"Camera and Electrical Department, The One and Only Mike Leigh"},{ "id":"nm2858858", "title":"", "name":"Harry Truman","description":"Uncategorised"}],"name_substring": [{ "id":"nm0874288", "title":"", "name":"Harry S. Truman","description":"Self, Universal Newsreel"}],"name_approx": [{ "id":"nm3174552", "title":"", "name":"Harry Tuman","description":"Visual Effects, A Gringo Honeymoon"},{ "id":"nm1457542", "title":"", "name":"Barry Truman","description":"Producer, Sandtown"},{ "id":"nm1088085", "title":"", "name":"Harry Treman","description":"Miscellaneous Crew, The Assistant"},{ "id":"nm4578731", "title":"", "name":"Harry Thumann","description":"Soundtrack, Grand Theft Auto IV"},{ "id":"nm4300359", "title":"", "name":"Harry Patramanis","description":"Director, Fynbos"},{ "id":"nm0627060", "title":"", "name":"Harry Neumann","description":"Cinematographer, The Wasp Woman"},{ "id":"nm2624295", "title":"", "name":"Martyn Truman","description":"Sound Department, Star Wars: The Legacy Revealed"},{ "id":"nm3886756", "title":"", "name":"Gary Truman","description":"Self, Stills of the Movement: The Civil Rights Photojournalism of Flip Schulke"},{ "id":"nm0874294", "title":"", "name":"Margaret Truman","description":"Self, Episode dated 15 July 1956"},{ "id":"nm5180656", "title":"", "name":"Robert Truman Farr","description":"Special Effects, Darling"},{ "id":"nm2506076", "title":"", "name":"Harry Tasman","description":"Actor, The Devil&#x27;s Sword"},{ "id":"nm1078148", "title":"", "name":"Harry Tuvanen","description":"Cinematographer, Med kameran som tr&#xF6;st, del 2"},{ "id":"nm6421709", "title":"", "name":"Harry Romana","description":"Cinematographer, Live My Life, Not the Film!"},{ "id":"nm5952866", "title":"", "name":"Harry Tuvanen","description":"Cinematographer, The Desert"},{ "id":"nm0141002", "title":"", "name":"Truman C. Carroll","description":"Actor, Sugar Hill"},{ "id":"nm3705388", "title":"", "name":"Harry Shumanski","description":"Director, Wrecked"},{ "id":"nm0380806", "title":"", "name":"Mark Herron","description":"Actor, 8&#xBD;"}]
+        }
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:29 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Harry%20Truman
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Fri, 11 Sep 2015 22:40:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '167'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sat, 12 Sep 2015 01:15:22 GMT
+      X-Varnish:
+      - 487731978, 3006921545 3003783745
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '1507'
+      X-Cache:
+      - cp1068 miss (0), cp1052 frontend hit (1)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=11-Sep-2015;Path=/;HttpOnly;Expires=Tue, 13 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Harry Truman",["Harry Truman"],["This is a redirect from a title
+        that is a shortened form of a person''s full name, a book title or other more
+        complete article title."],["https://en.wikipedia.org/wiki/Harry_Truman"]]'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:29 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/cookie
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:29 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"about:blank"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '21'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:29 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"/html/body/*"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '40'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:29 GMT
+recorded_with: VCR 2.9.3

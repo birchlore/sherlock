@@ -49,7 +49,7 @@ gem 'rack-ssl-enforcer'
 # gem 'capistrano-rails', group: :development
 
 gem 'web-console', '~> 2.0'
-
+gem 'rollbar', '~> 2.2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -66,6 +66,7 @@ group :development, :test do
 end
 
 group :test do
+  # gem 'webmock'
   gem 'faker'
   gem 'capybara'
   gem 'selenium-webdriver'
@@ -74,6 +75,5 @@ group :test do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
-  gem 'vcr'
 end
 

@@ -1,0 +1,2788 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Kaycee%20Block
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 11 Sep 2015 22:40:03 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYh9IPWRwLRlvgeRT8jmUeBXkRkGRR1h6Frmag7M9HRETJCo9y7ALCHRGxEA6l9_oDIl_OX0iE6Oj0IAkCYogkztO1XH2-A9YR6aBhgRSqNhV76UDq-LRKCMj20lC6UWAsqRzhy1BotYKXepL_wzPVSpG34_2V8zuAJCrlHlrOH6Is;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm6769931", "title":"", "name":"Caycee Black","description":"Actress, Jimbo"},{ "id":"nm4101038", "title":"", "name":"Kaycee Brooks","description":"Actress, Fuck My Mom &#x26; Me 14"},{ "id":"nm2448440", "title":"", "name":"Khaycee Aboloc","description":"Actress, Internet Shop"},{ "id":"nm0085512", "title":"", "name":"Stacey K. Black","description":"Make-Up Department, In Time"},{ "id":"nm2375706", "title":"", "name":"Kaytea Brock","description":"Actress, Chalk"},{ "id":"nm5919129", "title":"", "name":"Marcel de Block","description":"Producer, De Club van Sinterklaas &#x26; De Pietenschool"},{ "id":"nm0852449", "title":"", "name":"Hayley Taylor","description":"Actress, Poltergeist II: The Other Side"},{ "id":"nm7343904", "title":"", "name":"Lance Block","description":"Art Department, Prison Ship"},{ "id":"nm1508565", "title":"", "name":"Kaycee Clark","description":"Actress, Hurt"},{ "id":"nm3621306", "title":"", "name":"Karen Block","description":"Self, 51 Birch Street"},{ "id":"nm7312625", "title":"", "name":"Kate Block","description":"Make-Up Department, Ascending"},{ "id":"nm6608446", "title":"", "name":"Kaycee Lark","description":"Actress, Send in the Clowns"},{ "id":"nm3400078", "title":"", "name":"Wayne Block","description":"Self, The Johnstown Flood"},{ "id":"nm5668383", "title":"", "name":"Kylee Q. Brock","description":"Miscellaneous Crew, Napa Valley Dreams"},{ "id":"nm2677856", "title":"", "name":"Kael T. Block","description":"Self, XX Boys/Lexington Steele/Girls Rock"},{ "id":"nm1116402", "title":"", "name":"Kate Block","description":"Miscellaneous Crew, Cross Breeding"},{ "id":"nm5842171", "title":"", "name":"Lacey Block","description":"Uncategorised"},{ "id":"nm1868674", "title":"", "name":"Rachel Block","description":"Art Department, Ant-Man"},{ "id":"nm3109830", "title":"", "name":"Kaye Blocher","description":"Actress, Puso ng pasko"},{ "id":"nm6491899", "title":"", "name":"Jaycen Blackburn","description":"Actor, Closer to God"}]
+        }
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:04 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Kaycee%20Block
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Fri, 11 Sep 2015 22:40:04 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '40'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sat, 12 Sep 2015 01:40:04 GMT
+      X-Varnish:
+      - 1319227876, 3006872128
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1055 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=11-Sep-2015;Path=/;HttpOnly;Expires=Tue, 13 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Kaycee Block",[],[],[]]'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:04 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=Samantha@Samanthaettus.Com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Fri, 11 Sep 2015 22:40:05 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '299'
+      X-Rate-Limit-Reset:
+      - '60'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "56b73a80-d28e-4640-bb1c-58d7632d33ba",
+          "likelihood" : 0.9,
+          "photos" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/1e8f2efd6502e1e4999820760e43465a_e0a3a1eb06ba31369196ab9f34adaf621dabff2be8c8728ab1977853ced6cacb",
+            "isPrimary" : true
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/b57ab53994c9f7e59b620f6d4b9a1920_f97ea2978d4a811685287de08200d54316e5eb932f7cd0cb9109169e72c37b59",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/fb225328c0573a45c4486fe1cce928a3_a23d253add6ca1fcdc17a52340b138a388c20e87a5635d73e7a948f44b73bb4c",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "websites" : [ {
+              "url" : "http://www.samanthaettus.com"
+            }, {
+              "url" : "http://blogs.forbes.com/samanthaettus"
+            }, {
+              "url" : "http://www.workingmomslifestyle.com"
+            }, {
+              "url" : "http://www.babble.com/contributor/samanthaettus"
+            } ],
+            "familyName" : "Ettus",
+            "fullName" : "Samantha Ettus",
+            "givenName" : "Samantha"
+          },
+          "demographics" : {
+            "gender" : "Female"
+          },
+          "socialProfiles" : [ {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "19676684"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "12516"
+          }, {
+            "bio" : "Work life balance renegade. Radio host, TV guest, Forbes contributor, Bestselling author (next book is The Pie Life, May 2016) speaker, Harvard MBA, Momx3.",
+            "followers" : 20035,
+            "following" : 987,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "11947432"
+          }, {
+            "bio" : "It is time for working moms to be celebrated, so let's say goodbye to the guilt, hello to the enjoyment, and increase the sharing and support. Together we can make small improvements that will lead to great change!",
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/SamanthaEttus",
+            "username" : "SamanthaEttus"
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://plus.google.com/u/0/102425237296327109799",
+            "id" : "102425237296327109799"
+          }, {
+            "bio" : "Obsessed with helping women reach their potential. Contributor/Forbes. Radio host, speaker. Bestselling author. Harvard MBA. Wife of 1, Mom of 3!",
+            "followers" : 1201,
+            "following" : 92,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/samanthaettus/",
+            "username" : "samanthaettus"
+          }, {
+            "bio" : "Sam is the leading lifestyle and parenting expert for working women. Since earning her undergraduate and MBA degrees from Harvard, Sam has coached thousands of celebrities, entrepreneurs, top CEO's and professional athletes - who aim to perform at the highest levels in both their professional and personal lives.",
+            "type" : "aboutme",
+            "typeId" : "aboutme",
+            "typeName" : "About.me",
+            "url" : "https://about.me/samanthaettus",
+            "username" : "samanthaettus"
+          } ],
+          "digitalFootprint" : {
+            "scores" : [ {
+              "provider" : "klout",
+              "type" : "general",
+              "value" : 69
+            } ],
+            "topics" : [ {
+              "provider" : "aboutme",
+              "value" : "TV host"
+            }, {
+              "provider" : "aboutme",
+              "value" : "working moms"
+            }, {
+              "provider" : "klout",
+              "value" : "Journalism"
+            }, {
+              "provider" : "aboutme",
+              "value" : "professional women"
+            }, {
+              "provider" : "klout",
+              "value" : "Books"
+            }, {
+              "provider" : "aboutme",
+              "value" : "lifestyle"
+            }, {
+              "provider" : "klout",
+              "value" : "Management"
+            }, {
+              "provider" : "aboutme",
+              "value" : "women's leadership"
+            }, {
+              "provider" : "aboutme",
+              "value" : "keynote speaker"
+            }, {
+              "provider" : "klout",
+              "value" : "Leadership"
+            }, {
+              "provider" : "klout",
+              "value" : "Weddings"
+            }, {
+              "provider" : "aboutme",
+              "value" : "parenting"
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''celebrity_email''
+        or ./@name = ''celebrity_email'') or ./@placeholder = ''celebrity_email'')
+        or ./@id = //label[normalize-space(string(.)) = ''celebrity_email'']/@for)]
+        | .//label[normalize-space(string(.)) = ''celebrity_email'']//.//*[self::input
+        | self::textarea][not(./@type = ''submit'' or ./@type = ''image'' or ./@type
+        = ''radio'' or ./@type = ''checkbox'' or ./@type = ''hidden'' or ./@type =
+        ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '597'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '104'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[{"ELEMENT":"0.8320855125784874-2"}]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-2/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":true}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-2/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":true}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-2/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":"input"}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-2/attribute/type
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '74'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":"text"}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-2/attribute/readonly
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/execute
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"ELEMENT":"0.8320855125784874-2","element-6066-11e4-a52e-4f735466cecf":"0.8320855125784874-2"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '141'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-2/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["Samantha@Samanthaettus.Com"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '40'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''celebrity_first_name''
+        or ./@name = ''celebrity_first_name'') or ./@placeholder = ''celebrity_first_name'')
+        or ./@id = //label[normalize-space(string(.)) = ''celebrity_first_name'']/@for)]
+        | .//label[normalize-space(string(.)) = ''celebrity_first_name'']//.//*[self::input
+        | self::textarea][not(./@type = ''submit'' or ./@type = ''image'' or ./@type
+        = ''radio'' or ./@type = ''checkbox'' or ./@type = ''hidden'' or ./@type =
+        ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '622'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '104'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[{"ELEMENT":"0.8320855125784874-3"}]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-3/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":true}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-3/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":true}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-3/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":"input"}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-3/attribute/type
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '74'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":"text"}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-3/attribute/readonly
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/execute
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"ELEMENT":"0.8320855125784874-3","element-6066-11e4-a52e-4f735466cecf":"0.8320855125784874-3"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '141'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-3/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["Kaycee"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '20'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''celebrity_last_name''
+        or ./@name = ''celebrity_last_name'') or ./@placeholder = ''celebrity_last_name'')
+        or ./@id = //label[normalize-space(string(.)) = ''celebrity_last_name'']/@for)]
+        | .//label[normalize-space(string(.)) = ''celebrity_last_name'']//.//*[self::input
+        | self::textarea][not(./@type = ''submit'' or ./@type = ''image'' or ./@type
+        = ''radio'' or ./@type = ''checkbox'' or ./@type = ''hidden'' or ./@type =
+        ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '617'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '104'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[{"ELEMENT":"0.8320855125784874-4"}]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-4/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":true}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-4/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":true}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-4/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":"input"}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-4/attribute/type
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '74'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":"text"}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-4/attribute/readonly
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/execute
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"ELEMENT":"0.8320855125784874-4","element-6066-11e4-a52e-4f735466cecf":"0.8320855125784874-4"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '141'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-4/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["Block"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '19'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//input[./@type = ''submit'' or ./@type
+        = ''reset'' or ./@type = ''image'' or ./@type = ''button''][((./@id = ''Manual
+        Scan'' or ./@value = ''Manual Scan'') or ./@title = ''Manual Scan'')] | .//input[./@type
+        = ''image''][./@alt = ''Manual Scan''] | .//button[(((./@id = ''Manual Scan''
+        or ./@value = ''Manual Scan'') or normalize-space(string(.)) = ''Manual Scan'')
+        or ./@title = ''Manual Scan'')] | .//input[./@type = ''image''][./@alt = ''Manual
+        Scan'']"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '454'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '104'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[{"ELEMENT":"0.8320855125784874-5"}]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-5/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":true}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:05 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-5/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":true}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-5/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:06 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Kaycee%20Block
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 11 Sep 2015 22:40:05 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYgaQuPixTJYpCOvPb4L-YG6oUiPs2SX8s4xMfS3zCekUKq9ssEIrJ2PlVgt93eESNxkJrPQwXaO_WKEcUFGZX8qBd6yCFXIVE3xpH1AGHdTIWFTSm1eCQZJzAK_A0L4Glo3F-DGN-3Yuwf8E5s8iwwLuX7NRczsSmOWm7E_Hxfef8;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm6769931", "title":"", "name":"Caycee Black","description":"Actress, Jimbo"},{ "id":"nm4101038", "title":"", "name":"Kaycee Brooks","description":"Actress, Fuck My Mom &#x26; Me 14"},{ "id":"nm2448440", "title":"", "name":"Khaycee Aboloc","description":"Actress, Internet Shop"},{ "id":"nm0085512", "title":"", "name":"Stacey K. Black","description":"Make-Up Department, In Time"},{ "id":"nm2375706", "title":"", "name":"Kaytea Brock","description":"Actress, Chalk"},{ "id":"nm5919129", "title":"", "name":"Marcel de Block","description":"Producer, De Club van Sinterklaas &#x26; De Pietenschool"},{ "id":"nm0852449", "title":"", "name":"Hayley Taylor","description":"Actress, Poltergeist II: The Other Side"},{ "id":"nm7343904", "title":"", "name":"Lance Block","description":"Art Department, Prison Ship"},{ "id":"nm1508565", "title":"", "name":"Kaycee Clark","description":"Actress, Hurt"},{ "id":"nm3621306", "title":"", "name":"Karen Block","description":"Self, 51 Birch Street"},{ "id":"nm7312625", "title":"", "name":"Kate Block","description":"Make-Up Department, Ascending"},{ "id":"nm6608446", "title":"", "name":"Kaycee Lark","description":"Actress, Send in the Clowns"},{ "id":"nm3400078", "title":"", "name":"Wayne Block","description":"Self, The Johnstown Flood"},{ "id":"nm5668383", "title":"", "name":"Kylee Q. Brock","description":"Miscellaneous Crew, Napa Valley Dreams"},{ "id":"nm2677856", "title":"", "name":"Kael T. Block","description":"Self, XX Boys/Lexington Steele/Girls Rock"},{ "id":"nm1116402", "title":"", "name":"Kate Block","description":"Miscellaneous Crew, Cross Breeding"},{ "id":"nm5842171", "title":"", "name":"Lacey Block","description":"Uncategorised"},{ "id":"nm1868674", "title":"", "name":"Rachel Block","description":"Art Department, Ant-Man"},{ "id":"nm3109830", "title":"", "name":"Kaye Blocher","description":"Actress, Puso ng pasko"},{ "id":"nm6491899", "title":"", "name":"Jaycen Blackburn","description":"Actor, Closer to God"}]
+        }
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Kaycee%20Block
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Fri, 11 Sep 2015 22:40:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '40'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sat, 12 Sep 2015 01:40:04 GMT
+      X-Varnish:
+      - 1319227876, 3006877968 3006872128
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '3'
+      X-Cache:
+      - cp1055 miss (0), cp1052 frontend hit (1)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=11-Sep-2015;Path=/;HttpOnly;Expires=Tue, 13 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Kaycee Block",[],[],[]]'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:07 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=Samantha@Samanthaettus.Com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Fri, 11 Sep 2015 22:40:07 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1511'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '298'
+      X-Rate-Limit-Reset:
+      - '58'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "4eb3e225-eb72-4efa-b94d-d75b33d4216a",
+          "likelihood" : 0.9,
+          "photos" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/1e8f2efd6502e1e4999820760e43465a_e0a3a1eb06ba31369196ab9f34adaf621dabff2be8c8728ab1977853ced6cacb",
+            "isPrimary" : true
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/b57ab53994c9f7e59b620f6d4b9a1920_f97ea2978d4a811685287de08200d54316e5eb932f7cd0cb9109169e72c37b59",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/fb225328c0573a45c4486fe1cce928a3_a23d253add6ca1fcdc17a52340b138a388c20e87a5635d73e7a948f44b73bb4c",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "websites" : [ {
+              "url" : "http://www.samanthaettus.com"
+            }, {
+              "url" : "http://blogs.forbes.com/samanthaettus"
+            }, {
+              "url" : "http://www.workingmomslifestyle.com"
+            }, {
+              "url" : "http://www.babble.com/contributor/samanthaettus"
+            } ],
+            "familyName" : "Ettus",
+            "fullName" : "Samantha Ettus",
+            "givenName" : "Samantha"
+          },
+          "demographics" : {
+            "gender" : "Female"
+          },
+          "socialProfiles" : [ {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "19676684"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "12516"
+          }, {
+            "bio" : "Work life balance renegade. Radio host, TV guest, Forbes contributor, Bestselling author (next book is The Pie Life, May 2016) speaker, Harvard MBA, Momx3.",
+            "followers" : 20035,
+            "following" : 987,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "11947432"
+          }, {
+            "bio" : "It is time for working moms to be celebrated, so let's say goodbye to the guilt, hello to the enjoyment, and increase the sharing and support. Together we can make small improvements that will lead to great change!",
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/SamanthaEttus",
+            "username" : "SamanthaEttus"
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://plus.google.com/u/0/102425237296327109799",
+            "id" : "102425237296327109799"
+          }, {
+            "bio" : "Obsessed with helping women reach their potential. Contributor/Forbes. Radio host, speaker. Bestselling author. Harvard MBA. Wife of 1, Mom of 3!",
+            "followers" : 1201,
+            "following" : 92,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/samanthaettus/",
+            "username" : "samanthaettus"
+          }, {
+            "bio" : "Sam is the leading lifestyle and parenting expert for working women. Since earning her undergraduate and MBA degrees from Harvard, Sam has coached thousands of celebrities, entrepreneurs, top CEO's and professional athletes - who aim to perform at the highest levels in both their professional and personal lives.",
+            "type" : "aboutme",
+            "typeId" : "aboutme",
+            "typeName" : "About.me",
+            "url" : "https://about.me/samanthaettus",
+            "username" : "samanthaettus"
+          } ],
+          "digitalFootprint" : {
+            "scores" : [ {
+              "provider" : "klout",
+              "type" : "general",
+              "value" : 69
+            } ],
+            "topics" : [ {
+              "provider" : "aboutme",
+              "value" : "TV host"
+            }, {
+              "provider" : "aboutme",
+              "value" : "working moms"
+            }, {
+              "provider" : "klout",
+              "value" : "Journalism"
+            }, {
+              "provider" : "aboutme",
+              "value" : "professional women"
+            }, {
+              "provider" : "klout",
+              "value" : "Books"
+            }, {
+              "provider" : "aboutme",
+              "value" : "lifestyle"
+            }, {
+              "provider" : "klout",
+              "value" : "Management"
+            }, {
+              "provider" : "aboutme",
+              "value" : "women's leadership"
+            }, {
+              "provider" : "aboutme",
+              "value" : "keynote speaker"
+            }, {
+              "provider" : "klout",
+              "value" : "Leadership"
+            }, {
+              "provider" : "klout",
+              "value" : "Weddings"
+            }, {
+              "provider" : "aboutme",
+              "value" : "parenting"
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:08 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:08 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"css selector","value":".celebrity-row"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '49'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '104'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[{"ELEMENT":"0.8320855125784874-6"}]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:08 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/element/0.8320855125784874-6/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":true}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:08 GMT
+- request:
+    method: delete
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/cookie
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:08 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"about:blank"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '21'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":null}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:08 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:9517/session/939a59dab92f9fd262b400c2478ef129/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"/html/body/*"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '40'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"939a59dab92f9fd262b400c2478ef129","status":0,"value":[]}'
+    http_version: 
+  recorded_at: Fri, 11 Sep 2015 22:40:08 GMT
+recorded_with: VCR 2.9.3

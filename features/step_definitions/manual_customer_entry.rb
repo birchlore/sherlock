@@ -1,9 +1,12 @@
+Before do
+  @shop = FactoryGirl.build(:shop)
+end
+
 Given /^I am a logged in user$/ do
-  visit root_path
+  visit root_path + "/login"
   fill_in :shop, :with => "sherlocks-spears"
   click_button 'Install'
   expect(page).to have_content('Log in to manage')
-  # binding.pry
   fill_in :login, :with => 'jackson@vivomasks.com'
   fill_in :password, :with => "Jh4572"
   click_button 'Log in'
@@ -12,16 +15,9 @@ end
 
 
 
-Given /^the customer is a twitter celebrity$/ do
-  @customer = create(:celebrity, :shop => @shop, :email => 'samantha@samanthaettus.com')
-end
-
-Given "the customer has a wikipedia page" do
-  @customer = create(:celebrity, :shop=> @shop, :first_name=>"Noah", :last_name=>"Kagan")
-end
-
-Given "the customer has an IMDB page" do
-  @customer = create(:celebrity, :shop=> @shop, :first_name=>"Jackson", :last_name=>"Cunningham")
+Given /^the customer is a (.+) celebrity$/ do |type|
+  celebrity_type = (type + "_celebrity").to_sym
+  @customer = create(celebrity_type, :shop => @shop)
 end
 
 Given "the customer is a celebrity with incorrect whitespaces" do
