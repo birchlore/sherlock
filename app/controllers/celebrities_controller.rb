@@ -1,14 +1,13 @@
 class CelebritiesController < AuthenticatedController
-  layout 'embedded_app'
+  
+  layout "true" == Figaro.env.shopify_embedded_app ? 'embedded_app' : 'application'
 
   def new
     @celebrity = current_shop.celebrities.new
   end
   
   def index
-    trigger_login
-    current_shop.init_webhooks unless current_shop.installed
-    current_shop.set_email unless current_shop.email
+    # trigger_login
     @celebrity = current_shop.celebrities.new
     @celebrities = current_shop.celebrities.where(status: "active").select { |c| c.celebrity? }
   end
@@ -29,7 +28,6 @@ class CelebritiesController < AuthenticatedController
   end
 
   def create
-
     @customer = current_shop.celebrities.new(celebrity_params)
     if @customer.save
       @celebrity = @customer
@@ -43,7 +41,6 @@ class CelebritiesController < AuthenticatedController
 
 
   def archive
-
     @celebrity = current_shop.celebrities.find(params[:id])
     @celebrity.status = "archived"
     if @celebrity.save
@@ -70,7 +67,6 @@ class CelebritiesController < AuthenticatedController
   # helper_method :has_wikipedia?
   # helper_method :has_imdb?
   # helper_method :twitter_followers
-
 
 
 

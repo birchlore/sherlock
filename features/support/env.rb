@@ -44,6 +44,7 @@ end
 Capybara.javascript_driver = :chrome
 
 Capybara.default_max_wait_time = 5
+Capybara.server_port = 23456
 
 # You may also want to configure DatabaseCleaner to use different strategies for certain features and scenarios.
 # See the DatabaseCleaner documentation for details. Example:

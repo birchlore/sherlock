@@ -5,9 +5,3 @@ end
 Then "the customer should not be saved to the database" do
   expect(@shop.celebrities.where(id: @customer.id)).not_to exist
 end
-
-
-When /^pry$/ do
-  expect(page).to have_css('body')
-  binding.pry
-end

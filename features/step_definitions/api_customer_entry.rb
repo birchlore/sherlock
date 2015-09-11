@@ -2,6 +2,10 @@ Given "the app is installed" do
   @shop = create(:shop)
 end
 
+Then /^I should see "(.*)"$/ do |content|
+  expect(page).to have_content(content)
+end
+
 
 When "a celebrity is added" do
   customer_params = {:first_name => "Tom", :last_name => "Cruise", :shop => @shop, :email => nil}

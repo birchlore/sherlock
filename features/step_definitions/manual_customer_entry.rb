@@ -1,9 +1,13 @@
 # VCR.use_cassette('login to shopify') do  
   Given /^I am a logged in user$/ do
-    @shop = create(:shop)
     visit root_path
-    fill_in :shop, :with => @shop.shopify_domain
+    fill_in :shop, :with => "sherlocks-spears"
     click_button 'Install'
+    expect(page).to have_content('Log in to manage')
+    # binding.pry
+    fill_in :login, :with => 'jackson@vivomasks.com'
+    fill_in :password, :with => "Jh4572"
+    click_button 'Log in'
     expect(page).to have_content("We'll automatically")
   end
 # end
@@ -61,8 +65,3 @@ end
 
 
 
-
-When /^pry$/ do
-  expect(page).to have_css('body')
-  binding.pry
-end
