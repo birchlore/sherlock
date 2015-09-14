@@ -1,3 +1,7 @@
+Given "I visit the login page" do
+  visit "/login"
+end
+
 Given "I am at the homepage" do
   visit root_path
 end
@@ -20,6 +24,10 @@ end
 
 Then "I get taken to the app index page" do
   expect(page).to have_content("We'll automatically")
+end
+
+Then "I install the app" do
+  click_link_or_button "Install Groupie Test Environment"
 end
 
 

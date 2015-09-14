@@ -2,7 +2,10 @@ require 'spec_helper'
 
 describe Celebrity do
   it "has a valid factory" do
-    expect(FactoryGirl.build(:celebrity)).to be_valid
+    expect(FactoryGirl.build(:celebrity)).to_not be_valid
+    expect(FactoryGirl.build(:twitter_celebrity)).to be_valid
+    expect(FactoryGirl.build(:wikipedia_celebrity)).to be_valid
+    expect(FactoryGirl.build(:imdb_celebrity)).to be_valid
   end
 
   it "is invalid without a firstname" do

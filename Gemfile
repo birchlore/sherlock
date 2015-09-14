@@ -67,6 +67,7 @@ end
 
 group :test do
   # gem 'webmock'
+  gem 'rest-client'
   gem 'faker'
   gem 'capybara'
   gem 'selenium-webdriver'

@@ -4,23 +4,55 @@ require 'pry'
 
 class Celebrity < ActiveRecord::Base
   belongs_to :shop, :inverse_of => :celebrities
+
   validates_presence_of :first_name
   validates_presence_of :last_name
   validates_presence_of :shop
+
+  validate :celebrity_status
   
+  before_save :sanitize
+
   after_create :send_email_notification
 
+  def celebrity_status
+    get_imdb
+    get_wikipedia
+    get_followers
+    if !celebrity?
+      self.errors.add(:body, "This ain't no celebrity, kid")
+    end
+  end
 
   def full_name
     first_name + " " + last_name
   end
 
   def celebrity?
-    return true if (imdb_url && self.shop.imdb_notification) || (wikipedia_url && self.shop.wikipedia_notification) || (followers > self.shop.twitter_follower_threshold)
-    self.errors.add(:body, "This ain't no celebrity, kid")
-    false
+    (imdb_url && self.shop.imdb_notification) || 
+    (wikipedia_url && self.shop.wikipedia_notification) || 
+    (followers > self.shop.twitter_follower_threshold)
   end
 
+  def sanitize
+    fields = ["first_name", "last_name"]
+    fields.each do |field| 
+      if self[field]
+        # self[field] = self[field].gsub(/\s+/, "").downcase.capitalize
+        self[field] = self[field].capitalize
+      end
+    end
+  end
+
+  private
+
+  def send_email_notification
+    if celebrity? && self.shop.email_notifications
+      NotificationMailer.celebrity_notification(self).deliver_now
+    end
+  end
+
+  protected
 
 
   def get_imdb
@@ -83,29 +115,6 @@ class Celebrity < ActiveRecord::Base
 
   end
 
-
-  def sanitize
-    fields = ["first_name", "last_name", "email"]
-    fields.each do |field| 
-      if self[field]
-        self[field] = self[field].gsub(/\s+/, "").downcase.capitalize
-      end
-    end
-  end
-
-  def update_celebrity_stats
-    get_imdb
-    get_wikipedia
-    get_followers
-  end
-
-private
-
-  def send_email_notification
-    if celebrity? && self.shop.email_notifications
-      NotificationMailer.celebrity_notification(self).deliver_now
-    end
-  end
 
 
 end

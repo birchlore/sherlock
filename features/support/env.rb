@@ -4,6 +4,9 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
+require 'rest_client'
+require 'json'
+
 require 'cucumber/rails'
 # require File.expand_path("../../../spec/support/vcr_setup", __FILE__)
 
@@ -47,6 +50,74 @@ Capybara.javascript_driver = :chrome
 Capybara.default_max_wait_time = 5
 Capybara.server_port = 23456
 
+
+def install_app
+  step "I visit the login page"  
+  step "I supply my shopify url"
+  step "I get taken to Oauth page"
+  step "I supply my shopify credentials"
+  result = unless page.has_content?('Logged in')
+    step "I install the app"
+    step "I get taken to the app index page"
+    true
+  else
+    false
+  end
+  $shopify_token = Shop.last.shopify_token
+  $shopify_domain = Shop.last.shopify_domain
+  result
+end
+
+def uninstall_app
+  access_token = $shopify_token
+  revoke_url   = "https://#{$shopify_domain}/admin/oauth/revoke"
+
+  headers = {
+    'X-Shopify-Access-Token' => access_token,
+    content_type: 'application/json',
+    accept: 'application/json'
+  }
+
+  response = RestClient.delete(revoke_url, headers)
+  decoded = JSON.parse(response.body)['permission']
+  decoded['access_token'] # 'secret'
+end
+
+Before do
+  $was_installed ||= false
+  unless $was_installed
+    unless install_app
+      uninstall_app
+      install_app
+    end
+    $was_installed = true
+  end
+end
+
+at_exit do
+  uninstall_app 
+end
+
+# # Given "I am at the homepage" do
+#   visit '/'
+# # When "I supply my shopify url" do
+#   fill_in :shop, :with => "sherlocks-spears"
+#   click_button 'Install'
+# # Then "I get taken to Oauth page" do
+#   expect(page).to have_content('Log in to manage')
+# # When "I supply my shopify credentials" do
+#   fill_in :login, :with => 'jackson@vivomasks.com'
+#   fill_in :password, :with => "Jh4572"
+#   click_button 'Log in'
+# # Then "I get taken to the app index page" do
+#   expect(page).to have_content("We'll automatically")
+
+
+
+# Before(:all) do
+#   #uninstall (if there)
+#   #do the install process
+# end
 
 # Around do |scenario, block|
 #   VCR.use_cassette(scenario.feature.name + " " + scenario.name) do
