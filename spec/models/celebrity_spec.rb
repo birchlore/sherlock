@@ -26,4 +26,18 @@ describe Celebrity do
     expect(contact.full_name).to eq("John Doe")
   end
 
+  context "celebrity status" do
+
+    let(:shop) {
+      create(:shop, :imdb_notification => true)
+    }
+
+    it 'should work for imdb' do
+
+      expect(FactoryGirl.create(:imdb_celebrity, :shop => shop)).to be_valid
+
+    end
+
+  end
+
 end

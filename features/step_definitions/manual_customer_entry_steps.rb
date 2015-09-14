@@ -21,19 +21,27 @@ When "I supply my shopify credentials" do
   click_button 'Log in'
 end
 
-
 Then "I get taken to the app index page" do
   expect(page).to have_content("We'll automatically")
+end
+
+When "I am a logged in user" do
+  step "I visit the login page"
+  step "I supply my shopify url"
+  step "I get taken to the app index page"
 end
 
 Then "I install the app" do
   click_link_or_button "Install Groupie Test Environment"
 end
 
+When "I have enabled imdb" do
+  Shop.last.update_attributes!({:imdb_notification => true})
+end
 
 Given /^the customer is a (.+) celebrity$/ do |type|
   celebrity_type = (type + "_celebrity").to_sym
-  @customer = build(celebrity_type)
+  @customer = build(celebrity_type, :shop => Shop.last)
 end
 
 When /^I wait (.+) seconds$/ do |seconds|

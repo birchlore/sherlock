@@ -28,18 +28,14 @@ class CelebritiesController < AuthenticatedController
   end
 
   def create
-    @celebrity = current_shop.celebrities.new(celebrity_params)
-    @celebrity.sanitize
-    @celebrity.update_celebrity_stats
-    if @celebrity.celebrity? && @celebrity.save
+    @celebrity = current_shop.celebrities.create(celebrity_params)
+    if @celebrity.persisted?
       render 'create.js.erb'
     else
       flash.now[:notice] = "That ain't no celebrity, kid."
       render 'not_a_celebrity.js'
     end
-
   end
-
 
   def archive
     @celebrity = current_shop.celebrities.find(params[:id])
