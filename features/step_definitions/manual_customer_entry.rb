@@ -1,7 +1,3 @@
-Before do
-  @shop = FactoryGirl.build(:shop, :imdb_notification => true)
-end
-
 Given "I am at the homepage" do
   visit root_path
 end
@@ -29,15 +25,19 @@ end
 
 Given /^the customer is a (.+) celebrity$/ do |type|
   celebrity_type = (type + "_celebrity").to_sym
-  @customer = create(celebrity_type, :shop => @shop)
+  @customer = build(celebrity_type)
+end
+
+When /^I wait (.+) seconds$/ do |seconds|
+  sleep seconds.to_i
 end
 
 Given "the customer is a celebrity with incorrect whitespaces" do
-  @customer = create(:celebrity, :shop=> @shop, :first_name=>"  Noah", :last_name=>"Kagan ")
+  @customer = build(:celebrity, :first_name=>"  Noah", :last_name=>"Kagan ")
 end
 
 Given "the customer is a celebrity with incorrect capitalization" do
-  @customer = create(:celebrity, :shop=> @shop, :first_name=>"hArRy", :last_name=>"tRUman")
+  @customer = build(:celebrity, :first_name=>"hArRy", :last_name=>"tRUman")
 end
 
 When /^I add the customer$/ do
@@ -52,12 +52,12 @@ Then /^I should see that the customer is a celebrity$/ do
 end
 
 Given "the customer does not have a Wikipedia page, IMDB page, or Twitter following" do
-  @customer = create(:celebrity, :shop=> @shop, :first_name=>"Birglend", :last_name=>"Firglingham", :email=>"birglendfirglingham@gmail.com")
+  @customer = build(:celebrity, :first_name=>"Birglend", :last_name=>"Firglingham", :email=>"birglendfirglingham@gmail.com")
 end
 
 
-Then "I should not see that the customer is a celebrity" do
-  expect(page).not_to have_css('.celebrity-row')
+Then "I should see that the customer is not a celebrity" do
+  expect(page).to have_content("ain't no celebrity")
 end
 
 

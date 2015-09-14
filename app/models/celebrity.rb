@@ -7,9 +7,7 @@ class Celebrity < ActiveRecord::Base
   validates_presence_of :first_name
   validates_presence_of :last_name
   validates_presence_of :shop
-  before_validation :sanitize
-  after_validation :update_celebrity_stats
-  before_save :celebrity?
+  
   after_create :send_email_notification
 
 
@@ -18,16 +16,12 @@ class Celebrity < ActiveRecord::Base
   end
 
   def celebrity?
-    (imdb_url && self.shop.imdb_notification) || (wikipedia_url && self.shop.wikipedia_notification) || (followers > self.shop.twitter_follower_threshold)
+    return true if (imdb_url && self.shop.imdb_notification) || (wikipedia_url && self.shop.wikipedia_notification) || (followers > self.shop.twitter_follower_threshold)
+    self.errors.add(:body, "This ain't no celebrity, kid")
+    false
   end
 
-  protected
 
-  def send_email_notification
-    if celebrity? && self.shop.email_notifications
-      NotificationMailer.celebrity_notification(self).deliver_now
-    end
-  end
 
   def get_imdb
     source = "http://www.imdb.com/xml/find?json=1&nr=1&nm=on&q="+ first_name + "+" + last_name
@@ -89,14 +83,12 @@ class Celebrity < ActiveRecord::Base
 
   end
 
-  private
 
   def sanitize
     fields = ["first_name", "last_name", "email"]
     fields.each do |field| 
       if self[field]
-        self[field].strip!
-        self[field].downcase.titleize unless self[field] == "email"
+        self[field] = self[field].gsub(/\s+/, "").downcase.capitalize
       end
     end
   end
@@ -106,5 +98,14 @@ class Celebrity < ActiveRecord::Base
     get_wikipedia
     get_followers
   end
+
+private
+
+  def send_email_notification
+    if celebrity? && self.shop.email_notifications
+      NotificationMailer.celebrity_notification(self).deliver_now
+    end
+  end
+
 
 end

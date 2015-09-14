@@ -28,9 +28,10 @@ class CelebritiesController < AuthenticatedController
   end
 
   def create
-    @customer = current_shop.celebrities.new(celebrity_params)
-    if @customer.save
-      @celebrity = @customer
+    @celebrity = current_shop.celebrities.new(celebrity_params)
+    @celebrity.sanitize
+    @celebrity.update_celebrity_stats
+    if @celebrity.celebrity? && @celebrity.save
       render 'create.js.erb'
     else
       flash.now[:notice] = "That ain't no celebrity, kid."

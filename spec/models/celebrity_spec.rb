@@ -18,4 +18,9 @@ describe Celebrity do
     expect(contact.full_name).to eq("John Doe")
   end
 
+  it "converts a celebrity's name to proper capitalization" do
+    contact = FactoryGirl.create(:celebrity, first_name: "JoHN", last_name: "dOE", email: "John@gmail.com")
+    expect(contact.full_name).to eq("John Doe")
+  end
+
 end

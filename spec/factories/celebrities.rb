@@ -6,10 +6,11 @@ FactoryGirl.define do
     first_name { Faker::Name.first_name }
     last_name { Faker::Name.last_name }
     email { Faker::Internet.email }
+    association :shop
   end
 
   factory :invalid_celebrity, parent: :celebrity do
-    firstname nil
+    first_name nil
   end
 
   factory :twitter_celebrity, parent: :celebrity do
