@@ -9,7 +9,7 @@ class CelebritiesController < AuthenticatedController
   def index
     # trigger_login
     @celebrity = current_shop.celebrities.new
-    @celebrities = current_shop.celebrities.where(status: "active").select { |c| c.celebrity? }
+    @celebrities = current_shop.celebrities.where(status: "active")
   end
 
   def show

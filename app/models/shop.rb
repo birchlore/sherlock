@@ -43,7 +43,6 @@ class Shop < ActiveRecord::Base
     end
 
     puts "saved"
-    self.installed = true
     self.save!
   
   end

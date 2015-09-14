@@ -3,8 +3,13 @@
 Feature: User adds a customer manually
 
   Background:
-    Given I am a logged in user
+    Given I am at the homepage
+    And I supply my shopify url
 
+  Scenario: New install
+    Then I get taken to Oauth page
+    When I supply my shopify credentials
+    Then I get taken to the app index page
   
   Scenario: User adds a customer who is a twitter celebrity
     Given the customer is a twitter celebrity
@@ -17,7 +22,7 @@ Feature: User adds a customer manually
     Then I should see that the customer is a celebrity
 
   Scenario: User adds a customer who is a imdb celebrity
-    GGiven the customer is a imdb celebrity
+    Given the customer is a imdb celebrity
     When I add the customer
     Then I should see that the customer is a celebrity
 

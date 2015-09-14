@@ -69,7 +69,6 @@ class Celebrity < ActiveRecord::Base
   def get_followers
 
     return unless self.email.present?
-
     source = "https://api.fullcontact.com/v2/person.json?email=" + self.email + "&apiKey=" + ENV['full_contact_api_key']
     uri = URI.parse(source)
     res = Net::HTTP.get_response(uri)
@@ -97,7 +96,7 @@ class Celebrity < ActiveRecord::Base
     fields.each do |field| 
       if self[field]
         self[field].strip!
-        self[field] = self[field].downcase.titleize
+        self[field].downcase.titleize unless self[field] == "email"
       end
     end
   end
