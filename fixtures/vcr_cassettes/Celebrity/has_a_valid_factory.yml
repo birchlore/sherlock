@@ -1,0 +1,1874 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Rebeka%20Volkman
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:12 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYoGXKAfx71-_zkOkNjwCxtHp1Hg7V4WYbd78AUUP85kGrDd6S4WpuAjY1grPSaGdR8EYW02CwFmFf0x7ZLXXPSm4X4_Cii1lgpZlfZJ7rqLv86b5sKw4tlO_H8D0lp5bj3aEfqeZ9cDagoKSPJF3TJCwCmuxAlQ4zgwZUKjN_gWmU;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm5701211", "title":"", "name":"Rebekah Folkman","description":"Self, Every Location Title"},{ "id":"nm6238606", "title":"", "name":"Rebekah Goldman","description":"Actress, Montgomery"},{ "id":"nm2631181", "title":"", "name":"Robert Volkman","description":"Composer, Frank Lloyd Wright&#x27;s Buffalo"},{ "id":"nm7146771", "title":"", "name":"Rebekah Brockman","description":"Actress, Bridge of Spies"},{ "id":"nm5047032", "title":"", "name":"Jennifer Rebecka Holman","description":"Actress, The End of the Tour"},{ "id":"nm3671661", "title":"", "name":"Rebekah Nolan","description":"Writer, Today&#x27;s Riff"},{ "id":"nm4296075", "title":"", "name":"Rebekah Bowman","description":"Actress, The Last of Her Blood"},{ "id":"nm5227324", "title":"", "name":"Rebekah Hoffman","description":"Actress, Plan of Action"},{ "id":"nm5426623", "title":"", "name":"Rebekah Nolan","description":"Producer, Look Who&#x27;s Famous Now 2"},{ "id":"nm5252612", "title":"", "name":"Rebekah Buckman","description":"Actress, Cosmos: A Microfilm"},{ "id":"nm1062724", "title":"", "name":"Rebekah Nolan","description":"Self, Good Morning"},{ "id":"nm3004781", "title":"", "name":"Rebekka Volland","description":"Self, Das Adventsfest der Volksmusik"},{ "id":"nm6026105", "title":"", "name":"Rebekah Hoffman","description":"Uncategorised"},{ "id":"nm1994464", "title":"", "name":"Becky Loyd","description":"Actress, High Anxiety"},{ "id":"nm2838791", "title":"", "name":"Rebekah Holland","description":"Actress, June in Springdale"},{ "id":"nm6417433", "title":"", "name":"Ren&#xE9; Volkmann","description":"Self, Meine Kneipe"},{ "id":"nm0623856", "title":"", "name":"Volkmar Nebe","description":"Writer, Lastrumer Mischung"},{ "id":"nm3315583", "title":"", "name":"Rebeka Dobken","description":"Actress, Shallow Hal"},{ "id":"nm7333709", "title":"", "name":"Rebecca Goldman","description":"Director, Bittersweet Comfort"},{ "id":"nm3317344", "title":"", "name":"Rebecca Goldman","description":"Producer, I Have a Child with Special Needs"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:14 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Rebeka%20Volkman
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '42'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:11:14 GMT
+      X-Varnish:
+      - 493178746, 3538661202
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1067 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Rebeka Volkman",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:14 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=dylan.hilpert@crona.net
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 503
+      message: Service Unavailable
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:15 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '113'
+      Connection:
+      - keep-alive
+      Retry-After:
+      - '5'
+      Vary:
+      - Accept-Charset,Accept
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '298'
+      X-Rate-Limit-Reset:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 503,
+          "message" : "Service Unavailable",
+          "requestId" : "488857de-e32b-4f5c-83b4-fa678255fdaa"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:15 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Garrison%20Moore
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:15 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYhmyovWPZ8psp1dqVmEptuXn-JyxVwfSDIX-3-x37AMxW_ZKO8sqiq1A3YJfMkg9rJMdVgknVpljN9kZxzvDnuzQirdzrbdvlOKvkZcgZGYsP0h1p48AGaH4Pjx6xLUhbWo8kO4vJfmvWHbyKhI7dyJ2vWEHOsSK7bNwgCdo1Y0oQ;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm1061280", "title":"", "name":"Harrison Moore","description":"Cinematographer, JFK: A Presidency Revealed"},{ "id":"nm6952911", "title":"", "name":"Harrison Moore","description":"Actor, War at Home"},{ "id":"nm0601225", "title":"", "name":"Garry Moore","description":"Self, The Garry Moore Show"},{ "id":"nm0601224", "title":"", "name":"Gar Moore","description":"Actor, To Live in Peace"},{ "id":"nm3684133", "title":"", "name":"Meredith Garrison","description":"Visual Effects, The Avengers"},{ "id":"nm2775711", "title":"", "name":"Garrison Cooper Gillam","description":"Actor, Necroville"},{ "id":"nm5169838", "title":"", "name":"Morgan Garrison","description":"Self, Pediatrics"},{ "id":"nm2785078", "title":"", "name":"Garrison Cooper Gilliam","description":"Actor, Necroville"},{ "id":"nm7019461", "title":"", "name":"Garrison Mosemak","description":"Actor, C&#x27;est la Guerre"},{ "id":"nm6412482", "title":"", "name":"Harrison T. Elmore","description":"Writer, Kin to Kith"},{ "id":"nm0308418", "title":"", "name":"Gregorey Garrison","description":"Actor, Swing Kids"},{ "id":"nm6690695", "title":"", "name":"Harrison Densmore","description":"Actor, Neville Jean"},{ "id":"nm3656011", "title":"", "name":"Garrison Calagoure","description":"Actor, Speak Now 2010"},{ "id":"nm0600888", "title":"", "name":"Alyson Dee Moore","description":"Sound Department, The Dark Knight"},{ "id":"nm0308421", "title":"", "name":"Hope Garrison","description":"Second Unit Director or Assistant Director, Transformers: Revenge of the Fallen"},{ "id":"nm2472490", "title":"", "name":"Allison Brownmoore","description":"Visual Effects, The Escapist"},{ "id":"nm0600882", "title":"", "name":"Allison Moore","description":"Actress, Dexter&#x27;s Laboratory"},{ "id":"nm1701442", "title":"", "name":"Andre Garrison","description":"Producer, Ill Fated"},{ "id":"nm0308419", "title":"", "name":"Gregory Garrison","description":"Set Decorator, Norma Rae"},{ "id":"nm1839005", "title":"", "name":"Allison Moore","description":"Miscellaneous Crew, The Social Network"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:17 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Garrison%20Moore
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:18 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '42'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:11:18 GMT
+      X-Varnish:
+      - 1707226786, 3538672392
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1055 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Garrison Moore",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:18 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=samantha@samanthaettus.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:18 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '297'
+      X-Rate-Limit-Reset:
+      - '11'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "15da0395-aefb-4543-a256-a594c1a9d668",
+          "likelihood" : 0.9,
+          "photos" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/1e8f2efd6502e1e4999820760e43465a_e0a3a1eb06ba31369196ab9f34adaf621dabff2be8c8728ab1977853ced6cacb",
+            "isPrimary" : true
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/b57ab53994c9f7e59b620f6d4b9a1920_f97ea2978d4a811685287de08200d54316e5eb932f7cd0cb9109169e72c37b59",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/fb225328c0573a45c4486fe1cce928a3_a23d253add6ca1fcdc17a52340b138a388c20e87a5635d73e7a948f44b73bb4c",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "websites" : [ {
+              "url" : "http://www.samanthaettus.com"
+            }, {
+              "url" : "http://blogs.forbes.com/samanthaettus"
+            }, {
+              "url" : "http://www.workingmomslifestyle.com"
+            }, {
+              "url" : "http://www.babble.com/contributor/samanthaettus"
+            } ],
+            "familyName" : "Ettus",
+            "fullName" : "Samantha Ettus",
+            "givenName" : "Samantha"
+          },
+          "demographics" : {
+            "gender" : "Female"
+          },
+          "socialProfiles" : [ {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "19676684"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "12516"
+          }, {
+            "bio" : "Work life balance renegade. Radio host, TV guest, Forbes contributor, Bestselling author (next book is The Pie Life, May 2016) speaker, Harvard MBA, Momx3.",
+            "followers" : 20035,
+            "following" : 987,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "11947432"
+          }, {
+            "bio" : "It is time for working moms to be celebrated, so let's say goodbye to the guilt, hello to the enjoyment, and increase the sharing and support. Together we can make small improvements that will lead to great change!",
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/SamanthaEttus",
+            "username" : "SamanthaEttus"
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://plus.google.com/u/0/102425237296327109799",
+            "id" : "102425237296327109799"
+          }, {
+            "bio" : "Obsessed with helping women reach their potential. Contributor/Forbes. Radio host, speaker. Bestselling author. Harvard MBA. Wife of 1, Mom of 3!",
+            "followers" : 1201,
+            "following" : 92,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/samanthaettus/",
+            "username" : "samanthaettus"
+          }, {
+            "bio" : "Sam is the leading lifestyle and parenting expert for working women. Since earning her undergraduate and MBA degrees from Harvard, Sam has coached thousands of celebrities, entrepreneurs, top CEO's and professional athletes - who aim to perform at the highest levels in both their professional and personal lives.",
+            "type" : "aboutme",
+            "typeId" : "aboutme",
+            "typeName" : "About.me",
+            "url" : "https://about.me/samanthaettus",
+            "username" : "samanthaettus"
+          } ],
+          "digitalFootprint" : {
+            "scores" : [ {
+              "provider" : "klout",
+              "type" : "general",
+              "value" : 69
+            } ],
+            "topics" : [ {
+              "provider" : "aboutme",
+              "value" : "TV host"
+            }, {
+              "provider" : "aboutme",
+              "value" : "working moms"
+            }, {
+              "provider" : "klout",
+              "value" : "Journalism"
+            }, {
+              "provider" : "aboutme",
+              "value" : "professional women"
+            }, {
+              "provider" : "klout",
+              "value" : "Books"
+            }, {
+              "provider" : "aboutme",
+              "value" : "lifestyle"
+            }, {
+              "provider" : "klout",
+              "value" : "Management"
+            }, {
+              "provider" : "aboutme",
+              "value" : "women's leadership"
+            }, {
+              "provider" : "aboutme",
+              "value" : "keynote speaker"
+            }, {
+              "provider" : "klout",
+              "value" : "Leadership"
+            }, {
+              "provider" : "klout",
+              "value" : "Weddings"
+            }, {
+              "provider" : "aboutme",
+              "value" : "parenting"
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:18 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Noah%20Kagan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:18 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYnQD5H1C61XHrD8G4YpBv19rQ6xGg-01RpcXvs2Mf790VMOcb7aQTn7vg_LeaU0mqfZD-f8BI7Dv5d5rt6edPheFuP10ftQnLbnvef3PsB0p5PyZdr_aZNxzKWR-aR805TFuMqFGPA2-229H1Arr1qF-dKODUXPY94ikS1ha7cDsc;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm5861888", "title":"", "name":"Noah Kazanjian","description":"Actor, Late"},{ "id":"nm0863532", "title":"", "name":"Noah Timan","description":"Sound Department, Fantastic Mr. Fox"},{ "id":"nm5742208", "title":"", "name":"Jonah Kagan","description":"Writer, Donner Party: The Musical"},{ "id":"nm0810101", "title":"", "name":"Taran Noah Smith","description":"Actor, Little Bigfoot 2: The Journey Home"},{ "id":"nm0781913", "title":"", "name":"Noah Segan","description":"Actor, Looper"},{ "id":"nm6547344", "title":"", "name":"Noah Kaplan","description":"Writer, Raw Nerve"},{ "id":"nm1818048", "title":"", "name":"Kagan Goh","description":"Director, Stolen Memories"},{ "id":"nm5657500", "title":"", "name":"Noah Kaai","description":"Director, Maasai Voices on Climate Change: and Other Changes, Too"},{ "id":"nm3386285", "title":"", "name":"Noah Faran","description":"Miscellaneous Crew, Beaufort"},{ "id":"nm6154452", "title":"", "name":"Noah Hogan","description":"Visual Effects, #BreakfastInBedTour"},{ "id":"nm2264256", "title":"", "name":"Alan Noah","description":"Producer, Logo Movie Special: &#x27;Brokeback Mountain&#x27;"},{ "id":"nm3394949", "title":"", "name":"Emil Kagandahan","description":"Second Unit Director or Assistant Director, Takot ako, eh!"},{ "id":"nm3846679", "title":"", "name":"Noah ben Hagay","description":"Editor, Haya Bli Ima"},{ "id":"nm3660651", "title":"", "name":"Noah Hogan","description":"Animation Department, Motorcycle Dreams"},{ "id":"nm2789136", "title":"", "name":"Noah Philip Lagin","description":"Director, Warsaw"},{ "id":"nm5079489", "title":"", "name":"Noah Derek Logan","description":"Art Director, V/H/S/2"},{ "id":"nm5210140", "title":"", "name":"Noah Khan","description":"Actor, Part Time Fabulous"},{ "id":"nm3110828", "title":"", "name":"Josh Kagan","description":"Producer, Unmade Man"},{ "id":"nm4565073", "title":"", "name":"Rosh Kagan","description":"Actress, Golden: How to Make a Billion Dollars the Easy Way"},{ "id":"nm2666777", "title":"", "name":"Noah Kaplan","description":"Actor, Chance of a Lifetime"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:18 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Noah%20Kagan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '132'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:05:15 GMT
+      X-Varnish:
+      - 262424994, 3538674597 3537627355
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '364'
+      X-Cache:
+      - cp1052 miss (0), cp1052 frontend hit (2)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Noah Kagan",["Noah Kagan"],["Noah Kagan is an American Internet entrepreneur
+        and the founder of AppSumo."],["https://en.wikipedia.org/wiki/Noah_Kagan"]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:18 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=jaylen.thompson@abbottbosco.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:19 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '245'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '296'
+      X-Rate-Limit-Reset:
+      - '10'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "d163e34b-fc9d-461e-b48c-5982bf239cb1"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:19 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:19 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYnwXm5eFLwqyIKJ7SLax2mowj4Zbd7oGVqtkECzqPJ3-7o5V69_jkRWIIMh2t9LJ20j21NaVK3C21nx6-n0hnMmYxxcElf2yIKYjICWHAPu-U5iZWVXmL_0NZxdnQ-_oGxYG153i9brF7hp0p68GC9wBt20RcL-KTaWdM85ADZG1Y;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm1080980", "title":"", "name":"Jackson Cunningham","description":"Actor, 10-Speed"}],"name_approx": [{ "id":"nm2998651", "title":"", "name":"Jason Blaise Cunningham","description":"Camera and Electrical Department, Dawn of the Planet of the Apes"},{ "id":"nm0192336", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Road Trip"},{ "id":"nm1899417", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Stuck in the Middle with You"},{ "id":"nm3483519", "title":"", "name":"Jason Cunningham","description":"Thanks, The Signal"},{ "id":"nm6377923", "title":"", "name":"Jameson Cunningham","description":"Sound Department, Amor"},{ "id":"nm7308883", "title":"", "name":"Jameson Cunningham","description":"Camera and Electrical Department, Electric"},{ "id":"nm3175205", "title":"", "name":"Jason Cunningham","description":"Writer, All American Addict"},{ "id":"nm3784096", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Lockdown"},{ "id":"nm2553697", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Dale&#x27;s Supermarket Sweep"},{ "id":"nm6125182", "title":"", "name":"Jason Cunningham","description":"Thanks, Dirty Beautiful"},{ "id":"nm4963372", "title":"", "name":"Jason Cunningham","description":"Thanks, Haunt"},{ "id":"nm6367389", "title":"", "name":"Jameson Cunningham","description":"Uncategorised"},{ "id":"nm5439317", "title":"", "name":"Clare Alison Cunningham","description":"Director, The Ancient Arts of Qigong &#x26; Tai Chi"},{ "id":"nm0192328", "title":"", "name":"Jack Cunningham","description":"Second Unit Director or Assistant Director, The Great Race"},{ "id":"nm2731697", "title":"", "name":"Carson Cunningham","description":"Camera and Electrical Department, One Day More: Part 2"},{ "id":"nm0192278", "title":"", "name":"Dan Cunningham","description":"Actor, Richard III"},{ "id":"nm4765145", "title":"", "name":"Jaclyn Cunningham","description":"Actress, Forever"},{ "id":"nm0192256", "title":"", "name":"Cason Cunningham","description":"Actor, Black Girl"},{ "id":"nm3160705", "title":"", "name":"Jacob Cunningham","description":"Writer, Thy Will Be Done"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:19 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:05:16 GMT
+      X-Varnish:
+      - 14910292, 3538677454 3537629494
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '364'
+      X-Cache:
+      - cp1054 miss (0), cp1052 frontend hit (3)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Jackson Cunningham",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:19 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=vinnie_stanton@collins.name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 503
+      message: Service Unavailable
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:20 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '113'
+      Connection:
+      - keep-alive
+      Retry-After:
+      - '5'
+      Vary:
+      - Accept-Charset,Accept
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '295'
+      X-Rate-Limit-Reset:
+      - '9'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 503,
+          "message" : "Service Unavailable",
+          "requestId" : "8a689597-0f46-4940-a726-28e59ac2daf0"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:20 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Cory%20Farrell
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:32 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYtXRmMlpgo8B1Z0N9bHBRu-mA_su1m_UT-mG0czIlPmBCdD4o9_8tELWuURCE4OSs3vxQ7MFwl-tQG7zu0Z_KIKFqErre5iGe0hDn-zZlsb4cqJXnfKQqN1Tr-lkF0YfxNEL_qKED4I7f7lPyfQAAkO641LADg1lioNHfSCIhoRog;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm1016586", "title":"", "name":"Michele Corn","description":"Art Department, Requiem for a Dream"},{ "id":"nm4251328", "title":"", "name":"Corey Farrell","description":"Director, Last Minutes with the Stack"},{ "id":"nm0268324", "title":"", "name":"Rory Farrell","description":"Editorial Department, Suspicion"},{ "id":"nm2803241", "title":"", "name":"Cora Farrell","description":"Actress, Old Mother Riley, Headmistress"},{ "id":"nm3232760", "title":"", "name":"Lisa Corey Farrell","description":"Actress, Drop Dead Drunk"},{ "id":"nm0268201", "title":"", "name":"Corine Farrell","description":"Make-Up Department, Breach of Trust"},{ "id":"nm4943977", "title":"", "name":"Cormac Farrell Doyle","description":"Actor, Dilated"},{ "id":"nm0268226", "title":"", "name":"Gregory Farrell","description":"Camera and Electrical Department, Finding Forrester"},{ "id":"nm4104885", "title":"", "name":"Rory O&#x27;Farrell","description":"Director, The Ballad of the Irish Horse"},{ "id":"nm5734847", "title":"", "name":"Farrell Lecorps","description":"Cinematographer, Women Rules the Film"},{ "id":"nm4384609", "title":"", "name":"Rory O&#x27;Farrell","description":"Self, Buckwheat Blunders and Twists of Fate"},{ "id":"nm0268199", "title":"", "name":"Colin Farrell","description":"Actor, Phone Booth"},{ "id":"nm0268200", "title":"", "name":"Colin Farrell","description":"Actor, Oh! What a Lovely War"},{ "id":"nm0268281", "title":"", "name":"Mary Pat Farrell","description":"Actress, A Thin Line"},{ "id":"nm2290373", "title":"", "name":"Tony Farrell","description":"Art Department, There Will Be Blood"},{ "id":"nm0268219", "title":"", "name":"Gary Farrell","description":"Actor, On Deadly Ground"},{ "id":"nm1734187", "title":"", "name":"Mary Farrell","description":"Actress, Airplane II: The Sequel"},{ "id":"nm2854979", "title":"", "name":"Nora Farrell","description":"Miscellaneous Crew, The Land Before Time"},{ "id":"nm3158974", "title":"", "name":"Cody Horn","description":"Actress, Magic Mike"},{ "id":"nm0268220", "title":"", "name":"Gary W. Farrell","description":"Miscellaneous Crew, The Siege"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:34 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Cory%20Farrell
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '40'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:11:34 GMT
+      X-Varnish:
+      - 493234987, 3538736651
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1067 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Cory Farrell",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:34 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=isom@kihnzemlak.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:34 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '245'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '299'
+      X-Rate-Limit-Reset:
+      - '60'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "37ac806d-145e-4c81-89b4-12dbf5b2599c"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:34 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Jorge%20Carroll
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:35 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYtGhYKQNNRokuWzZD8NmTaVqrhz6udBqwjscC2ADJeCEFf2FMcAKyKzjG_ixVfrXBFNBV4Ri-ZY6wnLvaoD_cr4i1QKZwkl3qV5_zokMsEmCqITZ-rM6Jp11ePpQxxTzUhMqIaFRmVQ4QEQehjtl9DZc7DPVIYH-L_JeMt3qXH6c8;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm5259803", "title":"", "name":"Jorge Carruillo","description":"Actor, Sound of Noise"},{ "id":"nm0140497", "title":"", "name":"Jorge Carrillo","description":"Actor, El umbral"},{ "id":"nm1080873", "title":"", "name":"Jorge Pablo Carrillo","description":"Actor, El libro de piedra"},{ "id":"nm0140470", "title":"", "name":"Jorge Carrillo Olea","description":"Self, Mexique mort ou vif"},{ "id":"nm2282835", "title":"", "name":"Slaine","description":"Actor, The Town"},{ "id":"nm0140918", "title":"", "name":"Marjorie Carroll","description":"Actress, The Newton Boys"},{ "id":"nm5751799", "title":"", "name":"George Carroll","description":"Producer, Common Chord"},{ "id":"nm7215171", "title":"", "name":"George Carroll","description":"Producer, The Elm Tree"},{ "id":"nm3030955", "title":"", "name":"George Carroll","description":"Writer, Drunken Freestyle: An Interview with 2Pac"},{ "id":"nm0750537", "title":"", "name":"George Ruric","description":"Second Unit Director or Assistant Director, A Woman of the Sea"},{ "id":"nm2967814", "title":"", "name":"George T. Carroll","description":"Art Department, Heart Throbs"},{ "id":"nm6712679", "title":"", "name":"George Carroll","description":"Uncategorised"},{ "id":"nm2126578", "title":"", "name":"Joe Carroll","description":"Special Effects, Fargo"},{ "id":"nm2090124", "title":"", "name":"Joe Carroll","description":"Camera and Electrical Department, Great Expectations"},{ "id":"nm1265411", "title":"", "name":"Joe Carroll","description":"Camera and Electrical Department, White Palace"},{ "id":"nm0140864", "title":"", "name":"Joe Carroll","description":"Camera and Electrical Department, Backdraft"},{ "id":"nm1771526", "title":"", "name":"Jorge Carroza","description":"Special Effects, Descendents"},{ "id":"nm1201514", "title":"", "name":"Joe Carroll","description":"Composer, The Adventures of Pete &#x26; Pete"},{ "id":"nm4583874", "title":"", "name":"Joe Carroll","description":"Music Department, A Very Potter Musical"},{ "id":"nm6424816", "title":"", "name":"Jorge Carril","description":"Art Department, Cuesti&#xF3;n de pel"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:36 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Jorge%20Carroll
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '41'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:11:36 GMT
+      X-Varnish:
+      - 3218524032, 3538744281
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1053 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Jorge Carroll",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:36 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=ivory.mcglynn@cruickshank.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:36 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '245'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '298'
+      X-Rate-Limit-Reset:
+      - '58'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "fdd0a8d7-f8d6-4c40-9934-77d9b731fcd9"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:36 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=lola@monahan.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 503
+      message: Service Unavailable
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:37 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '113'
+      Connection:
+      - keep-alive
+      Retry-After:
+      - '5'
+      Vary:
+      - Accept-Charset,Accept
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '297'
+      X-Rate-Limit-Reset:
+      - '58'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 503,
+          "message" : "Service Unavailable",
+          "requestId" : "b3ddb2e7-8b05-4436-8fa0-9bed79e6e2e8"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:37 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Earlene%20Walter
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:12:15 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYmnktaUH-yGJA2AH7cWADnGESMwijIuud9Y9gZh6JB5wi0wHOk1BnTduzk6OYgIQByNGwz4LSCN8catY0kgl_M-esxVWRDSJSjR_ScDjjqdZdnpsFM6iheO_r-UwlxiinC9g_7JekhJDA0di5LgnCD1ErcW5W5_7Vd_K4pBeyxCGo;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm5496704", "title":"", "name":"Arlene Walters","description":"Thanks, Arch of Repose"},{ "id":"nm1392182", "title":"", "name":"Marlene Walker-Golden","description":"Miscellaneous Crew, Stonehenge: Decoded"},{ "id":"nm1899988", "title":"", "name":"Leslie Brown","description":"Casting Department, Kittens in a Cage"},{ "id":"nm0247356", "title":"", "name":"Walter Earle","description":"Actor, Big Timers"},{ "id":"nm4049569", "title":"", "name":"Marlene Walker","description":"Art Department, Abrupt Decision"},{ "id":"nm1054790", "title":"", "name":"Darlene Walker","description":"Miscellaneous Crew, American Virgin"},{ "id":"nm5634222", "title":"", "name":"Walter Arlen","description":"Self, Ein Dorf in der Gro&#xDF;stadt - Die Grundsteingasse in Wien-Ottakring"},{ "id":"nm7174804", "title":"", "name":"Walter Carline","description":"Actor, Unveiled"},{ "id":"nm3495287", "title":"", "name":"Carlene Walker","description":"Miscellaneous Crew, Portrait in Sepia Tone"},{ "id":"nm2189328", "title":"", "name":"Matthew Earnest","description":"Actor, Yes Man"},{ "id":"nm2233340", "title":"", "name":"Walter Earnest","description":"Actor, Z: A Zombie Musical"},{ "id":"nm6696380", "title":"", "name":"Marlene Alterach","description":"Actress, Sector: Morir En Directo"},{ "id":"nm2178136", "title":"", "name":"Darlene Waters","description":"Actress, So Dear to My Heart"},{ "id":"nm1691358", "title":"", "name":"Otto Ferrene","description":"Editorial Department, Channel Chasers"},{ "id":"nm0501808", "title":"", "name":"Walter Lenertz","description":"Cinematographer, Liebeslieder: Einst&#xFC;rzende Neubauten"},{ "id":"nm5568776", "title":"", "name":"Helene Walter","description":"Actress, Freche M&#xE4;dchen"},{ "id":"nm7328263", "title":"", "name":"Charlene Salter","description":"Actress, Fusion Food"},{ "id":"nm5674040", "title":"", "name":"Kimberlee Walter","description":"Actress, Ba&#xF1;o compartido"},{ "id":"nm7128306", "title":"", "name":"Arlene Waghalter","description":"Costume Designer, Flocker"},{ "id":"nm3698911", "title":"", "name":"Charlene Walker","description":"Actress, Reck and Ima"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:17 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Earlene%20Walter
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:12:18 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '42'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:12:18 GMT
+      X-Varnish:
+      - 1707403889, 3538930631
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1055 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Earlene Walter",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:18 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=aric@gibson.name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:12:18 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '245'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '292'
+      X-Rate-Limit-Reset:
+      - '16'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "0b8478ab-a682-4030-8d53-cfe45c8d4834"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:18 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Foster%20Mertz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:12:19 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYvqeSgdUOHxiMRUJQg6Z5Ny226tbT2y0EGaX3PLvF0rTHfuNKcfqE_aNgkGG9TjiM5Z5GdN4k78s0GXdz02HWnfdedRLAU8hMo28Y5eKw51h5StjhRoTZgOrkap7WKyBLiWhtwi7BQcU9gnZkoxLAR36omiLwOptAcbQs53JRf9eE;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm0288108", "title":"", "name":"W. Bert Foster","description":"Writer, Men in the Raw"},{ "id":"nm3235363", "title":"", "name":"Meron Foster","description":"Self, Into Abyssinia"},{ "id":"nm1622646", "title":"", "name":"Mersa Foster","description":"Actor, Wednesday&#x27;s Child"},{ "id":"nm5684752", "title":"", "name":"Marty Foster","description":"Editor, Teachers Pet"},{ "id":"nm1549143", "title":"", "name":"Martin Foster","description":"Visual Effects, Serenity"},{ "id":"nm0287960", "title":"", "name":"Martha D. Foster","description":"Writer, Bab&#x27;s Diary"},{ "id":"nm4614452", "title":"", "name":"Martyn Foster Lewis","description":"Writer, Masked"},{ "id":"nm6796163", "title":"", "name":"Martin Foster","description":"Animation Department, Jungle Boy"},{ "id":"nm3158221", "title":"", "name":"Martin Foster","description":"Actor, Super"},{ "id":"nm4670951", "title":"", "name":"Martin Foster","description":"Actor, The Last Night"},{ "id":"nm5561524", "title":"", "name":"Merryl Foster","description":"Art Department, Episode dated 23 October 1975"},{ "id":"nm5520800", "title":"", "name":"Mercedes Foster","description":"Actress, Strength in Numbers"},{ "id":"nm4624176", "title":"", "name":"Duane Martin Foster","description":"Actor, Pennies for the Boatman"},{ "id":"nm4928613", "title":"", "name":"Martha Foster","description":"Self, Day in Our Bay: Voices &#x26; Views from Bristol Bay"},{ "id":"nm2771391", "title":"", "name":"Martin Foster","description":"Music Department, Seducing Doctor Lewis"},{ "id":"nm4891355", "title":"", "name":"Martin Foster","description":"Self, Blakey"},{ "id":"nm6695533", "title":"", "name":"Martin Foster","description":"Actor, Gloria"},{ "id":"nm7507338", "title":"", "name":"Martin Foster","description":"Miscellaneous Crew, Sky Star Search"},{ "id":"nm6448779", "title":"", "name":"Martyn Foster","description":"Actor, Good with Words"},{ "id":"nm0001233", "title":"", "name":"Robert Forster","description":"Actor, Jackie Brown"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:20 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Foster%20Mertz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:12:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '40'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:12:20 GMT
+      X-Varnish:
+      - 1707412444, 3538942716
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1055 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Foster Mertz",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:20 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=rhianna@jacobihane.name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:12:21 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '244'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '291'
+      X-Rate-Limit-Reset:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "e4052c75-586a-46ea-a57a-709efd2fcdf4"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:21 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=tyrique.homenick@dooley.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:12:21 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '245'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '290'
+      X-Rate-Limit-Reset:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "0592f9d9-8ef6-4927-87bb-36ddb24686ed"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:21 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Aaslkdfj%20alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:13:36 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYleSaVyIq9cxGfiFB4v5C2K_fytqAz8qhvrOT6h4X3U7YeCKFk_KOvlrSKCZeNOCm8yPcPFwJpcQDD-b4p-qkOQcVaDv8YLk0_AHeCKxg5_Sw1aQG4pxfr_UxCb5xWY8l0RfnzQWWQQ6xJ0Lv-Fj3TYAhn32gxkjt9AACzv_ZASnY;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:37 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Aaslkdfj%20alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:13:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '45'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:13:37 GMT
+      X-Varnish:
+      - 3772012812, 3539217981
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1065 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Aaslkdfj alfsijef",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:37 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:13:38 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '244'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '299'
+      X-Rate-Limit-Reset:
+      - '60'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "43f9ce30-a901-424f-be19-24c865e30dae"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:38 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Aaslkdfj%20alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:13:38 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYnKWhdAEpH7fZvhXmkB-R1-fdBmOQm4b73_0KhADN1_fM84hgw-9lxBYCmpHg5I8oKzXA99xgzSbM5WZCF_ILsQrlPDNiPRZFJdTbEu4q7_a4V5t1nTlNbVmtloMDmJnTu-bdiS95mnDMuIu5I9gKZUkWUOTt6uXUFHyJ2XI8_qEI;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:39 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Aaslkdfj%20alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:13:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '45'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:13:37 GMT
+      X-Varnish:
+      - 3772012812, 3539223048 3539217981
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '2'
+      X-Cache:
+      - cp1065 miss (0), cp1052 frontend hit (1)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Aaslkdfj alfsijef",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:39 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:13:40 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '298'
+      X-Rate-Limit-Reset:
+      - '59'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "81ebf779-76c1-4243-9cda-3d611de20ae4"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:40 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:13:40 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '297'
+      X-Rate-Limit-Reset:
+      - '58'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "0944af7d-8984-471f-9f6d-4dea47edf5c5"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:40 GMT
+recorded_with: VCR 2.9.3

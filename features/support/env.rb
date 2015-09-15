@@ -8,6 +8,7 @@ require 'rest_client'
 require 'json'
 
 require 'cucumber/rails'
+
 # require File.expand_path("../../../spec/support/vcr_setup", __FILE__)
 
 # Capybara defaults to CSS3 selectors rather than XPath.
@@ -95,7 +96,7 @@ Before do
 end
 
 at_exit do
-  uninstall_app 
+  uninstall_app   
 end
 
 # # Given "I am at the homepage" do

@@ -1,0 +1,607 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:26 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYiqVFKlLrZW8FW2g6DTi1tITBedZ_NetJE4-KPgxqJkpSzf1gcZSORDCiyxbxTeRva6fBcW-jnQFsBtxfNIeIyck-mGGgZx3luQsDPq4cnglaCN-rsJDWbxpFPRlB5eCAoBXAD2VUr6wK6Baj2pTVtt8gnTX7dWPo0vALhO7gdJ7c;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm1080980", "title":"", "name":"Jackson Cunningham","description":"Actor, 10-Speed"}],"name_approx": [{ "id":"nm2998651", "title":"", "name":"Jason Blaise Cunningham","description":"Camera and Electrical Department, Dawn of the Planet of the Apes"},{ "id":"nm0192336", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Road Trip"},{ "id":"nm1899417", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Stuck in the Middle with You"},{ "id":"nm3483519", "title":"", "name":"Jason Cunningham","description":"Thanks, The Signal"},{ "id":"nm6377923", "title":"", "name":"Jameson Cunningham","description":"Sound Department, Amor"},{ "id":"nm7308883", "title":"", "name":"Jameson Cunningham","description":"Camera and Electrical Department, Electric"},{ "id":"nm3175205", "title":"", "name":"Jason Cunningham","description":"Writer, All American Addict"},{ "id":"nm3784096", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Lockdown"},{ "id":"nm2553697", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Dale&#x27;s Supermarket Sweep"},{ "id":"nm6125182", "title":"", "name":"Jason Cunningham","description":"Thanks, Dirty Beautiful"},{ "id":"nm4963372", "title":"", "name":"Jason Cunningham","description":"Thanks, Haunt"},{ "id":"nm6367389", "title":"", "name":"Jameson Cunningham","description":"Uncategorised"},{ "id":"nm5439317", "title":"", "name":"Clare Alison Cunningham","description":"Director, The Ancient Arts of Qigong &#x26; Tai Chi"},{ "id":"nm0192328", "title":"", "name":"Jack Cunningham","description":"Second Unit Director or Assistant Director, The Great Race"},{ "id":"nm2731697", "title":"", "name":"Carson Cunningham","description":"Camera and Electrical Department, One Day More: Part 2"},{ "id":"nm0192278", "title":"", "name":"Dan Cunningham","description":"Actor, Richard III"},{ "id":"nm4765145", "title":"", "name":"Jaclyn Cunningham","description":"Actress, Forever"},{ "id":"nm0192256", "title":"", "name":"Cason Cunningham","description":"Actor, Black Girl"},{ "id":"nm3160705", "title":"", "name":"Jacob Cunningham","description":"Writer, Thy Will Be Done"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:26 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:05:16 GMT
+      X-Varnish:
+      - 14910292, 3538702832 3537629494
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '370'
+      X-Cache:
+      - cp1054 miss (0), cp1052 frontend hit (4)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Jackson Cunningham",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:26 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=fred.gleichner@reichel.biz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:26 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '246'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '291'
+      X-Rate-Limit-Reset:
+      - '3'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "50cd985a-6588-460d-93f2-0bac7125956c"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:26 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:27 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYmm4YYvtM6N8tQV3iBLIla3e072WwGQuYCK_NZnmP340SvtTLOaV810OAgXVoExv-dQMu5cpcXISPQ2CTIxR3T22qSCkx56GvFdkaknbFR4S4MRTnPAMqwMlSrMwzOlDIthu-m1uUsZbGtOIWSZJoMcN66AlZnWAPQEorHLUVYFVo;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm1080980", "title":"", "name":"Jackson Cunningham","description":"Actor, 10-Speed"}],"name_approx": [{ "id":"nm2998651", "title":"", "name":"Jason Blaise Cunningham","description":"Camera and Electrical Department, Dawn of the Planet of the Apes"},{ "id":"nm0192336", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Road Trip"},{ "id":"nm1899417", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Stuck in the Middle with You"},{ "id":"nm3483519", "title":"", "name":"Jason Cunningham","description":"Thanks, The Signal"},{ "id":"nm6377923", "title":"", "name":"Jameson Cunningham","description":"Sound Department, Amor"},{ "id":"nm7308883", "title":"", "name":"Jameson Cunningham","description":"Camera and Electrical Department, Electric"},{ "id":"nm3175205", "title":"", "name":"Jason Cunningham","description":"Writer, All American Addict"},{ "id":"nm3784096", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Lockdown"},{ "id":"nm2553697", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Dale&#x27;s Supermarket Sweep"},{ "id":"nm6125182", "title":"", "name":"Jason Cunningham","description":"Thanks, Dirty Beautiful"},{ "id":"nm4963372", "title":"", "name":"Jason Cunningham","description":"Thanks, Haunt"},{ "id":"nm6367389", "title":"", "name":"Jameson Cunningham","description":"Uncategorised"},{ "id":"nm5439317", "title":"", "name":"Clare Alison Cunningham","description":"Director, The Ancient Arts of Qigong &#x26; Tai Chi"},{ "id":"nm0192328", "title":"", "name":"Jack Cunningham","description":"Second Unit Director or Assistant Director, The Great Race"},{ "id":"nm2731697", "title":"", "name":"Carson Cunningham","description":"Camera and Electrical Department, One Day More: Part 2"},{ "id":"nm0192278", "title":"", "name":"Dan Cunningham","description":"Actor, Richard III"},{ "id":"nm4765145", "title":"", "name":"Jaclyn Cunningham","description":"Actress, Forever"},{ "id":"nm0192256", "title":"", "name":"Cason Cunningham","description":"Actor, Black Girl"},{ "id":"nm3160705", "title":"", "name":"Jacob Cunningham","description":"Writer, Thy Will Be Done"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:27 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:05:16 GMT
+      X-Varnish:
+      - 14910292, 3538707297 3537629494
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '371'
+      X-Cache:
+      - cp1054 miss (0), cp1052 frontend hit (5)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Jackson Cunningham",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:27 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=fred.gleichner@reichel.biz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:27 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '290'
+      X-Rate-Limit-Reset:
+      - '2'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "6fe7e285-092e-474a-87ee-5213aa573e76"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:27 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=deja.effertz@pfeffer.biz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:42 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '242'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '294'
+      X-Rate-Limit-Reset:
+      - '53'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "cb84bcaa-be94-4aa6-8eec-4a9b89a77005"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:42 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=deja.effertz@pfeffer.biz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 503
+      message: Service Unavailable
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:43 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '113'
+      Connection:
+      - keep-alive
+      Retry-After:
+      - '5'
+      Vary:
+      - Accept-Charset,Accept
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '293'
+      X-Rate-Limit-Reset:
+      - '52'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 503,
+          "message" : "Service Unavailable",
+          "requestId" : "94d88ad7-737a-4ccf-acd9-67f1f2a8e72b"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:42 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=penelope@robelgutmann.io
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 503
+      message: Service Unavailable
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:12:26 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '113'
+      Connection:
+      - keep-alive
+      Retry-After:
+      - '5'
+      Vary:
+      - Accept-Charset,Accept
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '287'
+      X-Rate-Limit-Reset:
+      - '8'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 503,
+          "message" : "Service Unavailable",
+          "requestId" : "286be606-bdd2-45af-a1f3-0f054fc5222d"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:26 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=penelope@robelgutmann.io
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:12:27 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '244'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '286'
+      X-Rate-Limit-Reset:
+      - '8'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "92296b02-5b75-445a-902e-8692f0ae2c7f"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:27 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:13:44 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '294'
+      X-Rate-Limit-Reset:
+      - '54'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "014a43b7-0533-4f6c-87dd-d981319551bb"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:44 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:13:45 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '293'
+      X-Rate-Limit-Reset:
+      - '54'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "a8a98402-1ad5-42b0-9759-ccac65833c13"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:45 GMT
+recorded_with: VCR 2.9.3

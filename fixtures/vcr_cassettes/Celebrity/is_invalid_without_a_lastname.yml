@@ -1,0 +1,640 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Mercedes%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:22 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYuTtIKDSJks1GJSmufzkWYsFVbNq7cqCfexJC_WuR7UxtNvnO5_Nz7m1Ts8LNDOT1c0Fc-reGqJsDmmR6AlEjYDg3NCLHbncZ8Vjd4IWSToHtBUONin_NOL8O-MuQrm_KISHyOoG35p9ddmJWeZM3ow2Siq5kRzkUV0w7xtW-iChc;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm2270168", "title":"", "name":"Mercedes Seecoomar","description":"Soundtrack, This Is 40"},{ "id":"nm4257596", "title":"", "name":"Mercedes","description":"Self, Strip Club: Solid Gold"},{ "id":"nm2138367", "title":"", "name":"Brenda Camilleri","description":"Casting Department, Agora"},{ "id":"nm6800930", "title":"", "name":"Mercedes","description":"Actor, &#xC9;lie Kakou au Cirque d&#x27;Hiver"},{ "id":"nm3037510", "title":"", "name":"Mercedes","description":"Actress, Shades"},{ "id":"nm3645740", "title":"", "name":"Mercedes","description":"Actress, Birddog"},{ "id":"nm1707336", "title":"", "name":"Mercedes","description":"Actress, The Fetish Garden"},{ "id":"nm4898457", "title":"", "name":"Mercedes","description":"Costume and Wardrobe Department, A Witch Without a Broom"},{ "id":"nm1746391", "title":"", "name":"Mercedes Scelba-Shorte","description":"Self, The Girl Who Floats Like a Butterfly and Stings Like a Bee"},{ "id":"nm1430162", "title":"", "name":"Susana Spears","description":"Actress, Actiongirls.com Volume 3"},{ "id":"nm3163877", "title":"", "name":"Mercedes","description":"Director, My Night Job"},{ "id":"nm0513199", "title":"", "name":"Merc&#xE9;d&#xE8;s Lintermans","description":"Actress, Law of Men"},{ "id":"nm0962575", "title":"", "name":"Mercedes","description":"Actress, Suspense"},{ "id":"nm5620099", "title":"", "name":"Mercedes","description":"Miscellaneous Crew, Face of Terror"},{ "id":"nm0580214", "title":"", "name":"Mercedes","description":"Actress, R&#xE9;quiem para Cheyenne"},{ "id":"nm2924205", "title":"", "name":"Mercedes","description":"Actress, Un bacio nel sogno"},{ "id":"nm3150653", "title":"", "name":"Mercedes","description":"Actress, The Monster"},{ "id":"nm0222845", "title":"", "name":"Diana DeVoe","description":"Actress, Diana and the Demon Hunter"},{ "id":"nm0085270", "title":"", "name":"Eva Black","description":"Actress, Hideous Man"},{ "id":"nm6328351", "title":"", "name":"Mercedes","description":"Thanks, Inte som p&#xE5; film"},{ "id":"nm0528760", "title":"", "name":"Mercedes Lynn","description":"Actress, Married with Hormones"},{ "id":"nm0030051", "title":"", "name":"Anike","description":"Actress, The Pyramid 1"},{ "id":"nm1937416", "title":"", "name":"Mercedes","description":"Actress, Club Ecstasy"},{ "id":"nm3149655", "title":"", "name":"Mercedes","description":"Actress, Reasonable Excuse"},{ "id":"nm1060628", "title":"", "name":"Mercedes Ashley","description":"Actress, Dark Deception"},{ "id":"nm1174708", "title":"", "name":"Mercedes","description":"Actress, Kamasutra"},{ "id":"nm1139586", "title":"", "name":"Jennifer Red","description":"Actress, Private Gold 26: Tatiana 1"},{ "id":"nm0863585", "title":"", "name":"Timea","description":"Actress, Private Gold 28: Tatiana 3"},{ "id":"nm0580215", "title":"", "name":"Mercedes","description":"Actress, Private Gold 28: Tatiana 3"},{ "id":"nm3099605", "title":"", "name":"Mercedes","description":"Actress, The Best by Private 35: 3 x 1, Three Girls on One Guy"},{ "id":"nm1546698", "title":"", "name":"Mercedes","description":"Actress, Cum Dumpsters 4"},{ "id":"nm2579054", "title":"", "name":"Mercedes Santos","description":"Actress, Swallow My Children"},{ "id":"nm1741047", "title":"", "name":"Mercedes","description":"Actress, Orgy World 8"},{ "id":"nm1146935", "title":"", "name":"Green Eyes","description":"Actress, Cum Dumpsters"},{ "id":"nm1923976", "title":"", "name":"Mercedes","description":"Actress, True Anal Stories 2"},{ "id":"nm1512203", "title":"", "name":"Mercedes","description":"Actress, Teen Tryouts Audition 26"},{ "id":"nm2633983", "title":"", "name":"Mercedes Dragon","description":"Actress, Cum for Cover 7"},{ "id":"nm1685502", "title":"", "name":"Mercedes","description":"Actress, Lesbo 101 4"},{ "id":"nm1067689", "title":"", "name":"Sabrina Vox","description":"Actress, Im Arsch der Nachbarin"},{ "id":"nm0839794", "title":"", "name":"Yvette Balant","description":"Actress, 2 on 1 #5"},{ "id":"nm2128032", "title":"", "name":"Mercedes","description":"Actress, Bootlegs and B-Sides"},{ "id":"nm1783564", "title":"", "name":"Mercedes","description":"Actress, Geil mit 40! Teil 2"},{ "id":"nm5519625", "title":"", "name":"Mercedes","description":"Actress, Sweet Cheeks 3"},{ "id":"nm5701290", "title":"", "name":"Mercedes","description":"Actress, Bi Bi White Guy 6"},{ "id":"nm6930051", "title":"", "name":"Mercedes","description":"Actress, 42 ans, Femme Infid&#xE8;le"},{ "id":"nm1766297", "title":"", "name":"Mercedes","description":"Actress, Rotzfreche Internats-G&#xF6;ren"},{ "id":"nm1910216", "title":"", "name":"Mercedes","description":"Actress, Cumm Sistas 6"},{ "id":"nm2391378", "title":"", "name":"Mercedes","description":"Actress, Thrilling Tales of Costume Captivity"},{ "id":"nm2567740", "title":"", "name":"Mercedes","description":"Actress, Twinlock"},{ "id":"nm4602012", "title":"", "name":"Mercedes","description":"Actress, La venganza de las ninfas"},{ "id":"nm5505365", "title":"", "name":"Mercedes","description":"Actress, Gay Arab Club"},{ "id":"nm5527663", "title":"", "name":"Mercedes","description":"Actress, How to Please a She-Male 2"},{ "id":"nm3770964", "title":"", "name":"Mercedes Delpino","description":"Uncategorised"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:23 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Mercedes%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '86'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:11:24 GMT
+      X-Varnish:
+      - 3771557379, 3538693146
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1065 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Mercedes ",["Mercedes"],["Mercedes may refer to:"],["https://en.wikipedia.org/wiki/Mercedes"]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:24 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=bobby@stiedemann.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:24 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '244'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '293'
+      X-Rate-Limit-Reset:
+      - '5'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "c186c525-a814-4ec6-aad2-97f3d2c14de4"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:24 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Lydia%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:39 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYtTkjYXQSKbwM3peB4jKUc87dVKezzOb3sanRiNawANJQCf-Jiq8L_HXbQbSqfHBwjyzxOOUzCAM2VDksaEBWMwSrv6Dl0zItrMc1L1V8zFtWuu3DzlVwQqOfgfcLnxEjuaC-i6mECD0BODdGxkbQnJjOzMnYtAoq8xRS7VMLnR3M;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm4201865", "title":"", "name":"Lydia Bright","description":"Self, The Big Fat Quiz of the Year"},{ "id":"nm4792803", "title":"", "name":"Lydia Ayoade","description":"Thanks, The Double"},{ "id":"nm5560502", "title":"", "name":"Lydia","description":"Self, Solving a Melted Mystery/Performing a Whole-House Energy Audit"},{ "id":"nm2883924", "title":"", "name":"Lydia Scott-Lee","description":"Self, Episode dated 30 June 2012"},{ "id":"nm7506057", "title":"", "name":"Lydia.","description":"Producer, The Wizard"},{ "id":"nm3459383", "title":"", "name":"Lydia","description":"Composer, The Time of the End"},{ "id":"nm7506058", "title":"", "name":"Lydia","description":"Production Manager, The Wizard"},{ "id":"nm0527983", "title":"", "name":"Lydia","description":"Self, The Eurovision Song Contest"},{ "id":"nm1777281", "title":"", "name":"Lydia","description":"Actress, Pervirella"},{ "id":"nm0527982", "title":"", "name":"Lydia","description":"Actress, La vida es maravillosa"},{ "id":"nm0527985", "title":"", "name":"Lydia","description":"Actress, The Blonde Wench Project"},{ "id":"nm6313273", "title":"", "name":"Lydia","description":"Self, Miss Understud"},{ "id":"nm2606339", "title":"", "name":"Lydia","description":"Self, Give Me Your Naked"},{ "id":"nm7086615", "title":"", "name":"Lydia Shelly","description":"Self, Living with the Enemy"},{ "id":"nm2454703", "title":"", "name":"Lydia Handscomb","description":"Self, Episode #34.3"},{ "id":"nm1184091", "title":"", "name":"Lydia","description":"Casting Director, Hotel Fickmichgut"},{ "id":"nm0527984", "title":"", "name":"Lydia","description":"Actress, Private Gold 26: Tatiana 1"},{ "id":"nm1512511", "title":"", "name":"Lydia","description":"Make-Up Department, Easy Cheeks"},{ "id":"nm1954637", "title":"", "name":"Lydia Pirelli","description":"Actress, Gute M&#xE4;dchen, b&#xF6;se M&#xE4;dchen"},{ "id":"nm0842264", "title":"", "name":"Jay Sweet","description":"Actress, Buttman&#x27;s British Moderately Big Tit Adventure"},{ "id":"nm1685486", "title":"", "name":"Lydia","description":"Actress, Private Black Label 4: Indecency 2"},{ "id":"nm1448714", "title":"", "name":"Lydia","description":"Actress, Cock Smokers 9"},{ "id":"nm1164514", "title":"", "name":"Lydia Ferol","description":"Actress, Die K&#xF6;nige der Nacht"},{ "id":"nm1914983", "title":"", "name":"Lydia Baum","description":"Actress, The Hot Liners"},{ "id":"nm5092826", "title":"", "name":"Lydia Love","description":"Actress, Rocco&#x27;s POV 13"},{ "id":"nm1193234", "title":"", "name":"Lydia","description":"Actress, Sweet Brazilian She-Males"},{ "id":"nm1887492", "title":"", "name":"Lydia","description":"Actress, Horny Over 40 2"},{ "id":"nm2920440", "title":"", "name":"Lydia","description":"Actress, Durchgefickt &#x26; vollgewixt"},{ "id":"nm2929210", "title":"", "name":"Lydia","description":"Actress, Trapped and Tied!"},{ "id":"nm3136135", "title":"", "name":"Lydia","description":"Casting Department, Kate, die l&#xE4;ufige Raubkatze"},{ "id":"nm3543981", "title":"", "name":"Lydia","description":"Actress, Simply 18"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:40 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Lydia%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '238'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 01:10:38 GMT
+      X-Varnish:
+      - 1707290496 1697371290, 3538765942
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '7262'
+      X-Cache:
+      - cp1055 hit (1), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Lydia ",["Lydia"],["Lydia (Assyrian: Luddu; Greek: \u039b\u03c5\u03b4\u03af\u03b1,
+        Turkish: Lidya) was an Iron Age kingdom of western Asia Minor located generally
+        east of ancient Ionia in the modern western Turkish provinces of U\u015fak,
+        Manisa and inland \u0130zmir."],["https://en.wikipedia.org/wiki/Lydia"]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:41 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=iac.blanda@trantowwill.co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:41 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '244'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '295'
+      X-Rate-Limit-Reset:
+      - '53'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "bf295fa3-d268-4b9e-b424-2f7134eb3a6e"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:41 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Eula%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:12:24 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYq1mud2CyuBGGd-OMpnKw7ey3ko-FbCWoV__e3Hkgm2dL01XOE9I3Ib9kqMl1btUNDwgFdzJUPuZpPD5oq2rGfvjH19UTLI5BpW-nUr9dwcvm-y7E1NyHK3S9cakmGOX-AzmgWX51FYS30rLlUmedW0ZdxtwdDG9FHUd_-W4Akc08;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_popular": [{ "id":"nm0883648", "title":"", "name":"Eula Valdez","description":"Actress, Sparks"}],"name_exact": [{ "id":"nm6685301", "title":"", "name":"Eula","description":"Actress, La India blanca"}],"name_substring": [{ "id":"nm4423611", "title":"", "name":"Eula Caballero","description":"Actress, Yesterday Today Tomorrow"},{ "id":"nm6086345", "title":"", "name":"Eula Freudenburg","description":"Actress, Nebraska"},{ "id":"nm6772062", "title":"", "name":"Eula Biss","description":"Self, Finding Vivian Maier"},{ "id":"nm0780830", "title":"", "name":"Eula Seaton","description":"Writer, The End of August"},{ "id":"nm7145332", "title":"", "name":"Eula Fails","description":"Self, MacArthur Returns to the Philippines"},{ "id":"nm0190551", "title":"", "name":"Eula Donkeen Crying Wind","description":"Actress, Squanto: A Warrior&#x27;s Tale"},{ "id":"nm0349809", "title":"", "name":"Eula Guy","description":"Actress, Expensive Husbands"},{ "id":"nm1231603", "title":"", "name":"Eula Mae Bishop","description":"Actress, Hyperspace"},{ "id":"nm1264629", "title":"", "name":"Eula Booth","description":"Actress, Escanaba in da Moonlight"},{ "id":"nm5795992", "title":"", "name":"Eula Fritz","description":"Producer, Episode #1.4"},{ "id":"nm1339367", "title":"", "name":"Eula Lieferman","description":"Actress, Father Beauclaire"},{ "id":"nm4793489", "title":"", "name":"Eula Parker","description":"Self, Eula Parker"},{ "id":"nm0668322", "title":"", "name":"Eula Payne","description":"Actress, Alligator Eyes"},{ "id":"nm2880742", "title":"", "name":"Eula Stewart","description":"Actress, Macbeth on the Estate"},{ "id":"nm0038863", "title":"", "name":"Eula Asher","description":"Actress, Violets on Mt. Rose"},{ "id":"nm0063611", "title":"", "name":"Eula Beal","description":"Self, Concert Magic"},{ "id":"nm1818316", "title":"", "name":"Eula Campos","description":"Producer, O Amor Uniu Dois Cora&#xE7;&#xF5;es"},{ "id":"nm5787434", "title":"", "name":"Eula Fritz","description":"Producer, Be My Pal"},{ "id":"nm7451610", "title":"", "name":"Eula Hwang","description":"Make-Up Department, Boyfriend Application"},{ "id":"nm0604645", "title":"", "name":"Eula Morgan","description":"Actress, Monsieur Verdoux"},{ "id":"nm4109002", "title":"", "name":"Eula Mae Williams","description":"Self, Greenwood: The Devil and the Delta Blues"},{ "id":"nm0233259", "title":"", "name":"Eula Doonkeen","description":"Actress, Episode #1.1"},{ "id":"nm3480474", "title":"", "name":"Eula Milon","description":"Actress, The Execution of Julie Ann Mabry"},{ "id":"nm6599546", "title":"", "name":"Eula Rochard","description":"Actor, Quenda que os Alib&#xE3; v&#xEA; a&#xED;"},{ "id":"nm5559082", "title":"", "name":"Eula Versoza","description":"Actress, Born to Love You"},{ "id":"nm6592668", "title":"", "name":"Eula Fritz","description":"Self, Episode #2.1"},{ "id":"nm2171223", "title":"", "name":"Eula Manocchi","description":"Self, Sueki and Coach"},{ "id":"nm6458944", "title":"", "name":"Eula Berasse","description":"Actress, Shadow King"},{ "id":"nm6304514", "title":"", "name":"Eula Frost","description":"Actress, In God&#x27;s Hands"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:25 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Eula%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:12:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '82'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:12:25 GMT
+      X-Varnish:
+      - 15742517, 3538963631
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1054 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Eula ",["Eula"],["Eula may refer to:"],["https://en.wikipedia.org/wiki/Eula"]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:25 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=madge@labadieroberts.name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:12:26 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '244'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '288'
+      X-Rate-Limit-Reset:
+      - '9'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "86525a2b-045a-4c12-afaf-3c2188a1e8dd"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:26 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Aaslkdfj%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:13:42 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYsSnGeWrvC-WwP_j5w6g1A5NhFuHpwiq8nNsaqaQ8LC2MFdvgrxIhlvn_MHvaf_z8WhxRoQgzWctf8d9b4FN3P-VjJ0mPUvWXj2GcCV4lrkmxUHAeqZpTFuUPOn537RyI-VYJ0yfG6WRt8B_Dq-Dwb94MQPkD-9InNh4MPL4fWtgY;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:43 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Aaslkdfj%20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:13:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '37'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:13:43 GMT
+      X-Varnish:
+      - 1707594684, 3539232161
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1055 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Aaslkdfj ",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:43 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:13:44 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '295'
+      X-Rate-Limit-Reset:
+      - '55'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "d44e6634-1564-425e-a8a2-03f36ba48dfa"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:44 GMT
+recorded_with: VCR 2.9.3

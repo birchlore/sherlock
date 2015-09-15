@@ -1,6 +1,7 @@
 require 'spec_helper'
 
-describe Celebrity do
+describe Celebrity, :vcr do
+
   it "has a valid factory" do
     expect(FactoryGirl.build(:celebrity)).to_not be_valid
     expect(FactoryGirl.build(:twitter_celebrity)).to be_valid
@@ -37,6 +38,8 @@ describe Celebrity do
       expect(FactoryGirl.create(:imdb_celebrity, :shop => shop)).to be_valid
 
     end
+
+    
 
   end
 

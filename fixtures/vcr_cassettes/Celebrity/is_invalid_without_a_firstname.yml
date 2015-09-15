@@ -1,0 +1,637 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=%20Prosacco
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:20 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYkcMG6u3qp-WW70Bzah9EryUjyjv_FfytIdB8aX10TXLLiJkfa2dzG_H2Fh9xt0lpuR3PD7f-7P0VtnnDgsRfXQe3cjFdCQ-ZxRVNIRRnuseiFusFFH0Se9Hv0T70a9Mtzn95DIL6rlf3OHy7C8W2tVBc3mL1x1KbZGveyc_4cKJ8;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm4812759", "title":"", "name":"Judith Jacob","description":"Self, Episode dated 31 March 2012"},{ "id":"nm4813382", "title":"", "name":"Melanie Haupt","description":"Actress, Black White"},{ "id":"nm4812300", "title":"", "name":"Nora Boeckler","description":"Self, Episode dated 31 March 2012"},{ "id":"nm0698271", "title":"", "name":"Domenico Procacci","description":"Producer, Seven Pounds"},{ "id":"nm5444843", "title":"", "name":"Kristian Porsgaard Rosasco","description":"Self, Episode dated 29 January 2015"},{ "id":"nm1327995", "title":"", "name":"Jose Rizal","description":"Writer, El filibusterismo"},{ "id":"nm2104626", "title":"", "name":"Lino Procacci","description":"Director, Domenica in"},{ "id":"nm1032085", "title":"", "name":"Allison Procacci","description":"Miscellaneous Crew, Ghost"},{ "id":"nm3332414", "title":"", "name":"John Prosac","description":"Camera and Electrical Department, White Noise 2: The Light"},{ "id":"nm0994994", "title":"", "name":"Anthony R. Sacco","description":"Transportation Department, Rise of the Planet of the Apes"},{ "id":"nm1110539", "title":"", "name":"Fausto Polacco","description":"Actor, Il giorno della prima di Close Up"},{ "id":"nm1717685", "title":"", "name":"Kristie Protacio","description":"Actress, Returner"},{ "id":"nm0214215", "title":"", "name":"Protacio Dee","description":"Actor, Missing in Action"},{ "id":"nm0688770", "title":"", "name":"Cesare Polacco","description":"Actor, Quinta puntata"},{ "id":"nm7431315", "title":"", "name":"Ross Procaccio","description":"Writer, Of Clocks and Clouds, What You Need"},{ "id":"nm2323673", "title":"", "name":"Anais Prosaic","description":"Director, La t&#xE9;l&#xE9;vision des &#xC9;thiopiens"},{ "id":"nm3585043", "title":"", "name":"Nora Protacio","description":"Actress, Lea&#x27;s Story"},{ "id":"nm5378949", "title":"", "name":"Lina Losacco","description":"Actress, Giulia ha picchiato Filippo"},{ "id":"nm1877276", "title":"", "name":"Graziella Polacco","description":"Actress, Europe &#x27;51"},{ "id":"nm1590806", "title":"", "name":"Amy Procacci","description":"Producer, Sun Valley, Idaho"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:21 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=%20Prosacco
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '37'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:11:22 GMT
+      X-Varnish:
+      - 3218486187, 3538685188
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1053 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '[" Prosacco",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:22 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=cecelia.wolf@bartoletti.info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:22 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '245'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '294'
+      X-Rate-Limit-Reset:
+      - '7'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "e43f0d4a-5085-4f83-a277-3de8b08f0391"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:22 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=%20Morissette
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:11:37 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYmjD_4ZF23zYL6agB_i4QHD8pFuHpwiq8nNsaqaQ8LC2NXfm4t7jE0i8uqqIxZE6Rjf129wMvgeA0n335vCihFV6RC7Zqt7XKfI_Nwf85Vx06TYKmgwrtocyugHAgY67uJ7diHoETK0E-IVVg5tZ_TjvrLBpj1j5h2UfKvQyq3x-s;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_substring": [{ "id":"nm0001551", "title":"", "name":"Alanis Morissette","description":"Soundtrack, The Chronicles of Narnia: The Lion, the Witch and the Wardrobe"},{ "id":"nm1550844", "title":"", "name":"Marc Morissette","description":"Visual Effects, Ghost Rider"},{ "id":"nm1288034", "title":"", "name":"Jean-Francois Morissette","description":"Visual Effects, 300"},{ "id":"nm0605701", "title":"", "name":"St&#xE9;phane Morissette","description":"Director, 2000 pieds carr&#xE9;s"},{ "id":"nm2020286", "title":"", "name":"St&#xE9;phanie Morissette","description":"Producer, Vic + Flo Saw a Bear"},{ "id":"nm1747867", "title":"", "name":"Louis Morissette","description":"Actor, Le Mirage"},{ "id":"nm5778647", "title":"", "name":"Daniel Morissette","description":"Writer, L&#x27;amour n&#x27;a rien &#xE0; voir"},{ "id":"nm6277866", "title":"", "name":"Laurianne Morissette","description":"Self, Le semeur"},{ "id":"nm5642804", "title":"", "name":"Andre Morissette","description":"Sound Department, Listen to See"},{ "id":"nm3345438", "title":"", "name":"Dominic Morissette","description":"Director, Chroniques afghanes"},{ "id":"nm0607367", "title":"", "name":"Luc Morissette","description":"Actor, The Human Stain"},{ "id":"nm0605700", "title":"", "name":"Patrick Morissette","description":"Actor, Buddy Joe contre-attaque"},{ "id":"nm6967609", "title":"", "name":"Paul Morissette","description":"Thanks, Enemy"},{ "id":"nm1109426", "title":"", "name":"Gr&#xE9;goire Hay-Morissette","description":"Actor, February 15, 1839"},{ "id":"nm3171467", "title":"", "name":"Caroline Morissette","description":"Miscellaneous Crew, Immortals"},{ "id":"nm5317661", "title":"", "name":"Tabris Morissette","description":"Animation Department, Rodencia y el Diente de la Princesa"},{ "id":"nm0605696", "title":"", "name":"Armand Morissette","description":"Self, What Happened to Kerouac?"},{ "id":"nm1875349", "title":"", "name":"Claude Morissette","description":"Special Effects, Mystery of the Maya"},{ "id":"nm4218324", "title":"", "name":"Daniel Morissette","description":"Actor, A Diff&#xE9;rentes vitesses"},{ "id":"nm4134876", "title":"", "name":"Eric Morissette","description":"Miscellaneous Crew, Uncharted 3: Drake&#x27;s Deception"},{ "id":"nm0605697", "title":"", "name":"Florence Morissette","description":"Actress, Episode #4.5"},{ "id":"nm0605698", "title":"", "name":"Jennifer Morissette","description":"Costume and Wardrobe Department, Enough Already"},{ "id":"nm0605699", "title":"", "name":"Pamela Morissette","description":"Miscellaneous Crew, Mr. Murder"},{ "id":"nm3927322", "title":"", "name":"Caitlin Morissette","description":"Producer, Deborah &#x26; Pals!"},{ "id":"nm6832987", "title":"", "name":"Serge Morissette","description":"Self, Prog Rock"},{ "id":"nm7342709", "title":"", "name":"Lisa Hobman","description":"Self, Episode #8.2"},{ "id":"nm6915926", "title":"", "name":"Andr&#xE9; Morissette","description":"Actor, Episode #4.3"},{ "id":"nm3268772", "title":"", "name":"Dave Morissette","description":"Actor, Lance et compte"},{ "id":"nm1059014", "title":"", "name":"Suzanne Morissette","description":"Actress, The Last Place on Earth"},{ "id":"nm7346458", "title":"", "name":"Emma-Kate Spencer-Galsworthy","description":"Self, Episode #10.4"},{ "id":"nm3020498", "title":"", "name":"Sherry Morissette","description":"Writer, The Little French Maid"},{ "id":"nm5631297", "title":"", "name":"Yvan Morissette","description":"Art Department, Henchin&#x27;"},{ "id":"nm4106677", "title":"", "name":"Marion Duhaime-Morissette","description":"Producer, Les fourmis noires"},{ "id":"nm6048267", "title":"", "name":"Aaron Latta-Morissette","description":"Actor, Road Rage"},{ "id":"nm5255533", "title":"", "name":"Benoit Morissette","description":"Actor, Le Grinch"},{ "id":"nm4845714", "title":"", "name":"Erin Morissette","description":"Miscellaneous Crew, Episode #2.1"},{ "id":"nm4250589", "title":"", "name":"Julie Morissette","description":"Thanks, Doritos Crash Course"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:38 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=%20Morissette
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:11:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '74'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:11:39 GMT
+      X-Varnish:
+      - 263091396, 3538756114
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1052 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '[" Morissette",["Morissette"],[""],["https://en.wikipedia.org/wiki/Morissette"]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:39 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=cory@greenholtchristiansen.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:11:39 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '245'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '296'
+      X-Rate-Limit-Reset:
+      - '56'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "ebc361f5-dc48-4e22-9ca7-1787189b1f02"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:11:39 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=%20Goyette
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:12:21 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYgZF42PyjrUbYQyTQbG2dGhd75XrTwrJ3PdTmMz_IXuSM28c7zvl2_O6SkiY8Y3AEeMubAFk4Hp_HMBTz1YFVX7ju4jwmnvVGg67-U98IW_iZY1gwDOpruDIWTRkxlJakDtW46drEMGUeb74K_g91Faien9yy-Q55cnPC0LsJUst8;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_substring": [{ "id":"nm6333288", "title":"", "name":"Marie Goyette","description":"Actress, The Grand Budapest Hotel"},{ "id":"nm4485878", "title":"", "name":"Sophie Goyette","description":"Director, Le futur proche"},{ "id":"nm0333072", "title":"", "name":"Dave Goyette","description":"Special Effects, RoboCop 3"},{ "id":"nm1764887", "title":"", "name":"Paul Goyette","description":"Writer, The Trio of Minuet"},{ "id":"nm0333079", "title":"", "name":"Patrick Goyette","description":"Actor, The Confessional"},{ "id":"nm2531440", "title":"", "name":"Alexandre Goyette","description":"Actor, Mommy"},{ "id":"nm3752696", "title":"", "name":"M&#xE9;lanie Goyette","description":"Visual Effects, The Peacekeeper"},{ "id":"nm0333073", "title":"", "name":"Desir&#xE9;e Goyette","description":"Composer, Garfield in Disguise"},{ "id":"nm1650253", "title":"", "name":"Jennifer Goyette","description":"Director, The Lazy Assassin"},{ "id":"nm3863910", "title":"", "name":"Lindsay Goyette","description":"Producer, Thin Tin Tin"},{ "id":"nm1858012", "title":"", "name":"Chad Goyette","description":"Miscellaneous Crew, American Hustle"},{ "id":"nm5560012", "title":"", "name":"Ethiel Goyette","description":"Cinematographer, Sur le quai"},{ "id":"nm2748258", "title":"", "name":"Gerry Goyette","description":"Cinematographer, Daily Routine"},{ "id":"nm0333077", "title":"", "name":"Michel Goyette","description":"Actor, Le dernier souffle"},{ "id":"nm4964013", "title":"", "name":"Rich Goyette","description":"Sound Department, Andrea: The Revenge of the Spirit"},{ "id":"nm0333075", "title":"", "name":"Jocelyne Goyette","description":"Actress, Nic et Pic"},{ "id":"nm0333076", "title":"", "name":"Joe Goyette","description":"Producer, Drawn Together"},{ "id":"nm1314459", "title":"", "name":"Gerard Goyette Jr.","description":"Actor, It&#x27;s an Adventure, Charlie Brown"},{ "id":"nm2751833", "title":"", "name":"S&#xE9;bastien Goyette","description":"Editor, Bagarre G&#xE9;n&#xE9;rale"},{ "id":"nm2085857", "title":"", "name":"Elise Goyette","description":"Miscellaneous Crew, The Transformers: The Movie"},{ "id":"nm3795694", "title":"", "name":"Nicolas Goyette","description":"Sound Department, Osoyoos"},{ "id":"nm2596484", "title":"", "name":"Ariane Goyette","description":"Editorial Department, Expedition Eastern Gray Kangaroo"},{ "id":"nm1812780", "title":"", "name":"Charles Goyette","description":"Self, Washington You&#x27;re Fired"},{ "id":"nm0333074", "title":"", "name":"Frank Goyette","description":"Actor, Parentage"},{ "id":"nm7283409", "title":"", "name":"Harrison Goyette","description":"Actor, Iron Hans"},{ "id":"nm5892214", "title":"", "name":"Holden Goyette","description":"Actor, Zilla and Zoe"},{ "id":"nm5941564", "title":"", "name":"Jean-Philippe Goyette","description":"Sound Department, Alex Tagliani: L&#x27;homme, l&#x27;athl&#xE8;te"},{ "id":"nm4684983", "title":"", "name":"Jim Goyette","description":"Actor, The Holy Ground: The Killers - Part 2"},{ "id":"nm0333080", "title":"", "name":"Robert Goyette","description":"Actor, Checking Out"},{ "id":"nm2664543", "title":"", "name":"Carolyne Goyette","description":"Producer, Les fleurs de l&#x27;&#xE2;ge"},{ "id":"nm1345910", "title":"", "name":"Gabrielle Goyette","description":"Actress, Head of State"},{ "id":"nm7356429", "title":"", "name":"Marie-H&#xE9;l&#xE8;ne Goyette","description":"Camera and Electrical Department, Verdun"},{ "id":"nm6597105", "title":"", "name":"Michael Goyette","description":"Producer, State of Desolation"},{ "id":"nm6725448", "title":"", "name":"Phil Goyette","description":"Self, Hockey&#x27;s Greatest Era: 1942-1967"},{ "id":"nm4433221", "title":"", "name":"Samuel Goyette","description":"Actor, Twin Winds"},{ "id":"nm6245618", "title":"", "name":"Sarah Goyette","description":"Producer, After Ever After"},{ "id":"nm2509147", "title":"", "name":"Sue Goyette","description":"Writer, Heavy Metal Night at Gus&#x27; Pub"},{ "id":"nm7061113", "title":"", "name":"Terry Goyette","description":"Editorial Department, Got Milk?"},{ "id":"nm4433633", "title":"", "name":"Thomas Goyette","description":"Actor, Twin Winds"},{ "id":"nm3826976", "title":"", "name":"Alain Goyette","description":"Actor, A No-Hit No-Run Summer"},{ "id":"nm2078193", "title":"", "name":"Alex Goyette","description":"Producer, Expelled"},{ "id":"nm3679446", "title":"", "name":"Bianca Goyette","description":"Actress, God Forgive Us"},{ "id":"nm4049503", "title":"", "name":"Keith Goyette","description":"Self, Shake the Devil Off"},{ "id":"nm1076677", "title":"", "name":"Ken Goyette","description":"Miscellaneous Crew, Bedford Springs"},{ "id":"nm6100294", "title":"", "name":"Rose Goyette","description":"Miscellaneous Crew, Little Savages"},{ "id":"nm3556935", "title":"", "name":"Brina Goyette","description":"Transportation Department, Whiskey Jacks"},{ "id":"nm5696736", "title":"", "name":"Diane Goyette","description":"Self, Sherbrooke, QC: Chef Danny St. Pierre"},{ "id":"nm4392142", "title":"", "name":"Simone Goyette-Holm","description":"Self, Trisomie 21 Le d&#xE9;fi P&#xE9;rou"},{ "id":"nm7217661", "title":"", "name":"Lyette Goyette","description":"Actress, Contact"},{ "id":"nm6475144", "title":"", "name":"Patrick Goyette","description":"Actor, Maisons mod&#xE8;les"},{ "id":"nm2614457", "title":"", "name":"Ron Goyette","description":"Actor, 99.2: A SpyQuest Adventure"},{ "id":"nm1361714", "title":"", "name":"Danielle Goyette","description":"Actress, Episode #1.1"},{ "id":"nm1241383", "title":"", "name":"Gigi Goyette","description":"Stunts, Rusty: A Dog&#x27;s Tale"},{ "id":"nm3450700", "title":"", "name":"Jacqueline Goyette","description":"Thanks, The Lazy Assassin"},{ "id":"nm3209551", "title":"", "name":"Zac Goyette","description":"Actor, Too Dead to Die"},{ "id":"nm6245617", "title":"", "name":"Dan Goyette","description":"Uncategorised"},{ "id":"nm5720466", "title":"", "name":"Emily Goyette","description":"Uncategorised"},{ "id":"nm6706976", "title":"", "name":"Kathryn Goyette","description":"Uncategorised"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:23 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=%20Goyette
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:12:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '36'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:12:23 GMT
+      X-Varnish:
+      - 896483174, 3538955684
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1068 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '[" Goyette",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:23 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=trea_howell@spencer.info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:12:23 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '245'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '289'
+      X-Rate-Limit-Reset:
+      - '11'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 202,
+          "message" : "Queued for search. Please retry your query within about 2 minutes. Prefer not to re-submit queries? Try using our webhook option, documented at: http://www.fullcontact.com/developer/docs/person/#webhook-email",
+          "requestId" : "8040dc87-e269-4363-ba73-babc12c95371"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:12:23 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=%20alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 00:13:40 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYtUF4yJIhBMtX4h9NSLXAI8WEMGq18Ic9tz_LWhGVhFKPbuZjurHkJL8niyr1FOuA46DIaS_-Amya_2G6lZEs1RWFmj1Dzh6ebTdjN3_ShNRsja6VapiNnnOUebmJui5pfFUiwUaYYe5htj-DRCSeC60SaahJC123WZRtAoDczie4;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm1627360", "title":"", "name":"Katja P&#xE4;llijeff","description":"Editor, Presidentintekij&#xE4;t"},{ "id":"nm0701727", "title":"", "name":"Pentti P&#xE4;llijeff","description":"Camera and Electrical Department, One-Way Ticket to Mombasa"},{ "id":"nm7148639", "title":"", "name":"Peppina P&#xE4;llijeff","description":"Soundtrack, Urban Family"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:41 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=%20alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 00:13:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '37'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 03:13:42 GMT
+      X-Varnish:
+      - 1707592906, 3539228608
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1055 miss (0), cp1052 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.28:-123.11:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '[" alfsijef",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:42 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Tue, 15 Sep 2015 00:13:42 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '296'
+      X-Rate-Limit-Reset:
+      - '56'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "fbb80661-13bf-422d-8386-a732b5db6287"
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 00:13:42 GMT
+recorded_with: VCR 2.9.3
