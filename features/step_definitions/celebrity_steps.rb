@@ -32,7 +32,7 @@ When "I am a logged in user" do
 end
 
 Then "I install the app" do
-  click_link_or_button "Install Groupie Staging"
+  click_link_or_button "Install Groupie Test Environment"
 end
 
 When "I have enabled imdb" do
