@@ -8,10 +8,11 @@ class Celebrity < ActiveRecord::Base
   validates_presence_of :first_name
   validates_presence_of :last_name
   validates_presence_of :shop
+  before_validation :sanitize
 
   validate :celebrity_status
   
-  before_save :sanitize
+  
 
   after_create :send_email_notification
 
@@ -37,10 +38,7 @@ class Celebrity < ActiveRecord::Base
   def sanitize
     fields = ["first_name", "last_name"]
     fields.each do |field| 
-      if self[field]
-        # self[field] = self[field].gsub(/\s+/, "").downcase.capitalize
-        self[field] = self[field].capitalize
-      end
+      self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
     end
   end
 

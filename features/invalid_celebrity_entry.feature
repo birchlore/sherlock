@@ -1,21 +1,11 @@
 @javascript
-Feature: User adds a customer manually
+Feature: User adds an invalid celebrity
 
   Background:
     Given I am a logged in user
 
-  Scenario: User adds a customer who is a twitter celebrity
-    Given the customer is a twitter celebrity
-    When I add the customer
-    Then I should see that the customer is a celebrity
-
-  Scenario: User adds a customer who is a wikipedia celebrity
-    Given the customer is a wikipedia celebrity
-    When I add the customer
-    Then I should see that the customer is a celebrity
-
   Scenario: User adds a customer who is not a celebrity
-    Given the customer does not have a Wikipedia page, IMDB page, or Twitter following
+    Given the customer is not a celebrity
     When I add the customer
     Then I should see that the customer is not a celebrity
 
@@ -30,4 +20,3 @@ Feature: User adds a customer manually
     When I add the customer
     And I wait 2 seconds
     Then I should see that the customer is a celebrity
-

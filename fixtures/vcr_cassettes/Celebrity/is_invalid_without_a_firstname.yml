@@ -634,4 +634,115 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 15 Sep 2015 00:13:42 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 19:55:39 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYuOxKNF2mvOkarWh8oi_Q0TfnTVpO_rDJFTLO-Yll98Jbc8zza2czPPQchSVw1QLM3wGLBdZLULD9pZEJXLyniDIT7o_V5i6v6-vIJ92b0lKt8AB6u43SY3SMowNNn15LERoeAsxFfgXr-lg8AUX9t-0N2K2f_dEKRBCBzWiTJH2k;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm1627360", "title":"", "name":"Katja P&#xE4;llijeff","description":"Editor, Presidentintekij&#xE4;t"},{ "id":"nm0701727", "title":"", "name":"Pentti P&#xE4;llijeff","description":"Camera and Electrical Department, One-Way Ticket to Mombasa"},{ "id":"nm7148639", "title":"", "name":"Peppina P&#xE4;llijeff","description":"Soundtrack, Urban Family"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 19:55:40 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 19:55:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '37'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 22:55:40 GMT
+      X-Varnish:
+      - 2547907355, 1201890914
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1066 miss (0), cp1065 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '[" Alfsijef",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 19:55:41 GMT
 recorded_with: VCR 2.9.3

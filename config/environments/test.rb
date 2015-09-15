@@ -1,4 +1,13 @@
 Rails.application.configure do
+  require 'vcr'
+
+VCR.configure do |c|
+  c.default_cassette_options = { :record => :new_episodes }
+  c.cassette_library_dir = 'fixtures/vcr_cassettes'
+  c.hook_into :webmock # or :fakeweb
+  c.allow_http_connections_when_no_cassette = true 
+  c.configure_rspec_metadata!
+end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's

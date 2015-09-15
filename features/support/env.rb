@@ -82,6 +82,11 @@ def uninstall_app
   response = RestClient.delete(revoke_url, headers)
   decoded = JSON.parse(response.body)['permission']
   decoded['access_token'] # 'secret'
+
+  # stub_request(:delete, revoke_url).
+  # with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip, deflate', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby', 'X-Shopify-Access-Token'=> access_token}).
+  # to_return(:status => 200, :body => "", :headers => {})
+
 end
 
 Before do

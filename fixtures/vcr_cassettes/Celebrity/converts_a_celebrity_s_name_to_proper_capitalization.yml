@@ -210,4 +210,119 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 15 Sep 2015 00:11:25 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=John%20Doe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 19:55:41 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYv32UfPY38hTJeB0kGD9WrjlEr_1fQ7zinLEY-JEmxWgbE0KTmddzSAxAKunNIbGjGFCp75ncoTGLDNrIC3RgDGt_9Q5lUH2-ei9WQHLa4_CEaHSvDg3p9hGsrvhftTwFkNJF9WGE_fMTUxu3XJoqRueU_qs1nVNfLc-f9cmbEADA;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_popular": [{ "id":"nm0234809", "title":"", "name":"Jon Dough","description":"Actor, Latex"}],"name_exact": [{ "id":"nm0230335", "title":"", "name":"John Doe","description":"Actor, Great Balls of Fire!"},{ "id":"nm0230336", "title":"", "name":"John Doe","description":"Writer, ER: Life on the Edge"},{ "id":"nm7406805", "title":"", "name":"John Doe","description":"Director, Clean on the Outside Pink on the Inside 2"},{ "id":"nm0775010", "title":"", "name":"John Schouweiler","description":"Producer, Gods and Monsters"},{ "id":"nm0230337", "title":"", "name":"John Doe","description":"Camera and Electrical Department, BookWars"},{ "id":"nm4974861", "title":"", "name":"John Doe","description":"Editorial Department, Last Hour"},{ "id":"nm6879818", "title":"", "name":"John Doe","description":"Editor, The Axeman of Henderson County"},{ "id":"nm4600004", "title":"", "name":"John Doe","description":"Cinematographer, Iniquity"},{ "id":"nm2371277", "title":"", "name":"John Doe","description":"Composer, The American West: On the Road with Michael Blake"},{ "id":"nm4204339", "title":"", "name":"John Doe","description":"Actor, 99"},{ "id":"nm5069159", "title":"", "name":"John Doe","description":"Sound Department, Dead Pulse: Pilot"},{ "id":"nm5304335", "title":"", "name":"John Doe","description":"Miscellaneous Crew, Good to Go"},{ "id":"nm6477392", "title":"", "name":"John Doe","description":"Transportation Department, The Tank"},{ "id":"nm6359714", "title":"", "name":"John Doe","description":"Actor, Over 40 National Commercials"},{ "id":"nm7306855", "title":"", "name":"John Doe","description":"Self, Gun Control"},{ "id":"nm6328637", "title":"", "name":"John Doe","description":"Self, Invisible People Of The Upper West Side"},{ "id":"nm7403863", "title":"", "name":"John Doe","description":"Actor, Most Likely to Die"},{ "id":"nm6089340", "title":"", "name":"John Doe","description":"Miscellaneous Crew, Chivalry: Medieval Warfare"},{ "id":"nm3384869", "title":"", "name":"John Doe","description":"Sound Department, The Bitter End"},{ "id":"nm1458388", "title":"", "name":"John Doe","description":"Cinematographer, Schweden Report - Ausgabe 6"},{ "id":"nm5852211", "title":"", "name":"John Doe","description":"Uncategorised"},{ "id":"nm7044814", "title":"", "name":"John Doe","description":"Uncategorised"},{ "id":"nm6742918", "title":"", "name":"John Doe","description":"Uncategorised"}],"name_substring": [{ "id":"nm3387428", "title":"", "name":"The John Doe Thing","description":"Soundtrack, Sugar Town"},{ "id":"nm5557799", "title":"", "name":"George John Doe","description":"Actor, Ghost Man"}]
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 19:55:42 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=John%20Doe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 19:55:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '237'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 22:55:42 GMT
+      X-Varnish:
+      - 1003576019, 1201895964
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1068 miss (0), cp1065 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["John Doe",["John Doe"],["The names \"John Doe\" or \"John Roe\" for
+        men, \"Jane Doe\" or \"Jane Roe\" for women, or \"Johnnie Doe\" and \"Janie
+        Doe\" for children, or just \"Doe\" non-gender-specifically are used as placeholder
+        names for a party whose true identity is unknown or must be withheld in a
+        legal action, case, or discussion."],["https://en.wikipedia.org/wiki/John_Doe"]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 19:55:43 GMT
 recorded_with: VCR 2.9.3

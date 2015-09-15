@@ -1,5 +1,5 @@
 @javascript
-Feature: User adds a customer manually
+Feature: User adds an IMDB customer
 
   Background:
     Given I am a logged in user

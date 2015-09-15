@@ -48,13 +48,6 @@ When /^I wait (.+) seconds$/ do |seconds|
   sleep seconds.to_i
 end
 
-Given "the customer is a celebrity with incorrect whitespaces" do
-  @customer = build(:celebrity, :first_name=>"  Noah", :last_name=>"Kagan ")
-end
-
-Given "the customer is a celebrity with incorrect capitalization" do
-  @customer = build(:celebrity, :first_name=>"hArRy", :last_name=>"tRUman")
-end
 
 When /^I add the customer$/ do
   fill_in :celebrity_email, :with => @customer.email
@@ -67,21 +60,6 @@ Then /^I should see that the customer is a celebrity$/ do
   expect(page).to have_css('.celebrity-row')
 end
 
-Given "the customer does not have a Wikipedia page, IMDB page, or Twitter following" do
-  @customer = build(:celebrity, :first_name=>"Birglend", :last_name=>"Firglingham", :email=>"birglendfirglingham@gmail.com")
+When "pry" do
+  binding.pry
 end
-
-
-Then "I should see that the customer is not a celebrity" do
-  expect(page).to have_content("ain't no celebrity")
-end
-
-
-
-
-
-
-
-
-
-

@@ -1871,4 +1871,226 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 15 Sep 2015 00:13:40 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 19:55:37 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYmRR8m8nGYwQHCBuBK9nm7dJpIOWWdVAQGenVagyWvpvIcE38zKwSIcf2o_BR6JYozadEkeUVUX3EYLnm0MQnEEjy1FcarVFbVO20OxFzgHmKbkRq9E_aKnSTUDOcRDpItzLbmJBIAIKx5lyQaECIWom-5BZbYli5QCml5tyZDX7w;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 19:55:38 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 19:55:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '45'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 20:58:05 GMT
+      X-Varnish:
+      - 1798009158, 1201884527 1180338589
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '7053'
+      X-Cache:
+      - cp1055 miss (0), cp1065 frontend hit (15)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Aaslkdfj Alfsijef",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 19:55:38 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Sep 2015 19:55:38 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYoAwSjwEDhjmhzZ1kSjut3lN50YMFrF44bPg8ZwiFRad8sIMEXhu9H6w72crvDy2y9sAwFOjv5XFjpfgR29-naSYL7W-jioT_LWt5u7x059V1eW9l8efKrIapyTBq24O0VwRQkZ26zPDnxxbnrIPqaeV1qJzqjBVc8YUuIYWMJoSc;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+
+        }
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 19:55:39 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Tue, 15 Sep 2015 19:55:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '45'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Tue, 15 Sep 2015 20:58:05 GMT
+      X-Varnish:
+      - 1798009158, 1201886230 1180338589
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '7053'
+      X-Cache:
+      - cp1055 miss (0), cp1065 frontend hit (16)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=15-Sep-2015;Path=/;HttpOnly;Expires=Sat, 17 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Aaslkdfj Alfsijef",[],[],[]]'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 19:55:39 GMT
 recorded_with: VCR 2.9.3
