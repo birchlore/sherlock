@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/celebrity/unarchive/:id' => 'celebrities#unarchive', as: :celebrity_unarchive
   
   resources :celebrities, :only=> [:index, :show, :new, :create, :destroy]
-  resources :shops, :only=> [:edit, :update]
+  resource :shops, :only=> [:edit, :update]
 
 
   scope '/hooks', :controller => :hooks do
