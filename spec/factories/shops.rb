@@ -5,7 +5,6 @@ FactoryGirl.define do
     }
     shopify_token '12345'
     twitter_follower_threshold 1
-    imdb_notification true
 
     trait :actual_domain do
       shopify_domain "sherlocks-spears.myshopify.com"
