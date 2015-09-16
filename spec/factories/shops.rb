@@ -12,4 +12,8 @@ FactoryGirl.define do
 
   end
 
+   factory :imdb_shop, parent: :shop do
+     imdb_notification true
+   end
+
 end

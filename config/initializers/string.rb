@@ -6,11 +6,11 @@ class String
   end
 
   def is_common?
-    self && self.include?("may refer to")
+    self.include?("may refer to")
   end
 
   def is_a_redirect?
-     self && self.include?("This is a redirect")
+     self.include?("This is a redirect")
   end
 
 end
