@@ -10,7 +10,7 @@ class Celebrity < ActiveRecord::Base
   validates_presence_of :shop
   before_validation :sanitize
 
-  validate :celebrity_status
+  validate :celebrity_status, :on => :create
   
   
 

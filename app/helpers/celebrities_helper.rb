@@ -44,7 +44,7 @@ module CelebritiesHelper
     elsif celebrity.imdb_description
       celebrity.imdb_description
     else
-      "N/A"
+      "No description at this time. Investigate further (google them)."
     end
   end
 
