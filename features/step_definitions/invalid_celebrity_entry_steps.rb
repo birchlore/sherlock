@@ -6,8 +6,16 @@ Given "the customer is a celebrity with incorrect capitalization" do
   @customer = build(:celebrity, :first_name=>"hArRy", :last_name=>"tRUman")
 end
 
+Given "the customer is a celebrity who is dead" do
+  @customer = build(:celebrity, :first_name=>"Robert", :last_name=>"Frost")
+end
+
 Given "the customer is not a celebrity" do
   @customer = build(:celebrity, :first_name=>"Birglend", :last_name=>"Firglingham", :email=>"birglendfirglingham@gmail.com")
+end
+
+Given "the customer is a celebrity with a common name" do
+	@customer = build(:celebrity, :first_name=>"Sarah", :last_name=>"Smith")
 end
 
 

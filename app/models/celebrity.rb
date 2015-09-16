@@ -77,15 +77,19 @@ class Celebrity < ActiveRecord::Base
 
     if json[0].present? && json[0].upcase == self.full_name.upcase
 
+      wikipedia_url = json[3].first
       description = json[2].first
+      
       if description && description.include?("may refer to")
         description = "This is a common name and may refer to several celebrities."
+        wikipedia_url = nil
       elsif description && description.include?("This is a redirect")
         description = "This person has an AKA. See their Wikipedia page."
       end
 
+      self.wikipedia_url = wikipedia_url
       self.wikipedia_description = description
-      self.wikipedia_url = json[3].first
+      
     end
 
   end
