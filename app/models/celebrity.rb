@@ -42,6 +42,8 @@ class Celebrity < ActiveRecord::Base
     end
   end
 
+
+
   private
 
   def send_email_notification
@@ -79,11 +81,9 @@ class Celebrity < ActiveRecord::Base
 
       wikipedia_url = json[3].first
       description = json[2].first
-      
-      if description && description.include?("may refer to")
-        description = "This is a common name and may refer to several celebrities."
+      if description.is_common? || description.is_dead?
         wikipedia_url = nil
-      elsif description && description.include?("This is a redirect")
+      elsif description.is_a_redirect?
         description = "This person has an AKA. See their Wikipedia page."
       end
 
