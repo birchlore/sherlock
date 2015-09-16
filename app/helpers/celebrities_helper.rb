@@ -3,6 +3,8 @@ module CelebritiesHelper
     def has_wikipedia?(celebrity)
      if celebrity.wikipedia_url.present?
         link_to 'Yes', celebrity.wikipedia_url, :target=>"_blank"
+      elsif !celebrity.shop.wikipedia_notification
+        "N/A"
       else
         "No"
       end
@@ -11,6 +13,8 @@ module CelebritiesHelper
   def has_imdb?(celebrity)
     if celebrity.imdb_url.present?
       link_to 'Yes', celebrity.imdb_url, :target=>"_blank"
+    elsif !celebrity.shop.imdb_notification
+       "N/A"
     else
       "No"
     end
