@@ -14,9 +14,9 @@ class Shop < ActiveRecord::Base
   end
 
   def set_email
-    # if Rails.env.production?
-    #   self.update_attributes({:email => ShopifyAPI::Shop.current.email})
-    # end
+    if Rails.env.production?
+      self.update_attributes({:email => ShopifyAPI::Shop.current.email})
+    end
   end
 
   def self.retrieve(id)
@@ -37,8 +37,11 @@ class Shop < ActiveRecord::Base
 
     # webhooks weren't working on shopify when I used Figaro.env.root_uri + "/hooks/new_customer_callback". Afraid to change this now without messing it up..
     if Rails.env.production?
-      new_customer = ShopifyAPI::Webhook.new(:topic => "customers/create", :format => "json", :address => "https://groupie.pixelburst.co/hooks/new_customer_callback")
-      uninstall = ShopifyAPI::Webhook.new(:topic => "app/uninstalled", :format => "json", :address => "https://groupie.pixelburst.co/hooks/app_uninstalled_callback")
+      new_customer_callback_url = Figaro.env.root_uri + "/hooks/new_customer_callback"
+      uninstall_callback_url = Figaro.env.root_uri + "/hooks/app_uninstalled_callback"
+
+      new_customer = ShopifyAPI::Webhook.new(:topic => "customers/create", :format => "json", :address => new_customer_callback_url)
+      uninstall = ShopifyAPI::Webhook.new(:topic => "app/uninstalled", :format => "json", :address => uninstall_callback_url)
       
       new_customer.save
       uninstall.save
