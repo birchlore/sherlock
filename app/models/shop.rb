@@ -14,7 +14,9 @@ class Shop < ActiveRecord::Base
   end
 
   def set_email
-    # self.update_attributes({:email => ShopifyAPI::Shop.current.email})
+    if Rails.env.production?
+      self.update_attributes({:email => ShopifyAPI::Shop.current.email})
+    end
   end
 
   def self.retrieve(id)

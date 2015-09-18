@@ -2,7 +2,63 @@ require 'spec_helper'
 
 describe Celebrity, :vcr do
 
+  it { should belong_to(:shop) }
+
+
+  it { should respond_to(:shop) }
+  it { should respond_to (:first_name)}
+  it { should respond_to (:last_name)}
+  it { should respond_to (:email)}
+  it { should respond_to (:imdb_url)}
+  it { should respond_to (:wikipedia_url)}
+  it { should respond_to (:followers)}
+  it { should respond_to (:industry)}
+  it { should respond_to (:imdb_description)}
+  it { should respond_to (:wikipedia_description)}
+  it { should respond_to (:status)}
+  it { should respond_to (:shopify_url)}
+
+  it { should respond_to (:celebrity?)}
+
+  let(:shop) { FactoryGirl.build(:shop, twitter_follower_threshold: 1) }
+
+  let(:twitter_celebrity) { FactoryGirl.build(:celebrity, shop: shop, followers: 2) }
+
+  let(:wikipedia_response_dead_celebrity) {
+    ["robert frost",
+    ["Robert Frost"],
+    ["Robert Lee Frost (March 26, 1874 – January 29, 1963) was an American poet. His work was initially published in England before it was published in America."],
+    ["https://en.wikipedia.org/wiki/Robert_Frost"]]
+  }
+
+  describe 'celebrity?' do
+    context 'twitter celebrity' do
+      it 'should determine whether or not the customer is a celebrity' do
+        expect(twitter_celebrity.celebrity?).to eq true
+      end
+    end
+    context 'imdb celebrity' do
+    end
+    context 'imdb celebrity' do
+    end
+  end
+
+  describe 'send_email_notification' do
+
+    context 'when email notifications are turned on and customer is a celebrity' do
+
+      it 'should call send_email_notification on NotificationMailer' do
+        expect(NotificationMailer).to receive(:celebrity_notification).with(an_instance_of(Celebrity)).and_return(double(deliver_now:true))
+        FactoryGirl.create(:wikipedia_celebrity, shop: shop)
+      end
+
+    end
+
+  end
+
+
   it "has a valid factory" do
+    FactoryGirl.build(:shop)
     expect(FactoryGirl.build(:celebrity)).to_not be_valid
     expect(FactoryGirl.build(:twitter_celebrity)).to be_valid
     expect(FactoryGirl.build(:wikipedia_celebrity)).to be_valid

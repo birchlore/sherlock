@@ -38,6 +38,7 @@ gem 'pry-nav'
 gem 'responders', '~> 2.0'
 gem 'rails_12factor'
 gem 'rack-ssl-enforcer'
+gem 'httparty'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -67,6 +68,7 @@ end
 
 group :test do
   gem 'webmock'
+  gem 'shoulda-matchers'
   gem 'vcr'
   # gem 'webmock'
   gem 'rest-client'
