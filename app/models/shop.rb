@@ -40,6 +40,7 @@ class Shop < ActiveRecord::Base
       new_customer_callback_url = Figaro.env.root_uri + "/hooks/new_customer_callback"
       uninstall_callback_url = Figaro.env.root_uri + "/hooks/app_uninstalled_callback"
 
+      binding.pry
       new_customer = ShopifyAPI::Webhook.new(:topic => "customers/create", :format => "json", :address => new_customer_callback_url)
       uninstall = ShopifyAPI::Webhook.new(:topic => "app/uninstalled", :format => "json", :address => uninstall_callback_url)
       
