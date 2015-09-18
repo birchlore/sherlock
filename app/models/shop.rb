@@ -1,6 +1,6 @@
 class Shop < ActiveRecord::Base
   include ShopifyApp::Shop
-  has_many :celebrities, :inverse_of => :shop
+  has_many :celebrities, :inverse_of => :shop, dependent: :destroy
   # after_create :send_email_notification
 
   after_create :init_webhooks
@@ -14,9 +14,9 @@ class Shop < ActiveRecord::Base
   end
 
   def set_email
-    if Rails.env.production?
-      self.update_attributes({:email => ShopifyAPI::Shop.current.email})
-    end
+    # if Rails.env.production?
+    #   self.update_attributes({:email => ShopifyAPI::Shop.current.email})
+    # end
   end
 
   def self.retrieve(id)
