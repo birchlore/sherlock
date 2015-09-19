@@ -1,7 +1,7 @@
 class String
 
   def is_dead?
-    dates = self.scan(/[0-9]{4}/)
+    dates = self[0..100].scan(/[0-9]{4}/)
     dates.count > 1
   end
 
