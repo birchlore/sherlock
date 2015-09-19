@@ -12,9 +12,8 @@ class Celebrity < ActiveRecord::Base
 
   validate :celebrity_status, :on => :create
   
-  
-
   after_create :send_email_notification
+
 
   def celebrity_status
     get_imdb
@@ -39,16 +38,6 @@ class Celebrity < ActiveRecord::Base
     fields = ["first_name", "last_name"]
     fields.each do |field| 
       self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
-    end
-  end
-
-
-
-  private
-
-  def send_email_notification
-    if celebrity? && self.shop.email_notifications
-      NotificationMailer.celebrity_notification(self).deliver_now
     end
   end
 
@@ -115,6 +104,15 @@ class Celebrity < ActiveRecord::Base
       self.followers = twitter["followers"]
     end
 
+  end
+
+  
+  private
+
+  def send_email_notification
+    if celebrity? && self.shop.email_notifications
+      NotificationMailer.celebrity_notification(self).deliver_now
+    end
   end
 
 

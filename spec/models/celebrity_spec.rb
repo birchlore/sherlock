@@ -18,7 +18,15 @@ describe Celebrity, :vcr do
   it { should respond_to (:status)}
   it { should respond_to (:shopify_url)}
 
+  it { should validate_presence_of (:first_name)}
+  it { should validate_presence_of (:last_name)}
+  it { should validate_presence_of (:shop)}
+  it { should belong_to (:shop)}
+
   it { should respond_to (:celebrity?)}
+  it { should respond_to (:celebrity_status)}
+  it { should respond_to (:full_name)}
+  it { should respond_to (:sanitize)}
 
   let(:shop) { FactoryGirl.build(:shop, twitter_follower_threshold: 1) }
 
@@ -65,13 +73,6 @@ describe Celebrity, :vcr do
     expect(FactoryGirl.build(:imdb_celebrity, :shop=> FactoryGirl.build(:imdb_shop))).to be_valid
   end
 
-  it "is invalid without a firstname" do
-    expect(FactoryGirl.build(:celebrity, first_name: "")).to_not be_valid
-  end
-
-  it "is invalid without a lastname" do
-    expect(FactoryGirl.build(:celebrity, last_name: "")).to_not be_valid
-  end
 
   it "returns a celebrity's full name as a string" do
     contact = FactoryGirl.build(:celebrity, first_name: "John", last_name: "Doe", email: "John@gmail.com")
