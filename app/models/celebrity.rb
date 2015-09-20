@@ -16,6 +16,7 @@ class Celebrity < ActiveRecord::Base
 
 
   def celebrity_status
+    return if errors.present?
     get_imdb
     get_wikipedia
     get_followers

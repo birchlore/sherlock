@@ -25,6 +25,7 @@ FactoryGirl.define do
   factory :imdb_celebrity, parent: :celebrity do
     first_name { "Jackson" }
     last_name { "Cunningham" }
+    shop { build(:imdb_shop) }
   end
 
 end
