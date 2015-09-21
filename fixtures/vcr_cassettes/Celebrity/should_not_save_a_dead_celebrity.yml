@@ -1,0 +1,273 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Robert%20Frost
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 Sep 2015 20:18:32 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYtO8CcE51ZFBs2X2BYh9A3KY8FgxQKXdIlQlFmRfDNKqdvavDxcyJeT8u4QEIPT4N31fPBiAhjzEA-WGWFSXvQc8SDGpbKv5FLCL5_ZRXB1Y6mlSvWDsDRX3iAzzyK7hipr9q83ezz8SR02mq_SSwDSZRMY2zUFvtJfKLLOHqHakM;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm5868986", "title":"", "name":"Robert Frost","description":"Art Department, 21 &#x26; Over"},{ "id":"nm1247622", "title":"", "name":"Robert Frost","description":"Stunts, Orgazmo"},{ "id":"nm0296561", "title":"", "name":"Robert Frost","description":"Actor, The Black Cat"},{ "id":"nm4460857", "title":"", "name":"Robert Frost","description":"Writer, The Afterglow: A Tribute to Robert Frost"},{ "id":"nm0296560", "title":"", "name":"Robert Frost","description":"Writer, Fireflies in the Garden"},{ "id":"nm1318030", "title":"", "name":"Robert Frost","description":"Transportation Department, U2: Rattle and Hum"},{ "id":"nm0296558", "title":"", "name":"R.J. Frost","description":"Stunts, Orgazmo"},{ "id":"nm4699782", "title":"", "name":"Robert Frost","description":"Director, Oscar"},{ "id":"nm0296465", "title":"", "name":"A.J. Frost","description":"Stunts, True Vengeance"},{ "id":"nm3547410", "title":"", "name":"Robert Frost","description":"Visual Effects, Sophomore"},{ "id":"nm0296562", "title":"", "name":"Robert Frost","description":"Producer, Shed No Tears"},{ "id":"nm2246567", "title":"", "name":"Robert Frost","description":"Editor, Sudden Summer"},{ "id":"nm5242981", "title":"", "name":"Robert Frost","description":"Camera and Electrical Department, Darker Shades of Grey"},{ "id":"nm7151525", "title":"", "name":"Robert Frost","description":"Actor, Existentialism"},{ "id":"nm6947925", "title":"", "name":"Robert Frost","description":"Art Department, Traci Lords: Advanced Jazzthetics"},{ "id":"nm7119184", "title":"", "name":"Robert Frost","description":"Uncategorised"}],"name_substring": [{ "id":"nm0296532", "title":"", "name":"Lee Frost","description":"Director, The Thing with Two Heads"},{ "id":"nm4089810", "title":"", "name":"Robert J. Frost","description":"Actor, Misfit Patrol"}],"name_approx": [{ "id":"nm2974420", "title":"", "name":"Robert Froster","description":"Writer, Code of Vengeance"},{ "id":"nm6676214", "title":"", "name":"Robert Christian Frostholm","description":"Writer, USS Enterprise Averts Disaster Thanks to JVD ASIC"}]
+        }
+    http_version: 
+  recorded_at: Sun, 20 Sep 2015 20:18:33 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Robert%20Frost
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Sun, 20 Sep 2015 20:18:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '187'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sun, 20 Sep 2015 23:18:34 GMT
+      X-Varnish:
+      - 517474521, 1149322971
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1065 miss (0), cp1054 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=20-Sep-2015;Path=/;HttpOnly;Expires=Thu, 22 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Robert Frost",["Robert Frost"],["Robert Lee Frost (March 26, 1874
+        \u2013 January 29, 1963) was an American poet. His work was initially published
+        in England before it was published in America."],["https://en.wikipedia.org/wiki/Robert_Frost"]]'
+    http_version: 
+  recorded_at: Sun, 20 Sep 2015 20:18:34 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sun, 20 Sep 2015 20:18:34 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '299'
+      X-Rate-Limit-Reset:
+      - '60'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "ee7cda0e-b8a8-4d1b-bc4f-a2045f807710"
+        }
+    http_version: 
+  recorded_at: Sun, 20 Sep 2015 20:18:34 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 Sep 2015 20:21:04 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYmr8MiohZiLk9TU1pKY_dIFwOpKWHiOaAGFFH6zOdWlHpwQU092vXCvl6-nbxia5ncLKLI16_BTkrntfInm36_9JqX3DR5hHBw90uf124L1vPzCWixirTUrIUBuZPISo0HbT-3vJn1xNwOvOMvmnPsh4IOZEk0Zh3voiTvV0xCJlU;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+
+        }
+    http_version: 
+  recorded_at: Sun, 20 Sep 2015 20:21:05 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Sun, 20 Sep 2015 20:21:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '45'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sun, 20 Sep 2015 23:21:05 GMT
+      X-Varnish:
+      - 2462404246, 1149580838
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1055 miss (0), cp1054 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=20-Sep-2015;Path=/;HttpOnly;Expires=Thu, 22 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Aaslkdfj Alfsijef",[],[],[]]'
+    http_version: 
+  recorded_at: Sun, 20 Sep 2015 20:21:05 GMT
+recorded_with: VCR 2.9.3

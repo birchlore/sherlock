@@ -11,15 +11,17 @@ describe Celebrity, :vcr do
   it { should respond_to (:email)}
   it { should respond_to (:imdb_url)}
   it { should respond_to (:wikipedia_url)}
-  it { should respond_to (:followers)}
+  it { should respond_to (:twitter_followers)}
+  it { should respond_to (:youtube_followers)}
+  it { should respond_to (:instagram_followers)}
   it { should respond_to (:industry)}
   it { should respond_to (:imdb_description)}
   it { should respond_to (:wikipedia_description)}
   it { should respond_to (:status)}
   it { should respond_to (:shopify_url)}
 
-  # it { should validate_presence_of (:first_name)}
-  # it { should validate_presence_of (:last_name)}
+  it { should validate_presence_of (:first_name)}
+  it { should validate_presence_of (:last_name)}
 
   it { should respond_to (:celebrity?)}
   it { should respond_to (:celebrity_status)}
@@ -28,15 +30,15 @@ describe Celebrity, :vcr do
 
   let(:shop) { FactoryGirl.build(:shop, twitter_follower_threshold: 1) }
 
-  let(:twitter_celebrity) { FactoryGirl.create(:celebrity, shop: shop, followers: 2) }
+  let(:twitter_celebrity) { FactoryGirl.create(:celebrity, shop: shop, twitter_followers: 2) }
   let(:imdb_celebrity) { FactoryGirl.create(:imdb_celebrity) }
 
   let(:wikipedia_celebrity) { FactoryGirl.create(:wikipedia_celebrity) }
-  let(:wikipedia_response_dead_celebrity) {
-    ["robert frost",
-    ["Robert Frost"],
-    ["Robert Lee Frost (March 26, 1874 – January 29, 1963) was an American poet. His work was initially published in England before it was published in America."],
-    ["https://en.wikipedia.org/wiki/Robert_Frost"]]
+  let(:wikipedia_dead_celebrity_string) {
+   "Robert Lee Frost (March 26, 1874 – January 29, 1963) was an American poet. His work was initially published in England before it was published in America."
+  }
+  let(:wikipedia_alive_celebrity_string) {
+   "Robert Lee Frost (March 26, 1974) was an American poet. His work was initially published in England before it was published in America."
   }
 
 
@@ -61,11 +63,25 @@ describe Celebrity, :vcr do
   end
 
 
+describe 'is_dead?' do
+
+  it "should return true for a dead celebrity" do
+    expect(wikipedia_dead_celebrity_string.is_dead?).to be
+  end
+
+  it "should return false for an alive celebrity" do
+    expect(wikipedia_alive_celebrity_string.is_dead?).not_to be
+  end
+
+end
+
+
   context "celebrity status" do
 
-    it 'should work for imdb' do
-      expect(FactoryGirl.create(:imdb_celebrity)).to be_valid
-    end
+# Why isn't this working?
+    # it 'should return if there are validation errors' do
+    #   expect(Celebrity.create()).to receive(:celebrity_status).and_return(nil)
+    # end
 
   end
 

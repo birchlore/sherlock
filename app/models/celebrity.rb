@@ -19,7 +19,7 @@ class Celebrity < ActiveRecord::Base
     return if errors.present?
     get_imdb
     get_wikipedia
-    get_followers
+    get_fullcontact_data
     if !celebrity?
       self.errors.add(:body, "This ain't no celebrity, kid")
     end
@@ -32,7 +32,7 @@ class Celebrity < ActiveRecord::Base
   def celebrity?
     (imdb_url && self.shop.imdb_notification) || 
     (wikipedia_url && self.shop.wikipedia_notification) || 
-    (followers > self.shop.twitter_follower_threshold)
+    (twitter_followers > self.shop.twitter_follower_threshold)
   end
 
   def sanitize
@@ -42,7 +42,7 @@ class Celebrity < ActiveRecord::Base
     end
   end
 
-  protected
+  
 
 
   def get_imdb
@@ -84,28 +84,45 @@ class Celebrity < ActiveRecord::Base
 
   end
 
-  def get_followers
+  def get_fullcontact_data
 
     return unless self.email.present?
     source = "https://api.fullcontact.com/v2/person.json?email=" + self.email + "&apiKey=" + ENV['full_contact_api_key']
     uri = URI.parse(source)
     res = Net::HTTP.get_response(uri)
 
+
     return unless res.is_a?(Net::HTTPSuccess)
-
-
     json = JSON.parse(res.body)
-
     return if json["message"] && json["message"].include?("Queued")
 
-    profiles = json["socialProfiles"]
-    twitter = profiles.select {|profile| profile["type"] == "twitter"}.first
+    @profiles = json["socialProfiles"]
 
-    if twitter.present?
-      self.followers = twitter["followers"]
-    end
-
+    binding.pry
+    get_followers("twitter")
   end
+
+  
+
+
+  def get_followers(social_profile_name)
+    social_profile_data = @profiles.select {|profile| profile["type"] == social_profile_name}.first
+
+    if social_profile_data.present?
+      self["#{social_profile_name}_followers"] = social_profile_data["followers"]
+    end
+  end
+
+
+  # No need for this method with refactored above
+
+  # def get_twitter_followers
+  #   twitter = @profiles.select {|profile| profile["type"] == "twitter"}.first
+
+  #   if twitter.present?
+  #     self.twitter_followers = twitter["followers"]
+  #   end
+  # end
 
   
   private

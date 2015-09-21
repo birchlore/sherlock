@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150910184440) do
+ActiveRecord::Schema.define(version: 20150920204718) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "celebrities", force: :cascade do |t|
     t.string   "first_name"
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150910184440) do
     t.string   "email"
     t.string   "imdb_url"
     t.string   "wikipedia_url"
-    t.integer  "followers",             default: 0
+    t.integer  "twitter_followers",     default: 0
     t.string   "industry"
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
@@ -28,9 +31,11 @@ ActiveRecord::Schema.define(version: 20150910184440) do
     t.string   "status",                default: "active"
     t.integer  "shop_id"
     t.string   "shopify_url"
+    t.integer  "youtube_followers"
+    t.integer  "instagram_followers"
   end
 
-  add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id"
+  add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id", using: :btree
 
   create_table "shops", force: :cascade do |t|
     t.string   "shopify_domain",                             null: false
@@ -45,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150910184440) do
     t.boolean  "imdb_notification",          default: false
   end
 
-  add_index "shops", ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true
+  add_index "shops", ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true, using: :btree
 
+  add_foreign_key "celebrities", "shops"
 end
