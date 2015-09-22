@@ -18,8 +18,11 @@ class Celebrity < ActiveRecord::Base
   def celebrity_status
     return unless first_name && last_name
 
-    get_imdb
-    get_wikipedia
+    if first_name.ascii_only? && last_name.ascii_only?
+      get_imdb
+      get_wikipedia
+    end
+    
     get_fullcontact_data
     if !celebrity?
       self.errors.add(:body, "This ain't no celebrity, kid")
