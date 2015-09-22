@@ -16,7 +16,8 @@ class Celebrity < ActiveRecord::Base
 
 
   def celebrity_status
-    return if errors.present?
+    return unless first_name && last_name
+
     get_imdb
     get_wikipedia
     get_fullcontact_data
@@ -41,9 +42,6 @@ class Celebrity < ActiveRecord::Base
       self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
     end
   end
-
-  
-
 
   def get_imdb
     source = "http://www.imdb.com/xml/find?json=1&nr=1&nm=on&q="+ first_name + "+" + last_name
@@ -85,7 +83,6 @@ class Celebrity < ActiveRecord::Base
   end
 
   def get_fullcontact_data
-
     return unless self.email.present?
     source = "https://api.fullcontact.com/v2/person.json?email=" + self.email + "&apiKey=" + ENV['full_contact_api_key']
     uri = URI.parse(source)
@@ -96,20 +93,19 @@ class Celebrity < ActiveRecord::Base
     json = JSON.parse(res.body)
     return if json["message"] && json["message"].include?("Queued")
 
-    @profiles = json["socialProfiles"]
-
-    binding.pry
-    get_followers("twitter")
+    profiles = json["socialProfiles"]
+    get_followers(profiles, "twitter")
   end
 
   
 
 
-  def get_followers(social_profile_name)
-    social_profile_data = @profiles.select {|profile| profile["type"] == social_profile_name}.first
+  def get_followers(social_profiles_hash, desired_social_profile_name)
 
-    if social_profile_data.present?
-      self["#{social_profile_name}_followers"] = social_profile_data["followers"]
+    social_profile_data = social_profiles_hash.select {|profile| profile["type"] == desired_social_profile_name}.first
+
+    if social_profile_data.present? && social_profile_data["followers"]
+      self["#{desired_social_profile_name}_followers"] = social_profile_data["followers"]
     end
   end
 
@@ -128,11 +124,8 @@ class Celebrity < ActiveRecord::Base
   private
 
   def send_email_notification
-    if celebrity? && self.shop.email_notifications
-      NotificationMailer.celebrity_notification(self).deliver_now
+    if self.shop.email_notifications
+        NotificationMailer.celebrity_notification(self).deliver_now
     end
   end
-
-
-
 end
