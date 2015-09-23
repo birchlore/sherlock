@@ -90,8 +90,16 @@ end
 
 
 describe "celebrity status" do
-  context "has a first name and a last name" do
-  end
+  # context "has a first name and a last name" do
+
+  # end
+
+  # context "has non ascii characters" do 
+  #   it "will not call get_imdb" do 
+  #     expect_any_instance_of(Celebrity).not_to be_valid
+  #     FactoryGirl.create(:imdb_celebrity, first_name: "Sæthlangøy")
+  #   end
+  # end
 
   context "has a first name but not a last name" do
     it "will return" do
