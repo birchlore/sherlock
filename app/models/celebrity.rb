@@ -15,6 +15,13 @@ class Celebrity < ActiveRecord::Base
   after_create :send_email_notification
 
 
+  def celebrity?
+    (imdb_url && self.shop.imdb_notification) || 
+    (wikipedia_url && self.shop.wikipedia_notification) || 
+    (twitter_followers > self.shop.twitter_follower_threshold)
+  end
+
+
   def celebrity_status
     return unless first_name && last_name
 
@@ -35,29 +42,53 @@ class Celebrity < ActiveRecord::Base
       end
     end
 
-
-
     unless celebrity?
       self.errors.add(:body, "This ain't no celebrity, kid")
     end
   end
 
+
   def full_name
     first_name + " " + last_name
   end
 
-  def celebrity?
-    (imdb_url && self.shop.imdb_notification) || 
-    (wikipedia_url && self.shop.wikipedia_notification) || 
-    (twitter_followers > self.shop.twitter_follower_threshold)
-  end
 
-  def sanitize
-    fields = ["first_name", "last_name"]
-    fields.each do |field| 
-      self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
+  def get_description(fullcontact_profile_hash)
+    type = fullcontact_profile_hash["type"]
+
+    if type && fullcontact_profile_hash["bio"]
+      self["#{type}_description"] = fullcontact_profile_hash["bio"]
     end
   end
+
+
+  def get_fullcontact_data_array
+    return unless self.email.present?
+    source = "https://api.fullcontact.com/v2/person.json?email=" + self.email + "&apiKey=" + ENV['full_contact_api_key']
+    uri = URI.parse(source)
+    res = Net::HTTP.get_response(uri)
+
+
+    return unless res.is_a?(Net::HTTPSuccess)
+    json = JSON.parse(res.body)
+    return if json["message"] && json["message"].include?("Queued")
+
+    full_contact_data_array = json["socialProfiles"]
+  end
+
+
+  def get_followers(fullcontact_profile_hash)
+    profile_name = fullcontact_profile_hash["type"]
+    if profile_name && fullcontact_profile_hash["followers"] && has_attribute?("#{profile_name}_followers")
+      self["#{profile_name}_followers"] = fullcontact_profile_hash["followers"]
+    end
+  end
+
+
+  def get_fullcontact_profile_hash(full_contact_data_array, profile_name)
+    full_contact_data_array.select {|profile| profile["type"] == profile_name}.first
+  end
+
 
   def get_imdb
     source = "http://www.imdb.com/xml/find?json=1&nr=1&nm=on&q="+ first_name + "+" + last_name
@@ -76,6 +107,7 @@ class Celebrity < ActiveRecord::Base
     end
   end
 
+
   def get_wikipedia
     source = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + first_name + "%20" + last_name + "&limit=1&namespace=0&format=json"
     data = open(source).read
@@ -92,30 +124,16 @@ class Celebrity < ActiveRecord::Base
       end
 
       self.wikipedia_url = wikipedia_url
-      self.wikipedia_description = description
-      
+      self.wikipedia_description = description  
     end
-
-  end
-
-  def get_fullcontact_data_array
-    return unless self.email.present?
-    source = "https://api.fullcontact.com/v2/person.json?email=" + self.email + "&apiKey=" + ENV['full_contact_api_key']
-    uri = URI.parse(source)
-    res = Net::HTTP.get_response(uri)
-
-
-    return unless res.is_a?(Net::HTTPSuccess)
-    json = JSON.parse(res.body)
-    return if json["message"] && json["message"].include?("Queued")
-
-    full_contact_data_array = json["socialProfiles"]
   end
 
 
-
-  def get_fullcontact_profile_hash(full_contact_data_array, profile_name)
-    full_contact_data_array.select {|profile| profile["type"] == profile_name}.first
+  def sanitize
+    fields = ["first_name", "last_name"]
+    fields.each do |field| 
+      self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
+    end
   end
 
 
@@ -125,35 +143,6 @@ class Celebrity < ActiveRecord::Base
     get_followers(fullcontact_profile_hash)
     get_description(fullcontact_profile_hash)
   end
-
-
-  def get_followers(fullcontact_profile_hash)
-    profile_name = fullcontact_profile_hash["type"]
-    if profile_name && fullcontact_profile_hash["followers"] && has_attribute?("#{profile_name}_followers")
-      self["#{profile_name}_followers"] = fullcontact_profile_hash["followers"]
-    end
-  end
-
-
-   def get_description(fullcontact_profile_hash)
-    
-    type = fullcontact_profile_hash["type"]
-
-    if type && fullcontact_profile_hash["bio"]
-      self["#{type}_description"] = fullcontact_profile_hash["bio"]
-    end
-  end
-
-
-  # No need for this method with refactored above
-
-  # def get_twitter_followers
-  #   twitter = @profiles.select {|profile| profile["type"] == "twitter"}.first
-
-  #   if twitter.present?
-  #     self.twitter_followers = twitter["followers"]
-  #   end
-  # end
 
   
   private

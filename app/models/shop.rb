@@ -13,12 +13,6 @@ class Shop < ActiveRecord::Base
     shop.id
   end
 
-  def set_email
-    unless Rails.env.test?
-      self.update_attributes({:email => ShopifyAPI::Shop.current.email})
-    end
-  end
-
   def self.retrieve(id)
     shop = Shop.where(:id => id).first
     if shop
@@ -28,19 +22,13 @@ class Shop < ActiveRecord::Base
     end
   end
 
-   def shopify_session
+  def shopify_session
     shop_session = ShopifyAPI::Session.new(shopify_domain, shopify_token)
     ShopifyAPI::Base.activate_session(shop_session)
-   end
+  end
   
-  # def self.destroy(session)
-  #   shop = self.destroy(shopify_domain: session.url, shopify_token: session.token)
-  #   shop.id
-  # end
 
   def init_webhooks
-
-    # webhooks weren't working on shopify when I used Figaro.env.root_uri + "/hooks/new_customer_callback". Afraid to change this now without messing it up..
     unless Rails.env.test?
       shopify_session
 
@@ -56,7 +44,12 @@ class Shop < ActiveRecord::Base
 
     puts "saved"
     self.save!
-  
+  end
+
+  def set_email
+    unless Rails.env.test?
+      self.update_attributes({:email => ShopifyAPI::Shop.current.email})
+    end
   end
 
   def twitter_follower_threshold=(followers)
