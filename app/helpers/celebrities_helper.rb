@@ -43,12 +43,14 @@ module CelebritiesHelper
       celebrity.angellist_description
     elsif celebrity.linkedin_description
       celebrity.linkedin_description
+    elsif celebrity.twitter_description
+      celebrity.twitter_description
     elsif celebrity.wikipedia_description
       celebrity.wikipedia_description
     elsif celebrity.imdb_description
       celebrity.imdb_description
     else
-      "No description at this time. Investigate further (google them)."
+      "No description at this time."
     end
   end
 
