@@ -33,13 +33,9 @@ class Celebrity < ActiveRecord::Base
     social_data = get_fullcontact_data_array
     
     if social_data
-      social_accounts = ["twitter", "linkedin", "angellist"]
-      social_accounts.each do |account| 
-        social_profile = get_fullcontact_profile_hash(social_data, account) 
-        return unless social_profile
-        get_followers(social_profile)
-        get_description(social_profile)
-      end
+      get_fullcontact_social_profile_data(social_data, "twitter", ["followers", "url"])
+      get_fullcontact_social_profile_data(social_data, "linkedin", ["bio", "url"])
+      get_fullcontact_social_profile_data(social_data, "angellist", ["bio", "url"])
     end
 
     unless celebrity?
@@ -52,48 +48,55 @@ class Celebrity < ActiveRecord::Base
     first_name + " " + last_name
   end
 
-
-  def get_description(fullcontact_profile_hash)
-    type = fullcontact_profile_hash["type"]
-
-    if type && fullcontact_profile_hash["bio"] && has_attribute?("#{type}_description")
-      self["#{type}_description"] = fullcontact_profile_hash["bio"]
-    end
-  end
-
-
   def get_fullcontact_data_array
     return unless self.email.present?
     source = "https://api.fullcontact.com/v2/person.json?email=" + self.email + "&apiKey=" + ENV['full_contact_api_key']
-    uri = URI.parse(source)
-    res = Net::HTTP.get_response(uri)
+    
+    json = get_json(source)
 
-
-    return unless res.is_a?(Net::HTTPSuccess)
-    json = JSON.parse(res.body)
-    return if json["message"] && json["message"].include?("Queued")
+    return if !json || json["message"] && json["message"].include?("Queued")
 
     full_contact_data_array = json["socialProfiles"]
   end
 
-
-  def get_followers(fullcontact_profile_hash)
-    profile_name = fullcontact_profile_hash["type"]
-    if profile_name && fullcontact_profile_hash["followers"] && has_attribute?("#{profile_name}_followers")
-      self["#{profile_name}_followers"] = fullcontact_profile_hash["followers"]
-    end
+  def get_fullcontact_profile_hash(full_contact_data_array, social_profile_name)
+    full_contact_data_array.select {|profile| profile["type"] == social_profile_name}.first
   end
 
 
-  def get_fullcontact_profile_hash(full_contact_data_array, profile_name)
-    full_contact_data_array.select {|profile| profile["type"] == profile_name}.first
+  def get_fullcontact_social_profile_data(fullcontact_data_array, social_profile_name, column_array)
+
+    fullcontact_profile_hash = get_fullcontact_profile_hash(fullcontact_data_array, social_profile_name)
+    
+    return unless fullcontact_profile_hash
+
+    column_array.each do |column|
+      if fullcontact_profile_hash[column]
+        self["#{social_profile_name}_#{column}"] = fullcontact_profile_hash[column] 
+      end
+    end
+
+  end
+
+
+  def get_klout_id(fullcontact_profile_hash)
+
+  end
+
+  def get_klout_url(fullcontact_profile_hash)
+  end
+
+  def get_klout_hash(klout_id)
+  end
+
+  def get_klout_score(klout_profile_hash)
   end
 
 
   def get_imdb
     source = "http://www.imdb.com/xml/find?json=1&nr=1&nm=on&q="+ first_name + "+" + last_name
-    data = open(source).read
-    json = JSON.parse(data)
+    
+    json = get_json(source)
 
     if json["name_popular"].present?
       imdb_data = json["name_popular"][0]
@@ -103,28 +106,41 @@ class Celebrity < ActiveRecord::Base
 
     if imdb_data.present? && imdb_data["name"].upcase == self.full_name.upcase
       self.imdb_url = "http://www.imdb.com/name/" + imdb_data["id"]
-      self.imdb_description = imdb_data["description"]
+      self.imdb_bio = imdb_data["bio"]
     end
+  end
+
+   def get_instagram_followers(user_id)
+    source = "https://api.instagram.com/v1/users/#{user_id}/?client_id=#{Figaro.env.instagram_client_id}"
+    json = get_json(source)
+    json["data"]["counts"]["followed_by"]
+  end
+
+  def get_json(source)
+    uri = URI.parse(source)
+    res = Net::HTTP.get_response(uri)
+    return unless res.is_a?(Net::HTTPSuccess)
+    JSON.parse(res.body)
   end
 
 
   def get_wikipedia
     source = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + first_name + "%20" + last_name + "&limit=1&namespace=0&format=json"
-    data = open(source).read
-    json = JSON.parse(data)
+    
+    json = get_json(source)
 
     if json[0].present? && json[0].upcase == self.full_name.upcase
 
       wikipedia_url = json[3].first
-      description = json[2].first
-      if description && description.is_common? || description && description.is_dead?
+      bio = json[2].first
+      if bio && bio.is_common? || bio && bio.is_dead?
         wikipedia_url = nil
-      elsif description && description.is_a_redirect?
-        description = "This person has an AKA. See their Wikipedia page."
+      elsif bio && bio.is_a_redirect?
+        bio = "This person has an AKA. See their Wikipedia page."
       end
 
       self.wikipedia_url = wikipedia_url
-      self.wikipedia_description = description  
+      self.wikipedia_bio = bio  
     end
   end
 
@@ -135,15 +151,6 @@ class Celebrity < ActiveRecord::Base
       self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
     end
   end
-
-
-  def set_full_contact_stats(fullcontact_profile_hash)
-    return unless fullcontact_profile_hash
-
-    get_followers(fullcontact_profile_hash)
-    get_description(fullcontact_profile_hash)
-  end
-
   
   private
 

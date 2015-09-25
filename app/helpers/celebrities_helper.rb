@@ -38,19 +38,19 @@ module CelebritiesHelper
 
   
 
-  def description(celebrity)
-    if celebrity.angellist_description
-      celebrity.angellist_description
-    elsif celebrity.linkedin_description
-      celebrity.linkedin_description
-    elsif celebrity.twitter_description
-      celebrity.twitter_description
-    elsif celebrity.wikipedia_description
-      celebrity.wikipedia_description
-    elsif celebrity.imdb_description
-      celebrity.imdb_description
+  def bio(celebrity)
+    if celebrity.angellist_bio
+      celebrity.angellist_bio
+    elsif celebrity.linkedin_bio
+      celebrity.linkedin_bio
+    elsif celebrity.twitter_bio
+      celebrity.twitter_bio
+    elsif celebrity.wikipedia_bio
+      celebrity.wikipedia_bio
+    elsif celebrity.imdb_bio
+      celebrity.imdb_bio
     else
-      "No description at this time."
+      "No bio at this time."
     end
   end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150925043352) do
+ActiveRecord::Schema.define(version: 20150925163953) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,26 +22,29 @@ ActiveRecord::Schema.define(version: 20150925043352) do
     t.string   "email"
     t.string   "imdb_url"
     t.string   "wikipedia_url"
-    t.integer  "twitter_followers",     default: 0
+    t.integer  "twitter_followers",   default: 0
     t.string   "industry"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-    t.string   "imdb_description"
-    t.string   "wikipedia_description"
-    t.string   "status",                default: "active"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "imdb_bio"
+    t.string   "wikipedia_bio"
+    t.string   "status",              default: "active"
     t.integer  "shop_id"
     t.string   "shopify_url"
     t.integer  "youtube_followers"
     t.integer  "instagram_followers"
-    t.string   "twitter_description"
+    t.string   "twitter_bio"
     t.string   "twitter_url"
-    t.string   "youtube_description"
+    t.string   "youtube_bio"
     t.string   "youtube_url"
-    t.string   "angellist_description"
+    t.string   "angellist_bio"
     t.string   "angellist_url"
-    t.string   "linkedin_description"
+    t.string   "linkedin_bio"
     t.string   "linkedin_url"
     t.string   "instagram_username"
+    t.integer  "klout_id"
+    t.float    "klout_score"
+    t.string   "klout_url"
   end
 
   add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id", using: :btree

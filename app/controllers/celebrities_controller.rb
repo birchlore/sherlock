@@ -58,15 +58,6 @@ class CelebritiesController < AuthenticatedController
     end
   end
 
-
-
-  # helper_method :description
-  # helper_method :has_wikipedia?
-  # helper_method :has_imdb?
-  # helper_method :twitter_followers
-
-
-
   protected
 
   def celebrity_params
