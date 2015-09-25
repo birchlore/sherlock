@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150924222516) do
+ActiveRecord::Schema.define(version: 20150925043352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20150924222516) do
     t.string   "shopify_token",                              null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "twitter_follower_threshold", default: 10000
+    t.integer  "twitter_follower_threshold", default: 2500
     t.boolean  "email_notifications",        default: true
     t.boolean  "installed",                  default: false
     t.string   "email"
