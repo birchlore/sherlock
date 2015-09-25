@@ -281,19 +281,37 @@ end
 
 describe 'celebrity?' do
 
-  context 'twitter celebrity' do
+  context 'customer has twitter followers above store threshold' do
     it 'determines whether or not the customer is a twitter celebrity' do
       expect(twitter_celebrity.celebrity?).to eq true
     end
   end
 
-  context 'imdb celebrity' do
+  context 'customer has celebrities below store threshold' do
+    it 'determines whether or not the customer is a twitter celebrity' do
+      expect(twitter_celebrity.celebrity?).to eq true
+    end
+  end
+
+  context 'customer is imdb celebrity and imdb notifications turned on' do
     it 'determines whether or not the customer is an imdb celebrity' do
       expect(imdb_celebrity.celebrity?).to eq true
     end
   end
 
-  context 'wikipedia celebrity' do
+  context 'customer is imdb celebrity and imdb notifications turned off' do
+    it 'determines whether or not the customer is an imdb celebrity' do
+      expect(imdb_celebrity.celebrity?).to eq true
+    end
+  end
+
+  context 'customer is wikipedia celebrity and wikipedia notifications turned on' do
+    it 'determines whether or not the customer is a wikipedia celebrity' do
+      expect(wikipedia_celebrity.celebrity?).to eq true
+    end
+  end
+
+  context 'customer is wikipedia celebrity and wikipedia notifications turned off' do
     it 'determines whether or not the customer is a wikipedia celebrity' do
       expect(wikipedia_celebrity.celebrity?).to eq true
     end

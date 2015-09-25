@@ -60,6 +60,10 @@ Then /^I should see that the customer is a celebrity$/ do
   expect(page).to have_css('.celebrity-row')
 end
 
+Then "the customer should be saved to the database" do
+  expect(Shop.last.celebrities.where(email: @customer.email).count).to eq(1)
+end
+
 When "pry" do
   binding.pry
 end

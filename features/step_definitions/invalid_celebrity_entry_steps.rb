@@ -23,10 +23,6 @@ Then "I should see that the customer is not a celebrity" do
   expect(page).to have_content("ain't no celebrity")
 end
 
-Then "the customer should be saved to the database" do
-  expect(Shop.last.celebrities.where(email: @customer.email).count).to eq(1)
-end
-
 
 Then "the customer should not be saved to the database" do
   expect(Shop.last.celebrities.where(email: @customer.email).count).to eq(0)
