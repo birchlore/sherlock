@@ -23,9 +23,19 @@ class Celebrity < ActiveRecord::Base
       get_wikipedia
     end
     
-    social_profiles = get_fullcontact_data_array
+    social_data = get_fullcontact_data_array
+    
+    if social_data
+      social_accounts = ["twitter", "linkedin", "angellist"]
+      social_accounts.each do |account| 
+        social_profile = get_fullcontact_profile_hash(social_data, account) 
+        return unless social_profile
+        get_followers(social_profile)
+        get_description(social_profile)
+      end
+    end
 
-    set_social_profiles(social_profiles) if social_profiles
+
 
     unless celebrity?
       self.errors.add(:body, "This ain't no celebrity, kid")
@@ -103,38 +113,34 @@ class Celebrity < ActiveRecord::Base
   end
 
 
-  def set_social_profiles(full_contact_data_array)
 
-    twitter_hash = get_social_hash(full_contact_data_array, "twitter")
-
-    if twitter_hash
-      get_followers(twitter_hash)
-      get_description(twitter_hash)
-    end
-  end
-  
-
-
-  def get_social_hash(full_contact_data_array, desired_social_profile_name)
-    social_profile_data = full_contact_data_array.select {|profile| profile["type"] == desired_social_profile_name}.first
+  def get_fullcontact_profile_hash(full_contact_data_array, profile_name)
+    full_contact_data_array.select {|profile| profile["type"] == profile_name}.first
   end
 
 
-  def get_followers(social_profile_hash)
-    profile_name = social_profile_hash["type"]
+  def set_full_contact_stats(fullcontact_profile_hash)
+    return unless fullcontact_profile_hash
 
-    if profile_name && social_profile_hash["followers"]
-      self["#{profile_name}_followers"] = social_profile_hash["followers"]
+    get_followers(fullcontact_profile_hash)
+    get_description(fullcontact_profile_hash)
+  end
+
+
+  def get_followers(fullcontact_profile_hash)
+    profile_name = fullcontact_profile_hash["type"]
+    if profile_name && fullcontact_profile_hash["followers"] && has_attribute?("#{profile_name}_followers")
+      self["#{profile_name}_followers"] = fullcontact_profile_hash["followers"]
     end
   end
 
 
-   def get_description(social_profile_hash)
+   def get_description(fullcontact_profile_hash)
     
-    profile_name = social_profile_hash["type"]
+    type = fullcontact_profile_hash["type"]
 
-    if profile_name && social_profile_hash["bio"]
-      self["#{profile_name}_description"] = social_profile_hash["bio"]
+    if type && fullcontact_profile_hash["bio"]
+      self["#{type}_description"] = fullcontact_profile_hash["bio"]
     end
   end
 

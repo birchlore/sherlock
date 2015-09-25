@@ -43,7 +43,7 @@ describe Celebrity, :vcr do
    "Robert Lee Frost (March 26, 1974) was an American poet. His work was initially published in England before it was published in America."
   }
 
- let(:hash_without_followers) {
+ let(:fullcontact_hash_without_followers) {
   {"type"=>"twitter",
   "typeId"=>"twitter",
   "typeName"=>"Twitter",
@@ -52,7 +52,7 @@ describe Celebrity, :vcr do
   "id"=>"1450305547"}
  }
 
- let(:hash_without_type) {
+ let(:fullcontact_hash_without_type) {
   {"typeId"=>"twitter",
   "typeName"=>"Twitter",
   "url"=>"https://twitter.com/zino0121",
@@ -62,7 +62,7 @@ describe Celebrity, :vcr do
    }
  }
 
- let(:social_data_array) {
+ let(:fullcontact_data_array) {
   [{"bio"=>"Change Agent at IBM Design",
   "type"=>"linkedin",
   "typeId"=>"linkedin",
@@ -205,7 +205,7 @@ bmresearch, @mkshftmag, @betterxdesign.",
   "username"=>"steveddaniels"}]
  }
 
- let(:twitter_profile_hash) {
+ let(:fullcontact_twitter_hash) {
   {"bio"=>
   "Products with soul. Bringing design to value-based care at @ablehealth. Formerly @ibmdesign, @ibmresearch, @mkshftmag, @betterxdesign.",
  "followers"=>1770,
@@ -218,7 +218,7 @@ bmresearch, @mkshftmag, @betterxdesign.",
  "id"=>"19015299"}
  }
 
- let(:linkedin_profile_hash) {
+ let(:fullcontact_linkedin_hash) {
   {"bio"=>"Change Agent at IBM Design",
   "type"=>"linkedin",
   "typeId"=>"linkedin",
@@ -227,7 +227,7 @@ bmresearch, @mkshftmag, @betterxdesign.",
   "username"=>"steveddaniels"}
 }
 
- let(:angellist_profile_hash) {
+ let(:fullcontact_angellist_hash) {
   {"bio"=>
    "I build products that care for their users. I'm a Co-Founder at Able Health. I formerly led design for @ibm Watson Health and founded three social enterprises.",
   "followers"=>24,
@@ -343,11 +343,12 @@ describe 'send_email_notification' do
 
 end
 
-  describe 'get_social_hash' do
+  describe 'get_fullcontact_profile_hash' do
     it "should return a hash of the desired social account" do 
-      expect(celebrity.get_social_hash(social_data_array, "twitter")).to eq(twitter_profile_hash)
+      expect(celebrity.get_fullcontact_profile_hash(fullcontact_data_array, "twitter")).to eq(fullcontact_twitter_hash)
     end
   end
+
 
 
 
@@ -356,14 +357,14 @@ end
 
     context 'when social profile has no follower count present' do
       it 'should not change the Celebritys follower count to nil' do
-        celebrity.get_followers(hash_without_followers)
+        celebrity.get_followers(fullcontact_hash_without_followers)
         expect(celebrity.twitter_followers).not_to be nil
       end
     end
 
     context "for twitter account" do
       it "should return the correct amount of followers" do
-        expect(celebrity.get_followers(twitter_profile_hash)).to eq(1770)
+        expect(celebrity.get_followers(fullcontact_twitter_hash)).to eq(1770)
       end
     end
 
@@ -376,25 +377,25 @@ end
     
     context "for twitter" do
       it "should return the correct description" do 
-        expect(celebrity.get_description(twitter_profile_hash)).to eq("Products with soul. Bringing design to value-based care at @ablehealth. Formerly @ibmdesign, @ibmresearch, @mkshftmag, @betterxdesign.")
+        expect(celebrity.get_description(fullcontact_twitter_hash)).to eq("Products with soul. Bringing design to value-based care at @ablehealth. Formerly @ibmdesign, @ibmresearch, @mkshftmag, @betterxdesign.")
       end
     end
 
     context "for linkedin" do
       it "should return the correct description" do 
-        expect(celebrity.get_description(linkedin_profile_hash)).to eq("Change Agent at IBM Design")
+        expect(celebrity.get_description(fullcontact_linkedin_hash)).to eq("Change Agent at IBM Design")
       end
     end
 
     context "for angel list" do
       it "should return the correct description" do 
-        expect(celebrity.get_description(angellist_profile_hash)).to eq("I build products that care for their users. I'm a Co-Founder at Able Health. I formerly led design for @ibm Watson Health and founded three social enterprises.")
+        expect(celebrity.get_description(fullcontact_angellist_hash)).to eq("I build products that care for their users. I'm a Co-Founder at Able Health. I formerly led design for @ibm Watson Health and founded three social enterprises.")
       end
     end
 
     context "with no type" do
       it "should return nil" do 
-        expect(celebrity.get_description(hash_without_type)).to be nil
+        expect(celebrity.get_description(fullcontact_hash_without_type)).to be nil
       end
     end
 
