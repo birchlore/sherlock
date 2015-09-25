@@ -39,7 +39,11 @@ module CelebritiesHelper
   
 
   def description(celebrity)
-    if celebrity.wikipedia_description
+    if celebrity.angellist_description
+      celebrity.angellist_description
+    elsif celebrity.linkedin_description
+      celebrity.linkedin_description
+    elsif celebrity.wikipedia_description
       celebrity.wikipedia_description
     elsif celebrity.imdb_description
       celebrity.imdb_description

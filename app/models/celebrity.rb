@@ -56,7 +56,7 @@ class Celebrity < ActiveRecord::Base
   def get_description(fullcontact_profile_hash)
     type = fullcontact_profile_hash["type"]
 
-    if type && fullcontact_profile_hash["bio"]
+    if type && fullcontact_profile_hash["bio"] && has_attribute?("#{type}_description")
       self["#{type}_description"] = fullcontact_profile_hash["bio"]
     end
   end
