@@ -23,9 +23,11 @@ class Celebrity < ActiveRecord::Base
       get_wikipedia
     end
     
-    get_fullcontact_data
+    social_profiles = get_fullcontact_data_array
 
-    if !celebrity?
+    set_social_profiles(social_profiles) if social_profiles
+
+    unless celebrity?
       self.errors.add(:body, "This ain't no celebrity, kid")
     end
   end
@@ -86,7 +88,7 @@ class Celebrity < ActiveRecord::Base
 
   end
 
-  def get_fullcontact_data
+  def get_fullcontact_data_array
     return unless self.email.present?
     source = "https://api.fullcontact.com/v2/person.json?email=" + self.email + "&apiKey=" + ENV['full_contact_api_key']
     uri = URI.parse(source)
@@ -97,19 +99,42 @@ class Celebrity < ActiveRecord::Base
     json = JSON.parse(res.body)
     return if json["message"] && json["message"].include?("Queued")
 
-    profiles = json["socialProfiles"]
-    get_followers(profiles, "twitter")
+    full_contact_data_array = json["socialProfiles"]
   end
 
+
+  def set_social_profiles(full_contact_data_array)
+
+    twitter_hash = get_social_hash(full_contact_data_array, "twitter")
+
+    if twitter_hash
+      get_followers(twitter_hash)
+      get_description(twitter_hash)
+    end
+  end
   
 
 
-  def get_followers(social_profiles_hash, desired_social_profile_name)
+  def get_social_hash(full_contact_data_array, desired_social_profile_name)
+    social_profile_data = full_contact_data_array.select {|profile| profile["type"] == desired_social_profile_name}.first
+  end
 
-    social_profile_data = social_profiles_hash.select {|profile| profile["type"] == desired_social_profile_name}.first
 
-    if social_profile_data.present? && social_profile_data["followers"]
-      self["#{desired_social_profile_name}_followers"] = social_profile_data["followers"]
+  def get_followers(social_profile_hash)
+    profile_name = social_profile_hash["type"]
+
+    if profile_name && social_profile_hash["followers"]
+      self["#{profile_name}_followers"] = social_profile_hash["followers"]
+    end
+  end
+
+
+   def get_description(social_profile_hash)
+    
+    profile_name = social_profile_hash["type"]
+
+    if profile_name && social_profile_hash["bio"]
+      self["#{profile_name}_description"] = social_profile_hash["bio"]
     end
   end
 

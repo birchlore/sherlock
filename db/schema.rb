@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920204718) do
+ActiveRecord::Schema.define(version: 20150924222516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 20150920204718) do
     t.string   "shopify_url"
     t.integer  "youtube_followers"
     t.integer  "instagram_followers"
+    t.string   "twitter_description"
+    t.string   "twitter_url"
+    t.string   "youtube_description"
+    t.string   "youtube_url"
+    t.string   "angellist_description"
+    t.string   "angellist_url"
+    t.string   "linkedin_description"
+    t.string   "linkedin_url"
+    t.string   "instagram_username"
   end
 
   add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id", using: :btree
