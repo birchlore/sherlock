@@ -36,12 +36,6 @@ describe Celebrity, :vcr do
   let(:imdb_celebrity) { FactoryGirl.create(:imdb_celebrity) }
 
   let(:wikipedia_celebrity) { FactoryGirl.create(:wikipedia_celebrity) }
-  let(:wikipedia_dead_celebrity_string) {
-   "Robert Lee Frost (March 26, 1874 – January 29, 1963) was an American poet. His work was initially published in England before it was published in America."
-  }
-  let(:wikipedia_alive_celebrity_string) {
-   "Robert Lee Frost (March 26, 1974) was an American poet. His work was initially published in England before it was published in America."
-  }
 
  let(:fullcontact_array_without_followers) {
   [{"type"=>"twitter",
@@ -223,26 +217,15 @@ it "has a valid factory" do
 end
 
 
-it "returns a celebrity's full name as a string" do
+it "returns it's full name as a string" do
   contact = FactoryGirl.build(:celebrity, first_name: "John", last_name: "Doe", email: "John@gmail.com")
   expect(contact.full_name).to eq("John Doe")
 end
 
 
-it "converts a celebrity's name to proper capitalization" do
+it "converts it's name with proper capitalization" do
   contact = FactoryGirl.create(:celebrity, first_name: "JoHN", last_name: "dOE", email: "John@gmail.com")
   expect(contact.full_name).to eq("John Doe")
-end
-
-
-describe 'is_dead?' do
-  it "returns true for a dead celebrity" do
-    expect(wikipedia_dead_celebrity_string.is_dead?).to be
-  end
-
-  it "returns false for an alive celebrity" do
-    expect(wikipedia_alive_celebrity_string.is_dead?).not_to be
-  end
 end
 
 
