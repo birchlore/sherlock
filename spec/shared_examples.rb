@@ -40,6 +40,12 @@ shared_context "shared examples" do
     "url"=>"https://www.facebook.com/sleevedaniels",
     "username"=>"sleevedaniels",
     "id"=>"1385190060"},
+    {"followers"=>1343,
+    "following"=>1343,
+    "type"=>"angellist",
+    "url"=>"https://www.angellist.com/sleevedaniels",
+    "bio"=>"I make tech things",
+    "id"=>"1385190060"},
    {"type"=>"vimeo",
     "typeId"=>"vimeo",
     "typeName"=>"Vimeo",
@@ -215,6 +221,6 @@ shared_context "shared examples" do
     let(:twitter_celebrity) { FactoryGirl.create(:celebrity, shop: shop, twitter_followers: 2, email: "jacksondcunningham@gmail.com") }
     let(:imdb_celebrity) { FactoryGirl.create(:imdb_celebrity) }
     let(:instagram_celebrity) { FactoryGirl.build(:instagram_celebrity) }
-
+    let(:super_celebrity) { FactoryGirl.build(:super_celebrity) }
     let(:wikipedia_celebrity) { FactoryGirl.create(:wikipedia_celebrity) }
 end

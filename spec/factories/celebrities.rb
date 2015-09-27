@@ -34,4 +34,10 @@ FactoryGirl.define do
     instagram_id { "821170560" }
   end
 
+  factory :super_celebrity, parent: :celebrity do
+    first_name { "John" }
+    last_name { "Travolta" }
+    email { "Ericrobertmyers@Gmail.Com" }
+  end
+
 end

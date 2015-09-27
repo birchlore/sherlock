@@ -37,7 +37,7 @@ describe Services, :vcr do
 
         context "when querying a non-listed profile" do
           it "returns nil" do 
-            expect(Fullcontact.get_profile_data(fullcontact_data_array, "angellist", "bio")).to be nil
+            expect(Fullcontact.get_profile_data(fullcontact_data_array, "snapchat", "bio")).to be nil
           end
         end
 
@@ -112,6 +112,23 @@ describe Services, :vcr do
               expect(GetWikipedia).to receive(:call).with(celebrity)
               expect(Fullcontact).to receive(:get_data_array).with(celebrity)
               celebrity.send(:get_celebrity_status)
+            end
+
+            it "saves the social data" do
+              super_celebrity.shop.imdb_notification = true
+              super_celebrity.send(:get_celebrity_status)
+              expect(super_celebrity.imdb_url).to be
+              expect(super_celebrity.imdb_bio).to be
+              expect(super_celebrity.wikipedia_url).to be
+              expect(super_celebrity.wikipedia_bio).to be
+              expect(super_celebrity.twitter_url).to be
+              expect(super_celebrity.twitter_followers).to be
+              expect(super_celebrity.linkedin_url).to be
+              expect(super_celebrity.linkedin_bio).to be
+              expect(super_celebrity.angellist_url).to be
+              expect(super_celebrity.angellist_bio).to be
+              expect(super_celebrity.klout_url).to be
+              expect(super_celebrity.klout_id).to be
             end
           end
 
