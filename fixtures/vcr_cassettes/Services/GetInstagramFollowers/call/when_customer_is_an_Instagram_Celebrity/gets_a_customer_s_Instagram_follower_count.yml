@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/821170560/?client_id=f93100f5c0d843809f07f94367795fb0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.instagram.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4998'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Sat, 26 Sep 2015 21:52:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=94353017084da35a26b77750dbabb4da; expires=Sat, 24-Sep-2016 21:52:40
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '276'
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":{"username":"vivomasks","bio":"We make
+        beautiful masquerade masks","website":"http:\/\/www.vivomasks.com","profile_picture":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11371051_1021861514499988_1654257680_a.jpg","full_name":"VIVO
+        Masks","counts":{"media":25,"followed_by":102,"follows":43},"id":"821170560"}}'
+    http_version: 
+  recorded_at: Sat, 26 Sep 2015 21:52:40 GMT
+recorded_with: VCR 2.9.3

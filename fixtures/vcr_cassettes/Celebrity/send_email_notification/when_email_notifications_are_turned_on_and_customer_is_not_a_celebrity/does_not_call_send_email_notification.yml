@@ -1,0 +1,459 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Sep 2015 23:30:37 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYkZKE-39gj94OF7Rc0Sq8YY2uV0w_sgIDdeEWUvyhedrxGt2CuILMx5Plph1ChtR_GQ9_QZKR_D71i0S8yIC79mWU9PCuN3ITtd9bKMRvKBcfXIHemKfg7isTzJoU3pDh56MU1qoj2nyacduvEQ5VXmnMTGXxMEB3JazPzLeHVjC8;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+
+        }
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 23:30:38 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Fri, 25 Sep 2015 23:30:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '45'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sat, 26 Sep 2015 01:01:26 GMT
+      X-Varnish:
+      - 1018195571, 1173474426 1166194820
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '5352'
+      X-Cache:
+      - cp1055 miss (0), cp1067 frontend hit (3)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=25-Sep-2015;Path=/;HttpOnly;Expires=Tue, 27 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Aaslkdfj Alfsijef",[],[],[]]'
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 23:30:39 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Fri, 25 Sep 2015 23:30:39 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '299'
+      X-Rate-Limit-Reset:
+      - '60'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "4dc1e4c0-541a-4c92-a761-66f07ea37a7f"
+        }
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 23:30:40 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Sep 2015 23:32:01 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYpg4HesfpR0-MpSGcl7YmAKM-x4XE7FHHEOs3Zhjy_gvEdji8IblHLs5qXTbKucr7TJW0W09xlr1YlrNnUAXNt4TDrGOdIRER2olENDtUwFTAUBRtpCgtDFrrfAwELMRGNpVdXWHqegVg4kz_5941DjCwcHA2EYnZcQE5hsZ-qRMs;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm1080980", "title":"", "name":"Jackson Cunningham","description":"Actor, 10-Speed"}],"name_approx": [{ "id":"nm2998651", "title":"", "name":"Jason Blaise Cunningham","description":"Camera and Electrical Department, Dawn of the Planet of the Apes"},{ "id":"nm0192336", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Road Trip"},{ "id":"nm1899417", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Stuck in the Middle with You"},{ "id":"nm3483519", "title":"", "name":"Jason Cunningham","description":"Thanks, The Signal"},{ "id":"nm6377923", "title":"", "name":"Jameson Cunningham","description":"Sound Department, Amor"},{ "id":"nm7308883", "title":"", "name":"Jameson Cunningham","description":"Camera and Electrical Department, Electric"},{ "id":"nm3175205", "title":"", "name":"Jason Cunningham","description":"Writer, All American Addict"},{ "id":"nm3784096", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Lockdown"},{ "id":"nm2553697", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Dale&#x27;s Supermarket Sweep"},{ "id":"nm6125182", "title":"", "name":"Jason Cunningham","description":"Thanks, Dirty Beautiful"},{ "id":"nm4963372", "title":"", "name":"Jason Cunningham","description":"Thanks, Haunt"},{ "id":"nm6367389", "title":"", "name":"Jameson Cunningham","description":"Uncategorised"},{ "id":"nm5439317", "title":"", "name":"Clare Alison Cunningham","description":"Director, The Ancient Arts of Qigong &#x26; Tai Chi"},{ "id":"nm0192328", "title":"", "name":"Jack Cunningham","description":"Second Unit Director or Assistant Director, The Great Race"},{ "id":"nm2731697", "title":"", "name":"Carson Cunningham","description":"Camera and Electrical Department, One Day More: Part 2"},{ "id":"nm0192278", "title":"", "name":"Dan Cunningham","description":"Actor, Richard III"},{ "id":"nm4765145", "title":"", "name":"Jaclyn Cunningham","description":"Actress, Forever"},{ "id":"nm0192256", "title":"", "name":"Cason Cunningham","description":"Actor, Black Girl"},{ "id":"nm3160705", "title":"", "name":"Jacob Cunningham","description":"Writer, Thy Will Be Done"}]
+        }
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 23:32:03 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Fri, 25 Sep 2015 23:32:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sat, 26 Sep 2015 01:01:15 GMT
+      X-Varnish:
+      - 1375018638, 1173583096 1166180148
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '5447'
+      X-Cache:
+      - cp1054 miss (0), cp1067 frontend hit (1)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=25-Sep-2015;Path=/;HttpOnly;Expires=Tue, 27 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Jackson Cunningham",[],[],[]]'
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 23:32:03 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=samantha@samanthaettus.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Fri, 25 Sep 2015 23:32:49 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '299'
+      X-Rate-Limit-Reset:
+      - '60'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "9963fe99-05a3-41d3-9c49-46fe4a28f660",
+          "likelihood" : 0.9,
+          "photos" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/1e8f2efd6502e1e4999820760e43465a_e0a3a1eb06ba31369196ab9f34adaf621dabff2be8c8728ab1977853ced6cacb",
+            "isPrimary" : true
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/b57ab53994c9f7e59b620f6d4b9a1920_f97ea2978d4a811685287de08200d54316e5eb932f7cd0cb9109169e72c37b59",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/fb225328c0573a45c4486fe1cce928a3_a23d253add6ca1fcdc17a52340b138a388c20e87a5635d73e7a948f44b73bb4c",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "websites" : [ {
+              "url" : "http://www.samanthaettus.com"
+            }, {
+              "url" : "http://blogs.forbes.com/samanthaettus"
+            }, {
+              "url" : "http://www.workingmomslifestyle.com"
+            }, {
+              "url" : "http://www.babble.com/contributor/samanthaettus"
+            } ],
+            "familyName" : "Ettus",
+            "fullName" : "Samantha Ettus",
+            "givenName" : "Samantha"
+          },
+          "demographics" : {
+            "gender" : "Female"
+          },
+          "socialProfiles" : [ {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "19676684"
+          }, {
+            "bio" : "Obsessed with helping women reach their potential. Contributor/Forbes. Radio host, speaker. Bestselling author. Harvard MBA. Wife of 1, Mom of 3!",
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/samanthaettus/",
+            "username" : "samanthaettus"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "12516"
+          }, {
+            "bio" : "Work life balance renegade. Radio host, TV guest, Forbes contributor, Bestselling author (next book is The Pie Life, May 2016) speaker, Harvard MBA, Momx3.",
+            "followers" : 20035,
+            "following" : 987,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/samanthaettus",
+            "username" : "samanthaettus",
+            "id" : "11947432"
+          }, {
+            "bio" : "It is time for working moms to be celebrated, so let's say goodbye to the guilt, hello to the enjoyment, and increase the sharing and support. Together we can make small improvements that will lead to great change!",
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/SamanthaEttus",
+            "username" : "SamanthaEttus"
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://plus.google.com/u/0/102425237296327109799",
+            "id" : "102425237296327109799"
+          }, {
+            "bio" : "Sam is the leading lifestyle and parenting expert for working women. Since earning her undergraduate and MBA degrees from Harvard, Sam has coached thousands of celebrities, entrepreneurs, top CEO's and professional athletes - who aim to perform at the highest levels in both their professional and personal lives.",
+            "type" : "aboutme",
+            "typeId" : "aboutme",
+            "typeName" : "About.me",
+            "url" : "https://about.me/samanthaettus",
+            "username" : "samanthaettus"
+          } ],
+          "digitalFootprint" : {
+            "scores" : [ {
+              "provider" : "klout",
+              "type" : "general",
+              "value" : 68
+            } ],
+            "topics" : [ {
+              "provider" : "aboutme",
+              "value" : "TV host"
+            }, {
+              "provider" : "aboutme",
+              "value" : "working moms"
+            }, {
+              "provider" : "klout",
+              "value" : "Journalism"
+            }, {
+              "provider" : "aboutme",
+              "value" : "professional women"
+            }, {
+              "provider" : "klout",
+              "value" : "Books"
+            }, {
+              "provider" : "aboutme",
+              "value" : "lifestyle"
+            }, {
+              "provider" : "klout",
+              "value" : "Management"
+            }, {
+              "provider" : "aboutme",
+              "value" : "women's leadership"
+            }, {
+              "provider" : "aboutme",
+              "value" : "keynote speaker"
+            }, {
+              "provider" : "klout",
+              "value" : "Leadership"
+            }, {
+              "provider" : "klout",
+              "value" : "Weddings"
+            }, {
+              "provider" : "aboutme",
+              "value" : "parenting"
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 23:32:50 GMT
+recorded_with: VCR 2.9.3

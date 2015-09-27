@@ -1,0 +1,406 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 26 Sep 2015 21:39:51 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYk63YwRPamjcBVobhSgqFmq507pkzYUVjits27226dQ0XYvRM2ez40rwn9doQainCd7YSsLiqD8VXxkE0W1OGa_m5opkOmexnwHIijeHqv2OIUU8fAOjvEpTpGO8U0HuatGUTWGq1GSG8zvZ0ZwhVxml5VzNmFmiHR-KAHMy0vO6E;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+
+        }
+    http_version: 
+  recorded_at: Sat, 26 Sep 2015 21:39:52 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Sat, 26 Sep 2015 21:39:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '45'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sat, 26 Sep 2015 23:57:00 GMT
+      X-Varnish:
+      - 1122915941, 1271263254 1266760163
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '2572'
+      X-Cache:
+      - cp1055 miss (0), cp1067 frontend hit (2)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=26-Sep-2015;Path=/;HttpOnly;Expires=Wed, 28 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Aaslkdfj Alfsijef",[],[],[]]'
+    http_version: 
+  recorded_at: Sat, 26 Sep 2015 21:39:53 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=jacksondcunningham@gmail.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sat, 26 Sep 2015 21:39:53 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '299'
+      X-Rate-Limit-Reset:
+      - '60'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "d2743939-d48c-4aac-96c3-2071f6505144",
+          "likelihood" : 0.89,
+          "photos" : [ {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/918dd143bf2a769907ea76e7011a22c4_98a924c61a33a2aeab731d6a01ca49eff4bec4f7539f62f8197e76a527302001",
+            "isPrimary" : true
+          }, {
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/1b6ebc874230805f290681d53d29b061_07d7c7c722132aa12f845a98ec6ba73b664f3406a496162de567fdfb9ec5655a",
+            "isPrimary" : false
+          }, {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/cb4b8940a243011bf048a238793f5db8_77695323073aa04faa5abc2b390bbe4c63b41d50725489729acacad80a060a5d",
+            "isPrimary" : false
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/9142a5dccd08f59a91bf26ef13459f30_3967463042becaf71131b4dd02b19cdff8425570346ca634bad572beefa4f42c",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "websites" : [ {
+              "url" : "http://www.brokerengine.ca"
+            } ],
+            "familyName" : "Cunningham",
+            "fullName" : "Jackson Cunningham",
+            "givenName" : "Jackson"
+          },
+          "demographics" : {
+            "locationDeduced" : {
+              "normalizedLocation" : "Vancouver",
+              "deducedLocation" : "Vancouver, British Columbia, Canada",
+              "city" : {
+                "deduced" : false,
+                "name" : "Vancouver"
+              },
+              "state" : {
+                "deduced" : true,
+                "name" : "British Columbia"
+              },
+              "country" : {
+                "deduced" : true,
+                "name" : "Canada",
+                "code" : "CA"
+              },
+              "continent" : {
+                "deduced" : true,
+                "name" : "North America"
+              },
+              "likelihood" : 0.92
+            },
+            "locationGeneral" : "Vancouver"
+          },
+          "socialProfiles" : [ {
+            "bio" : "Beautiful websites designed specifically for Mortgage Brokers.",
+            "followers" : 743,
+            "following" : 1263,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/BrokerEngine",
+            "username" : "BrokerEngine",
+            "id" : "344946262"
+          }, {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/jacksoncunningham",
+            "username" : "jacksoncunningham"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/brokerengine",
+            "username" : "brokerengine"
+          }, {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/mortgage604test",
+            "username" : "mortgage604test",
+            "id" : "14434136"
+          }, {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/brokerengine",
+            "username" : "brokerengine",
+            "id" : "64935056@n07"
+          }, {
+            "followers" : 75,
+            "following" : 38,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/birchlore/",
+            "username" : "birchlore"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/user11693023",
+            "username" : "user11693023",
+            "id" : "11693023"
+          }, {
+            "followers" : 6,
+            "following" : 0,
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/jacksoncunningham",
+            "username" : "jacksoncunningham",
+            "id" : "761520"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/6424042",
+            "id" : "6424042"
+          } ]
+        }
+    http_version: 
+  recorded_at: Sat, 26 Sep 2015 21:39:53 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users//?client_id=f93100f5c0d843809f07f94367795fb0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.instagram.com
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Language, Cookie
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Sat, 26 Sep 2015 21:39:53 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - mid=VgcQqQAEAAFwFrW27q-DIdqjtKz0; expires=Fri, 21-Sep-2035 21:39:53 GMT; Max-Age=630720000;
+        Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '6841'
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en\" class=\"no-js
+        lt-ie9 lt-ie8 lt-ie7 not-logged-in \"> <![endif]-->\n<!--[if IE 7]>         <html
+        lang=\"en\" class=\"no-js lt-ie9 lt-ie8 not-logged-in \"> <![endif]-->\n<!--[if
+        IE 8]>         <html lang=\"en\" class=\"no-js lt-ie9 not-logged-in \"> <![endif]-->\n<!--[if
+        gt IE 8]><!--> <html lang=\"en\" class=\"no-js not-logged-in \"> <!--<![endif]-->\n
+        \   <head>\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"X-UA-Compatible\"
+        content=\"IE=edge\">\n\n        <title>Page Not Found &bull; Instagram</title>\n\n
+        \       <script type=\"text/javascript\">\n  WebFontConfig = {\n    custom:
+        {\n      families: ['proxima-nova:n3,n4,n6,n7'],\n      urls: ['//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/cache/styles/fonts.css']\n
+        \   }\n  };\n</script>\n<script src=\"//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/scripts/webfont.js\"
+        type=\"text/javascript\" async></script>\n\n        \n    \n        <meta
+        name=\"robots\" content=\"noimageindex\">\n        \n    <meta name=\"apple-mobile-web-app-capable\"
+        content=\"yes\">\n    <meta name=\"apple-mobile-web-app-status-bar-style\"
+        content=\"black\">\n\n\n        \n    <meta id=\"viewport\" name=\"viewport\"
+        content=\"width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1,
+        maximum-scale=1\">\n\n\n        <script type=\"text/javascript\">\n        (function()
+        {\n            var docElement = document.documentElement;\n            var
+        classRE = new RegExp('(^|\\\\s)no-js(\\\\s|$)');\n            var className
+        = docElement.className;\n            docElement.className = className.replace(classRE,
+        '$1js$2');\n        })();\n        </script>\n\n        \n    \n    \n        <link
+        rel=\"icon\" sizes=\"any\" mask href=\"//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/images/ico/favicon.svg\">\n
+        \       <meta name=\"theme-color\" content=\"#125688\">\n        <link rel=\"Shortcut
+        Icon\" type=\"image/x-icon\" href=\"//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/images/ico/favicon.ico\">\n
+        \   \n    \n        <link rel=\"apple-touch-icon-precomposed\" href=\"//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/images/ico/apple-touch-icon-precomposed.png\">\n
+        \       <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/images/ico/apple-touch-icon-72x72-precomposed.png\">\n
+        \       <link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\" href=\"//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/images/ico/apple-touch-icon-114x114-precomposed.png\">\n
+        \       <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/images/ico/apple-touch-icon-144x144-precomposed.png\">\n
+        \   \n    \n    <link href=\"//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/cache/styles/distillery/dialog-main.css\"
+        type=\"text/css\" rel=\"stylesheet\"></link>\n\n    \n    <script src=\"//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/scripts/jquery.js\"
+        type=\"text/javascript\"></script>\n    <script src=\"//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/scripts/bluebar.js\"
+        type=\"text/javascript\"></script>\n\n\n    </head>\n    <body class=\" p-error
+        dialog-404\">\n        \n    \n        <div class=\"root\">\n        \n            <div
+        class=\"page\">\n                \n                    \n                        <header
+        class=\"top-bar top-bar-new\">\n    <div class=\"top-bar-wrapper\">\n        <div
+        class=\"logo\"><a href=\"/\">Instagram</a></div>\n\n        <div class=\"top-bar-left\">\n
+        \           <ul class=\"top-bar-actions\">\n                <li>\n                    <a
+        class=\"top-bar-home\" href=\"/\" label=Home><i></i></a>\n                </li>\n
+        \           </ul>\n        </div>\n\n        \n            <div class=\"top-bar-right
+        account-state\" id=\"top_bar_right\">\n                <ul class=\"top-bar-actions\">\n
+        \                   \n                    \n                    <li id=\"link_profile\"
+        class=\"link-signin\">\n                        <a href=\"/accounts/login/\"
+        class=\"loginLink\">\n                            <i></i>\n                            <strong>Log
+        in</strong>\n                        </a>\n                    </li>\n                    \n
+        \               </ul>\n            </div>\n        \n    </div>\n</header>
+        <!-- .top-bar -->\n                    \n                \n\n                \n
+        \               <div class=\"main\">\n                    \n\t<div class=\"error-container\">\n\t\n\n
+        \   <h2>Sorry, this page isn&#39;t available.</h2>\n\n    <p>\n        The
+        link you followed may be broken, or the page may have been removed.\n        <a
+        href=\"/\">Go back to Instagram.</a>\n    </p>\n\n\n\n\t</div>\n\n                </div>
+        <!-- .main -->\n                \n\n            </div> <!-- .page -->\n\n
+        \           \n            <footer class=\"page-footer\" role=\"contentinfo\">\n
+        \               <div class=\"wrapper\">\n                    <nav>\n                        <ul>\n
+        \                           <li><a href=\"/about/us/\">About us</a></li>\n
+        \                           <li><a href=\"http://help.instagram.com/\">Support</a></li>\n
+        \                           <li><a href=\"http://blog.instagram.com/\">Blog</a></li>\n
+        \                           <li><a href=\"http://instagram.com/press/\">Press</a></li>\n
+        \                           <li><a href=\"/developer/\">API</a></li>\n                            <li><a
+        href=\"/about/jobs/\">Jobs</a></li>\n                            <li><a href=\"/legal/privacy/\">Privacy</a></li>\n
+        \                           <li><a href=\"/legal/terms/\">Terms</a></li>\n
+        \                       </ul>\n                    </nav>\n\n                    <p
+        class=\"copyright\">&copy; 2015 Instagram</p>\n                </div>\n            </footer>\n
+        \           \n        \n        <div id=\"reactModalMountPoint\"></div>\n
+        \   </div> <!-- .root -->\n    \n    \n\n        \n    <script src=//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/scripts/polyfills/es5-shim.min.js></script>\n<script
+        src=//instagramstatic-a.akamaihd.net/bluebar/a7a7e25/scripts/polyfills/es5-sham.min.js></script>\n<script
+        type=\"text/javascript\">window._sharedData = {\"static_root\":\"\\/\\/instagramstatic-a.akamaihd.net\\/bluebar\\/a7a7e25\",\"entry_data\":{},\"hostname\":\"api.instagram.com\",\"platform\":\"web\",\"qe\":{\"su\":false},\"display_properties_server_guess\":{\"viewport_width\":360,\"pixel_ratio\":1.5},\"country_code\":\"CA\",\"language_code\":\"en\",\"gatekeepers\":{\"rhp\":true},\"config\":{\"dismiss_app_install_banner_until\":null,\"viewer\":null,\"csrf_token\":\"NOTPROVIDED\"},\"environment_switcher_visible_server_guess\":true};</script>\n\n
+        \       \n<script>\n!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;\nn.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;\nt.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,\ndocument,'script','//connect.facebook.net/en_US/fbevents.js');\nfbq('init',
+        '1425767024389221');\nfbq('track', 'PageView');\n\n\n</script>\n<noscript>\n\n\n</noscript>\n\n
+        \   \n\n    </body>\n</html>"
+    http_version: 
+  recorded_at: Sat, 26 Sep 2015 21:39:53 GMT
+recorded_with: VCR 2.9.3

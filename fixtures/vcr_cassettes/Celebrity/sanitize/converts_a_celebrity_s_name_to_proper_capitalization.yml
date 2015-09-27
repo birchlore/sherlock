@@ -1,0 +1,219 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=John%20Doe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Sep 2015 23:17:17 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYsF97oyAjhJ-qTapUCg4FmZ6awyii_S8HpgW_lGorHQtcBGRfD5mr1nsWObbeZ5v59JBmQVQEY5hSzRKqmTyEu_MzNuwd-kj8HFxE85wSpvrTBgXN2aNFVOnEIh2E_7iIrBpoo4EJllL8kv8NZD4g7Kb-TFaWN0hNXKU0uiw7IaZo;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Nncoection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_popular": [{ "id":"nm0234809", "title":"", "name":"Jon Dough","description":"Actor, Latex"}],"name_exact": [{ "id":"nm0230335", "title":"", "name":"John Doe","description":"Actor, Great Balls of Fire!"},{ "id":"nm0230336", "title":"", "name":"John Doe","description":"Writer, ER: Life on the Edge"},{ "id":"nm7406805", "title":"", "name":"John Doe","description":"Director, Clean on the Outside Pink on the Inside 2"},{ "id":"nm0775010", "title":"", "name":"John Schouweiler","description":"Producer, Gods and Monsters"},{ "id":"nm0230337", "title":"", "name":"John Doe","description":"Camera and Electrical Department, BookWars"},{ "id":"nm4974861", "title":"", "name":"John Doe","description":"Editorial Department, Last Hour"},{ "id":"nm6879818", "title":"", "name":"John Doe","description":"Editor, The Axeman of Henderson County"},{ "id":"nm4600004", "title":"", "name":"John Doe","description":"Cinematographer, Iniquity"},{ "id":"nm2371277", "title":"", "name":"John Doe","description":"Composer, The American West: On the Road with Michael Blake"},{ "id":"nm4204339", "title":"", "name":"John Doe","description":"Actor, 99"},{ "id":"nm5069159", "title":"", "name":"John Doe","description":"Sound Department, Dead Pulse: Pilot"},{ "id":"nm5304335", "title":"", "name":"John Doe","description":"Miscellaneous Crew, Good to Go"},{ "id":"nm6477392", "title":"", "name":"John Doe","description":"Transportation Department, The Tank"},{ "id":"nm6359714", "title":"", "name":"John Doe","description":"Actor, Over 40 National Commercials"},{ "id":"nm7306855", "title":"", "name":"John Doe","description":"Self, Gun Control"},{ "id":"nm6328637", "title":"", "name":"John Doe","description":"Self, Invisible People Of The Upper West Side"},{ "id":"nm7403863", "title":"", "name":"John Doe","description":"Actor, Most Likely to Die"},{ "id":"nm6089340", "title":"", "name":"John Doe","description":"Miscellaneous Crew, Chivalry: Medieval Warfare"},{ "id":"nm3384869", "title":"", "name":"John Doe","description":"Sound Department, The Bitter End"},{ "id":"nm1458388", "title":"", "name":"John Doe","description":"Cinematographer, Schweden Report - Ausgabe 6"},{ "id":"nm5852211", "title":"", "name":"John Doe","description":"Uncategorised"},{ "id":"nm7044814", "title":"", "name":"John Doe","description":"Uncategorised"},{ "id":"nm6742918", "title":"", "name":"John Doe","description":"Uncategorised"}],"name_substring": [{ "id":"nm3387428", "title":"", "name":"The John Doe Thing","description":"Soundtrack, Sugar Town"},{ "id":"nm5557799", "title":"", "name":"George John Doe","description":"Actor, Ghost Man"}]
+        }
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 23:17:19 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=John%20Doe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Fri, 25 Sep 2015 23:17:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '237'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sat, 26 Sep 2015 02:17:19 GMT
+      X-Varnish:
+      - 1083233587, 1172364770
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      X-Cache:
+      - cp1068 miss (0), cp1067 frontend miss (0)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=25-Sep-2015;Path=/;HttpOnly;Expires=Tue, 27 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["John Doe",["John Doe"],["The names \"John Doe\" or \"John Roe\" for
+        men, \"Jane Doe\" or \"Jane Roe\" for women, or \"Johnnie Doe\" and \"Janie
+        Doe\" for children, or just \"Doe\" non-gender-specifically are used as placeholder
+        names for a party whose true identity is unknown or must be withheld in a
+        legal action, case, or discussion."],["https://en.wikipedia.org/wiki/John_Doe"]]'
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 23:17:19 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=John@gmail.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Fri, 25 Sep 2015 23:25:13 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '561'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '299'
+      X-Rate-Limit-Reset:
+      - '60'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "8a6e7c37-700e-4adc-8061-526ce079ad38",
+          "likelihood" : 0.91,
+          "photos" : [ {
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/7c4d5351cbc1b089791245ef04a5d9b2_2987b2f3f24e0e7780b01e3f4f7eec38c1b8653cedcf6eee91f22eb42093202c",
+            "isPrimary" : true
+          } ],
+          "contactInfo" : {
+            "familyName" : "Chan",
+            "fullName" : "John Chan",
+            "givenName" : "John"
+          },
+          "socialProfiles" : [ {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/10446024@N00",
+            "id" : "10446024@N00"
+          }, {
+            "followers" : 2,
+            "following" : 0,
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/john-81",
+            "username" : "john-81",
+            "id" : "356013"
+          }, {
+            "bio" : "Hi, I am toy Designer.",
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/johnidshk",
+            "username" : "johnidshk"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/14173",
+            "id" : "14173"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/user1525740",
+            "id" : "1525740"
+          } ]
+        }
+    http_version: 
+  recorded_at: Fri, 25 Sep 2015 23:25:14 GMT
+recorded_with: VCR 2.9.3

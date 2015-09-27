@@ -21,7 +21,7 @@ module CelebritiesHelper
   end
 
   def twitter_follower_count(celebrity)
-    if celebrity.twitter_followers > current_shop.twitter_follower_threshold
+    if celebrity.twitter_followers && celebrity.twitter_followers > current_shop.twitter_follower_threshold
       number_with_delimiter(celebrity.twitter_followers, :delimiter => ',')
     else
       "< #{number_with_delimiter(current_shop.twitter_follower_threshold, :delimiter => ',')}"

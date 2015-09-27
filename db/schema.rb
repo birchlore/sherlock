@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150925163953) do
+ActiveRecord::Schema.define(version: 20150926233248) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150925163953) do
     t.string   "email"
     t.string   "imdb_url"
     t.string   "wikipedia_url"
-    t.integer  "twitter_followers",   default: 0
+    t.integer  "twitter_followers"
     t.string   "industry"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20150925163953) do
     t.string   "angellist_url"
     t.string   "linkedin_bio"
     t.string   "linkedin_url"
-    t.string   "instagram_username"
+    t.string   "instagram_id"
     t.integer  "klout_id"
     t.float    "klout_score"
     t.string   "klout_url"

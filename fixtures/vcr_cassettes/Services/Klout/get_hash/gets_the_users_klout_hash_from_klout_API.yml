@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.klout.com/v2/user.json/27043?key=zkrjuqr3t3a2hhv2z9mku222
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.klout.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cf-Ray:
+      - 22c2e5e77f83070d-SJC
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 26 Sep 2015 23:55:09 GMT
+      Server:
+      - cloudflare-nginx
+      Set-Cookie:
+      - __cfduid=d3d46652936de6c70e0636c7b427488ae1443311709; expires=Sun, 25-Sep-16
+        23:55:09 GMT; path=/; domain=.klout.com; HttpOnly
+      X-Apikey-Qps-Allotted:
+      - '10'
+      X-Apikey-Qps-Current:
+      - '1'
+      X-Apikey-Quota-Allotted:
+      - '20000'
+      X-Apikey-Quota-Current:
+      - '1'
+      X-Mashery-Responder:
+      - prod-j-worker-us-west-1b-36.mashery.com
+      X-Quota-Reset:
+      - Sunday, September 27, 2015 12:00:00 AM GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"kloutId":"27043","nick":"Ericbobmyers","score":{"score":63.05425156135237,"bucket":"60-69"},"scoreDeltas":{"dayChange":0.8801018966145193,"weekChange":5.259996562121209,"monthChange":3.6855222563244183}}'
+    http_version: 
+  recorded_at: Sat, 26 Sep 2015 23:55:09 GMT
+recorded_with: VCR 2.9.3
