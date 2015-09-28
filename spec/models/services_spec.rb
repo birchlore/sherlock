@@ -199,18 +199,18 @@ describe Services, :vcr do
         end
     end
 
-    describe GetInstagramFollowers, :vcr do
+    describe Instagram.get_followers, :vcr do
 
         describe "call" do
             context "when customer is an Instagram Celebrity" do
                 it "gets a customer's Instagram follower count" do
-                    expect(GetInstagramFollowers.call(instagram_celebrity)).to be_an(Integer)
+                    expect(Instagram.get_followers.call(instagram_celebrity)).to be_an(Integer)
                 end
             end
 
             context "when customer is not an Instagram Celebrity" do
                 it "returns nil" do
-                    expect(GetInstagramFollowers.call(twitter_celebrity)).to be nil
+                    expect(Instagram.get_followers.call(twitter_celebrity)).to be nil
                 end
             end
         end

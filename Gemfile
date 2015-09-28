@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem "letter_opener", :group => :development
+gem 'nokogiri'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -39,7 +40,6 @@ gem 'responders', '~> 2.0'
 gem 'rails_12factor'
 gem 'rack-ssl-enforcer'
 gem 'httparty'
-gem 'instagram'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
