@@ -148,6 +148,14 @@ shared_context "shared examples" do
     "username"=>"steveddaniels"}]
    }
 
+   let(:youtube_hash) {
+    {"viewCount"=>"695",
+     "commentCount"=>"0",
+     "subscriberCount"=>"1",
+     "hiddenSubscriberCount"=>false,
+     "videoCount"=>"1"}
+   }
+
    let(:fullcontact_twitter_hash) {
     {"bio"=>
     "Products with soul. Bringing design to value-based care at @ablehealth. Formerly @ibmdesign, @ibmresearch, @mkshftmag, @betterxdesign.",

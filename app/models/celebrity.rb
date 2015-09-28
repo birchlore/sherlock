@@ -48,6 +48,16 @@ class Celebrity < ActiveRecord::Base
     self.instagram_id = Instagram.get_id(self)
     self.instagram_followers = Instagram.get_followers(self)
 
+    self.youtube_url = Fullcontact.get_profile_data(social_data, "youtube", "url")
+    self.youtube_username = Fullcontact.get_profile_data(social_data, "youtube", "username")
+    
+    youtube_hash = Youtube.get_hash(self)
+
+    if youtube_hash
+      self.youtube_subscribers = Youtube.get_subscribers(youtube_hash)
+      self.youtube_views = Youtube.get_views(youtube_hash)
+    end
+
   end
 
   private

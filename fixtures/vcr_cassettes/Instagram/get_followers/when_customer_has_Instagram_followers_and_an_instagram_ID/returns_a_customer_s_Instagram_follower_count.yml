@@ -3074,4 +3074,78 @@ http_interactions:
         Myers","counts":{"media":256,"followed_by":418,"follows":494},"id":"1272396"}}'
     http_version: 
   recorded_at: Mon, 28 Sep 2015 18:08:55 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/channels?forUsername=ericbobmyers&key=AIzaSyAUjDU4wIp2S-8GkxK05rY2k4gJWkSQqP4&part=statistics
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.googleapis.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Mon, 28 Sep 2015 22:31:42 GMT
+      Date:
+      - Mon, 28 Sep 2015 22:31:42 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"YxyobdYztCvdjXOUqpUttvF39GM/r6C4Wl8Fxk0e6wuAiGfSvljrT9A"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '501'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#channelListResponse",
+         "etag": "\"YxyobdYztCvdjXOUqpUttvF39GM/r6C4Wl8Fxk0e6wuAiGfSvljrT9A\"",
+         "pageInfo": {
+          "totalResults": 1,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#channel",
+           "etag": "\"YxyobdYztCvdjXOUqpUttvF39GM/U8EgDvxEel-CZg9DlKHedV9ay64\"",
+           "id": "UCp1fDRkGaB-p8PtzmbHVpUA",
+           "statistics": {
+            "viewCount": "695",
+            "commentCount": "0",
+            "subscriberCount": "1",
+            "hiddenSubscriberCount": false,
+            "videoCount": "1"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Mon, 28 Sep 2015 22:31:42 GMT
 recorded_with: VCR 2.9.3

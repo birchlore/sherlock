@@ -13,7 +13,7 @@ describe Celebrity, :vcr do
   it { should respond_to (:imdb_url)}
   it { should respond_to (:wikipedia_url)}
   it { should respond_to (:twitter_followers)}
-  it { should respond_to (:youtube_followers)}
+  it { should respond_to (:youtube_subscribers)}
   it { should respond_to (:instagram_followers)}
   it { should respond_to (:industry)}
   it { should respond_to (:imdb_bio)}
@@ -39,7 +39,10 @@ describe Celebrity, :vcr do
 
   it { should respond_to (:full_name)}
   it { should respond_to (:celebrity?)}
-  it { should respond_to (instance_eval{:sanitize})}
+  it { should respond_to (:set_social_data)}
+  it { should respond_to (:sanitize)}
+  # it { should respond_to (instance_eval{:get_celebrity_status})}
+  # it { should respond_to (instance_eval{:send_email_notification})}
 
 
   it "has a valid factory" do
@@ -78,7 +81,7 @@ describe Celebrity, :vcr do
     # context 'when email notifications are turned on and customer is not a celebrity' do
     #   it 'does not call send_email_notification' do
     #     expect(NotificationMailer).not_to receive(:celebrity_notification)
-    #     expect(create(:celebrity, shop: shop)
+    #     post :create, :celebrity, attributes_for(:wikipedia_celebrity, shop: shop)
     #   end
     # end
 
@@ -100,8 +103,7 @@ describe Celebrity, :vcr do
 
   describe "set_social_data" do
     before(:all) do
-      @super_celebrity = FactoryGirl.build(:super_celebrity, shop: Shop.last)
-      @super_celebrity.shop.imdb_notification = true
+      @super_celebrity = build(:super_celebrity, shop: build(:shop, shopify_domain: "whatever.myshopify.com"))
       fullcontact_data_array = [
         {"bio"=>"Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",
         "type"=>"angellist",
@@ -167,6 +169,13 @@ describe Celebrity, :vcr do
     it "sets the instagram data" do     
       expect(@super_celebrity.instagram_id).to be
       expect(@super_celebrity.instagram_followers).to be
+    end
+
+    it "sets the youtube data" do     
+      expect(@super_celebrity.youtube_username).to be
+      expect(@super_celebrity.youtube_url).to be
+      expect(@super_celebrity.youtube_subscribers).to be
+      expect(@super_celebrity.youtube_views).to be
     end
 
 
