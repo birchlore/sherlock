@@ -1,4 +1,4 @@
-class Fullcontact < Services
+class Fullcontact
 
   class << self 
 

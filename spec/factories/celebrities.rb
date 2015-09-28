@@ -29,9 +29,9 @@ FactoryGirl.define do
   end
 
   factory :instagram_celebrity, parent: :celebrity do
-    first_name { "Jackson" }
-    last_name { "Cunningham" }
-    instagram_id { "821170560" }
+    first_name { "Eric" }
+    last_name { "Myers" }
+    email { "Ericrobertmyers@Gmail.Com" }
   end
 
   factory :super_celebrity, parent: :celebrity do

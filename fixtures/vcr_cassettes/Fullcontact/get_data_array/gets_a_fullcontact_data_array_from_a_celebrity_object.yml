@@ -1,0 +1,464 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 28 Sep 2015 16:36:09 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYnx0QY8PR98vsfojeq_n3tQrX1DxMVrx6GykA8uHco6VRgUR4crh16YWBWRDR-EV1CyxJUdCn9E1xJKhRHaR75OkvcIh4VxyOwc64wA1MsU3h0cDj1dfvue_W_cV--7n7SywuEDYMYPkHAmk7vLBxFV72ziPsCty5SdzfmhzqFDvs;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+
+        }
+    http_version: 
+  recorded_at: Mon, 28 Sep 2015 16:36:10 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Aaslkdfj%20Alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Mon, 28 Sep 2015 16:36:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '45'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Mon, 28 Sep 2015 19:35:59 GMT
+      X-Varnish:
+      - 1347208538, 2256940416, 348726785 348691948
+      Via:
+      - 1.1 varnish, 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '11'
+      X-Cache:
+      - cp1055 miss (0), cp2016 miss (0), cp2023 frontend hit (1)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=28-Sep-2015;Path=/;HttpOnly;Expires=Fri, 30 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Aaslkdfj Alfsijef",[],[],[]]'
+    http_version: 
+  recorded_at: Mon, 28 Sep 2015 16:36:10 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=jacksondcunningham@gmail.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Mon, 28 Sep 2015 16:36:10 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1172'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '292'
+      X-Rate-Limit-Reset:
+      - '45'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "f77b0487-1b97-42cb-ad56-915d0392401d",
+          "likelihood" : 0.89,
+          "photos" : [ {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/918dd143bf2a769907ea76e7011a22c4_98a924c61a33a2aeab731d6a01ca49eff4bec4f7539f62f8197e76a527302001",
+            "isPrimary" : true
+          }, {
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/1b6ebc874230805f290681d53d29b061_07d7c7c722132aa12f845a98ec6ba73b664f3406a496162de567fdfb9ec5655a",
+            "isPrimary" : false
+          }, {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/cb4b8940a243011bf048a238793f5db8_77695323073aa04faa5abc2b390bbe4c63b41d50725489729acacad80a060a5d",
+            "isPrimary" : false
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/9142a5dccd08f59a91bf26ef13459f30_3967463042becaf71131b4dd02b19cdff8425570346ca634bad572beefa4f42c",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "websites" : [ {
+              "url" : "http://www.brokerengine.ca"
+            } ],
+            "familyName" : "Cunningham",
+            "fullName" : "Jackson Cunningham",
+            "givenName" : "Jackson"
+          },
+          "demographics" : {
+            "locationDeduced" : {
+              "normalizedLocation" : "Vancouver",
+              "deducedLocation" : "Vancouver, British Columbia, Canada",
+              "city" : {
+                "deduced" : false,
+                "name" : "Vancouver"
+              },
+              "state" : {
+                "deduced" : true,
+                "name" : "British Columbia"
+              },
+              "country" : {
+                "deduced" : true,
+                "name" : "Canada",
+                "code" : "CA"
+              },
+              "continent" : {
+                "deduced" : true,
+                "name" : "North America"
+              },
+              "likelihood" : 0.92
+            },
+            "locationGeneral" : "Vancouver"
+          },
+          "socialProfiles" : [ {
+            "bio" : "Beautiful websites designed specifically for Mortgage Brokers.",
+            "followers" : 743,
+            "following" : 1263,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/BrokerEngine",
+            "username" : "BrokerEngine",
+            "id" : "344946262"
+          }, {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/jacksoncunningham",
+            "username" : "jacksoncunningham"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/brokerengine",
+            "username" : "brokerengine"
+          }, {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/mortgage604test",
+            "username" : "mortgage604test",
+            "id" : "14434136"
+          }, {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/brokerengine",
+            "username" : "brokerengine",
+            "id" : "64935056@n07"
+          }, {
+            "followers" : 75,
+            "following" : 38,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/birchlore/",
+            "username" : "birchlore"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/user11693023",
+            "username" : "user11693023",
+            "id" : "11693023"
+          }, {
+            "followers" : 6,
+            "following" : 0,
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/jacksoncunningham",
+            "username" : "jacksoncunningham",
+            "id" : "761520"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/6424042",
+            "id" : "6424042"
+          } ]
+        }
+    http_version: 
+  recorded_at: Mon, 28 Sep 2015 16:36:10 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=jacksondcunningham@gmail.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Mon, 28 Sep 2015 16:36:11 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '291'
+      X-Rate-Limit-Reset:
+      - '45'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "5189e4c3-e754-4772-bcbf-4669855c93b5",
+          "likelihood" : 0.89,
+          "photos" : [ {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/918dd143bf2a769907ea76e7011a22c4_98a924c61a33a2aeab731d6a01ca49eff4bec4f7539f62f8197e76a527302001",
+            "isPrimary" : true
+          }, {
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/1b6ebc874230805f290681d53d29b061_07d7c7c722132aa12f845a98ec6ba73b664f3406a496162de567fdfb9ec5655a",
+            "isPrimary" : false
+          }, {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/cb4b8940a243011bf048a238793f5db8_77695323073aa04faa5abc2b390bbe4c63b41d50725489729acacad80a060a5d",
+            "isPrimary" : false
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/9142a5dccd08f59a91bf26ef13459f30_3967463042becaf71131b4dd02b19cdff8425570346ca634bad572beefa4f42c",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "websites" : [ {
+              "url" : "http://www.brokerengine.ca"
+            } ],
+            "familyName" : "Cunningham",
+            "fullName" : "Jackson Cunningham",
+            "givenName" : "Jackson"
+          },
+          "demographics" : {
+            "locationDeduced" : {
+              "normalizedLocation" : "Vancouver",
+              "deducedLocation" : "Vancouver, British Columbia, Canada",
+              "city" : {
+                "deduced" : false,
+                "name" : "Vancouver"
+              },
+              "state" : {
+                "deduced" : true,
+                "name" : "British Columbia"
+              },
+              "country" : {
+                "deduced" : true,
+                "name" : "Canada",
+                "code" : "CA"
+              },
+              "continent" : {
+                "deduced" : true,
+                "name" : "North America"
+              },
+              "likelihood" : 0.92
+            },
+            "locationGeneral" : "Vancouver"
+          },
+          "socialProfiles" : [ {
+            "bio" : "Beautiful websites designed specifically for Mortgage Brokers.",
+            "followers" : 743,
+            "following" : 1263,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/BrokerEngine",
+            "username" : "BrokerEngine",
+            "id" : "344946262"
+          }, {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/jacksoncunningham",
+            "username" : "jacksoncunningham"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/brokerengine",
+            "username" : "brokerengine"
+          }, {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/mortgage604test",
+            "username" : "mortgage604test",
+            "id" : "14434136"
+          }, {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/brokerengine",
+            "username" : "brokerengine",
+            "id" : "64935056@n07"
+          }, {
+            "followers" : 75,
+            "following" : 38,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/birchlore/",
+            "username" : "birchlore"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/user11693023",
+            "username" : "user11693023",
+            "id" : "11693023"
+          }, {
+            "followers" : 6,
+            "following" : 0,
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/jacksoncunningham",
+            "username" : "jacksoncunningham",
+            "id" : "761520"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/6424042",
+            "id" : "6424042"
+          } ]
+        }
+    http_version: 
+  recorded_at: Mon, 28 Sep 2015 16:36:11 GMT
+recorded_with: VCR 2.9.3

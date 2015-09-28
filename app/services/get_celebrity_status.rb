@@ -1,4 +1,4 @@
-class GetCelebrityStatus < Services
+class GetCelebrityStatus
 
   def self.call(celebrity)
     return unless celebrity.first_name && celebrity.last_name

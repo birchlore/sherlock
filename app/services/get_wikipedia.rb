@@ -1,4 +1,4 @@
-class GetWikipedia < Services
+class GetWikipedia
    def self.call(celebrity)
     source = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + celebrity.first_name + "%20" + celebrity.last_name + "&limit=1&namespace=0&format=json"
     

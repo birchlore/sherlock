@@ -1,4 +1,4 @@
-class GetJSON < Services
+class GetJSON
    def self.call(source)
     uri = URI.parse(source)
     res = Net::HTTP.get_response(uri)

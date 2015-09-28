@@ -1,4 +1,4 @@
-class Instagram < Services
+class Instagram
 
     def self.get_id(celebrity)
       klout_url = celebrity.klout_url

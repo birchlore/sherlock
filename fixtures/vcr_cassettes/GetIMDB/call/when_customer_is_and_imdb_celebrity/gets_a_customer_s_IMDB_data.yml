@@ -1,0 +1,214 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 28 Sep 2015 16:36:11 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYifDgkdWWGRnJbrPtMM6vlgl_S2Fqemk3CcBxYSv2RuNPKo55v3ZvN2HMjGEnPO9tSx605Qas-0F-Dua7bOKT0K6i-sAcMi1syQwP5CLFO-VhENPFiiT6yTaRRGiNEgXuvB8n693GgFFMqOZFaG8Zj-IQwcYYQYaC903dLL-aBZDo;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm1080980", "title":"", "name":"Jackson Cunningham","description":"Actor, 10-Speed"}],"name_approx": [{ "id":"nm2998651", "title":"", "name":"Jason Blaise Cunningham","description":"Camera and Electrical Department, Dawn of the Planet of the Apes"},{ "id":"nm0192336", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Road Trip"},{ "id":"nm1899417", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Stuck in the Middle with You"},{ "id":"nm3483519", "title":"", "name":"Jason Cunningham","description":"Thanks, The Signal"},{ "id":"nm6377923", "title":"", "name":"Jameson Cunningham","description":"Sound Department, Amor"},{ "id":"nm7308883", "title":"", "name":"Jameson Cunningham","description":"Camera and Electrical Department, Electric"},{ "id":"nm3175205", "title":"", "name":"Jason Cunningham","description":"Writer, All American Addict"},{ "id":"nm3784096", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Lockdown"},{ "id":"nm2553697", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Dale&#x27;s Supermarket Sweep"},{ "id":"nm4963372", "title":"", "name":"Jason Cunningham","description":"Thanks, Haunt"},{ "id":"nm6125182", "title":"", "name":"Jason Cunningham","description":"Thanks, Dirty Beautiful"},{ "id":"nm6367389", "title":"", "name":"Jameson Cunningham","description":"Uncategorised"},{ "id":"nm5439317", "title":"", "name":"Clare Alison Cunningham","description":"Director, The Ancient Arts of Qigong &#x26; Tai Chi"},{ "id":"nm0192328", "title":"", "name":"Jack Cunningham","description":"Second Unit Director or Assistant Director, The Great Race"},{ "id":"nm2731697", "title":"", "name":"Carson Cunningham","description":"Camera and Electrical Department, One Day More: Part 2"},{ "id":"nm0192278", "title":"", "name":"Dan Cunningham","description":"Actor, Richard III"},{ "id":"nm4765145", "title":"", "name":"Jaclyn Cunningham","description":"Actress, Forever"},{ "id":"nm0192256", "title":"", "name":"Cason Cunningham","description":"Actor, Black Girl"},{ "id":"nm3160705", "title":"", "name":"Jacob Cunningham","description":"Writer, Thy Will Be Done"}]
+        }
+    http_version: 
+  recorded_at: Mon, 28 Sep 2015 16:36:11 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Mon, 28 Sep 2015 16:36:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Mon, 28 Sep 2015 19:36:01 GMT
+      X-Varnish:
+      - 1673695968, 1934386531, 348731973 348696825
+      Via:
+      - 1.1 varnish, 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '11'
+      X-Cache:
+      - cp1054 miss (0), cp2013 miss (0), cp2023 frontend hit (2)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=28-Sep-2015;Path=/;HttpOnly;Expires=Fri, 30 Oct 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Jackson Cunningham",[],[],[]]'
+    http_version: 
+  recorded_at: Mon, 28 Sep 2015 16:36:12 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Mon, 28 Sep 2015 16:36:12 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '290'
+      X-Rate-Limit-Reset:
+      - '44'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "bf41baad-4831-47e5-8c23-20dbf4e84b6b"
+        }
+    http_version: 
+  recorded_at: Mon, 28 Sep 2015 16:36:12 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 28 Sep 2015 16:36:12 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYgGsS51SADw_aDUCWhF_QhNAEEtGySUWHTTt4keuVl2yaYxu81BceAvQj0WyMb06H-05joiBcb_qrAN0gZAcyaoKP7brBlIwgZj7Hom6JBPILu4AwW9Seb4y-3Ck_0hc_FBOxvKsmzM0ai77WID1xpDmNvFwfisRAeTEaLPAfJdJ0;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm1080980", "title":"", "name":"Jackson Cunningham","description":"Actor, 10-Speed"}],"name_approx": [{ "id":"nm2998651", "title":"", "name":"Jason Blaise Cunningham","description":"Camera and Electrical Department, Dawn of the Planet of the Apes"},{ "id":"nm0192336", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Road Trip"},{ "id":"nm1899417", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Stuck in the Middle with You"},{ "id":"nm3483519", "title":"", "name":"Jason Cunningham","description":"Thanks, The Signal"},{ "id":"nm6377923", "title":"", "name":"Jameson Cunningham","description":"Sound Department, Amor"},{ "id":"nm7308883", "title":"", "name":"Jameson Cunningham","description":"Camera and Electrical Department, Electric"},{ "id":"nm3175205", "title":"", "name":"Jason Cunningham","description":"Writer, All American Addict"},{ "id":"nm3784096", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Lockdown"},{ "id":"nm2553697", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Dale&#x27;s Supermarket Sweep"},{ "id":"nm4963372", "title":"", "name":"Jason Cunningham","description":"Thanks, Haunt"},{ "id":"nm6125182", "title":"", "name":"Jason Cunningham","description":"Thanks, Dirty Beautiful"},{ "id":"nm6367389", "title":"", "name":"Jameson Cunningham","description":"Uncategorised"},{ "id":"nm5439317", "title":"", "name":"Clare Alison Cunningham","description":"Director, The Ancient Arts of Qigong &#x26; Tai Chi"},{ "id":"nm0192328", "title":"", "name":"Jack Cunningham","description":"Second Unit Director or Assistant Director, The Great Race"},{ "id":"nm2731697", "title":"", "name":"Carson Cunningham","description":"Camera and Electrical Department, One Day More: Part 2"},{ "id":"nm0192278", "title":"", "name":"Dan Cunningham","description":"Actor, Richard III"},{ "id":"nm4765145", "title":"", "name":"Jaclyn Cunningham","description":"Actress, Forever"},{ "id":"nm0192256", "title":"", "name":"Cason Cunningham","description":"Actor, Black Girl"},{ "id":"nm3160705", "title":"", "name":"Jacob Cunningham","description":"Writer, Thy Will Be Done"}]
+        }
+    http_version: 
+  recorded_at: Mon, 28 Sep 2015 16:36:13 GMT
+recorded_with: VCR 2.9.3

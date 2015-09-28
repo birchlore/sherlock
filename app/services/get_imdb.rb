@@ -1,4 +1,4 @@
-class GetIMDB < Services
+class GetIMDB
 
    def self.call(celebrity)
     source = "http://www.imdb.com/xml/find?json=1&nr=1&nm=on&q="+ celebrity.first_name + "+" + celebrity.last_name
