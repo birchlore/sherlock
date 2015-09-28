@@ -7,7 +7,8 @@ class Klout < Services
       json = GetJSON.call(source)
     end
 
-    def get_score(klout_profile_hash)
+    def get_score(klout_id)
+      klout_profile_hash = get_hash(klout_id)
       klout_profile_hash.try(:[],'score').try(:[], 'score')
     end
 

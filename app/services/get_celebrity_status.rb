@@ -22,7 +22,6 @@ class GetCelebrityStatus < Services
     end
     
     social_data = Fullcontact.get_data_array(celebrity)
-
     if social_data
       
       celebrity.twitter_followers = Fullcontact.get_profile_data(social_data, "twitter", "followers")
