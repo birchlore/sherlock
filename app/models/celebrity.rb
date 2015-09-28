@@ -31,6 +31,25 @@ class Celebrity < ActiveRecord::Base
     (twitter_followers && twitter_followers > shop.twitter_follower_threshold)
   end
 
+  def set_social_data(social_data)
+    self.twitter_followers = Fullcontact.get_profile_data(social_data, "twitter", "followers")
+    self.twitter_url = Fullcontact.get_profile_data(social_data, "twitter", "url")
+    
+    self.linkedin_bio = Fullcontact.get_profile_data(social_data, "linkedin", "bio")
+    self.linkedin_url = Fullcontact.get_profile_data(social_data, "linkedin","url")
+    
+    self.angellist_bio = Fullcontact.get_profile_data(social_data, "angellist", "bio")
+    self.angellist_url = Fullcontact.get_profile_data(social_data, "angellist", "url")
+
+    self.klout_id = Fullcontact.get_profile_data(social_data, "klout", "id")
+    self.klout_url = Fullcontact.get_profile_data(social_data, "klout", "url")
+    self.klout_score = Klout.get_score(self)
+
+    self.instagram_id = Instagram.get_id(self)
+    self.instagram_followers = Instagram.get_followers(self)
+
+  end
+
   private
 
   def get_celebrity_status

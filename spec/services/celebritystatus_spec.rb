@@ -35,31 +35,13 @@ describe GetCelebrityStatus, :vcr do
         end
       end
 
-      context "when customer is valid" do
+      context "when customer is a valid celebrity" do
         it "checks the different social channels for hits" do
-          expect(GetIMDB).to receive(:call).with(celebrity)
-          expect(GetWikipedia).to receive(:call).with(celebrity)
-          expect(Fullcontact).to receive(:get_data_array).with(celebrity)
-          celebrity.send(:get_celebrity_status)
-        end
-
-        it "saves the social data" do
-          super_celebrity.shop.imdb_notification = true
+          expect(GetIMDB).to receive(:call).with(super_celebrity)
+          expect(GetWikipedia).to receive(:call).with(super_celebrity)
+          expect(super_celebrity).to receive(:set_social_data)
           super_celebrity.send(:get_celebrity_status)
-          expect(super_celebrity.imdb_url).to be
-          expect(super_celebrity.imdb_bio).to be
-          expect(super_celebrity.wikipedia_url).to be
-          expect(super_celebrity.wikipedia_bio).to be
-          expect(super_celebrity.twitter_url).to be
-          expect(super_celebrity.twitter_followers).to be
-          expect(super_celebrity.linkedin_url).to be
-          expect(super_celebrity.linkedin_bio).to be
-          expect(super_celebrity.angellist_url).to be
-          expect(super_celebrity.angellist_bio).to be
-          expect(super_celebrity.klout_url).to be
-          expect(super_celebrity.klout_id).to be
         end
-      end
 
     end
 
@@ -107,6 +89,8 @@ describe GetCelebrityStatus, :vcr do
       end
 
     end
+
+  end
 end
 
 

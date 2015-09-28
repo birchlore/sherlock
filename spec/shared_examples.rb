@@ -221,6 +221,6 @@ shared_context "shared examples" do
     let(:twitter_celebrity) { FactoryGirl.create(:celebrity, shop: shop, twitter_followers: 2, email: "jacksondcunningham@gmail.com") }
     let(:imdb_celebrity) { FactoryGirl.create(:imdb_celebrity) }
     let(:instagram_celebrity) { FactoryGirl.create(:instagram_celebrity) }
-    let(:super_celebrity) { FactoryGirl.build(:super_celebrity) }
     let(:wikipedia_celebrity) { FactoryGirl.create(:wikipedia_celebrity) }
+    let(:super_celebrity) { FactoryGirl.create(:super_celebrity) }
 end

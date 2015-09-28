@@ -98,4 +98,78 @@ describe Celebrity, :vcr do
     end
   end
 
+  describe "set_social_data" do
+    before(:all) do
+      @super_celebrity = FactoryGirl.build(:super_celebrity, shop: Shop.last)
+      @super_celebrity.shop.imdb_notification = true
+      fullcontact_data_array = [
+        {"bio"=>"Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",
+        "type"=>"angellist",
+        "typeId"=>"angellist",
+        "typeName"=>"AngelList",
+        "url"=>"https://angel.co/ericbobmyers",
+        "username"=>"ericbobmyers",
+        "id"=>"998397"},
+       {"type"=>"klout",
+        "typeId"=>"klout",
+        "typeName"=>"Klout",
+        "url"=>"http://klout.com/Ericbobmyers",
+        "username"=>"Ericbobmyers",
+        "id"=>"27043"},
+        {"bio"=>
+         "#Vegas-Based, Diabetic (#T1D) #SEM Account Director. Huge #Analytics, #PPC and #Social geek tweeting about whatever entertains me at that moment.",
+        "followers"=>1538,
+        "following"=>1139,
+        "type"=>"twitter",
+        "typeId"=>"twitter",
+        "typeName"=>"Twitter",
+        "url"=>"https://twitter.com/Ericbobmyers",
+        "username"=>"Ericbobmyers",
+        "id"=>"15771736"},
+       {"type"=>"youtube",
+        "typeId"=>"youtube",
+        "typeName"=>"YouTube",
+        "url"=>"https://youtube.com/user/ericbobmyers",
+        "username"=>"ericbobmyers"},
+       {"bio"=>"Senior Account Manager | SEM | Analytics | Senior Digital Marketing Analyst",
+        "type"=>"linkedin",
+        "typeId"=>"linkedin",
+        "typeName"=>"LinkedIn",
+        "url"=>"https://www.linkedin.com/in/ericrmyers",
+        "username"=>"ericrmyers"}
+      ]
+
+        @super_celebrity.set_social_data(fullcontact_data_array)
+
+    end
+
+    it "sets the twitter data" do  
+      expect(@super_celebrity.twitter_url).to be
+      expect(@super_celebrity.twitter_followers).to be
+    end
+
+    it "sets the linkedin data" do     
+      expect(@super_celebrity.linkedin_url).to be
+      expect(@super_celebrity.linkedin_bio).to be
+    end
+
+    it "sets the angellist data" do     
+      expect(@super_celebrity.angellist_url).to be
+      expect(@super_celebrity.angellist_bio).to be
+    end
+
+    it "sets the klout data" do     
+      expect(@super_celebrity.klout_url).to be
+      expect(@super_celebrity.klout_id).to be
+      expect(@super_celebrity.klout_score).to be
+    end
+
+    it "sets the instagram data" do     
+      expect(@super_celebrity.instagram_id).to be
+      expect(@super_celebrity.instagram_followers).to be
+    end
+
+
+  end
 end
+
