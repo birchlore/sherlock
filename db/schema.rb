@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929035920) do
+ActiveRecord::Schema.define(version: 20150929045959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,17 +22,17 @@ ActiveRecord::Schema.define(version: 20150929035920) do
     t.string   "email"
     t.string   "imdb_url"
     t.string   "wikipedia_url"
-    t.integer  "twitter_followers",            limit: 8
+    t.integer  "twitter_followers",   limit: 8
     t.string   "industry"
-    t.datetime "created_at",                                                null: false
-    t.datetime "updated_at",                                                null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
     t.string   "imdb_bio"
     t.string   "wikipedia_bio"
-    t.string   "status",                                 default: "active"
+    t.string   "status",                        default: "active"
     t.integer  "shop_id"
     t.string   "shopify_url"
-    t.integer  "youtube_subscribers",          limit: 8
-    t.integer  "instagram_followers",          limit: 8
+    t.integer  "youtube_subscribers", limit: 8
+    t.integer  "instagram_followers", limit: 8
     t.string   "twitter_bio"
     t.string   "twitter_url"
     t.string   "youtube_bio"
@@ -42,29 +42,29 @@ ActiveRecord::Schema.define(version: 20150929035920) do
     t.string   "linkedin_bio"
     t.string   "linkedin_url"
     t.string   "instagram_id"
-    t.integer  "klout_id",                     limit: 8
+    t.integer  "klout_id",            limit: 8
     t.float    "klout_score"
     t.string   "klout_url"
-    t.integer  "youtube_views",                limit: 8
+    t.integer  "youtube_views",       limit: 8
     t.string   "youtube_username"
-    t.integer  "youtube_subscriber_threshold",           default: 5000
-    t.integer  "instagram_follower_threshold",           default: 2500
-    t.integer  "klout_score_threshold",                  default: 75
   end
 
   add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id", using: :btree
 
   create_table "shops", force: :cascade do |t|
-    t.string   "shopify_domain",                             null: false
-    t.string   "shopify_token",                              null: false
+    t.string   "shopify_domain",                               null: false
+    t.string   "shopify_token",                                null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "twitter_follower_threshold", default: 2500
-    t.boolean  "email_notifications",        default: true
-    t.boolean  "installed",                  default: false
+    t.integer  "twitter_follower_threshold",   default: 2500
+    t.boolean  "email_notifications",          default: true
+    t.boolean  "installed",                    default: false
     t.string   "email"
-    t.boolean  "wikipedia_notification",     default: true
-    t.boolean  "imdb_notification",          default: false
+    t.boolean  "wikipedia_notification",       default: true
+    t.boolean  "imdb_notification",            default: false
+    t.integer  "youtube_subscriber_threshold", default: 5000
+    t.integer  "instagram_follower_threshold", default: 2500
+    t.integer  "klout_score_threshold",        default: 75
   end
 
   add_index "shops", ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true, using: :btree
