@@ -4,6 +4,18 @@ require 'shared_examples'
 
 describe Shop do
   include_context "shared examples"
+  it { should respond_to(:shopify_domain) }
+  it { should respond_to(:shopify_token) }
+  it { should respond_to(:twitter_follower_threshold) }
+  it { should respond_to(:email_notifications) }
+  it { should respond_to(:installed) }
+  it { should respond_to(:email) }
+  it { should respond_to(:wikipedia_notification) }
+  it { should respond_to(:imdb_notification) }
+  it { should respond_to(:youtube_subscriber_threshold) }
+  it { should respond_to(:instagram_follower_threshold) }
+  it { should respond_to(:klout_score_threshold) }
+
 
     before(:each) do
       @shop1 = build(:shop)

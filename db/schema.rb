@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150928211956) do
+ActiveRecord::Schema.define(version: 20150929035920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,17 +22,17 @@ ActiveRecord::Schema.define(version: 20150928211956) do
     t.string   "email"
     t.string   "imdb_url"
     t.string   "wikipedia_url"
-    t.integer  "twitter_followers"
+    t.integer  "twitter_followers",            limit: 8
     t.string   "industry"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.datetime "created_at",                                                null: false
+    t.datetime "updated_at",                                                null: false
     t.string   "imdb_bio"
     t.string   "wikipedia_bio"
-    t.string   "status",              default: "active"
+    t.string   "status",                                 default: "active"
     t.integer  "shop_id"
     t.string   "shopify_url"
-    t.integer  "youtube_subscribers"
-    t.integer  "instagram_followers"
+    t.integer  "youtube_subscribers",          limit: 8
+    t.integer  "instagram_followers",          limit: 8
     t.string   "twitter_bio"
     t.string   "twitter_url"
     t.string   "youtube_bio"
@@ -42,11 +42,14 @@ ActiveRecord::Schema.define(version: 20150928211956) do
     t.string   "linkedin_bio"
     t.string   "linkedin_url"
     t.string   "instagram_id"
-    t.integer  "klout_id"
+    t.integer  "klout_id",                     limit: 8
     t.float    "klout_score"
     t.string   "klout_url"
-    t.integer  "youtube_views"
+    t.integer  "youtube_views",                limit: 8
     t.string   "youtube_username"
+    t.integer  "youtube_subscriber_threshold",           default: 5000
+    t.integer  "instagram_follower_threshold",           default: 2500
+    t.integer  "klout_score_threshold",                  default: 75
   end
 
   add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id", using: :btree
