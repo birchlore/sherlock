@@ -8,9 +8,19 @@ class Shop < ActiveRecord::Base
   after_create :send_install_notification
 
   def self.store(session)
+    original_shop = Shop.where(:shopify_domain => session.url).first
+    previous_install = original_shop.present? && !original_shop.installed
+
     shop = Shop.where(:shopify_domain => session.url).first_or_create({ shopify_domain: session.url, 
                                       :shopify_token => session.token,
                                       :installed => true})
+    if previous_install
+      shop.installed = true
+      shop.init_webhooks
+      shop.set_email
+      shop.send_install_notification
+    end
+
     shop.id
   end
 
@@ -38,18 +48,6 @@ class Shop < ActiveRecord::Base
 
       new_customer = ShopifyAPI::Webhook.new(:topic => "customers/create", :format => "json", :address => new_customer_callback_url)
       uninstall = ShopifyAPI::Webhook.new(:topic => "app/uninstalled", :format => "json", :address => uninstall_callback_url)
-      
-      if new_customer.save
-        puts ">>>>>>>>>>>>customer callback saved<<<<<<<<<<<<<<<<"
-      else
-        puts ">>>>>>>>>>>>customer callback not saved<<<<<<<<<<<<<<<<"
-      end
-
-      if uninstall.save
-        puts ">>>>>>>>>>>>uninstall callback saved<<<<<<<<<<<<<<<<"
-      else
-        puts ">>>>>>>>>>>>uninstall callback not saved <<<<<<<<<<<<<<<<"
-      end
     end
 
     
@@ -69,8 +67,6 @@ class Shop < ActiveRecord::Base
   def twitter_follower_threshold=(followers)
     write_attribute(:twitter_follower_threshold, "#{followers}".gsub(/\D/, ''))
   end
-
-  private
 
   def send_install_notification
     NotificationMailer.install_notification(self).deliver_now
