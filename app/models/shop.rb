@@ -44,6 +44,9 @@ class Shop < ActiveRecord::Base
 
       new_customer = ShopifyAPI::Webhook.new(:topic => "customers/create", :format => "json", :address => new_customer_callback_url)
       uninstall = ShopifyAPI::Webhook.new(:topic => "app/uninstalled", :format => "json", :address => uninstall_callback_url)
+
+      new_customer.save
+      uninstall.save
     end
 
     
