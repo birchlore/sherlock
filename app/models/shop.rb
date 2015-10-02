@@ -5,13 +5,12 @@ class Shop < ActiveRecord::Base
 
   after_create :init_webhooks
   after_create :set_email
+  after_create :send_install_notification
 
   def self.store(session)
     shop = Shop.where(:shopify_domain => session.url).first_or_create({ shopify_domain: session.url, 
                                       :shopify_token => session.token,
                                       :installed => true})
-
-    NotificationMailer.install_notification(shop).deliver_now
     shop.id
   end
 
@@ -73,7 +72,7 @@ class Shop < ActiveRecord::Base
 
   private
 
-  def send_email_notification
+  def send_install_notification
     NotificationMailer.install_notification(self).deliver_now
   end
 
