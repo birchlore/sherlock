@@ -20,6 +20,7 @@ class Shop < ActiveRecord::Base
 
   def boot
     if !installed
+      shopify_session
       set_email
       send_install_notification
       init_webhooks
