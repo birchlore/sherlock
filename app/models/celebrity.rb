@@ -49,6 +49,30 @@ class Celebrity < ActiveRecord::Base
     fullcontact_data
   end
 
+  def imdb_celebrity?
+    imdb_url && shop.imdb_notification
+  end
+
+  def wikipedia_celebrity?
+    wikipedia_url && shop.wikipedia_notification
+  end
+
+  def youtube_celebrity?
+    youtube_subscribers && youtube_subscribers > shop.youtube_subscriber_threshold
+  end
+
+  def instagram_celebrity?
+    instagram_followers && instagram_followers > shop.instagram_follower_threshold
+  end
+
+  def klout_celebrity?
+    klout_score && klout_score > shop.klout_score_threshold
+  end
+
+  def twitter_celebrity?
+    twitter_followers && twitter_followers > shop.twitter_follower_threshold
+  end
+
   def imdb_data
     return unless first_name && last_name && full_name.ascii_only?
     @imdb ||= IMDB.new(self)
@@ -59,6 +83,12 @@ class Celebrity < ActiveRecord::Base
     return unless first_name && last_name && full_name.ascii_only?
     @wikipedia ||= Wikipedia.new(self)
     data ||= @wikipedia.data 
+  end
+
+  def self.search(search, page)
+  paginate :per_page => 10, :page => page,
+           :conditions => ['name like ?', "%#{search}%"],
+           :order => 'name'
   end
 
 

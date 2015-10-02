@@ -118,6 +118,7 @@ describe Celebrity, :vcr do
           expect(super_celebrity).to receive(:set_wikipedia)
           expect(super_celebrity).to receive(:set_social_data)
           expect(super_celebrity).to receive(:celebrity?)
+          super_celebrity.shop.imdb_notification = true
           super_celebrity.send(:get_celebrity_status)
         end
       end

@@ -1,9 +1,34 @@
-You just made a sale to <%= @celebrity.full_name %>
+You just made a sale to <%= name(@celebrity) %>
 
 <%= bio(@celebrity) %>
 
+<% if @celebrity.wikipedia_celebrity? %>
+   Wikipedia Page: <%= wikipedia_link(@celebrity) %>
+ <% end %>
 
-**Investigate this further to see if it's legit then reach out to see if you can get a shout out for your brand.**
+  <% if @celebrity.imdb_celebrity? %>
+   IMDB Page: <%= imdb_link(@celebrity) %>
+ <% end %>
 
-You can turn off celebrity notifications <%= link_to "here", edit_shop_url %>
+ <% if @celebrity.klout_celebrity? %>
+   Klout Score: <%= klout_score(@celebrity) %>
+ <% end %>
+
+  <% if @celebrity.youtube_celebrity? %>
+   Youtube Subscribers: <%= youtube_subscriber_count(@celebrity) %>
+ <% end %>
+
+ <% if @celebrity.twitter_celebrity? %>
+   Twitter Followers: <%= twitter_follower_count(@celebrity) %>
+ <% end %>
+
+ <% if @celebrity.instagram_celebrity? %>
+   Instagram Followers: <%= instagram_follower_count(@celebrity) %>
+ <% end %>
+
+
+  **Investigate this further to see if it's legit then reach out to see if you can get a shout out for your brand.**
+
+
+ You can turn off celebrity notifications <%= link_to "here", edit_shop_url %>
 

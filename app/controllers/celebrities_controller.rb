@@ -2,14 +2,10 @@ class CelebritiesController < AuthenticatedController
   
   layout "true" == Figaro.env.shopify_embedded_app ? 'embedded_app' : 'application'
 
-  # def new
-  #   @customer = current_shop.customers.new
-  # end
-  
   def index
-    # trigger_login
     @celebrity = current_shop.celebrities.new
-    @celebrities = current_shop.celebrities.where(status: "active").reverse
+    @celebrities = current_shop.active_celebrities
+    Kaminari.paginate_array(@celebrities).page(params[:page]).per(10)
   end
 
   def show

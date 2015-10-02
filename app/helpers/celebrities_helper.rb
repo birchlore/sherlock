@@ -1,6 +1,6 @@
 module CelebritiesHelper
 
-    def has_wikipedia?(celebrity)
+    def wikipedia_link(celebrity)
       if celebrity.wikipedia_url.present?
         link_to 'Yes', celebrity.wikipedia_url, :target=>"_blank" 
       else
@@ -8,7 +8,7 @@ module CelebritiesHelper
       end
     end
 
-  def has_imdb?(celebrity)
+  def imdb_link(celebrity)
     if celebrity.imdb_url.present?
       link_to 'Yes', celebrity.imdb_url, :target=>"_blank" 
     else
@@ -17,12 +17,10 @@ module CelebritiesHelper
   end
 
   def twitter_follower_count(celebrity)
-    threshold = current_shop.twitter_follower_threshold
-    followers = celebrity.twitter_followers
-    if followers && followers > threshold && celebrity.twitter_url
-      link_to followers, celebrity.twitter_url, :target=>"_blank"
-    elsif followers && followers > threshold
-      followers
+    if celebrity.twitter_celebrity? && celebrity.twitter_url
+      link_to celebrity.twitter_followers, celebrity.twitter_url, :target=>"_blank"
+    elsif celebrity.twitter_celebrity?
+      celebrity.twitter_followers
     else
       "—"
     end
@@ -55,21 +53,17 @@ module CelebritiesHelper
   end
 
   def klout_score(celebrity)
-    threshold = celebrity.shop.klout_score_threshold
-    score = celebrity.klout_score
-    if score && score > threshold
-      link_to score, "https://klout.com/corp/score", :target=>"_blank"
+    if celebrity.klout_celebrity?
+      link_to celebrity.klout_score, "https://klout.com/corp/score", :target=>"_blank"
     else
       "—"
     end
   end
 
   def youtube_subscriber_count(celebrity)
-    threshold = celebrity.shop.youtube_subscriber_threshold
-    subscribers = celebrity.youtube_subscribers
-    if subscribers && subscribers > threshold && celebrity.youtube_url
+    if celebrity.youtube_celebrity? && celebrity.youtube_url
       link_to subscribers, celebrity.youtube_url, :target=>"_blank"
-    elsif subscribers && subscribers > threshold
+    elsif celebrity.youtube_celebrity?
       subscribers
     else
       "—"
@@ -77,12 +71,10 @@ module CelebritiesHelper
   end
 
   def instagram_follower_count(celebrity)
-    threshold = celebrity.shop.instagram_follower_threshold
-    followers = celebrity.instagram_followers
-    if followers && followers > threshold && celebrity.instagram_url
-      link_to followers, celebrity.instagram_url, :target=>"_blank"
-    elsif followers && followers > threshold
-      followers
+    if celebrity.instagram_celebrity? && celebrity.instagram_url
+      link_to celebrity.instagram_followers, celebrity.instagram_url, :target=>"_blank"
+    elsif celebrity.instagram_celebrity?
+      celebrity.instagram_followers
     else
       "—"
     end

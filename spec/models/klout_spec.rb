@@ -22,7 +22,7 @@ describe Klout, :vcr do
 
     describe "score" do
       it "gets the users klout score from their klout hash" do
-        expect(@klout.score).to be_a(Float)
+        expect(@klout.score).to be_a(Integer)
       end
     end
 

@@ -9,11 +9,11 @@
 
 
    <% if current_shop.wikipedia_notification %>
-     <td><%= has_wikipedia?(celebrity) %></td>
+     <td><%= wikipedia_link(celebrity) %></td>
    <% end %>
 
     <% if current_shop.imdb_notification %>
-     <td><%= has_imdb?(celebrity) %></td>
+     <td><%= imdb_link(celebrity) %></td>
    <% end %>
 
    <% if current_shop.klout_score_threshold %>

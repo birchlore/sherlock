@@ -46,6 +46,10 @@ class Shop < ActiveRecord::Base
     self.save!
   end
 
+  def active_celebrities
+    celebrities.where(status: "active").reverse
+  end
+
   def set_email
     unless Rails.env.test?
       self.update_attributes({:email => ShopifyAPI::Shop.current.email})

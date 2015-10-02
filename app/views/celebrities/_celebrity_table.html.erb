@@ -3,6 +3,7 @@
   <div class="spacer"></div>
 
 
+
     <table class="table customers-container table-hover">
      <thead>
       <tr>
@@ -11,6 +12,7 @@
      </thead>
 
      <tbody>
+
         <% @celebrities.each do |celebrity| %>
           <%= render 'celebrity_table_row', :celebrity=> celebrity %>
        <% end %>

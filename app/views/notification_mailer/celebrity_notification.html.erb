@@ -1,9 +1,33 @@
-<h1>You just made a sale to <%= @celebrity.full_name %></h1>
+<h1>You just made a sale to <%= name(@celebrity) %></h1>
 
-<%= render 'wikipedia' %>
-<%= render 'imdb' %>
-<%= render 'followers' %>
-<%= bio(@celebrity) %>
+<p><%= bio(@celebrity) %></p>
+
+<ul>
+<% if @celebrity.wikipedia_celebrity? %>
+   <li>Wikipedia Page: <%= wikipedia_link(@celebrity) %></li>
+ <% end %>
+
+  <% if @celebrity.imdb_celebrity? %>
+   <li>IMDB Page: <%= imdb_link(@celebrity) %></li>
+ <% end %>
+
+ <% if @celebrity.klout_celebrity? %>
+   <li>Klout Score: <%= klout_score(@celebrity) %></li>
+ <% end %>
+
+  <% if @celebrity.youtube_celebrity? %>
+   <li>Youtube Subscribers: <%= youtube_subscriber_count(@celebrity) %></li>
+ <% end %>
+
+ <% if @celebrity.twitter_celebrity? %>
+   <li>Twitter Followers: <%= twitter_follower_count(@celebrity) %></li>
+ <% end %>
+
+ <% if @celebrity.instagram_celebrity? %>
+   <li>Instagram Followers: <%= instagram_follower_count(@celebrity) %></li>
+ <% end %>
+</ul>
+
 
 <p>
   **Investigate this further to see if it's legit then reach out to see if you can get a shout out for your brand.**
@@ -12,6 +36,10 @@
 <div class="text-center">
   <strong>You can turn off celebrity notifications <%= link_to "here", edit_shop_url %></strong>
 </div>
+
+
+
+   
 
 
 
