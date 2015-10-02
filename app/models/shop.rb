@@ -5,14 +5,7 @@ class Shop < ActiveRecord::Base
   def self.store(session)
     shop = Shop.where(:shopify_domain => session.url).first_or_create({ shopify_domain: session.url, 
                                       :shopify_token => session.token})
-    if !shop.installed
-      shop.set_email
-      shop.send_install_notification
-      shop.init_webhooks
-      shop.installed = true
-      shop.save!
-    end
-
+    shop.boot
     shop.id
   end
 
@@ -25,23 +18,32 @@ class Shop < ActiveRecord::Base
     end
   end
 
+  def boot
+    if !installed
+      shopify_session
+      set_email
+      send_install_notification
+      init_webhooks
+      self.installed = true
+      self.save!
+    end
+  end
+
   def shopify_session
     shop_session = ShopifyAPI::Session.new(shopify_domain, shopify_token)
     ShopifyAPI::Base.activate_session(shop_session)
   end
 
-  def check_webhooks
-    unless Rails.env.test?
-      shopify_session
+  # def check_webhooks
+  #   unless Rails.env.test?
+  #     shopify_session
 
-    end
-  end
+  #   end
+  # end
   
 
   def init_webhooks
     unless Rails.env.test?
-      shopify_session
-
       new_customer_callback_url = Figaro.env.root_uri + "/hooks/new_customer_callback"
       uninstall_callback_url = Figaro.env.root_uri + "/hooks/app_uninstalled_callback"
 
