@@ -50,6 +50,7 @@ class Shop < ActiveRecord::Base
         puts ">>>>>>>>>>>>uninstall callback saved<<<<<<<<<<<<<<<<"
       else
         puts ">>>>>>>>>>>>uninstall callback not saved <<<<<<<<<<<<<<<<"
+      end
     end
 
     
