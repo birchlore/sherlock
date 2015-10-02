@@ -2,13 +2,39 @@
    <td>
       <%= link_to celebrity_archive_path(celebrity), :remote=>"true" do %>
         <i class="glyphicon glyphicon-remove"></i>
-      <% end %>
-
-        
+      <% end %>  
    </td>
    <td><%= name(celebrity) %></td>
    <td><%= bio(celebrity) %></td>
-   <td><%= has_wikipedia?(celebrity) %></td>
-   <td><%= has_imdb?(celebrity) %></td>
-   <td><%= twitter_follower_count(celebrity) %></td>
+
+
+   <% if current_shop.wikipedia_notification %>
+     <td><%= has_wikipedia?(celebrity) %></td>
+   <% end %>
+
+    <% if current_shop.imdb_notification %>
+     <td><%= has_imdb?(celebrity) %></td>
+   <% end %>
+
+   <% if current_shop.klout_score_threshold %>
+     <td><%= klout_score(celebrity) %></td>
+   <% end %>
+
+    <% if current_shop.youtube_subscriber_threshold %>
+     <td><%= youtube_subscriber_count(celebrity) %></td>
+   <% end %>
+
+   <% if current_shop.twitter_follower_threshold %>
+     <td><%= twitter_follower_count(celebrity) %></td>
+   <% end %>
+
+   <% if current_shop.instagram_follower_threshold %>
+     <td><%= instagram_follower_count(celebrity) %></td>
+   <% end %>
+
+   
+   
+   
+   
 </tr>
+
