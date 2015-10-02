@@ -11,8 +11,8 @@ class Shop < ActiveRecord::Base
   def self.retrieve(id)
     shop = Shop.where(:id => id).first
     if shop
-      ShopifyAPI::Session.new(shop.shopify_domain, shop.shopify_token)
       shop.boot
+      ShopifyAPI::Session.new(shop.shopify_domain, shop.shopify_token)
     else
       nil
     end
