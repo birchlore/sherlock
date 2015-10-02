@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Aaslkdfj%20alfsijef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 02 Oct 2015 01:50:19 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYh4UrPQ_nfVydikYUCWutE7fZLX5dZD5f4I-qC5eWY_7s5tJe7zAOBttVKA61NMUKbaFd5GmRHkoebXt7HlzJW8NTy_lc7ZUqncEv0qWmBajgVX3f5_YJz4ngP0gtOO7fdQ0SG6omUpes489F5rG1TrQLZ_tGnFPztwV63JXC5Y14;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+
+        }
+    http_version: 
+  recorded_at: Fri, 02 Oct 2015 01:50:19 GMT
+recorded_with: VCR 2.9.3

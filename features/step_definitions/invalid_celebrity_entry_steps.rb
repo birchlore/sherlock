@@ -16,6 +16,7 @@ end
 
 Given "the customer is a celebrity with a common name" do
 	@customer = build(:celebrity, :first_name=>"Sarah", :last_name=>"Smith")
+  @customer.shop.imdb_notification = false
 end
 
 

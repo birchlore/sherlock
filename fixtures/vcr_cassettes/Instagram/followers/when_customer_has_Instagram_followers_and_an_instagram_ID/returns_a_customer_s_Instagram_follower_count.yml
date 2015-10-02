@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/1272396/?client_id=f93100f5c0d843809f07f94367795fb0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.instagram.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4998'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Fri, 02 Oct 2015 02:19:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=b714877f3ab1fb820245353285d819b6; expires=Fri, 30-Sep-2016 02:19:31
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '360'
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":{"username":"ericbobmyers","bio":"Senior
+        analyst based in Hartford. I''ve got a severe nerdy streak \u0026 dry sense
+        of humor. Enjoy mix of entertainment \u0026 ADD-fueled fascination.","website":"http:\/\/about.me\/ericbobmyers","profile_picture":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11330809_1634634546820830_1421562166_a.jpg","full_name":"Eric
+        Myers","counts":{"media":256,"followed_by":420,"follows":497},"id":"1272396"}}'
+    http_version: 
+  recorded_at: Fri, 02 Oct 2015 02:19:31 GMT
+recorded_with: VCR 2.9.3

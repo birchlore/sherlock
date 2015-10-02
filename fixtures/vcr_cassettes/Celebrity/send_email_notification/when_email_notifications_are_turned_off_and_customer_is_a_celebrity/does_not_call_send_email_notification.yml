@@ -162,4 +162,166 @@ http_interactions:
         }
     http_version: 
   recorded_at: Fri, 25 Sep 2015 23:28:50 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Thu, 01 Oct 2015 19:35:27 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '294'
+      X-Rate-Limit-Reset:
+      - '58'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "6b5d671d-65e2-42f6-8925-54ece8df69fc"
+        }
+    http_version: 
+  recorded_at: Thu, 01 Oct 2015 19:35:27 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Noah%20Kagan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 01 Oct 2015 20:55:34 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYoIl-RZsnaFW5Z71rLNQtbTXf8CqFZgGpuUzDDs--d0Ii4KBSxsIUkFKzat9ILBVCXVw_zJxOwHyo5Co16vLjkYa1cG89wVLFmzJRMs9--ShmJIoLT4GZ9YeVBhZqO4piknOjFg_PsTIGRyChZK68FV_2SCtfjDFy2qLVOJ7rng3Q;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm5861888", "title":"", "name":"Noah Kazanjian","description":"Actor, Late"},{ "id":"nm0863532", "title":"", "name":"Noah Timan","description":"Sound Department, Fantastic Mr. Fox"},{ "id":"nm5742208", "title":"", "name":"Jonah Kagan","description":"Writer, Donner Party: The Musical"},{ "id":"nm0810101", "title":"", "name":"Taran Noah Smith","description":"Actor, Little Bigfoot 2: The Journey Home"},{ "id":"nm0781913", "title":"", "name":"Noah Segan","description":"Actor, Looper"},{ "id":"nm6547344", "title":"", "name":"Noah Kaplan","description":"Writer, Raw Nerve"},{ "id":"nm1818048", "title":"", "name":"Kagan Goh","description":"Director, Stolen Memories"},{ "id":"nm5657500", "title":"", "name":"Noah Kaai","description":"Director, Maasai Voices on Climate Change: and Other Changes, Too"},{ "id":"nm3386285", "title":"", "name":"Noah Faran","description":"Miscellaneous Crew, Beaufort"},{ "id":"nm6154452", "title":"", "name":"Noah Hogan","description":"Visual Effects, #BreakfastInBedTour"},{ "id":"nm2264256", "title":"", "name":"Alan Noah","description":"Producer, Logo Movie Special: &#x27;Brokeback Mountain&#x27;"},{ "id":"nm3394949", "title":"", "name":"Emil Kagandahan","description":"Second Unit Director or Assistant Director, Takot ako, eh!"},{ "id":"nm3846679", "title":"", "name":"Noah ben Hagay","description":"Editor, Haya Bli Ima"},{ "id":"nm3660651", "title":"", "name":"Noah Hogan","description":"Animation Department, Motorcycle Dreams"},{ "id":"nm2789136", "title":"", "name":"Noah Philip Lagin","description":"Director, Warsaw"},{ "id":"nm5079489", "title":"", "name":"Noah Derek Logan","description":"Art Director, V/H/S/2"},{ "id":"nm5210140", "title":"", "name":"Noah Khan","description":"Actor, Part Time Fabulous"},{ "id":"nm3110828", "title":"", "name":"Josh Kagan","description":"Producer, Unmade Man"},{ "id":"nm4565073", "title":"", "name":"Rosh Kagan","description":"Actress, Golden: How to Make a Billion Dollars the Easy Way"},{ "id":"nm2666777", "title":"", "name":"Noah Kaplan","description":"Actor, Chance of a Lifetime"}]
+        }
+    http_version: 
+  recorded_at: Thu, 01 Oct 2015 20:55:36 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Noah%20Kagan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Thu, 01 Oct 2015 21:43:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '132'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Thu, 01 Oct 2015 23:00:27 GMT
+      X-Varnish:
+      - 1391165340, 1370121561 1357671562
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '6166'
+      X-Cache:
+      - cp1052 miss (0), cp1052 frontend hit (6)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=01-Oct-2015;Path=/;HttpOnly;Expires=Mon, 02 Nov 2015 12:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Noah Kagan",["Noah Kagan"],["Noah Kagan is an American Internet entrepreneur
+        and the founder of AppSumo."],["https://en.wikipedia.org/wiki/Noah_Kagan"]]'
+    http_version: 
+  recorded_at: Thu, 01 Oct 2015 21:43:14 GMT
 recorded_with: VCR 2.9.3

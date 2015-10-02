@@ -2,8 +2,8 @@ require 'spec_helper'
 require 'shared_examples'
 
 describe Celebrity, :vcr do
-  include_context "shared examples"
 
+  include_context "shared examples"
   it { should belong_to(:shop) }
 
   it { should respond_to(:shop) }
@@ -40,18 +40,24 @@ describe Celebrity, :vcr do
   it { should respond_to (:full_name)}
   it { should respond_to (:celebrity?)}
   it { should respond_to (:set_social_data)}
-  it { should respond_to (:sanitize)}
-  # it { should respond_to (instance_eval{:get_celebrity_status})}
-  # it { should respond_to (instance_eval{:send_email_notification})}
 
 
-  it "has a valid factory" do
+  it "has a valid celebrity factory" do
     expect(celebrity).to_not be_valid
-    expect(twitter_celebrity).to be_valid
-    expect(wikipedia_celebrity).to be_valid
-    expect(imdb_celebrity).to be_valid
   end
 
+   it "has a valid twitter factory" do
+    expect(twitter_celebrity).to be_valid
+  end
+
+   it "has a valid wikipedia factory" do
+    expect(wikipedia_celebrity).to be_valid
+  end
+
+  it "has a valid imdb factory" do
+    expect(imdb_celebrity).to be_valid
+  end
+    
 
   describe "full_name" do
     it "returns a celebrity's full name as a string" do
@@ -95,90 +101,291 @@ describe Celebrity, :vcr do
   end
 
   describe "get_celebrity_status" do
-    it "should call GetCelebrityStatus" do
-      expect(GetCelebrityStatus).to receive(:call).with(celebrity)
-      celebrity.send(:get_celebrity_status)
+    before(:each) do
+      super_celebrity = build(:super_celebrity)
+      super_celebrity.get_external_data
+
+      celebrity = build(:celebrity)
+      celebrity.get_external_data
+
+      no_name = build(:celebrity, first_name: nil)
+      no_name.get_external_data
     end
+
+      context "when customer has social data" do
+        it "checks the different social channels for hits" do
+          expect(super_celebrity).to receive(:set_imdb)
+          expect(super_celebrity).to receive(:set_wikipedia)
+          expect(super_celebrity).to receive(:set_social_data)
+          expect(super_celebrity).to receive(:celebrity?)
+          super_celebrity.send(:get_celebrity_status)
+        end
+      end
+
+      context "when customer does not have social data" do
+        it  "doesnt check fullcontact" do
+          expect(celebrity).not_to receive(:set_imdb)
+          expect(celebrity).not_to receive(:set_wikipedia)
+          expect(celebrity).not_to receive(:set_social_data)
+          expect(celebrity).to receive(:celebrity?)
+          celebrity.send(:get_celebrity_status)
+        end
+      end
+
+      context "when customer is invalid" do
+        it  "doesnt check any external sources" do
+          expect(celebrity).not_to receive(:set_imdb)
+          expect(celebrity).not_to receive(:set_wikipedia)
+          expect(celebrity).not_to receive(:set_social_data)
+          expect(celebrity).to receive(:celebrity?)
+          celebrity.send(:get_celebrity_status)
+        end
+      end
+
   end
 
   describe "set_social_data" do
-    before(:all) do
-      @super_celebrity = build(:super_celebrity, shop: build(:shop, shopify_domain: "whatever.myshopify.com"))
-      fullcontact_data_array = [
-        {"bio"=>"Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",
-        "type"=>"angellist",
-        "typeId"=>"angellist",
-        "typeName"=>"AngelList",
-        "url"=>"https://angel.co/ericbobmyers",
-        "username"=>"ericbobmyers",
-        "id"=>"998397"},
-       {"type"=>"klout",
-        "typeId"=>"klout",
-        "typeName"=>"Klout",
-        "url"=>"http://klout.com/Ericbobmyers",
-        "username"=>"Ericbobmyers",
-        "id"=>"27043"},
-        {"bio"=>
-         "#Vegas-Based, Diabetic (#T1D) #SEM Account Director. Huge #Analytics, #PPC and #Social geek tweeting about whatever entertains me at that moment.",
-        "followers"=>1538,
-        "following"=>1139,
-        "type"=>"twitter",
-        "typeId"=>"twitter",
-        "typeName"=>"Twitter",
-        "url"=>"https://twitter.com/Ericbobmyers",
-        "username"=>"Ericbobmyers",
-        "id"=>"15771736"},
-       {"type"=>"youtube",
-        "typeId"=>"youtube",
-        "typeName"=>"YouTube",
-        "url"=>"https://youtube.com/user/ericbobmyers",
-        "username"=>"ericbobmyers"},
-       {"bio"=>"Senior Account Manager | SEM | Analytics | Senior Digital Marketing Analyst",
-        "type"=>"linkedin",
-        "typeId"=>"linkedin",
-        "typeName"=>"LinkedIn",
-        "url"=>"https://www.linkedin.com/in/ericrmyers",
-        "username"=>"ericrmyers"}
-      ]
+    it "calls methods to set social profile data" do
+      expect(super_celebrity).to receive(:set_twitter)
+      expect(super_celebrity).to receive(:set_linkedin)
+      expect(super_celebrity).to receive(:set_angellist)
+      expect(super_celebrity).to receive(:set_klout)
+      expect(super_celebrity).to receive(:set_instagram)
+      expect(super_celebrity).to receive(:set_youtube)
+      super_celebrity.set_social_data
+    end
+  end
 
-        @super_celebrity.set_social_data(fullcontact_data_array)
 
+  describe "social_data" do
+    it "returns an array when customer has social data" do
     end
 
-    it "sets the twitter data" do  
-      expect(@super_celebrity.twitter_url).to be
-      expect(@super_celebrity.twitter_followers).to be
+    it "returns nil when customer has no social data" do
+    end
+  end
+
+ describe "celebrity?" do
+
+    context 'when customer has twitter followers above store threshold' do
+      it 'returns true if customer is a twitter celebrity' do
+        expect(twitter_celebrity.celebrity?).to be true
+      end
     end
 
-    it "sets the linkedin data" do     
-      expect(@super_celebrity.linkedin_url).to be
-      expect(@super_celebrity.linkedin_bio).to be
+    context 'when customer has twitter followers below store threshold' do
+      it 'returns false if customer is not a twitter celebrity' do
+        no_twitter_celebrity = build(:celebrity, twitter_followers: 0)
+        expect(no_twitter_celebrity.celebrity?).to be false
+      end
     end
 
-    it "sets the angellist data" do     
-      expect(@super_celebrity.angellist_url).to be
-      expect(@super_celebrity.angellist_bio).to be
+    context 'when customer is imdb celebrity and imdb notifications turned on' do
+      it 'returns true if customer is an imdb celebrity' do
+        expect(imdb_celebrity.celebrity?).to be true
+      end
     end
 
-    it "sets the klout data" do     
-      expect(@super_celebrity.klout_url).to be
-      expect(@super_celebrity.klout_id).to be
-      expect(@super_celebrity.klout_score).to be
+    context 'when customer is imdb celebrity and imdb notifications turned off' do
+      it 'returns false' do
+        imdb_celebrity.shop.imdb_notification = false
+        expect(imdb_celebrity.celebrity?).not_to be
+      end
     end
 
-    it "sets the instagram data" do     
-      expect(@super_celebrity.instagram_id).to be
-      expect(@super_celebrity.instagram_followers).to be
+    context 'when customer is wikipedia celebrity and wikipedia notifications turned on' do
+      it 'returns true' do
+        expect(wikipedia_celebrity.celebrity?).to be true
+      end
     end
 
-    it "sets the youtube data" do     
-      expect(@super_celebrity.youtube_username).to be
-      expect(@super_celebrity.youtube_url).to be
-      expect(@super_celebrity.youtube_subscribers).to be
-      expect(@super_celebrity.youtube_views).to be
+    context 'when customer is wikipedia celebrity and wikipedia notifications turned off' do
+      it 'returns false' do
+        wikipedia_celebrity.shop.wikipedia_notification = false
+        expect(wikipedia_celebrity.celebrity?).not_to be
+      end
     end
-
 
   end
+
+
+  describe "setting social profiles" do
+    before(:each) do
+      super_celebrity = build(:super_celebrity)
+      super_celebrity.fullcontact_data
+      super_celebrity.wikipedia_data
+      super_celebrity.imdb_data
+    end
+
+    describe "set_twitter" do
+      context "customer has a twitter profile" do
+        it "sets the customers twitter data" do
+          super_celebrity.send(:set_twitter)
+          expect(super_celebrity.twitter_followers).to be
+          expect(super_celebrity.twitter_url).to be
+        end
+      end
+
+      context "customer does not have a twitter profile" do
+        it "does not change the customer" do
+          expect(imdb_celebrity.send(:set_twitter)).not_to be
+        end
+      end
+    end
+
+    describe "set_youtube" do
+      context "customer has a youtube profile" do
+        it "sets the customers youtube data" do
+          super_celebrity.send(:set_youtube)
+          expect(super_celebrity.youtube_subscribers).to be
+          expect(super_celebrity.youtube_username).to be
+          expect(super_celebrity.youtube_url).to be
+          expect(super_celebrity.youtube_views).to be
+        end
+      end
+
+      context "customer does not have a youtube profile" do
+        it "does not change the customer" do
+          expect(imdb_celebrity.send(:set_youtube)).to be nil
+        end
+      end
+    end
+
+    describe "set_instagram" do
+      context "customer has a instagram profile" do
+        it "sets the customers instagram data" do
+          super_celebrity.send(:set_instagram)
+          expect(super_celebrity.instagram_id).to be
+          expect(super_celebrity.instagram_followers).to be
+        end
+      end
+
+      context "customer does not have a instagram profile" do
+        it "does not change the customer" do
+          expect(imdb_celebrity.send(:set_instagram)).to be nil
+        end
+      end
+    end
+
+    describe "set_linkedin" do
+      context "customer has a linkedin profile" do
+        it "sets the customers linkedin data" do
+          super_celebrity.send(:set_linkedin)
+          expect(super_celebrity.linkedin_bio).to be
+          expect(super_celebrity.linkedin_url).to be
+        end
+      end
+
+      context "customer does not have a linkedin profile" do
+        it "does not change the customer" do
+          expect(imdb_celebrity.send(:set_linkedin)).to be nil
+        end
+      end
+    end
+
+    describe "set_angellist" do
+      context "customer has a angellist profile" do
+        it "sets the customers angellist data" do
+          super_celebrity.send(:set_angellist)
+          expect(super_celebrity.angellist_url).to be
+          expect(super_celebrity.angellist_bio).to be
+        end
+      end
+
+      context "customer does not have a angellist profile" do
+        it "does not change the customer" do
+          expect(imdb_celebrity.send(:set_angellist)).to be nil
+        end
+      end
+    end
+
+    describe "set_wikipedia" do
+      context "customer has a wikipedia profile" do
+        it "sets the customers wikipedia data" do
+          super_celebrity.send(:set_wikipedia)
+          expect(super_celebrity.wikipedia_bio).to be
+          expect(super_celebrity.wikipedia_url).to be
+        end
+      end
+
+      context "customer does not have a wikipedia profile" do
+        it "does not change the customer" do
+          expect(imdb_celebrity.send(:set_wikipedia)).to be nil
+        end
+      end
+    end
+
+    describe "set_imdb" do
+      context "customer has a imdb profile" do
+        it "sets the customers imdb data" do
+          super_celebrity.send(:set_imdb)
+          expect(super_celebrity.imdb_bio).to be
+          expect(super_celebrity.imdb_url).to be
+        end
+      end
+
+      context "customer does not have a imdb profile" do
+        it "does not change the customer" do
+          expect(wikipedia_celebrity.send(:set_imdb)).to be nil
+        end
+      end
+    end
+  end
+
+  describe "get external data" do
+    it "gets external data from imdb, wikipedia, and fullcontact" do
+      expect(celebrity).to receive(:wikipedia_data)
+      expect(celebrity).to receive(:imdb_data)
+      expect(celebrity).to receive(:fullcontact_data)
+      celebrity.get_external_data
+    end
+  end
+
+  describe "wikipedia_data" do
+    it "gets a wikipedia JSON object" do
+
+    end
+  end
+
+  describe "imdb_data" do
+    it "gets an IMDB JSON object" do
+    end
+  end
+
+  describe "fullcontact_data" do
+    it "gets a fullcontact data array" do
+    end
+  end
+
 end
+
+
+
+# context "when customers name has non ascii characters" do 
+#         it "will not call get_imdb" do 
+#           celebrity = build(:imdb_celebrity, first_name: "Sæthlangøy")
+#           expect(celebrity).not_to be_valid
+#         end
+#       end
+
+#       context "when customer has a first name but not a last name" do
+#         it "returns nil" do
+#           celebrity = build(:celebrity, last_name: nil)
+#           expect(GetCelebrityStatus.call(celebrity)).to be nil
+#         end
+#       end
+
+#       context "when customer has a last name but not a first name" do
+#         it "returns nil" do
+#           celebrity = build(:celebrity, first_name: nil)
+#           expect(GetCelebrityStatus.call(celebrity)).to be nil
+#         end
+#       end
+
+#       context "when customer does not have a first name or a last name" do
+#         it "returns nil" do
+#           celebrity = build(:celebrity, first_name: nil, last_name: nil)
+#           expect(GetCelebrityStatus.call(celebrity)).to be nil
+#         end
+#       end
 

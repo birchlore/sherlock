@@ -19,6 +19,45 @@ shared_context "shared examples" do
      }
    }
 
+   let(:super_fullcontact_array) {
+      [
+        {"bio"=>"Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",
+        "type"=>"angellist",
+        "typeId"=>"angellist",
+        "typeName"=>"AngelList",
+        "url"=>"https://angel.co/ericbobmyers",
+        "username"=>"ericbobmyers",
+        "id"=>"998397"},
+       {"type"=>"klout",
+        "typeId"=>"klout",
+        "typeName"=>"Klout",
+        "url"=>"http://klout.com/Ericbobmyers",
+        "username"=>"Ericbobmyers",
+        "id"=>"27043"},
+        {"bio"=>
+         "#Vegas-Based, Diabetic (#T1D) #SEM Account Director. Huge #Analytics, #PPC and #Social geek tweeting about whatever entertains me at that moment.",
+        "followers"=>1538,
+        "following"=>1139,
+        "type"=>"twitter",
+        "typeId"=>"twitter",
+        "typeName"=>"Twitter",
+        "url"=>"https://twitter.com/Ericbobmyers",
+        "username"=>"Ericbobmyers",
+        "id"=>"15771736"},
+       {"type"=>"youtube",
+        "typeId"=>"youtube",
+        "typeName"=>"YouTube",
+        "url"=>"https://youtube.com/user/ericbobmyers",
+        "username"=>"ericbobmyers"},
+       {"bio"=>"Senior Account Manager | SEM | Analytics | Senior Digital Marketing Analyst",
+        "type"=>"linkedin",
+        "typeId"=>"linkedin",
+        "typeName"=>"LinkedIn",
+        "url"=>"https://www.linkedin.com/in/ericrmyers",
+        "username"=>"ericrmyers"}
+      ]
+   }
+   
    let(:fullcontact_data_array) {
     [{"bio"=>"Change Agent at IBM Design",
     "type"=>"linkedin",
@@ -220,13 +259,15 @@ shared_context "shared examples" do
 
 
     let(:shop) { FactoryGirl.create(:shop, twitter_follower_threshold: 1) }
+    let(:shop2) { FactoryGirl.create(:shop, twitter_follower_threshold: 1, shopify_domain: "secondshop") }
     let(:shop_without_notifications) { FactoryGirl.create(:shop, twitter_follower_threshold: 1, email_notifications: false) }
+
 
 
     # Use build instead of create as celebrity validation will fail
     # on create and won't be able to create it in first place
-    let(:celebrity) { FactoryGirl.build(:celebrity, shop: shop) }
-    let(:twitter_celebrity) { FactoryGirl.create(:celebrity, shop: shop, twitter_followers: 2, email: "jacksondcunningham@gmail.com") }
+    let(:celebrity) { FactoryGirl.build(:celebrity) }
+    let(:twitter_celebrity) { FactoryGirl.create(:celebrity, twitter_followers: 2, email: "jacksondcunningham@gmail.com") }
     let(:imdb_celebrity) { FactoryGirl.create(:imdb_celebrity) }
     let(:instagram_celebrity) { FactoryGirl.create(:instagram_celebrity) }
     let(:wikipedia_celebrity) { FactoryGirl.create(:wikipedia_celebrity) }

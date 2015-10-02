@@ -3148,4 +3148,998 @@ http_interactions:
         }
     http_version: 
   recorded_at: Mon, 28 Sep 2015 22:31:42 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Eric%20Myers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 02 Oct 2015 00:10:59 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYrxyOE21lm7gxy3nHg7tLFFS5yqrQ11cTx8WBRpe7J4oDfS1pcWjqnF9UAcZiT0gANjY-87npnFIwU-Xou84vVpc6rcily1MHJoQi0NVR3l1TL66K57AMuPOU7BjfjrdKwh7khBnSB1DktI_rtono0t8TcnChMuecdHFc73D_id-I;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm0616706", "title":"", "name":"Eric Myers","description":"Miscellaneous Crew, Scent of a Woman"},{ "id":"nm2254232", "title":"", "name":"Eric Myers","description":"Visual Effects, Good Night, and Good Luck."},{ "id":"nm0583534", "title":"", "name":"Eric Meyers","description":"Actor, 1408"},{ "id":"nm2687059", "title":"", "name":"Eric Myers","description":"Writer, Found in Translation"},{ "id":"nm1914730", "title":"", "name":"Eric Myers","description":"Self, The Lady in Question Is Charles Busch"},{ "id":"nm2392146", "title":"", "name":"Eric Myers","description":"Sound Department, Up Yours"},{ "id":"nm2780119", "title":"", "name":"Eric Myers","description":"Editor, Well Met in Osaka"},{ "id":"nm3383827", "title":"", "name":"Eric Myers","description":"Sound Department, The Hooker with a Heart of Gold"},{ "id":"nm4471847", "title":"", "name":"Eric Myers","description":"Producer, Billy&#x27;s Cult"},{ "id":"nm4601817", "title":"", "name":"Eric Myers","description":"Thanks, Vito"},{ "id":"nm1546419", "title":"", "name":"Eric Myers","description":"Actor, Without Warning"},{ "id":"nm5327073", "title":"", "name":"Eric Myers","description":"Thanks, Adventures in Plymptoons!"}],"name_substring": [{ "id":"nm0616826", "title":"", "name":"Paul Eric Myers","description":"Writer, Aftershock: Earthquake in New York"}],"name_approx": [{ "id":"nm0616899", "title":"", "name":"Eric Myerson","description":"Editor, Poached"},{ "id":"nm4747071", "title":"", "name":"Erica J Myers","description":"Miscellaneous Crew, Final Auditions"},{ "id":"nm5458121", "title":"", "name":"Peter Myers And Erica Richards","description":"Producer, Our Green Roadie: Snapshots and Stories Shared"},{ "id":"nm3112554", "title":"", "name":"Erica Myers","description":"Miscellaneous Crew, 2009 CMT Music Awards"},{ "id":"nm7469443", "title":"", "name":"Erica Myers","description":"Uncategorised"},{ "id":"nm0583543", "title":"", "name":"Fredricka Meyers","description":"Actress, The Thirsty Dead"},{ "id":"nm3926107", "title":"", "name":"Jericho Myers","description":"Camera and Electrical Department, 12:01"}]
+        }
+    http_version: 
+  recorded_at: Fri, 02 Oct 2015 00:11:00 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Eric%20Myers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Fri, 02 Oct 2015 00:11:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '213'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Fri, 02 Oct 2015 03:10:56 GMT
+      X-Varnish:
+      - 2026208164, 1384042658 1384036185
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '4'
+      X-Cache:
+      - cp1053 miss (0), cp1052 frontend hit (1)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=02-Oct-2015;Path=/;HttpOnly;Expires=Tue, 03 Nov 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Eric Myers",["Eric Myers"],["This is a redirect from a page that
+        was merged into another page. This page was kept as a redirect to the corresponding
+        main page on the topic it names, in order to preserve this page''s edit history
+        after its content was merged into the target page''s content."],["https://en.wikipedia.org/wiki/Eric_Myers"]]'
+    http_version: 
+  recorded_at: Fri, 02 Oct 2015 00:11:00 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=Ericrobertmyers@Gmail.Com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Fri, 02 Oct 2015 00:11:01 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '2886'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '294'
+      X-Rate-Limit-Reset:
+      - '53'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "b005b529-1a24-492c-875a-424f8c8add90",
+          "likelihood" : 0.93,
+          "photos" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/af1c44a1e1f3e4b1ffbbca3373843f1e_4c121273e8ce1da2a3ff3e5ebc9d829dc962b2867694784b313f8c5b3c5f1f36",
+            "isPrimary" : true
+          }, {
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/04b33c22ccba69a49bb07fe154ec1011_59735eee583abad92906a3dcfee9685b0813ae5221f010c1ded78f28d036f4a8",
+            "isPrimary" : false
+          }, {
+            "type" : "other",
+            "typeId" : "other",
+            "typeName" : "Other",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2d2c28c0a2de7ccae81416e8bb6ba09d_06cf706dc72d423798d5f3edf89c48c5b297588ab81c2b86efe008c5b9082b01",
+            "isPrimary" : false
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/5f295e6b5883e962c1f643de46fb0da4_f9b04eda71634fa2bccad9381e2e4e89981e82874d2495c191a9b70fa90c8a95",
+            "isPrimary" : false
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2295bc2aeb8862e8fb2f9cdfbe74ec79_dc84ed7cdfe4f3d268c777cbde386b32fd7f397990ce83e1f5494496b906de5a",
+            "isPrimary" : false
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/fa0eeac58bbc534680ba8dfb02cbb7cf_e09adef25151a40dd283b84ad00f15386535a76ffc437d731cce9f1b1236ab02",
+            "isPrimary" : false
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/0050bd0da7a0d9c47fbe623d760b2ab1_ed9a6d3d008ff1bcf7891876f4bf8343e784d9b1a3b78c254a4de4346f25338e",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/d85298e9eb8e37a9a5a329a10ab97551_73c18996dd95d1585b8c7efc26d82bc495f794b78c70c6e4c68d18caa9452f3b",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "chats" : [ {
+              "client" : "aim",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "yahoo",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "skype",
+              "handle" : "EricBobMyers"
+            }, {
+              "client" : "gtalk",
+              "handle" : "ericrobertmyers@gmail.com"
+            } ],
+            "websites" : [ {
+              "url" : "http://blog.reachlocal.com/605582/2012/12/07/5-steps-to-getting-your-business-found-on-apple-maps.html"
+            }, {
+              "url" : "https://adwords.google.com/professionals/profile/ind?id=03622790389943358426&hl=en"
+            }, {
+              "url" : "http://www.verticalnerve.com/blog"
+            }, {
+              "url" : "http://www.digitizedallas.com"
+            }, {
+              "url" : "http://www.digitzekc.com"
+            }, {
+              "url" : "http://www.verticalnerve.com"
+            }, {
+              "url" : "http://www.findpeopleonplus.com/profiles/115257874832329284928"
+            } ],
+            "familyName" : "Myers",
+            "fullName" : "Eric Myers",
+            "givenName" : "Eric"
+          },
+          "organizations" : [ {
+            "isPrimary" : true,
+            "name" : "Overnight Prints",
+            "startDate" : "2015-02",
+            "title" : "Manager - Digital Analytics",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Levy Online",
+            "startDate" : "2014",
+            "endDate" : "2015",
+            "title" : "SEM Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013",
+            "endDate" : "2014",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-07",
+            "endDate" : "2013-02",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012",
+            "endDate" : "2013",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-01",
+            "endDate" : "2012-07",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011-03",
+            "endDate" : "2012-01",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Reachlocal",
+            "startDate" : "2011",
+            "endDate" : "2012",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2007-08",
+            "endDate" : "2011-04",
+            "title" : "CEO & Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2004",
+            "endDate" : "2011",
+            "title" : "Owner / Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011",
+            "endDate" : "2011",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2010-01",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College SIFE",
+            "startDate" : "2008-08",
+            "endDate" : "2009-01",
+            "title" : "Vice President of External Affairs & Communication",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007",
+            "endDate" : "2009",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2007-08",
+            "title" : "Office of Admission Web Designer",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : false
+          } ],
+          "demographics" : {
+            "locationDeduced" : {
+              "normalizedLocation" : "Las Vegas, Nevada",
+              "deducedLocation" : "Las Vegas, Nevada, United States",
+              "city" : {
+                "deduced" : false,
+                "name" : "Las Vegas"
+              },
+              "state" : {
+                "deduced" : false,
+                "name" : "Nevada",
+                "code" : "NV"
+              },
+              "country" : {
+                "deduced" : true,
+                "name" : "United States",
+                "code" : "US"
+              },
+              "continent" : {
+                "deduced" : true,
+                "name" : "North America"
+              },
+              "county" : {
+                "deduced" : true,
+                "name" : "Clark",
+                "code" : "Clark"
+              },
+              "likelihood" : 1.0
+            },
+            "age" : "26",
+            "ageRange" : "25-34",
+            "gender" : "Male",
+            "locationGeneral" : "Las Vegas, NV"
+          },
+          "socialProfiles" : [ {
+            "bio" : "Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "998397"
+          }, {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "1191540035"
+          }, {
+            "bio" : "Las Vegas Marketing Consultant that works with small business owners. A Lover of all things tech, random, and entertaining, you never know quite what you'll find.",
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "18374143"
+          }, {
+            "type" : "lastfm",
+            "typeId" : "lastfm",
+            "typeName" : "Last.FM",
+            "url" : "http://www.last.fm/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "27043"
+          }, {
+            "type" : "aboutme",
+            "typeId" : "aboutme",
+            "typeName" : "About.me",
+            "url" : "https://about.me/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "quora",
+            "typeId" : "quora",
+            "typeName" : "Quora",
+            "url" : "http://www.quora.com/eric-myers",
+            "username" : "eric-myers"
+          }, {
+            "bio" : "Dallas-based marketing consultant that works with small businesses. A lover of all things tech, entertaining, and random. I'm a Type 1 diabetic & info buffet.",
+            "followers" : 314,
+            "following" : 365,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/ericbobmyers/",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://profile.yahoo.com/YV36KZSMWG47UJY3WNPL43RL7U",
+            "id" : "YV36KZSMWG47UJY3WNPL43RL7U"
+          }, {
+            "bio" : "#Vegas-Based, Diabetic (#T1D) #SEM Account Director. Huge #Analytics, #PPC and #Social geek tweeting about whatever entertains me at that moment.",
+            "followers" : 1538,
+            "following" : 1139,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "15771736"
+          }, {
+            "type" : "youtube",
+            "typeId" : "youtube",
+            "typeName" : "YouTube",
+            "url" : "https://youtube.com/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "bio" : "Senior Account Manager | SEM | Analytics | Senior Digital Marketing Analyst",
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://www.linkedin.com/in/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://plus.google.com/u/0/115257874832329284928",
+            "id" : "115257874832329284928"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/48907847",
+            "id" : "48907847"
+          } ],
+          "digitalFootprint" : {
+            "scores" : [ {
+              "provider" : "klout",
+              "type" : "general",
+              "value" : 57
+            } ],
+            "topics" : [ {
+              "provider" : "klout",
+              "value" : "Facebook"
+            }, {
+              "provider" : "aboutme",
+              "value" : "senior account manager"
+            }, {
+              "provider" : "aboutme",
+              "value" : "small business"
+            }, {
+              "provider" : "klout",
+              "value" : "Digital Marketing"
+            }, {
+              "provider" : "aboutme",
+              "value" : "reachlocal"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online marketing"
+            }, {
+              "provider" : "aboutme",
+              "value" : "adwords qualified individual"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online advertising"
+            }, {
+              "provider" : "klout",
+              "value" : "Google Adwords"
+            }, {
+              "provider" : "aboutme",
+              "value" : "texas"
+            }, {
+              "provider" : "aboutme",
+              "value" : "dallas"
+            }, {
+              "provider" : "klout",
+              "value" : "LinkedIn"
+            }, {
+              "provider" : "klout",
+              "value" : "Diabetes"
+            }, {
+              "provider" : "aboutme",
+              "value" : "campaign consultant"
+            }, {
+              "provider" : "aboutme",
+              "value" : "social media consultant"
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 02 Oct 2015 00:11:01 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=Ericrobertmyers@Gmail.Com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Fri, 02 Oct 2015 00:11:01 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '293'
+      X-Rate-Limit-Reset:
+      - '53'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "d29548bb-52d2-449e-adef-a892cef7e39c",
+          "likelihood" : 0.93,
+          "photos" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/af1c44a1e1f3e4b1ffbbca3373843f1e_4c121273e8ce1da2a3ff3e5ebc9d829dc962b2867694784b313f8c5b3c5f1f36",
+            "isPrimary" : true
+          }, {
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/04b33c22ccba69a49bb07fe154ec1011_59735eee583abad92906a3dcfee9685b0813ae5221f010c1ded78f28d036f4a8",
+            "isPrimary" : false
+          }, {
+            "type" : "other",
+            "typeId" : "other",
+            "typeName" : "Other",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2d2c28c0a2de7ccae81416e8bb6ba09d_06cf706dc72d423798d5f3edf89c48c5b297588ab81c2b86efe008c5b9082b01",
+            "isPrimary" : false
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/5f295e6b5883e962c1f643de46fb0da4_f9b04eda71634fa2bccad9381e2e4e89981e82874d2495c191a9b70fa90c8a95",
+            "isPrimary" : false
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2295bc2aeb8862e8fb2f9cdfbe74ec79_dc84ed7cdfe4f3d268c777cbde386b32fd7f397990ce83e1f5494496b906de5a",
+            "isPrimary" : false
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/fa0eeac58bbc534680ba8dfb02cbb7cf_e09adef25151a40dd283b84ad00f15386535a76ffc437d731cce9f1b1236ab02",
+            "isPrimary" : false
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/0050bd0da7a0d9c47fbe623d760b2ab1_ed9a6d3d008ff1bcf7891876f4bf8343e784d9b1a3b78c254a4de4346f25338e",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/d85298e9eb8e37a9a5a329a10ab97551_73c18996dd95d1585b8c7efc26d82bc495f794b78c70c6e4c68d18caa9452f3b",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "chats" : [ {
+              "client" : "aim",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "yahoo",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "skype",
+              "handle" : "EricBobMyers"
+            }, {
+              "client" : "gtalk",
+              "handle" : "ericrobertmyers@gmail.com"
+            } ],
+            "websites" : [ {
+              "url" : "http://blog.reachlocal.com/605582/2012/12/07/5-steps-to-getting-your-business-found-on-apple-maps.html"
+            }, {
+              "url" : "https://adwords.google.com/professionals/profile/ind?id=03622790389943358426&hl=en"
+            }, {
+              "url" : "http://www.verticalnerve.com/blog"
+            }, {
+              "url" : "http://www.digitizedallas.com"
+            }, {
+              "url" : "http://www.digitzekc.com"
+            }, {
+              "url" : "http://www.verticalnerve.com"
+            }, {
+              "url" : "http://www.findpeopleonplus.com/profiles/115257874832329284928"
+            } ],
+            "familyName" : "Myers",
+            "fullName" : "Eric Myers",
+            "givenName" : "Eric"
+          },
+          "organizations" : [ {
+            "isPrimary" : true,
+            "name" : "Overnight Prints",
+            "startDate" : "2015-02",
+            "title" : "Manager - Digital Analytics",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Levy Online",
+            "startDate" : "2014",
+            "endDate" : "2015",
+            "title" : "SEM Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013",
+            "endDate" : "2014",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-07",
+            "endDate" : "2013-02",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012",
+            "endDate" : "2013",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-01",
+            "endDate" : "2012-07",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011-03",
+            "endDate" : "2012-01",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Reachlocal",
+            "startDate" : "2011",
+            "endDate" : "2012",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2007-08",
+            "endDate" : "2011-04",
+            "title" : "CEO & Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2004",
+            "endDate" : "2011",
+            "title" : "Owner / Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011",
+            "endDate" : "2011",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2010-01",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College SIFE",
+            "startDate" : "2008-08",
+            "endDate" : "2009-01",
+            "title" : "Vice President of External Affairs & Communication",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007",
+            "endDate" : "2009",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2007-08",
+            "title" : "Office of Admission Web Designer",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : false
+          } ],
+          "demographics" : {
+            "locationDeduced" : {
+              "normalizedLocation" : "Las Vegas, Nevada",
+              "deducedLocation" : "Las Vegas, Nevada, United States",
+              "city" : {
+                "deduced" : false,
+                "name" : "Las Vegas"
+              },
+              "state" : {
+                "deduced" : false,
+                "name" : "Nevada",
+                "code" : "NV"
+              },
+              "country" : {
+                "deduced" : true,
+                "name" : "United States",
+                "code" : "US"
+              },
+              "continent" : {
+                "deduced" : true,
+                "name" : "North America"
+              },
+              "county" : {
+                "deduced" : true,
+                "name" : "Clark",
+                "code" : "Clark"
+              },
+              "likelihood" : 1.0
+            },
+            "age" : "26",
+            "ageRange" : "25-34",
+            "gender" : "Male",
+            "locationGeneral" : "Las Vegas, NV"
+          },
+          "socialProfiles" : [ {
+            "bio" : "Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "998397"
+          }, {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "1191540035"
+          }, {
+            "bio" : "Las Vegas Marketing Consultant that works with small business owners. A Lover of all things tech, random, and entertaining, you never know quite what you'll find.",
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "18374143"
+          }, {
+            "type" : "lastfm",
+            "typeId" : "lastfm",
+            "typeName" : "Last.FM",
+            "url" : "http://www.last.fm/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "27043"
+          }, {
+            "type" : "aboutme",
+            "typeId" : "aboutme",
+            "typeName" : "About.me",
+            "url" : "https://about.me/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "quora",
+            "typeId" : "quora",
+            "typeName" : "Quora",
+            "url" : "http://www.quora.com/eric-myers",
+            "username" : "eric-myers"
+          }, {
+            "bio" : "Dallas-based marketing consultant that works with small businesses. A lover of all things tech, entertaining, and random. I'm a Type 1 diabetic & info buffet.",
+            "followers" : 314,
+            "following" : 365,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/ericbobmyers/",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://profile.yahoo.com/YV36KZSMWG47UJY3WNPL43RL7U",
+            "id" : "YV36KZSMWG47UJY3WNPL43RL7U"
+          }, {
+            "bio" : "#Vegas-Based, Diabetic (#T1D) #SEM Account Director. Huge #Analytics, #PPC and #Social geek tweeting about whatever entertains me at that moment.",
+            "followers" : 1538,
+            "following" : 1139,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "15771736"
+          }, {
+            "type" : "youtube",
+            "typeId" : "youtube",
+            "typeName" : "YouTube",
+            "url" : "https://youtube.com/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "bio" : "Senior Account Manager | SEM | Analytics | Senior Digital Marketing Analyst",
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://www.linkedin.com/in/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://plus.google.com/u/0/115257874832329284928",
+            "id" : "115257874832329284928"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/48907847",
+            "id" : "48907847"
+          } ],
+          "digitalFootprint" : {
+            "scores" : [ {
+              "provider" : "klout",
+              "type" : "general",
+              "value" : 57
+            } ],
+            "topics" : [ {
+              "provider" : "klout",
+              "value" : "Facebook"
+            }, {
+              "provider" : "aboutme",
+              "value" : "senior account manager"
+            }, {
+              "provider" : "aboutme",
+              "value" : "small business"
+            }, {
+              "provider" : "klout",
+              "value" : "Digital Marketing"
+            }, {
+              "provider" : "aboutme",
+              "value" : "reachlocal"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online marketing"
+            }, {
+              "provider" : "aboutme",
+              "value" : "adwords qualified individual"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online advertising"
+            }, {
+              "provider" : "klout",
+              "value" : "Google Adwords"
+            }, {
+              "provider" : "aboutme",
+              "value" : "texas"
+            }, {
+              "provider" : "aboutme",
+              "value" : "dallas"
+            }, {
+              "provider" : "klout",
+              "value" : "LinkedIn"
+            }, {
+              "provider" : "klout",
+              "value" : "Diabetes"
+            }, {
+              "provider" : "aboutme",
+              "value" : "campaign consultant"
+            }, {
+              "provider" : "aboutme",
+              "value" : "social media consultant"
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 02 Oct 2015 00:11:01 GMT
 recorded_with: VCR 2.9.3

@@ -1,0 +1,134 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Fri, 02 Oct 2015 02:40:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Fri, 02 Oct 2015 03:51:31 GMT
+      X-Varnish:
+      - 2041507765, 1398698537 1387896436
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '6567'
+      X-Cache:
+      - cp1054 miss (0), cp1052 frontend hit (14)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=02-Oct-2015;Path=/;HttpOnly;Expires=Tue, 03 Nov 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Jackson Cunningham",[],[],[]]'
+    http_version: 
+  recorded_at: Fri, 02 Oct 2015 02:40:58 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Noah%20Kagan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Fri, 02 Oct 2015 02:43:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '132'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Fri, 02 Oct 2015 03:51:06 GMT
+      X-Varnish:
+      - 1412797977, 1398924782 1387859407
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '6721'
+      X-Cache:
+      - cp1052 miss (0), cp1052 frontend hit (25)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=02-Oct-2015;Path=/;HttpOnly;Expires=Tue, 03 Nov 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1
+    body:
+      encoding: UTF-8
+      string: '["Noah Kagan",["Noah Kagan"],["Noah Kagan is an American Internet entrepreneur
+        and the founder of AppSumo."],["https://en.wikipedia.org/wiki/Noah_Kagan"]]'
+    http_version: 
+  recorded_at: Fri, 02 Oct 2015 02:43:08 GMT
+recorded_with: VCR 2.9.3

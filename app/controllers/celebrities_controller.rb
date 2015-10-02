@@ -2,9 +2,9 @@ class CelebritiesController < AuthenticatedController
   
   layout "true" == Figaro.env.shopify_embedded_app ? 'embedded_app' : 'application'
 
-  def new
-    @celebrity = current_shop.celebrities.new
-  end
+  # def new
+  #   @customer = current_shop.customers.new
+  # end
   
   def index
     # trigger_login
