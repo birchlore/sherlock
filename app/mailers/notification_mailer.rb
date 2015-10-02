@@ -22,4 +22,12 @@ class NotificationMailer < ApplicationMailer
     mail to: "jackson@pixelburst.co"
   end
 
+   def uninstall_notification(shop)
+    @greeting = "Hi"
+    
+    @email = shop.email
+
+    mail to: "jackson@pixelburst.co"
+  end
+
 end

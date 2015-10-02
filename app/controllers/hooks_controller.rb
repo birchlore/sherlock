@@ -27,6 +27,7 @@ class HooksController < ApplicationController
     shop = Shop.where(shopify_domain: shopify_domain).first
     shop.installed = false
     shop.save!
+    NotificationMailer.uninstall_notification(shop)
     head :ok
   end
 

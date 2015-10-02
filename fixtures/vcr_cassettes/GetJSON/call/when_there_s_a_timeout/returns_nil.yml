@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=FRED%20FREE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 02 Oct 2015 16:59:34 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYtFZqBEsCgB1Y-6ICrCcS2YTX5n7y3i3k1c20kwsF_SigOx9w2xtW5-jzmPtbL5OmDvRtGHUFPXX88GZUlzSaaBNP01NKavnTHnSSnLVAmCWLBDUh2uJ6ZGr00le-w9atpOIJQ8Effz6WBbsatJh4zCvQVeTtYIE8ZLAf3ZNkIdh0;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_popular": [{ "id":"nm0736872", "title":"", "name":"Fred Rogers","description":"Actor, 1715: Sharing"},{ "id":"nm0000625", "title":"", "name":"Fred Savage","description":"Actor, The Princess Bride"},{ "id":"nm0208111", "title":"", "name":"Frederick De Cordova","description":"Director, The Tonight Show Starring Johnny Carson"},{ "id":"nm0000552", "title":"", "name":"Eddie Murphy","description":"Actor, Beverly Hills Cop"}],"name_approx": [{ "id":"nm0293391", "title":"", "name":"Fred Freeman","description":"Writer, Delirious"},{ "id":"nm5290996", "title":"", "name":"Fred Frees","description":"Actor, We Are Voice Actors!"},{ "id":"nm0273495", "title":"", "name":"Federico Fern&#xE1;ndez","description":"Camera and Electrical Department, Deathstalker"},{ "id":"nm2401053", "title":"", "name":"Fred Freed","description":"Actor, Episode #1.7"},{ "id":"nm2308985", "title":"", "name":"Fred Freeman","description":"Sound Department, The Firm: Firm Basics - Sculpting with Weights"},{ "id":"nm0293107", "title":"", "name":"Fred Freed","description":"Composer, Aladdin and His Magic Lamp"},{ "id":"nm3783774", "title":"", "name":"Fred Freed","description":"Actor, All My Men"},{ "id":"nm6759427", "title":"", "name":"Fred Freeman","description":"Actor, 3 Tickets to Paradise"},{ "id":"nm4654416", "title":"", "name":"Fred Freeman","description":"Actor, Bats in the Clocktower"},{ "id":"nm0293392", "title":"", "name":"Frederick Freeman","description":"Director, Carrots and Onions"},{ "id":"nm1002931", "title":"", "name":"Freedom Williams","description":"Soundtrack, Old School"},{ "id":"nm3694800", "title":"", "name":"Freddy Freegrove","description":"Actor, Lonely Lucky Dead"},{ "id":"nm2653600", "title":"", "name":"Frederick Freeman","description":"Actor, The Germ of Mystery"},{ "id":"nm4799237", "title":"", "name":"Freddie Freeman","description":"Self, Los Angeles Angels vs. Atlanta Braves"},{ "id":"nm5111233", "title":"", "name":"Freddy Freeman","description":"Music Department, BearCity"},{ "id":"nm4497995", "title":"", "name":"F. Freddy Freemont","description":"Cinematographer, Caress of the Vampire 3: Lust of the Nightstalker"}]
+        }
+    http_version: 
+  recorded_at: Fri, 02 Oct 2015 16:59:34 GMT
+recorded_with: VCR 2.9.3
