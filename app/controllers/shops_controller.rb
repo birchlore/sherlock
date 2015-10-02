@@ -19,7 +19,7 @@ class ShopsController < AuthenticatedController
 
   def shop_params
     params.require(:shop).permit(
-      :email_notifications, :wikipedia_notification, :imdb_notification, :twitter_follower_threshold)
+      :email_notifications, :wikipedia_notification, :imdb_notification, :twitter_follower_threshold, :instagram_follower_threshold, :klout_score_threshold, :youtube_subscriber_threshold)
   end
 
 end

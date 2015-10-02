@@ -9,7 +9,7 @@ class CelebritiesController < AuthenticatedController
   def index
     # trigger_login
     @celebrity = current_shop.celebrities.new
-    @celebrities = current_shop.celebrities.where(status: "active")
+    @celebrities = current_shop.celebrities.where(status: "active").reverse
   end
 
   def show

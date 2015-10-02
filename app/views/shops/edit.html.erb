@@ -23,6 +23,18 @@
 			  <div id="slider">
 			  	<p>Customers who have over <%= f.number_field :twitter_follower_threshold, :style=>"width:75px;" %> Twitter followers should be considered celebrities.</p>
 			  </div>
+
+        <div>
+          <p>Customers who have over <%= f.number_field :youtube_subscriber_threshold, :style=>"width:75px;" %> Youtube subscribers should be considered celebrities.</p>
+        </div>
+
+        <div>
+          <p>Customers who have over <%= f.number_field :instagram_follower_threshold, :style=>"width:75px;" %> Instagram followers should be considered celebrities.</p>
+        </div>
+
+        <div>
+          <p>Customers who have a Klout score over <%= f.number_field :klout_score_threshold, :style=>"width:75px;", :max=> 100 %> should be considered celebrities.</p>
+        </div>
 			  <%= f.submit 'Update Settings', :class=>"btn btn-default" %>
 		  <% end %>
 	  </div>

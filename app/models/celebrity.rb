@@ -29,12 +29,13 @@ class Celebrity < ActiveRecord::Base
   end
 
   def set_social_data
-    set_twitter
+    shop = self.shop
+    set_twitter if shop.twitter_follower_threshold
     set_linkedin
     set_angellist
-    set_klout
-    set_instagram
-    set_youtube
+    set_klout if shop.klout_score_threshold
+    set_instagram  if shop.twitter_follower_threshold
+    set_youtube if shop.youtube_subscriber_threshold
   end
 
   def fullcontact_data
@@ -83,6 +84,7 @@ class Celebrity < ActiveRecord::Base
     instagram = Instagram.new(self)
     self.instagram_id = instagram.id
     self.instagram_followers = instagram.followers
+    self.instagram_url = instagram.url
   end
 
   def set_klout
@@ -120,8 +122,8 @@ class Celebrity < ActiveRecord::Base
 
   
   def get_celebrity_status
-    set_imdb if imdb_data
-    set_wikipedia if wikipedia_data
+    set_imdb if imdb_data && self.shop.imdb_notification
+    set_wikipedia if wikipedia_data && self.shop.wikipedia_notification
     set_social_data if fullcontact_data
     errors.add(:body, "This ain't no celebrity, kid") unless celebrity?
   end

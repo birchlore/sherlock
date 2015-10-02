@@ -14,7 +14,7 @@ class Klout
 
   def score
     return unless @hash
-    @hash.try(:[],'score').try(:[], 'score')
+    @hash.try(:[],'score').try(:[], 'score').try(:to_i)
   end
 
 end

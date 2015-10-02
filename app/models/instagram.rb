@@ -2,11 +2,11 @@ class Instagram
 
   def initialize(customer)
     @customer = customer
-    @id ||= id
-    @followers ||= followers
+    @id ||= get_id
+    @data ||= data
   end
 
-   def id
+   def get_id
     klout_url = @customer.klout_url
     return unless klout_url
     uri = HTTParty.get(klout_url)
@@ -18,12 +18,25 @@ class Instagram
     url.scan(/\d+/).map(&:to_i).last
   end
 
-  def followers
+  def id
+    @id
+  end
+
+  def data
     return unless @id
     source = "https://api.instagram.com/v1/users/#{@id}/?client_id=#{Figaro.env.instagram_client_id}"
-    json = GetJSON.call(source)
-    json.try(:[], 'data').try(:[], 'counts').try(:[], 'followed_by')
-    # json['data']['counts']['followed_by'] if json && json['data'] && json['data']['counts'] && json['data']['counts']['followed_by']
+    GetJSON.call(source)
+  end
+
+  def followers
+    return unless @data
+    @data.try(:[], 'data').try(:[], 'counts').try(:[], 'followed_by')
+  end
+
+  def url
+    return unless @data
+    username = @data.try(:[], 'data').try(:[], 'username')
+    "http://www.instagram.com/#{username}"
   end
   
 end
