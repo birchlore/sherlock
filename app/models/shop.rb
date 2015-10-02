@@ -8,25 +8,21 @@ class Shop < ActiveRecord::Base
   after_create :send_install_notification
 
   def self.store(session)
-    original_shop = Shop.where(:shopify_domain => session.url).first
-    previous_install = original_shop.present? && !original_shop.installed
-
     shop = Shop.where(:shopify_domain => session.url).first_or_create({ shopify_domain: session.url, 
                                       :shopify_token => session.token,
                                       :installed => true})
-    if previous_install
-      shop.installed = true
-      shop.init_webhooks
-      shop.set_email
-      shop.send_install_notification
-    end
-
     shop.id
   end
 
   def self.retrieve(id)
     shop = Shop.where(:id => id).first
-    if shop
+    if shop && !shop.installed
+      shop.installed = true
+      shop.init_webhooks
+      shop.set_email
+      shop.send_install_notification
+      ShopifyAPI::Session.new(shop.shopify_domain, shop.shopify_token)
+    elsif shop
       ShopifyAPI::Session.new(shop.shopify_domain, shop.shopify_token)
     else
       nil
