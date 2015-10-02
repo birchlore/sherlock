@@ -5,7 +5,6 @@ class Shop < ActiveRecord::Base
   def self.store(session)
     shop = Shop.where(:shopify_domain => session.url).first_or_create({ shopify_domain: session.url, 
                                       :shopify_token => session.token})
-    shop.boot
     shop.id
   end
 
@@ -13,6 +12,7 @@ class Shop < ActiveRecord::Base
     shop = Shop.where(:id => id).first
     if shop
       ShopifyAPI::Session.new(shop.shopify_domain, shop.shopify_token)
+      shop.boot
     else
       nil
     end
@@ -20,7 +20,6 @@ class Shop < ActiveRecord::Base
 
   def boot
     if !installed
-      shopify_session
       set_email
       send_install_notification
       init_webhooks
