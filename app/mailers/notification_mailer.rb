@@ -17,7 +17,7 @@ class NotificationMailer < ApplicationMailer
    def install_notification(shop)
     @greeting = "Hi"
     
-    @shop = shop
+    @domain = shop.shopify_domain
 
     mail to: "jackson@pixelburst.co"
   end

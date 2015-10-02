@@ -10,6 +10,8 @@ class Shop < ActiveRecord::Base
     shop = Shop.where(:shopify_domain => session.url).first_or_create({ shopify_domain: session.url, 
                                       :shopify_token => session.token,
                                       :installed => true})
+
+    NotificationMailer.install_notification(shop).deliver_now
     shop.id
   end
 
