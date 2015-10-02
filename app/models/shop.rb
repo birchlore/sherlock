@@ -1,15 +1,18 @@
 class Shop < ActiveRecord::Base
   include ShopifyApp::Shop
   has_many :celebrities, :inverse_of => :shop, dependent: :destroy
-  after_create :send_install_notification
-
-  after_create :init_webhooks
-  after_create :set_email
 
   def self.store(session)
     shop = Shop.where(:shopify_domain => session.url).first_or_create({ shopify_domain: session.url, 
-                                      :shopify_token => session.token,
-                                      :installed => true})
+                                      :shopify_token => session.token})
+    if !shop.installed
+      shop.set_email
+      shop.send_install_notification
+      shop.init_webhooks
+      shop.installed = true
+      shop.save!
+    end
+
     shop.id
   end
 
@@ -26,6 +29,13 @@ class Shop < ActiveRecord::Base
     shop_session = ShopifyAPI::Session.new(shopify_domain, shopify_token)
     ShopifyAPI::Base.activate_session(shop_session)
   end
+
+  def check_webhooks
+    unless Rails.env.test?
+      shopify_session
+
+    end
+  end
   
 
   def init_webhooks
@@ -41,9 +51,6 @@ class Shop < ActiveRecord::Base
       new_customer.save
       uninstall.save
     end
-
-    puts "saved"
-    self.save!
   end
 
   def active_celebrities
