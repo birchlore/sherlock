@@ -3,9 +3,9 @@ class CelebritiesController < AuthenticatedController
   layout "true" == Figaro.env.shopify_embedded_app ? 'embedded_app' : 'application'
 
   def index
+    current_shop.install unless current_shop.installed
     @celebrity = current_shop.celebrities.new
-    @celebrities = current_shop.active_celebrities
-    Kaminari.paginate_array(@celebrities).page(params[:page]).per(10)
+    @celebrities = current_shop.celebrities.page(params[:page]).per(10)
   end
 
   def show

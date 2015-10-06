@@ -11,22 +11,19 @@ class Shop < ActiveRecord::Base
   def self.retrieve(id)
     shop = Shop.where(:id => id).first
     if shop
-      shop.boot
       ShopifyAPI::Session.new(shop.shopify_domain, shop.shopify_token)
     else
       nil
     end
   end
 
-  def boot
-    if !installed
-      shopify_session
-      set_email
-      send_install_notification
-      init_webhooks
-      self.installed = true
-      self.save!
-    end
+  def install
+    shopify_session
+    set_email
+    send_install_notification
+    init_webhooks
+    self.installed = true
+    self.save!
   end
 
   def shopify_session
