@@ -18,8 +18,6 @@ class Shop < ActiveRecord::Base
   end
 
   def install
-    shopify_session
-    print "!!!!!!!!!!!!! session created !!!!!!!!!!!!!!!!!!"
 
     set_email
 print "!!!!!!!!!!!!! email set !!!!!!!!!!!!!!!!!!"
