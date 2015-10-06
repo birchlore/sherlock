@@ -19,11 +19,25 @@ class Shop < ActiveRecord::Base
 
   def install
     shopify_session
+    print "!!!!!!!!!!!!! session created !!!!!!!!!!!!!!!!!!"
+
     set_email
+print "!!!!!!!!!!!!! email set !!!!!!!!!!!!!!!!!!"
+
     send_install_notification
+    print "!!!!!!!!!!!!! sent install notification !!!!!!!!!!!!!!!!!!"
+
+
     init_webhooks
+     print "!!!!!!!!!!!!! ran init webhooks !!!!!!!!!!!!!!!!!!"
+
+
     self.installed = true
+
+    print "!!!!!!!!!!!!! self installed true !!!!!!!!!!!!!!!!!!"
     self.save!
+
+    print "!!!!!!!!!!!!! saved !!!!!!!!!!!!!!!!!!"
   end
 
   def shopify_session
