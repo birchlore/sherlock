@@ -55,11 +55,13 @@ class Shop < ActiveRecord::Base
 
 
   def scans_performed
-    customer_records.where('date > ?', 30.days.ago).sum(:count)
+    scans = customer_records.last
+    scans ? scans.count : 0
   end
 
   def scans_remaining
-    scans_allowed - scans_performed
+    sum = scans_allowed - scans_performed
+    sum < 0 ? 0 : sum
   end
 
   

@@ -10,6 +10,7 @@ class Celebrity < ActiveRecord::Base
   validates_presence_of :shop
   before_validation :sanitize
   before_validation :increase_customers_processed_count
+  before_validation :check_scans_remaining
   before_validation :get_external_data
   validate :get_celebrity_status, :on => :create
   after_create :send_email_notification
@@ -23,6 +24,7 @@ class Celebrity < ActiveRecord::Base
     youtube_celebrity? || 
     klout_celebrity?
   end
+
 
   def full_name
     first_name + " " + last_name
@@ -150,6 +152,10 @@ class Celebrity < ActiveRecord::Base
 
   private
 
+   def check_scans_remaining
+     return false unless shop.scans_remaining > 0
+   end
+
   
   def get_celebrity_status
     set_imdb if imdb_data && self.shop.imdb_notification
@@ -167,7 +173,7 @@ class Celebrity < ActiveRecord::Base
 
   def increase_customers_processed_count
     date = Date.today
-    record = self.shop.customer_records.where(date: date).first_or_create(date: date)
+    record = self.shop.customer_records.where('date > ?', 30.days.ago).first_or_create(date: date)
     record.increase_count
   end
 

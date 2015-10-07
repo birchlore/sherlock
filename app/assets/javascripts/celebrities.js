@@ -36,7 +36,13 @@ $(function(){
         $(this).closest('tr').hide();
      });
 
- 
+     var scansRemaining = $('#scans-remaining').text();
+     var scansRemainingInt = parseInt(scansRemaining);
+
+     if (scansRemainingInt < 1) {
+        $('.btn.scan').prop('disabled', true)
+    }      
+
 
 })
  

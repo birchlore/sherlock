@@ -10,4 +10,5 @@ class CustomerRecord < ActiveRecord::Base
   end
 
 
+
 end
