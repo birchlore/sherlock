@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151002052834) do
+ActiveRecord::Schema.define(version: 20151007011825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20151002052834) do
     t.datetime "updated_at"
     t.integer  "twitter_follower_threshold",             default: 2500
     t.boolean  "email_notifications",                    default: true
-    t.boolean  "installed",                              default: false
+    t.boolean  "installed",                              default: true
     t.string   "email"
     t.boolean  "wikipedia_notification",                 default: true
     t.boolean  "imdb_notification",                      default: false

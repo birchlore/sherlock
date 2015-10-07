@@ -5,33 +5,34 @@ class Shop < ActiveRecord::Base
   def self.store(session)
     shop = Shop.where(:shopify_domain => session.url).first_or_create({ shopify_domain: session.url, 
                                       :shopify_token => session.token})
+    if !shop.installed
+      shop.shopify_token = session.token
+      shop.save
+    end
+
     shop.id
   end
 
   def self.retrieve(id)
-    shop = Shop.where(:id => id).first
-    shopify_session if shop
+    
+    return unless shop = Shop.where(:id => id).first
+
+    if !shop.installed
+      shop.install
+    end
+
+    ShopifyAPI::Session.new(shop.shopify_domain, shop.shopify_token) 
+  
   end
 
   def install
-
+    shopify_session
     set_email
-print "!!!!!!!!!!!!! email set !!!!!!!!!!!!!!!!!!"
-
     send_install_notification
-    print "!!!!!!!!!!!!! sent install notification !!!!!!!!!!!!!!!!!!"
-
-
     init_webhooks
-     print "!!!!!!!!!!!!! ran init webhooks !!!!!!!!!!!!!!!!!!"
-
 
     self.installed = true
-
-    print "!!!!!!!!!!!!! self installed true !!!!!!!!!!!!!!!!!!"
     self.save!
-
-    print "!!!!!!!!!!!!! saved !!!!!!!!!!!!!!!!!!"
   end
 
   def shopify_session
@@ -52,11 +53,11 @@ print "!!!!!!!!!!!!! email set !!!!!!!!!!!!!!!!!!"
       new_customer_callback_url = Figaro.env.root_uri + "/hooks/new_customer_callback"
       uninstall_callback_url = Figaro.env.root_uri + "/hooks/app_uninstalled_callback"
 
-      new_customer = ShopifyAPI::Webhook.new(:topic => "customers/create", :format => "json", :address => new_customer_callback_url)
-      uninstall = ShopifyAPI::Webhook.new(:topic => "app/uninstalled", :format => "json", :address => uninstall_callback_url)
+      new_customer_webhook = ShopifyAPI::Webhook.new(:topic => "customers/create", :format => "json", :address => new_customer_callback_url)
+      uninstall_webhook = ShopifyAPI::Webhook.new(:topic => "app/uninstalled", :format => "json", :address => uninstall_callback_url)
       
-      new_customer.save
-      uninstall.save
+      new_customer_webhook.save
+      uninstall_webhook.save
     end
   end
 
