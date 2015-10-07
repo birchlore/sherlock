@@ -19,9 +19,12 @@ class Celebrity < ActiveRecord::Base
 
 
   def celebrity?
-    (imdb_url && shop.imdb_notification) || 
-    (wikipedia_url && shop.wikipedia_notification) || 
-    (twitter_followers && twitter_followers > shop.twitter_follower_threshold)
+    imdb_celebrity? || 
+    wikipedia_celebrity? || 
+    twitter_celebrity? || 
+    instagram_celebrity? || 
+    youtube_celebrity? || 
+    klout_celebrity? || 
   end
 
   def full_name
