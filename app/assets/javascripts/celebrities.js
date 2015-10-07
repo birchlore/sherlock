@@ -1,4 +1,5 @@
 $(function(){
+
  $('.scan').on('click', function(e){
 
   console.log('scanning >>>>>>>>>')
@@ -14,6 +15,7 @@ $(function(){
    var first_name_missing = $('#celebrity_first_name').val() == "" || $('#celebrity_first_name').val() == null
    var last_name_missing = $('#celebrity_last_name').val() == ""
    var email_incorrectly_formatted = $('#celebrity_email').val() != "" && !isEmail($('#celebrity_email').val())
+   var scans_remaining = $('#scans-remaining').text()
     
 
    if (first_name_missing) {
@@ -23,6 +25,8 @@ $(function(){
     } else if (email_incorrectly_formatted) {
       $('#celebrity_email').closest('.form-group').addClass('has-error');
     } else {
+      $('#scans-remaining').text(scans_remaining - 1)
+      disableButton()
       $('.container').addClass('blur');
       $('.load-ajax').show()
       $("#new_celebrity").submit();
@@ -34,16 +38,19 @@ $(function(){
 
      $('.customers-container').on('click', '.glyphicon-remove', function(){
         $(this).closest('tr').hide();
-     });
+     });  
 
-     var scansRemaining = $('#scans-remaining').text();
-     var scansRemainingInt = parseInt(scansRemaining);
-
-     if (scansRemainingInt < 1) {
-        $('.btn.scan').prop('disabled', true)
-    }      
-
+     disableButton()
 
 })
+
+ 
+  function disableButton() {
+    var scansRemaining = $('#scans-remaining').text();
+    if (scansRemaining < 1) {
+        $('.btn.scan').prop('disabled', true)
+    }   
+  } 
+ 
  
 
