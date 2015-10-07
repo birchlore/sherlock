@@ -1,20 +1,17 @@
 require 'open-uri'
-require 'open-uri'
 require 'json'
 require 'pry'
 
 class Celebrity < ActiveRecord::Base
   belongs_to :shop, :inverse_of => :celebrities
-  cattr_reader :users_processed
 
   validates_presence_of :first_name
   validates_presence_of :last_name
   validates_presence_of :shop
   before_validation :sanitize
+  before_validation :increase_customers_processed_count
   before_validation :get_external_data
-
   validate :get_celebrity_status, :on => :create
-  
   after_create :send_email_notification
 
 
@@ -166,6 +163,12 @@ class Celebrity < ActiveRecord::Base
     fields.each do |field| 
       self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
     end
+  end
+
+  def increase_customers_processed_count
+    date = Date.today
+    record = self.shop.customer_records.where(date: date).first_or_create(date: date)
+    record.increase_count
   end
 
   def send_email_notification

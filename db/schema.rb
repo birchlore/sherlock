@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007183632) do
+ActiveRecord::Schema.define(version: 20151007212628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,21 +52,26 @@ ActiveRecord::Schema.define(version: 20151007183632) do
 
   add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id", using: :btree
 
+  create_table "customer_records", force: :cascade do |t|
+    t.integer "shop_id"
+    t.integer "count",   default: 0
+    t.date    "date"
+  end
+
   create_table "shops", force: :cascade do |t|
-    t.string   "shopify_domain",                                         null: false
-    t.string   "shopify_token",                                          null: false
+    t.string   "shopify_domain",                               null: false
+    t.string   "shopify_token",                                null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "twitter_follower_threshold",             default: 2500
-    t.boolean  "email_notifications",                    default: true
-    t.boolean  "installed",                              default: false
+    t.integer  "twitter_follower_threshold",   default: 2500
+    t.boolean  "email_notifications",          default: true
+    t.boolean  "installed",                    default: false
     t.string   "email"
-    t.boolean  "wikipedia_notification",                 default: true
-    t.boolean  "imdb_notification",                      default: false
-    t.integer  "youtube_subscriber_threshold",           default: 5000
-    t.integer  "instagram_follower_threshold",           default: 2500
-    t.integer  "klout_score_threshold",                  default: 75
-    t.integer  "customers_processed",          limit: 8, default: 0
+    t.boolean  "wikipedia_notification",       default: true
+    t.boolean  "imdb_notification",            default: false
+    t.integer  "youtube_subscriber_threshold", default: 5000
+    t.integer  "instagram_follower_threshold", default: 2500
+    t.integer  "klout_score_threshold",        default: 75
   end
 
   add_index "shops", ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true, using: :btree

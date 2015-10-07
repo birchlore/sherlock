@@ -1,6 +1,7 @@
 class Shop < ActiveRecord::Base
   include ShopifyApp::Shop
   has_many :celebrities, :inverse_of => :shop, dependent: :destroy
+  has_many :customer_records, :inverse_of => :shop, dependent: :destroy
 
   def self.store(session)
 
@@ -46,6 +47,21 @@ class Shop < ActiveRecord::Base
 
   #   end
   # end
+
+  def scans_allowed
+    ### will eventually change this to be dynamic based on current_shop.plan
+    30
+  end
+
+
+  def scans_performed
+    customer_records.where('date > ?', 30.days.ago).sum(:count)
+  end
+
+  def scans_remaining
+    scans_allowed - scans_performed
+  end
+
   
 
   def init_webhooks
