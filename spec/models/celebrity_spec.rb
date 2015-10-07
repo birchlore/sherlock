@@ -176,9 +176,9 @@ describe Celebrity, :vcr do
     end
 
     context 'when customer has twitter followers below store threshold' do
-      it 'returns false if customer is not a twitter celebrity' do
+      it 'returns false or nil if customer is not a twitter celebrity' do
         no_twitter_celebrity = build(:celebrity, twitter_followers: 0)
-        expect(no_twitter_celebrity.celebrity?).to be false
+        expect(no_twitter_celebrity.celebrity?).not_to be
       end
     end
 

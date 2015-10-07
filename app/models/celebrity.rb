@@ -24,7 +24,7 @@ class Celebrity < ActiveRecord::Base
     twitter_celebrity? || 
     instagram_celebrity? || 
     youtube_celebrity? || 
-    klout_celebrity? || 
+    klout_celebrity?
   end
 
   def full_name

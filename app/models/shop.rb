@@ -3,12 +3,18 @@ class Shop < ActiveRecord::Base
   has_many :celebrities, :inverse_of => :shop, dependent: :destroy
 
   def self.store(session)
-    shop = Shop.where(:shopify_domain => session.url).first_or_create({ shopify_domain: session.url, 
-                                      :shopify_token => session.token})
-    if !shop.installed
+
+    shop = Shop.where(:shopify_domain => session.url).first
+
+    if shop.present?
+      binding.pry
       shop.shopify_token = session.token
-      shop.save
+      shop.save!
+    else
+      shop = Shop.create({ shopify_domain: session.url, shopify_token: session.token })
     end
+
+    shop.install unless shop.installed
 
     shop.id
   end
@@ -16,10 +22,6 @@ class Shop < ActiveRecord::Base
   def self.retrieve(id)
     
     return unless shop = Shop.where(:id => id).first
-
-    if !shop.installed
-      shop.install
-    end
 
     ShopifyAPI::Session.new(shop.shopify_domain, shop.shopify_token) 
   
@@ -30,9 +32,7 @@ class Shop < ActiveRecord::Base
     set_email
     send_install_notification
     init_webhooks
-
     self.installed = true
-    self.save!
   end
 
   def shopify_session
@@ -60,6 +60,7 @@ class Shop < ActiveRecord::Base
       uninstall_webhook.save
     end
   end
+
 
   def active_celebrities
     celebrities.where(status: "active").order(created_at: :desc)
