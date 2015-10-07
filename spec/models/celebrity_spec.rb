@@ -1,10 +1,11 @@
 require 'spec_helper'
 require 'shared_examples'
 
+
 describe Celebrity, :vcr do
 
   include_context "shared examples"
-  it { should belong_to(:shop) }
+  # it { should belong_to(:shop) }
 
   it { should respond_to(:shop) }
   it { should respond_to (:first_name)}
@@ -34,8 +35,8 @@ describe Celebrity, :vcr do
   it { should respond_to (:klout_score)}
   it { should respond_to (:klout_url)}
 
-  it { should validate_presence_of (:first_name)}
-  it { should validate_presence_of (:last_name)}
+  # it { should validate_presence_of (:first_name)}
+  # it { should validate_presence_of (:last_name)}
 
   it { should respond_to (:full_name)}
   it { should respond_to (:celebrity?)}
