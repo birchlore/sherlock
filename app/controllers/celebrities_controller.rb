@@ -6,6 +6,11 @@ class CelebritiesController < AuthenticatedController
     @celebrity = current_shop.celebrities.new
     @celebrities = current_shop.active_celebrities.page(params[:page]).per(10)
     @scans_remaining = current_shop.scans_remaining
+
+    if @scans_remaining < 1
+      flash[:danger] = "You have no celebrity scans remaining this month."
+    end
+    
   end
 
   def show
