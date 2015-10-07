@@ -62,7 +62,7 @@ class Shop < ActiveRecord::Base
   end
 
   def active_celebrities
-    celebrities.where(status: "active").reverse
+    celebrities.where(status: "active").order(created_at: :desc)
   end
 
   def set_email

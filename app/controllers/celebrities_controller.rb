@@ -4,7 +4,7 @@ class CelebritiesController < AuthenticatedController
 
   def index
     @celebrity = current_shop.celebrities.new
-    @celebrities = current_shop.celebrities.page(params[:page]).per(10)
+    @celebrities = current_shop.active_celebrities.page(params[:page]).per(10)
   end
 
   def show
