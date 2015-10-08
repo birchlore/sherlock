@@ -6,7 +6,6 @@ class HooksController < ApplicationController
 
   def new_customer_callback
     data = ActiveSupport::JSON.decode(request.body.read)
-
     # confirms customer has made at least one order, to avoid abandoned cart customers being created
     # if data["last_order_id"]
 

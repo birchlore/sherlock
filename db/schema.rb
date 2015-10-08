@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007212628) do
+ActiveRecord::Schema.define(version: 20151008175051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(version: 20151007212628) do
   end
 
   create_table "shops", force: :cascade do |t|
-    t.string   "shopify_domain",                               null: false
-    t.string   "shopify_token",                                null: false
+    t.string   "shopify_domain",                                null: false
+    t.string   "shopify_token",                                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "twitter_follower_threshold",   default: 2500
@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(version: 20151007212628) do
     t.integer  "youtube_subscriber_threshold", default: 5000
     t.integer  "instagram_follower_threshold", default: 2500
     t.integer  "klout_score_threshold",        default: 75
+    t.string   "plan",                         default: "free"
+    t.integer  "charge_id"
   end
 
   add_index "shops", ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true, using: :btree

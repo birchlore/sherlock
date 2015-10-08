@@ -43,6 +43,8 @@ module CelebritiesHelper
       celebrity.linkedin_bio
     elsif celebrity.angellist_bio
       celebrity.angellist_bio
+    elsif celebrity.twitter_bio
+      celebrity.twitter_bio
     elsif celebrity.wikipedia_bio
       celebrity.wikipedia_bio
     elsif celebrity.imdb_bio

@@ -1,7 +1,7 @@
 require 'pry'
 
 class CustomerRecord < ActiveRecord::Base
-  belongs_to :shop, :inverse_of => :celebrities
+  belongs_to :shop
 
 
   def increase_count

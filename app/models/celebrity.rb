@@ -5,13 +5,13 @@ require 'pry'
 class Celebrity < ActiveRecord::Base
   belongs_to :shop, :inverse_of => :celebrities
 
-  validates_presence_of :first_name
-  validates_presence_of :last_name
-  validates_presence_of :shop
-  before_validation :sanitize
-  before_validation :increase_customers_processed_count
-  before_validation :check_scans_remaining
-  before_validation :get_external_data
+  validates_presence_of :first_name, :on => :create
+  validates_presence_of :last_name, :on => :create
+  validates_presence_of :shop, :on => :create
+  before_validation :sanitize, :on => :create
+  before_validation :increase_customers_processed_count, :on => :create
+  before_validation :check_scans_remaining, :on => :create
+  before_validation :get_external_data, :on => :create
   validate :get_celebrity_status, :on => :create
   after_create :send_email_notification
 
@@ -137,6 +137,7 @@ class Celebrity < ActiveRecord::Base
     twitter_profile = @fullcontact.profile_hash("twitter")
     self.twitter_followers = @fullcontact.profile_data("followers")
     self.twitter_url = @fullcontact.profile_data("url")
+    self.twitter_bio = @fullcontact.profile_data("bio")
   end
 
   def set_youtube

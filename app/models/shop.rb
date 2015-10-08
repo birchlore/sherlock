@@ -1,14 +1,16 @@
+require './lib/modules/plan'
+
 class Shop < ActiveRecord::Base
   include ShopifyApp::Shop
+  include Plan
   has_many :celebrities, :inverse_of => :shop, dependent: :destroy
-  has_many :customer_records, :inverse_of => :shop, dependent: :destroy
+  has_many :customer_records, dependent: :destroy
 
   def self.store(session)
 
     shop = Shop.where(:shopify_domain => session.url).first
 
     if shop.present?
-      binding.pry
       shop.shopify_token = session.token
       shop.save!
     else
@@ -49,8 +51,7 @@ class Shop < ActiveRecord::Base
   # end
 
   def scans_allowed
-    ### will eventually change this to be dynamic based on current_shop.plan
-    30
+    Plan.scans(self.plan)
   end
 
 

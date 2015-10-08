@@ -8,9 +8,9 @@ class CelebritiesController < AuthenticatedController
     @scans_remaining = current_shop.scans_remaining
 
     if @scans_remaining < 1
-      flash[:danger] = "You have no celebrity scans remaining this month."
+      flash[:danger] = "You have no celebrity scans remaining this month. Upgrade your plan in settings."
     end
-    
+
   end
 
   def show
@@ -33,7 +33,7 @@ class CelebritiesController < AuthenticatedController
     if @celebrity.persisted?
       render 'create.js.erb'
     else
-      flash.now[:notice] = "That ain't no celebrity, kid."
+      flash.now[:info] = "That ain't no celebrity, kid."
       render 'not_a_celebrity.js'
     end
   end
@@ -45,7 +45,7 @@ class CelebritiesController < AuthenticatedController
       render :nothing => true, :status => 200
     else
       render :nothing => true, :status => 404
-      flash[:notice] = "There was an error with your archive."
+      flash[:danger] = "There was an error with your archive."
     end
   end
 

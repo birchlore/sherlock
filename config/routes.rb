@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   
   resources :celebrities, :only=> [:index, :show, :new, :create, :destroy]
   resource :shop, :only=> [:edit, :update]
+  get '/shop/plans/update_plan' => 'shops#update_plan', as: :update_plan
+  patch '/shop/plans/confirm_update' => 'shops#confirm_update', as: :confirm_update
 
 
   scope '/hooks', :controller => :hooks do

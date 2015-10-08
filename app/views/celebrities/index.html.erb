@@ -1,7 +1,7 @@
 <div class="container">
 <div class="spacer"></div>
  <div style="text-align:right;">
- 	<h4><span id="scans-remaining"><%= @scans_remaining %></span> customer scans remaining this month</h4 id="scans-remaining">
+ 	<h4><span id="scans-remaining"><%= @scans_remaining %></span> customer scans remaining this month (<%= link_to "upgrade plan", edit_shop_path(anchor: 'plan') %>)</h4 id="scans-remaining">
     <%= link_to edit_shop_path do %>
     	<i class="glyphicon glyphicon-cog"></i> Settings & Notifications
    	<% end %>
