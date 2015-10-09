@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resource :shop, :only=> [:edit, :update]
   get '/shop/plans/update_plan' => 'shops#update_plan', as: :update_plan
   patch '/shop/plans/confirm_update' => 'shops#confirm_update', as: :confirm_update
+  post '/celebrity/bulk_scan' => 'celebrities#bulk_scan', as: :bulk_scan
 
 
   scope '/hooks', :controller => :hooks do

@@ -65,6 +65,97 @@ class Shop < ActiveRecord::Base
     sum < 0 ? 0 : sum
   end
 
+
+  def recent_customers(num, include_previously_scanned)
+    if include_previously_scanned
+      all_customers(num)
+    else
+      unscanned_customers(num)
+    end
+  end
+
+
+  def bulk_scan(num, include_previously_scanned)
+    customers = recent_customers(num.to_i, include_previously_scanned)
+
+    scanned_count = customers.count
+    @celebrities_count = 0
+
+    emails_on = self.email_notifications
+
+    if emails_on
+      self.email_notifications = false
+    end
+
+    customers.each do |customer|
+      celebrity = celebrities.create(first_name: customer.first_name, last_name: customer.last_name, email: customer.email)
+      @celebrities_count += 1 if celebrity.celebrity?
+    end
+
+    if emails_on
+      self.email_notifications = true
+    end
+
+
+    [scanned_count, @celebrities_count]
+    
+  end
+
+
+  def all_customers(num)
+    pages = 1
+    num = scans_remaining if num > scans_remaining
+
+    if num > 250
+      num = 250
+      total_customers = ShopifyAPI::Customer.count
+      pages = (total_customers/250.to_f).ceil
+    end
+
+    @count = 1
+    @customers = []
+
+    pages.times do
+      result = ShopifyAPI::Customer.find(:all, :params => {:limit => num, :page => @count})
+      @customers += result.to_a
+      @count += 1
+    end
+
+     @customers.first(num)
+  end
+
+
+  def unscanned_customers(num)
+    num = scans_remaining if num > scans_remaining
+  
+    total_customers = ShopifyAPI::Customer.count
+    pages = (total_customers/250.to_f).ceil
+
+
+    @page_count = 1
+    @filtered_customers = []
+
+    while @filtered_customers.count < num && @page_count < pages do
+      @all_customers = ShopifyAPI::Customer.find(:all, :params => {:limit => 250, :page => @page_count})
+      
+      @counter = 0
+
+      while @filtered_customers.count < num do
+        customer = @all_customers[@counter]
+
+        unless celebrities.where(shopify_id: customer.id).first
+          @filtered_customers << customer
+        end
+        @counter += 1
+      end
+
+      @page_count += 1
+
+    end
+
+     @filtered_customers
+  end
+
   
 
   def init_webhooks

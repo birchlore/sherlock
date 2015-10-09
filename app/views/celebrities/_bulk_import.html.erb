@@ -1,0 +1,16 @@
+<div class="spacer"></div>
+
+<%= form_tag bulk_scan_path do %>
+	<div class="row vertical-align bulk-import">
+	  <div class="text-center col-sm-4">
+	    <%= submit_tag "Bulk Scan", :class=>"btn btn-danger", :id => "bulk-scan" %>
+	  </div>
+	  <div class="col-sm-8">
+	     <p>Scan your <%= number_field_tag 'quantity', 10, in: 1...@scans_remaining %> most recent unscanned customers. Double check your <%= link_to 'celebrity settings', edit_shop_path %> first.</p>
+	     <%= hidden_field_tag :include_scanned, '' %>
+	     <%= check_box_tag :include_scanned %> <em>Include customers who have already been scanned by Groupie</em>
+	  </div>
+	</div>
+<% end %>
+
+<div class="spacer"></div>

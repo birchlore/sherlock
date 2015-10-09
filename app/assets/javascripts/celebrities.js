@@ -1,5 +1,10 @@
 $(function(){
 
+  $('#bulk-scan').on('click', function(){
+    $('.container').addClass('blur');
+    $('.load-ajax').show()
+  });
+
  $('.scan').on('click', function(e){
 
   console.log('scanning >>>>>>>>>')

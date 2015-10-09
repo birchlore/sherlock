@@ -1,8 +1,11 @@
-task :fullcontact_hits => :environment do
-  @celebrities = []
-  Celebrity.where("twitter_followers > ?", 1).each do |celebrity|
-    @celebrities << celebrity.get_fullcontact_data
+task :set_missing_shopify_ids => :environment do
+  Celebrity.where("shopify_id IS NULL").each do |celebrity|
+  	url = celebrity.shopify_url
+  	if url
+	    celebrity.shopify_id = url.match(/customers\/\d+/)[0].match(/\d+/)[0].to_i
+	    puts celebrity.full_name
+	    celebrity.save
+	end
   end
-  print @celebrities
-end
 
+end

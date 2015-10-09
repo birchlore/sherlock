@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151008175051) do
+ActiveRecord::Schema.define(version: 20151008202007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20151008175051) do
     t.integer  "youtube_views",       limit: 8
     t.string   "youtube_username"
     t.string   "instagram_url"
+    t.integer  "shopify_id"
   end
 
   add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id", using: :btree

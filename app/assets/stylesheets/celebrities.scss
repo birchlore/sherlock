@@ -83,6 +83,11 @@ label {
   background-color: #429BD1;
 }
 
+#bulk-scan {
+  width: 200px;
+  margin: 10px 0;
+}
+
 .scan:hover {
   background-color: #4293c2;
 }
@@ -112,3 +117,28 @@ label {
 .invalid {
   border: 1px solid red;
 }
+
+.bulk-import {
+
+  border: 1px dashed #999;
+  padding: 5px 0;
+
+   p {
+    margin: 3px 0;
+  }
+
+
+ }
+
+
+@media(min-width:34em){
+
+ .vertical-align {
+    display: flex;
+    align-items: center;
+  }
+
+  
+
+}
+

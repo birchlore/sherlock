@@ -18,7 +18,7 @@ class HooksController < ApplicationController
       shopify_url = shopify_domain + "/admin/customers/" + id.to_s
 
        if shop
-        celebrity = shop.celebrities.new(:first_name => first_name, :last_name => last_name, :email => email, :shopify_url => shopify_url)
+        celebrity = shop.celebrities.new(:first_name => first_name, :last_name => last_name, :email => email, :shopify_url => shopify_url, :shopify_id => id)
         celebrity.save
        end
 

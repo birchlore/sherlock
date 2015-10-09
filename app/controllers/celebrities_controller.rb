@@ -59,11 +59,30 @@ class CelebritiesController < AuthenticatedController
     end
   end
 
+  def bulk_scan
+    num = bulk_scan_params[:quantity]
+    scan_existing = bulk_scan_params[:include_scanned].present?
+
+    result = current_shop.bulk_scan(num, scan_existing)
+    total_scanned = result[0]
+    total_found = result[1]
+
+    flash[:success] = "#{total_scanned} customers scanned and #{total_found} new celebrities found"
+  
+
+    redirect_to celebrities_path
+  end
+
   protected
 
   def celebrity_params
     params.require(:celebrity).permit(
       :first_name, :last_name, :email)
+  end
+
+  def bulk_scan_params
+    params.permit(
+      :include_scanned, :quantity)
   end
 
 
