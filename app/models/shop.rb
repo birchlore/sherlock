@@ -3,6 +3,7 @@ require './lib/modules/plan'
 class Shop < ActiveRecord::Base
   include ShopifyApp::Shop
   include Plan
+  include Rails.application.routes.url_helpers
   has_many :celebrities, :inverse_of => :shop, dependent: :destroy
   has_many :customer_records, dependent: :destroy
 
@@ -100,6 +101,57 @@ class Shop < ActiveRecord::Base
     [scanned_count, @celebrities_count]
     
   end
+
+  def confirm_plan(shopify_plan)
+
+    if shopify_plan != self.plan
+
+      if shopify_plan == "free"
+
+        if charge = self.charge_id
+          recurring = ShopifyAPI::RecurringApplicationCharge.find(charge)
+          recurring.destroy
+          self.charge_id = nil
+        end
+
+        self.plan = "free"
+        self.save
+        celebrities_url(:host => Figaro.env.root_uri)
+     
+      else
+        price = Plan.cost(shopify_plan)
+        name = shopify_plan + " Groupie Plan"
+        return_url = update_plan_url(:host => Figaro.env.root_uri)
+        response = ShopifyAPI::RecurringApplicationCharge.create({
+                              :name => name, 
+                              :price => price, 
+                              :return_url => return_url, 
+                              :test=> !Rails.env.production? 
+                              })
+
+        response.confirmation_url
+
+      end
+
+    else
+         celebrities_url(:host => Figaro.env.root_uri)
+    end
+  end
+
+
+  def update_plan(charge)
+    if charge.status == "accepted"
+      plan = charge.name.split.first
+      charge.activate
+      self.plan = plan
+      self.charge_id = charge.id
+      self.save
+      "You are now on the #{plan.capitalize} Groupie Plan. Yay!"
+    else
+      "Charge not processed properly, please try again"
+    end
+  end
+
 
 
   def all_customers(num)

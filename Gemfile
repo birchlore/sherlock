@@ -21,6 +21,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem "letter_opener", :group => :development
 gem 'nokogiri'
 gem 'kaminari'
+gem 'gon'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

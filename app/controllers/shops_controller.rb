@@ -20,54 +20,25 @@ class ShopsController < AuthenticatedController
 
 	def confirm_update
 		@plan = shop_params[:plan]
+		redirect_url = current_shop.confirm_plan(@plan)
 
-		if @plan != current_shop.plan
-
-			if @plan == "free"
-				if charge = current_shop.charge_id
-					recurring = ShopifyAPI::RecurringApplicationCharge.find(charge)
-					recurring.destroy
-					current_shop.charge_id = nil
-				end
-
-				current_shop.plan = "free"
-				current_shop.save
-				flash[:info] = "Successfully downgraded to Free Groupie Plan"
-				redirect_to celebrities_url
-			else
-				price = Plan.cost(@plan)
-				name = @plan + " Groupie Plan"
-				response = ShopifyAPI::RecurringApplicationCharge.create({
-															:name => name, 
-															:price => price, 
-															:return_url => update_plan_url, 
-															:test=> !Rails.env.production? 
-															})
-				redirect_to response.confirmation_url
-			end
-
-		else
+		if redirect_url == celebrities_url
+			flash[:success] = "Groupie Plan Updated! You are now on the #{@plan} plan."
 			redirect_to celebrities_url
+		else
+			gon.authorization_url = redirect_url
+			render :authorize_payment
 		end
+		
 
 	end
 
 	def update_plan
 		charge = charge = ShopifyAPI::RecurringApplicationCharge.first
-		plan = charge.name.split.first
+		response = current_shop.update_plan(charge)
+		flash[:info] = response
 
-		if charge.status == "accepted"
-			charge.activate
-			current_shop.plan = plan
-			current_shop.charge_id = charge.id
-			current_shop.save
-			flash[:success] = "Update complete! You are now on the #{plan.capitalize} Groupie Plan. Yay!"
-		else
-			flash[:danger] = "Charge not processed properly, please try again"
-		end
-		
 		redirect_to celebrities_url
-
 	end
 
 
