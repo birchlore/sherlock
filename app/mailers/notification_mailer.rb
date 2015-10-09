@@ -18,6 +18,7 @@ class NotificationMailer < ApplicationMailer
     @greeting = "Hi"
     
     @domain = shop.shopify_domain
+    @email = shop.email
 
     mail to: "jackson@pixelburst.co"
   end
