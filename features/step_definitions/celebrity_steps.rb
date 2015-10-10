@@ -53,7 +53,7 @@ When /^I add the customer$/ do
   fill_in :celebrity_email, :with => @customer.email
   fill_in :celebrity_first_name, :with => @customer.first_name
   fill_in :celebrity_last_name, :with => @customer.last_name
-  click_button 'Manual Scan'
+  click_button 'Single Scan'
 end
 
 Then /^I should see that the customer is a celebrity$/ do
