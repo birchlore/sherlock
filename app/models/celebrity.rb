@@ -8,7 +8,7 @@ class Celebrity < ActiveRecord::Base
   validates_presence_of :first_name, :on => :create
   validates_presence_of :last_name, :on => :create
   validates_presence_of :shop, :on => :create
-  validates :shopify_id, uniqueness: true, if: 'shopify_id.present?'
+  validates :shopify_id, uniqueness: true, if: 'shopify_id.present?', :on => :create
   before_validation :sanitize, :on => :create
   before_validation :check_scans_remaining, :on => :create
   before_validation :get_external_data, :on => :create
