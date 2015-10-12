@@ -18,9 +18,11 @@ class HooksController < ApplicationController
     email = data["email"]
     id = data["id"]
     shopify_url = shopify_domain + "/admin/customers/" + id.to_s
-    duplicate_celebrity = Celebrity.where(shopify_id: id).first
+    # duplicate_celebrity = Celebrity.where(shopify_id: id).first
+    customer = shop.customers.new(:shopify_id => id)
 
-     if shop && !duplicate_celebrity
+     if shop && !customer.duplicate?
+        customer.save
         celebrity = shop.celebrities.new(:first_name => first_name, :last_name => last_name, :email => email, :shopify_url => shopify_url, :shopify_id => id)
         celebrity.save
      end

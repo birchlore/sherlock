@@ -9,11 +9,12 @@ class Celebrity < ActiveRecord::Base
   validates_presence_of :last_name, :on => :create
   validates_presence_of :shop, :on => :create
   validates :shopify_id, uniqueness: true, if: 'shopify_id.present?', :on => :create
+  
   before_validation :sanitize, :on => :create
   before_validation :check_scans_remaining, :on => :create
+  before_validation :increase_customers_processed_count, :on => :create
   before_validation :get_external_data, :on => :create
   before_validation :get_celebrity_status, :on => :create
-  after_create :increase_customers_processed_count
   after_create :send_email_notification
 
 

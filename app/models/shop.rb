@@ -5,6 +5,7 @@ class Shop < ActiveRecord::Base
   include Plan
   include Rails.application.routes.url_helpers
   has_many :celebrities, :inverse_of => :shop, dependent: :destroy
+  has_many :customers, :inverse_of => :shop, dependent: :destroy 
   has_many :customer_records, dependent: :destroy
 
   def self.store(session)
@@ -19,7 +20,6 @@ class Shop < ActiveRecord::Base
     end
 
     shop.install unless shop.installed
-
     shop.id
   end
 
@@ -37,6 +37,7 @@ class Shop < ActiveRecord::Base
     send_install_notification
     init_webhooks
     self.installed = true
+    self.save
   end
 
   def shopify_session
