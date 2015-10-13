@@ -11,7 +11,7 @@ class ShopsController < AuthenticatedController
 		@shop = current_shop
 
 		if @shop.update_attributes(shop_params)
-			flash[:notice] = "Settings Successfully Saved"
+			flash[:success] = "Settings Successfully Saved"
 			redirect_to customers_url
 		else
 			render :edit
