@@ -35,7 +35,6 @@ class Shop < ActiveRecord::Base
     shopify_session
     set_email
     send_install_notification
-    get_shopify_customers
     init_webhooks
     self.installed = true
     self.save
@@ -47,26 +46,6 @@ class Shop < ActiveRecord::Base
   end
 
 
-  def get_shopify_customers
-    shopify_customers = self.shopify_customers
-    return unless customers
-    @customers = 0
-    shopify_customers.each do |shopify_customer|
-      customer = self.customers.new(
-                            first_name: shopify_customer.first_name, 
-                            last_name: shopify_customer.last_name, 
-                            email: shopify_customer.email, 
-                            shopify_id: shopify_customer.id
-                            )
-      unless customer.duplicate?
-        customer.save 
-        @customers += 1
-      end
-    end
-
-    @customers
-
-  end
 
   # def check_webhooks
   #   unless Rails.env.test?
@@ -90,19 +69,16 @@ class Shop < ActiveRecord::Base
   end
 
 
-  def recent_customers(num, include_previously_scanned)
-    if include_previously_scanned
-      all_customers(num)
-    else
-      unscanned_customers(num)
-    end
-  end
-
 
   def bulk_scan(num, include_previously_scanned)
-    customers = recent_customers(num.to_i, include_previously_scanned)
 
-    scanned_count = customers.count
+    if include_previously_scanned
+      shopify_customers = all_customers(num)
+    else
+      shopify_customers = unscanned_customers(num)
+    end
+
+    scanned_count = shopify_customers.count
     @celebrities_count = 0
 
     emails_on = self.email_notifications
@@ -111,9 +87,22 @@ class Shop < ActiveRecord::Base
       self.email_notifications = false
     end
 
-    customers.each do |customer|
+    shopify_customers.each do |shopify_customer|
+      customer = self.customers.new(
+                              first_name: shopify_customer.first_name,
+                              last_name: shopify_customer.last_name,
+                              email: shopify_customer.email,
+                              shopify_id: shopify_customer.id
+        )
+
       customer.scan
-      @celebrities_count += 1 if customer.celebrity?
+
+      if customer.celebrity?
+        @celebrities_count += 1 
+      end
+
+      customer.save
+
     end
 
     if emails_on
@@ -196,27 +185,27 @@ class Shop < ActiveRecord::Base
 
 
 
-  # def all_customers(num)
-  #   pages = 1
-  #   num = scans_remaining if num > scans_remaining
+  def all_customers(num)
+    pages = 1
+    num = scans_remaining if num > scans_remaining
 
-  #   if num > 250
-  #     num = 250
-  #     total_customers = ShopifyAPI::Customer.count
-  #     pages = (total_customers/250.to_f).ceil
-  #   end
+    if num > 250
+      num = 250
+      total_customers = ShopifyAPI::Customer.count
+      pages = (total_customers/250.to_f).ceil
+    end
 
-  #   @count = 1
-  #   @customers = []
+    @count = 1
+    @customers = []
 
-  #   pages.times do
-  #     result = ShopifyAPI::Customer.find(:all, :params => {:limit => num, :page => @count})
-  #     @customers += result.to_a
-  #     @count += 1
-  #   end
+    pages.times do
+      result = ShopifyAPI::Customer.find(:all, :params => {:limit => num, :page => @count})
+      @customers += result.to_a
+      @count += 1
+    end
 
-  #    @customers.first(num)
-  # end
+     @customers.first(num)
+  end
 
 
   def unscanned_customers(num)
@@ -229,15 +218,17 @@ class Shop < ActiveRecord::Base
     @page_count = 1
     @filtered_customers = []
 
-    while @filtered_customers.count < num && @page_count < pages do
+
+    while @filtered_customers.count < num && @page_count <= pages do
       @all_customers = ShopifyAPI::Customer.find(:all, :params => {:limit => 250, :page => @page_count})
       
       @counter = 0
 
+
       while @filtered_customers.count < num do
         customer = @all_customers[@counter]
 
-        unless celebrities.where(shopify_id: customer.id).first
+        unless customers.where(shopify_id: customer.id).first
           @filtered_customers << customer
         end
         @counter += 1

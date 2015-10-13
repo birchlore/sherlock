@@ -3,7 +3,6 @@ class CustomersController < AuthenticatedController
   layout "true" == Figaro.env.shopify_embedded_app ? 'embedded_app' : 'application'
 
   def index
-    binding.pry
     @customer = current_shop.customers.new
     @celebrities = current_shop.celebrities.page(params[:page]).per(10)
     @scans_remaining = current_shop.scans_remaining
@@ -34,7 +33,6 @@ class CustomersController < AuthenticatedController
     @customer.scan
 
     if @customer.celebrity?
-      @customer.status = "celebrity"
       @customer.save
       render 'create.js.erb'
     else
@@ -66,7 +64,7 @@ class CustomersController < AuthenticatedController
   end
 
   def bulk_scan
-    num = bulk_scan_params[:quantity]
+    num = bulk_scan_params[:quantity].to_i
     scan_existing = bulk_scan_params[:include_scanned].present?
 
     result = current_shop.bulk_scan(num, scan_existing)
@@ -74,9 +72,9 @@ class CustomersController < AuthenticatedController
     total_scanned = result[0]
     total_found = result[1]
 
-    flash[:success] = "#{total_scanned} customers scanned and #{total_found} new celebrities found"
-  
+    flash[:success] = "Bulk celebrity scan processing. Please check back in approx #{num/2} minutes."
     redirect_to customers_path
+
   end
 
   protected

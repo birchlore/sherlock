@@ -9,8 +9,6 @@ class Customer < ActiveRecord::Base
   validates_presence_of :first_name, :on => :create
   validates_presence_of :last_name, :on => :create
   
-  validates :shopify_id, uniqueness: true, if: 'shopify_id.present?', :on => :create
-
   before_validation :sanitize, :on => :create
   # before_validation :get_external_data, :on => :create
   # before_validation :get_celebrity_status, :on => :create
@@ -21,7 +19,11 @@ class Customer < ActiveRecord::Base
     data = self.get_external_data
     return unless data
     self.get_celebrity_status
-    shop.send_celebrity_notification(self) if self.celebrity?
+
+    if self.celebrity?
+      shop.send_celebrity_notification(self) 
+      self.status = "celebrity"
+    end
   end
 
 
@@ -32,6 +34,10 @@ class Customer < ActiveRecord::Base
     instagram_celebrity? || 
     youtube_celebrity? || 
     klout_celebrity?
+  end
+
+  def shopify_url
+    shop.shopify_domain + "/admin/customers/" + self.shopify_id.to_s
   end
 
 

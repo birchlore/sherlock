@@ -59,3 +59,5 @@ task :transfer_celebrities_to_customers => :environment do
 	@customers
 end
 
+
+
