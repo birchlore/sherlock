@@ -4,9 +4,9 @@ class Shop < ActiveRecord::Base
   include ShopifyApp::Shop
   include Plan
   include Rails.application.routes.url_helpers
-  has_many :celebrities, :inverse_of => :shop, dependent: :destroy
-  has_many :customers, :inverse_of => :shop, dependent: :destroy 
-  has_many :customer_records, dependent: :destroy
+  has_many :customers, :inverse_of => :shop, dependent: :destroy
+  # has_many :customers, :inverse_of => :shop, dependent: :destroy 
+  # has_many :customer_records, dependent: :destroy
 
   def self.store(session)
 
@@ -35,6 +35,7 @@ class Shop < ActiveRecord::Base
     shopify_session
     set_email
     send_install_notification
+    get_shopify_customers
     init_webhooks
     self.installed = true
     self.save
@@ -43,6 +44,28 @@ class Shop < ActiveRecord::Base
   def shopify_session
     shop_session = ShopifyAPI::Session.new(shopify_domain, shopify_token)
     ShopifyAPI::Base.activate_session(shop_session)
+  end
+
+
+  def get_shopify_customers
+    shopify_customers = self.shopify_customers
+    return unless customers
+    @customers = 0
+    shopify_customers.each do |shopify_customer|
+      customer = self.customers.new(
+                            first_name: shopify_customer.first_name, 
+                            last_name: shopify_customer.last_name, 
+                            email: shopify_customer.email, 
+                            shopify_id: shopify_customer.id
+                            )
+      unless customer.duplicate?
+        customer.save 
+        @customers += 1
+      end
+    end
+
+    @customers
+
   end
 
   # def check_webhooks
@@ -58,8 +81,7 @@ class Shop < ActiveRecord::Base
 
 
   def scans_performed
-    scans = customer_records.last
-    scans ? scans.count : 0
+    customers.where('created_at > ?', 30.days.ago).count
   end
 
   def scans_remaining
@@ -90,8 +112,8 @@ class Shop < ActiveRecord::Base
     end
 
     customers.each do |customer|
-      celebrity = celebrities.create(first_name: customer.first_name, last_name: customer.last_name, email: customer.email)
-      @celebrities_count += 1 if celebrity.celebrity?
+      customer.scan
+      @celebrities_count += 1 if customer.celebrity?
     end
 
     if emails_on
@@ -117,7 +139,7 @@ class Shop < ActiveRecord::Base
 
         self.plan = "free"
         self.save
-        celebrities_url(:host => Figaro.env.root_uri)
+        customers_url(:host => Figaro.env.root_uri)
      
       else
         price = Plan.cost(shopify_plan)
@@ -135,7 +157,7 @@ class Shop < ActiveRecord::Base
       end
 
     else
-         celebrities_url(:host => Figaro.env.root_uri)
+         customers_url(:host => Figaro.env.root_uri)
     end
   end
 
@@ -155,27 +177,46 @@ class Shop < ActiveRecord::Base
 
 
 
-  def all_customers(num)
-    pages = 1
-    num = scans_remaining if num > scans_remaining
-
-    if num > 250
-      num = 250
-      total_customers = ShopifyAPI::Customer.count
-      pages = (total_customers/250.to_f).ceil
-    end
+  def shopify_customers
+    total_customers = ShopifyAPI::Customer.count
+    pages = (total_customers/250.to_f).ceil
 
     @count = 1
     @customers = []
 
     pages.times do
-      result = ShopifyAPI::Customer.find(:all, :params => {:limit => num, :page => @count})
+      result = ShopifyAPI::Customer.find(:all, :params => {:limit => 250, :page => @count})
       @customers += result.to_a
       @count += 1
     end
 
-     @customers.first(num)
+    @customers
+
   end
+
+
+
+  # def all_customers(num)
+  #   pages = 1
+  #   num = scans_remaining if num > scans_remaining
+
+  #   if num > 250
+  #     num = 250
+  #     total_customers = ShopifyAPI::Customer.count
+  #     pages = (total_customers/250.to_f).ceil
+  #   end
+
+  #   @count = 1
+  #   @customers = []
+
+  #   pages.times do
+  #     result = ShopifyAPI::Customer.find(:all, :params => {:limit => num, :page => @count})
+  #     @customers += result.to_a
+  #     @count += 1
+  #   end
+
+  #    @customers.first(num)
+  # end
 
 
   def unscanned_customers(num)
@@ -225,8 +266,8 @@ class Shop < ActiveRecord::Base
   end
 
 
-  def active_celebrities
-    celebrities.where(status: "active").order(created_at: :desc)
+  def celebrities
+    customers.where(status: "celebrity").where(archived: false).order(created_at: :desc)
   end
 
   def set_email
@@ -238,6 +279,13 @@ class Shop < ActiveRecord::Base
   def twitter_follower_threshold=(followers)
     write_attribute(:twitter_follower_threshold, "#{followers}".gsub(/\D/, ''))
   end
+
+  def send_celebrity_notification(celebrity)
+     if self.email_notifications
+        NotificationMailer.celebrity_notification(celebrity).deliver_now
+    end
+  end
+
 
   private
 

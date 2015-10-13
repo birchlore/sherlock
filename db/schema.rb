@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151011231913) do
+ActiveRecord::Schema.define(version: 20151013000939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,10 +60,38 @@ ActiveRecord::Schema.define(version: 20151011231913) do
   end
 
   create_table "customers", force: :cascade do |t|
-    t.integer  "shopify_id"
+    t.integer  "shopify_id",          limit: 8
     t.integer  "shop_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "imdb_url"
+    t.string   "imdb_bio"
+    t.string   "wikipedia_url"
+    t.string   "wikipedia_bio"
+    t.string   "twitter_url"
+    t.string   "twitter_bio"
+    t.integer  "twitter_followers",   limit: 8
+    t.string   "youtube_url"
+    t.string   "youtube_bio"
+    t.integer  "youtube_subscribers", limit: 8
+    t.integer  "youtube_views",       limit: 8
+    t.string   "youtube_username"
+    t.string   "angellist_bio"
+    t.string   "angellist_url"
+    t.string   "linkedin_bio"
+    t.string   "linkedin_url"
+    t.integer  "klout_id",            limit: 8
+    t.integer  "klout_score"
+    t.string   "klout_url"
+    t.integer  "instagram_followers", limit: 8
+    t.string   "instagram_id"
+    t.string   "instagram_url"
+    t.string   "shopify_url"
+    t.string   "status",                        default: "regular"
+    t.boolean  "archived",                      default: false
   end
 
   create_table "shops", force: :cascade do |t|

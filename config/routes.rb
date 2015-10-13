@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
 
 
-  root :to => 'celebrities#index'
+  root :to => 'customers#index'
   mount ShopifyApp::Engine, at: '/'
 
-  get '/celebrity/archive/:id' => 'celebrities#archive', as: :celebrity_archive
-  get '/celebrity/unarchive/:id' => 'celebrities#unarchive', as: :celebrity_unarchive
+  get '/customer/archive/:id' => 'customers#archive', as: :customer_archive
+  get '/customer/unarchive/:id' => 'customers#unarchive', as: :customer_unarchive
   
-  resources :celebrities, :only=> [:index, :show, :new, :create, :destroy]
+  resources :customers, :only=> [:index, :show, :new, :create, :destroy]
   resource :shop, :only=> [:edit, :update]
   get '/shop/plans/update_plan' => 'shops#update_plan', as: :update_plan
   patch '/shop/plans/confirm_update' => 'shops#confirm_update', as: :confirm_update
-  post '/celebrity/bulk_scan' => 'celebrities#bulk_scan', as: :bulk_scan
+  post '/customer/bulk_scan' => 'customers#bulk_scan', as: :bulk_scan
 
 
   scope '/hooks', :controller => :hooks do

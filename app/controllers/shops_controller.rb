@@ -12,7 +12,7 @@ class ShopsController < AuthenticatedController
 
 		if @shop.update_attributes(shop_params)
 			flash[:info] = "Settings Successfully Saved"
-			redirect_to celebrities_url
+			redirect_to customers_url
 		else
 			render :edit
 		end
@@ -22,9 +22,9 @@ class ShopsController < AuthenticatedController
 		@plan = shop_params[:plan]
 		redirect_url = current_shop.confirm_plan(@plan)
 
-		if redirect_url == celebrities_url
+		if redirect_url == customers_url
 			flash[:success] = "Groupie Plan Updated! You are now on the #{@plan} plan."
-			redirect_to celebrities_url
+			redirect_to customers_url
 		else
 			gon.authorization_url = redirect_url
 			render :authorize_payment
@@ -38,7 +38,7 @@ class ShopsController < AuthenticatedController
 		response = current_shop.update_plan(charge)
 		flash[:info] = response
 
-		redirect_to celebrities_url
+		redirect_to customers_url
 	end
 
 

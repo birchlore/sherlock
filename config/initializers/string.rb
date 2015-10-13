@@ -13,4 +13,8 @@ class String
      self.include?("This is a redirect")
   end
 
+  def sanitize
+    self.gsub(/\s+/, "").capitalize
+  end
+
 end

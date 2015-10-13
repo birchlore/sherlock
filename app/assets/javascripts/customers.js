@@ -17,24 +17,24 @@ $(function(){
   }
 
 
-   var first_name_missing = $('#celebrity_first_name').val() == "" || $('#celebrity_first_name').val() == null
-   var last_name_missing = $('#celebrity_last_name').val() == ""
-   var email_incorrectly_formatted = $('#celebrity_email').val() != "" && !isEmail($('#celebrity_email').val())
+   var first_name_missing = $('#customer_first_name').val() == "" || $('#customer_first_name').val() == null
+   var last_name_missing = $('#customer_last_name').val() == ""
+   var email_incorrectly_formatted = $('#customer_email').val() != "" && !isEmail($('#customer_email').val())
    var scans_remaining = $('#scans-remaining').text()
     
 
    if (first_name_missing) {
-      $('#celebrity_first_name').closest('.form-group').addClass('has-error');
+      $('#customer_first_name').closest('.form-group').addClass('has-error');
    }  else if (last_name_missing) {
-      $('#celebrity_last_name').closest('.form-group').addClass('has-error');
+      $('#customer_last_name').closest('.form-group').addClass('has-error');
     } else if (email_incorrectly_formatted) {
-      $('#celebrity_email').closest('.form-group').addClass('has-error');
+      $('#customer_email').closest('.form-group').addClass('has-error');
     } else {
       $('#scans-remaining').text(scans_remaining - 1)
       disableButton()
       $('.container').addClass('blur');
       $('.load-ajax').show()
-      $("#new_celebrity").submit();
+      $("#new_customer").submit();
     }
    
 
