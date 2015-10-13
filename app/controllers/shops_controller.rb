@@ -11,7 +11,7 @@ class ShopsController < AuthenticatedController
 		@shop = current_shop
 
 		if @shop.update_attributes(shop_params)
-			flash[:info] = "Settings Successfully Saved"
+			flash[:notice] = "Settings Successfully Saved"
 			redirect_to customers_url
 		else
 			render :edit
@@ -36,7 +36,7 @@ class ShopsController < AuthenticatedController
 	def update_plan
 		charge = charge = ShopifyAPI::RecurringApplicationCharge.first
 		response = current_shop.update_plan(charge)
-		flash[:info] = response
+		flash[:notice] = response
 
 		redirect_to customers_url
 	end

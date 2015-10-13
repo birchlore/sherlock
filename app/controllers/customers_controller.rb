@@ -8,7 +8,7 @@ class CustomersController < AuthenticatedController
     @scans_remaining = current_shop.scans_remaining
 
     if @scans_remaining < 1
-      flash[:danger] = "You have no customer scans remaining this month. Upgrade your plan in settings."
+      flash[:alert] = "You have no customer scans remaining this month. Upgrade your plan in settings."
     end
 
   end
@@ -22,7 +22,7 @@ class CustomersController < AuthenticatedController
     if @celebrity.destroy
       redirect_to customers_path
     else
-      flash[:now] = "There was an error."
+      flash.now[:alert] = "There was an error."
       render :index
     end
 
@@ -37,7 +37,7 @@ class CustomersController < AuthenticatedController
       render 'create.js.erb'
     else
       @customer.save
-      flash.now[:info] = "That ain't no celebrity, kid."
+      flash.now[:notice] = "That ain't no celebrity, kid."
       render 'not_a_celebrity.js'
     end
   end
@@ -49,7 +49,7 @@ class CustomersController < AuthenticatedController
       render :nothing => true, :status => 200
     else
       render :nothing => true, :status => 404
-      flash[:danger] = "There was an error with your archive."
+      flash[:alert] = "There was an error with your archive."
     end
   end
 
@@ -67,12 +67,9 @@ class CustomersController < AuthenticatedController
     num = bulk_scan_params[:quantity].to_i
     scan_existing = bulk_scan_params[:include_scanned].present?
 
-    result = current_shop.bulk_scan(num, scan_existing)
+    Resque.enqueue(BulkScanner, num, scan_existing)
 
-    total_scanned = result[0]
-    total_found = result[1]
-
-    flash[:success] = "Bulk celebrity scan processing. Please check back in approx #{num/2} minutes."
+    flash[:success] = "Bulk celebrity scan processing. We'll send you an email in approx #{num/2} minutes."
     redirect_to customers_path
 
   end

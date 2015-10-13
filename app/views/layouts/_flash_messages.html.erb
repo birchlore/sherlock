@@ -1,6 +1,6 @@
 <div>
   <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %> fade in text-center">
+    <div class="<%= flash_class(key) %> fade in text-center">
       <a href="#" data-dismiss="alert" class="close">×</a>
       <%= value %>
     </div>

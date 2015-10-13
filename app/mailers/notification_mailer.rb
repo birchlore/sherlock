@@ -23,12 +23,21 @@ class NotificationMailer < ApplicationMailer
     mail to: "jackson@pixelburst.co"
   end
 
-   def uninstall_notification(shop)
+  def uninstall_notification(shop)
     @greeting = "Hi"
     
     @email = shop.email
 
     mail to: "jackson@pixelburst.co"
+  end
+
+  def bulk_scan_notification(shop, total_scanned, total_found)
+    @greeting = "Hi"
+    @total_scanned = total_scanned
+    @total_found = total_found
+    @scans_remaining = shop.scans_remaining
+
+    mail to: shop.email
   end
 
 end
