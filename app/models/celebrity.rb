@@ -13,7 +13,7 @@ class Celebrity < ActiveRecord::Base
   before_validation :check_scans_remaining, :on => :create
   before_validation :get_external_data, :on => :create
   before_validation :get_celebrity_status, :on => :create
-  after_create :increase_customers_processed_count
+  before_validation :increase_customers_processed_count
   after_create :send_email_notification
 
 
