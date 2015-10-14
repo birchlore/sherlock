@@ -13,9 +13,9 @@ class HooksController < ApplicationController
     
     shopify_domain = request.headers["HTTP_X_SHOPIFY_SHOP_DOMAIN"]
     shop = Shop.where(shopify_domain: shopify_domain).first
-    first_name = data["first_name"].sanitize
-    last_name = data["last_name"].sanitize
-    email = data["email"].sanitize
+    first_name = data["first_name"]
+    last_name = data["last_name"]
+    email = data["email"]
     id = data["id"]
     # duplicate_celebrity = Celebrity.where(shopify_id: id).first
     customer = shop.customers.new(:shopify_id => id)

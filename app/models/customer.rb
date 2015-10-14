@@ -5,6 +5,8 @@ require 'pry'
 class Customer < ActiveRecord::Base
   belongs_to :shop
   
+  before_validation :sanitize
+
   validates_presence_of :shop, :on => :create
   validates_presence_of :first_name, :on => :create
   validates_presence_of :last_name, :on => :create
@@ -91,13 +93,13 @@ class Customer < ActiveRecord::Base
   end
 
   def imdb_data
-    return unless first_name.present && last_name.present? && full_name.ascii_only?
+    return unless first_name.present? && last_name.present? && full_name.ascii_only?
     @imdb ||= IMDB.new(self)
     data ||= @imdb.data
   end
 
   def wikipedia_data
-    return unless first_name.present && last_name.present? && full_name.ascii_only?
+    return unless first_name.present? && last_name.present? && full_name.ascii_only?
     @wikipedia ||= Wikipedia.new(self)
     data ||= @wikipedia.data 
   end
@@ -176,6 +178,12 @@ class Customer < ActiveRecord::Base
     set_wikipedia if wikipedia_data && self.shop.wikipedia_notification
     set_social_data if fullcontact_data
     # errors.add(:body, "This ain't no celebrity, kid") unless celebrity?
+  end
+
+  def sanitize
+    self.first_name = self.first_name.sanitize if self.first_name.present?
+    self.last_name = self.last_name.sanitize if self.first_name.present?
+    self.email = self.email.sanitize if self.first_name.present?
   end
 
 
