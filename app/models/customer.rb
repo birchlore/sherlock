@@ -10,10 +10,6 @@ class Customer < ActiveRecord::Base
   validates_presence_of :shop, :on => :create
   validates_presence_of :first_name, :on => :create
   validates_presence_of :last_name, :on => :create
-  
-  # before_validation :get_external_data, :on => :create
-  # before_validation :get_celebrity_status, :on => :create
-  # after_create :send_email_notification
 
 
   def scan
@@ -22,8 +18,9 @@ class Customer < ActiveRecord::Base
     self.get_celebrity_status
 
     if self.celebrity?
-      shop.send_celebrity_notification(self) 
+      self.shop.send_celebrity_notification(self) 
       self.status = "celebrity"
+      self.save
     end
   end
 
@@ -111,7 +108,7 @@ class Customer < ActiveRecord::Base
   end
 
   def duplicate?
-    self.shop.customers.where(shopify_id: self.shopify_id).first || self.shop.celebrities.where(shopify_id: self.shopify_id).first
+   true if self.shop.customers.where(shopify_id: self.shopify_id).first || self.shop.celebrities.where(shopify_id: self.shopify_id).first
   end
 
 

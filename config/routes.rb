@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root :to => 'customers#index'
   mount ShopifyApp::Engine, at: '/'
+  mount Resque::Server, :at => "/resque"
 
   get '/customer/archive/:id' => 'customers#archive', as: :customer_archive
   get '/customer/unarchive/:id' => 'customers#unarchive', as: :customer_unarchive

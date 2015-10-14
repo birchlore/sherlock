@@ -30,15 +30,13 @@ class CustomersController < AuthenticatedController
 
   def create
     @customer = current_shop.customers.new(customer_params)
-    @customer.scan
+    @customer.scan if @customer.save
 
     if @customer.celebrity?
-      @customer.save
       render 'create.js.erb'
     else
-      @customer.save
       flash.now[:notice] = "That ain't no celebrity, kid."
-      render 'not_a_celebrity.js'
+      render :nothing => true, :status => 200
     end
   end
 

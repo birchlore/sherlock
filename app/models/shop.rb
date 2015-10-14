@@ -95,13 +95,11 @@ class Shop < ActiveRecord::Base
                               shopify_id: shopify_customer.id
         )
 
-      customer.scan
+      customer.scan if customer.save
 
       if customer.celebrity?
         @celebrities_count += 1 
       end
-
-      customer.save
 
     end
 
