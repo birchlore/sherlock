@@ -3,6 +3,7 @@ class BulkScanner
 
 	def self.perform(shop_id, num, scan_existing)
 	  shop = Shop.find(shop_id)
+	  shop.shopify_session
 
 	  result = shop.bulk_scan(num, scan_existing)
 	  total_scanned = result[0]
