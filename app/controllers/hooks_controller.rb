@@ -15,7 +15,7 @@ class HooksController < ApplicationController
     shop = Shop.where(shopify_domain: shopify_domain).first
     first_name = data["first_name"]
     last_name = data["last_name"]
-    email = data["email"]
+    email = data["email"].gsub(/\s+/, "")
     id = data["id"]
     shopify_url = shopify_domain + "/admin/customers/" + id.to_s
     duplicate_celebrity = Celebrity.where(shopify_id: id).first

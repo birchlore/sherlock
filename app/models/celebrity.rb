@@ -77,13 +77,13 @@ class Celebrity < ActiveRecord::Base
   end
 
   def imdb_data
-    return unless first_name && last_name && full_name.ascii_only?
+    return unless first_name.present? && last_name.present? && full_name.ascii_only?
     @imdb ||= IMDB.new(self)
     data ||= @imdb.data
   end
 
   def wikipedia_data
-    return unless first_name && last_name && full_name.ascii_only?
+    return unless first_name.present? && last_name.present? && full_name.ascii_only?
     @wikipedia ||= Wikipedia.new(self)
     data ||= @wikipedia.data 
   end
