@@ -9,7 +9,6 @@ class Customer < ActiveRecord::Base
   validates_presence_of :first_name, :on => :create
   validates_presence_of :last_name, :on => :create
   
-  before_validation :sanitize, :on => :create
   # before_validation :get_external_data, :on => :create
   # before_validation :get_celebrity_status, :on => :create
   # after_create :send_email_notification
@@ -92,13 +91,13 @@ class Customer < ActiveRecord::Base
   end
 
   def imdb_data
-    return unless first_name && last_name && full_name.ascii_only?
+    return unless first_name.present && last_name.present? && full_name.ascii_only?
     @imdb ||= IMDB.new(self)
     data ||= @imdb.data
   end
 
   def wikipedia_data
-    return unless first_name && last_name && full_name.ascii_only?
+    return unless first_name.present && last_name.present? && full_name.ascii_only?
     @wikipedia ||= Wikipedia.new(self)
     data ||= @wikipedia.data 
   end
@@ -178,18 +177,6 @@ class Customer < ActiveRecord::Base
     set_social_data if fullcontact_data
     # errors.add(:body, "This ain't no celebrity, kid") unless celebrity?
   end
-
-
-
-  private
-
-   def sanitize
-    self.first_name = first_name.sanitize if first_name
-    self.last_name = last_name.sanitize if last_name
-   end
-
-  
- 
 
 
 

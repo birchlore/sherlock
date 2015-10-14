@@ -29,6 +29,7 @@ class CustomersController < AuthenticatedController
   end
 
   def create
+    customer_params.map! { |p| p.sanitize }
     @customer = current_shop.customers.new(customer_params)
     @customer.scan
 

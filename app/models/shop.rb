@@ -89,9 +89,9 @@ class Shop < ActiveRecord::Base
 
     shopify_customers.each do |shopify_customer|
       customer = self.customers.new(
-                              first_name: shopify_customer.first_name,
-                              last_name: shopify_customer.last_name,
-                              email: shopify_customer.email,
+                              first_name: shopify_customer.first_name.sanitize,
+                              last_name: shopify_customer.last_name.sanitize,
+                              email: shopify_customer.email.sanitize,
                               shopify_id: shopify_customer.id
         )
 
