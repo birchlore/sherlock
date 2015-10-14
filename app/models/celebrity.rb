@@ -1,20 +1,20 @@
+
 # require 'open-uri'
 # require 'json'
 # require 'pry'
 
 # class Celebrity < ActiveRecord::Base
-#   belongs_to :shop, :inverse_of => :customers
+#   belongs_to :shop, :inverse_of => :celebrities
 
 #   validates_presence_of :first_name, :on => :create
 #   validates_presence_of :last_name, :on => :create
 #   validates_presence_of :shop, :on => :create
 #   validates :shopify_id, uniqueness: true, if: 'shopify_id.present?', :on => :create
-  
 #   before_validation :sanitize, :on => :create
 #   before_validation :check_scans_remaining, :on => :create
-#   before_validation :increase_customers_processed_count, :on => :create
 #   before_validation :get_external_data, :on => :create
 #   before_validation :get_celebrity_status, :on => :create
+#   before_validation :increase_customers_processed_count
 #   after_create :send_email_notification
 
 
@@ -78,13 +78,13 @@
 #   end
 
 #   def imdb_data
-#     return unless first_name && last_name && full_name.ascii_only?
+#     return unless first_name.present? && last_name.present? && full_name.ascii_only?
 #     @imdb ||= IMDB.new(self)
 #     data ||= @imdb.data
 #   end
 
 #   def wikipedia_data
-#     return unless first_name && last_name && full_name.ascii_only?
+#     return unless first_name.present? && last_name.present? && full_name.ascii_only?
 #     @wikipedia ||= Wikipedia.new(self)
 #     data ||= @wikipedia.data 
 #   end
@@ -158,32 +158,33 @@
 #    def check_scans_remaining
 #      return false unless shop && shop.scans_remaining > 0
 #    end
+# >>>>>>> master
 
   
-#   def get_celebrity_status
-#     set_imdb if imdb_data && self.shop.imdb_notification
-#     set_wikipedia if wikipedia_data && self.shop.wikipedia_notification
-#     set_social_data if fullcontact_data
-#     errors.add(:body, "This ain't no celebrity, kid") unless celebrity?
-#   end
+# #   def get_celebrity_status
+# #     set_imdb if imdb_data && self.shop.imdb_notification
+# #     set_wikipedia if wikipedia_data && self.shop.wikipedia_notification
+# #     set_social_data if fullcontact_data
+# #     errors.add(:body, "This ain't no celebrity, kid") unless celebrity?
+# #   end
 
-#   def sanitize
-#     return unless first_name && last_name
-#     fields = ["first_name", "last_name"]
-#     fields.each do |field| 
-#       self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
-#     end
-#   end
+# #   def sanitize
+# #     return unless first_name && last_name
+# #     fields = ["first_name", "last_name"]
+# #     fields.each do |field| 
+# #       self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
+# #     end
+# #   end
 
-#   def increase_customers_processed_count
-#     date = Date.today
-#     record = self.shop.customer_records.where('date > ?', 30.days.ago).first_or_create(date: date)
-#     record.increase_count
-#   end
+# #   def increase_customers_processed_count
+# #     date = Date.today
+# #     record = self.shop.customer_records.where('date > ?', 30.days.ago).first_or_create(date: date)
+# #     record.increase_count
+# #   end
 
-#   def send_email_notification
-#     if self.shop.email_notifications
-#         NotificationMailer.celebrity_notification(self).deliver_now
-#     end
-#   end
-# end
+# #   def send_email_notification
+# #     if self.shop.email_notifications
+# #         NotificationMailer.celebrity_notification(self).deliver_now
+# #     end
+# #   end
+# # end
