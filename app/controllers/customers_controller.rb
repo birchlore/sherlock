@@ -8,7 +8,7 @@ class CustomersController < AuthenticatedController
     @scans_remaining = current_shop.scans_remaining
 
     if @scans_remaining < 1
-      flash[:alert] = "You have no customer scans remaining this month. Upgrade your plan in settings."
+      flash[:alert] = "You have no customer scans remaining this month. Change your plan in settings."
     end
 
   end
