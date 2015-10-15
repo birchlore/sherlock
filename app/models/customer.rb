@@ -179,8 +179,8 @@ class Customer < ActiveRecord::Base
 
   def sanitize
     self.first_name = self.first_name.sanitize if self.first_name.present?
-    self.last_name = self.last_name.sanitize if self.first_name.present?
-    self.email = self.email.sanitize if self.first_name.present?
+    self.last_name = self.last_name.sanitize if self.last_name.present?
+    self.email = self.email.sanitize if self.email.present?
   end
 
 
