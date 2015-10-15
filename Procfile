@@ -1,3 +1,2 @@
-web: bundle exec rails s
-redis: redis-server
-resque: TERM_CHILD=1 QUEUES='*' rake resque:work
+web: thin start -p $PORT
+worker: env QUEUE='*' bundle exec rake resque:work
