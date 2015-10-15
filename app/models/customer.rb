@@ -59,10 +59,10 @@ class Customer < ActiveRecord::Base
   end
 
   def get_external_data
-    wikipedia_data
-    imdb_data
-    fullcontact_data
-    true if wikipedia_data || imdb_data || fullcontact_data
+    @wikipedia_data = wikipedia_data
+    @imdb_data = imdb_data
+    @fullcontact_data = fullcontact_data
+    true if @wikipedia_data || @imdb_data || @fullcontact_data
   end
 
   def imdb_celebrity?
@@ -98,7 +98,7 @@ class Customer < ActiveRecord::Base
   def wikipedia_data
     return unless first_name.present? && last_name.present? && full_name.ascii_only?
     @wikipedia ||= Wikipedia.new(self)
-    data ||= @wikipedia.data 
+    data = @wikipedia.data 
   end
 
   def self.search(search, page)
@@ -171,9 +171,9 @@ class Customer < ActiveRecord::Base
   end
 
    def get_celebrity_status
-    set_imdb if imdb_data && self.shop.imdb_notification
-    set_wikipedia if wikipedia_data && self.shop.wikipedia_notification
-    set_social_data if fullcontact_data
+    set_imdb if @imdb_data && self.shop.imdb_notification
+    set_wikipedia if @wikipedia_data && self.shop.wikipedia_notification
+    set_social_data if @fullcontact_data
     # errors.add(:body, "This ain't no celebrity, kid") unless celebrity?
   end
 

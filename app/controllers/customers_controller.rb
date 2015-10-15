@@ -36,7 +36,7 @@ class CustomersController < AuthenticatedController
       render 'create.js.erb'
     else
       flash.now[:notice] = "That ain't no celebrity, kid."
-      render :nothing => true, :status => 200
+      render 'not_a_celebrity.js'
     end
   end
 
