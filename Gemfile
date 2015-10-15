@@ -43,6 +43,8 @@ gem 'responders', '~> 2.0'
 gem 'rails_12factor'
 gem 'rack-ssl-enforcer'
 gem 'httparty'
+gem 'redis'
+gem 'redis-rails'
 gem 'resque', :require => "resque/server"
 
 # Use ActiveModel has_secure_password
