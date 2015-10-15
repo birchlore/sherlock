@@ -158,33 +158,31 @@ class Celebrity < ActiveRecord::Base
    def check_scans_remaining
      return false unless shop && shop.scans_remaining > 0
    end
->>>>>>> master
-
   
-#   def get_celebrity_status
-#     set_imdb if imdb_data && self.shop.imdb_notification
-#     set_wikipedia if wikipedia_data && self.shop.wikipedia_notification
-#     set_social_data if fullcontact_data
-#     errors.add(:body, "This ain't no celebrity, kid") unless celebrity?
-#   end
+  def get_celebrity_status
+    set_imdb if imdb_data && self.shop.imdb_notification
+    set_wikipedia if wikipedia_data && self.shop.wikipedia_notification
+    set_social_data if fullcontact_data
+    errors.add(:body, "This ain't no celebrity, kid") unless celebrity?
+  end
 
-#   def sanitize
-#     return unless first_name && last_name
-#     fields = ["first_name", "last_name"]
-#     fields.each do |field| 
-#       self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
-#     end
-#   end
+  def sanitize
+    return unless first_name && last_name
+    fields = ["first_name", "last_name"]
+    fields.each do |field| 
+      self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
+    end
+  end
 
-#   def increase_customers_processed_count
-#     date = Date.today
-#     record = self.shop.customer_records.where('date > ?', 30.days.ago).first_or_create(date: date)
-#     record.increase_count
-#   end
+  def increase_customers_processed_count
+    date = Date.today
+    record = self.shop.customer_records.where('date > ?', 30.days.ago).first_or_create(date: date)
+    record.increase_count
+  end
 
-#   def send_email_notification
-#     if self.shop.email_notifications
-#         NotificationMailer.celebrity_notification(self).deliver_now
-#     end
-#   end
-# end
+  def send_email_notification
+    if self.shop.email_notifications
+        NotificationMailer.celebrity_notification(self).deliver_now
+    end
+  end
+end
