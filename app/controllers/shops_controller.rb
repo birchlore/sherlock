@@ -40,7 +40,7 @@ class ShopsController < AuthenticatedController
 
 		if new_plan
 			NotificationMailer.plan_change(current_shop, old_plan).deliver_now
-			flash[:notice] = "You are now on the #{plan.capitalize} Groupie Plan. Yay!"
+			flash[:notice] = "You are now on the #{new_plan.capitalize} Groupie Plan. Yay!"
 	    else
 	      	flash[:alert] = "Charge not processed properly, please try again"
 	    end
