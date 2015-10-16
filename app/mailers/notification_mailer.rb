@@ -36,6 +36,7 @@ class NotificationMailer < ApplicationMailer
     @total_scanned = total_scanned
     @total_found = total_found
     @scans_remaining = shop.scans_remaining
+    @unscanned_customers = shop.unscanned_customer_count
 
     mail to: shop.email
   end

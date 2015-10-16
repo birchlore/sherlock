@@ -68,6 +68,10 @@ class Shop < ActiveRecord::Base
     sum < 0 ? 0 : sum
   end
 
+  def unscanned_customer_count
+    ShopifyAPI::Customer.count - self.customers.count
+  end
+
 
 
   def bulk_scan(num, include_previously_scanned)
