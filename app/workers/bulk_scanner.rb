@@ -10,7 +10,12 @@ class BulkScanner
 	  total_scanned = result[0]
       total_found = result[1]
 
-	  NotificationMailer.bulk_scan_notification(shop, total_scanned, total_found).deliver_now
+	  if total_scanned > 0
+		  NotificationMailer.bulk_scan_notification(shop, total_scanned, total_found).deliver_now
+	  else
+	  	  NotificationMailer.nothing_to_scan(shop).deliver_now
+	  end
+
 	end
 
 end

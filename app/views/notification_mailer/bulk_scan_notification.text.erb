@@ -1,6 +1,8 @@
-<h1>Groupie bulk scan is complete.</h1>
-<p>We scanned <%= @total_scanned %> customers and found <%= @total_found %> celebrities. You have <%= @scans_remaining %> scans remaining (you can change your plan here: <%= edit_shop_url %>).</p>
+Groupie bulk scan is complete.
 
+We scanned <%= @total_scanned %> customers and found <%= @total_found %> celebrities. You have <%= @scans_remaining %> scans remaining (you can change your plan <%= link_to 'here', edit_shop_url %>).
+
+You can view all your store's celebrities here: <%= customers_url %>
 
    
 

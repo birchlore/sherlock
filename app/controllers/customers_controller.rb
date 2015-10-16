@@ -62,14 +62,23 @@ class CustomersController < AuthenticatedController
   end
 
   def bulk_scan
-    num = bulk_scan_params[:quantity].to_i
+    num = bulk_scan_params[:quantity].to_f
     scan_existing = bulk_scan_params[:include_scanned].present?
 
     Resque.enqueue(BulkScanner, current_shop.id, num, scan_existing)
 
-    flash[:notice] = "Bulk celebrity scan processing. We'll send you an email in approx #{num/2} minutes."
-    redirect_to customers_path
+    @time = (num/6).ceil
 
+    respond_to do |format|
+      format.js { 
+        flash.now[:success] = "Bulk celebrity scan processing. We'll send you an email in approx #{@time} minutes."
+        render :bulk_scan  
+       }
+      format.html {
+        flash[:notice] = "Bulk celebrity scan processing. We'll send you an email in approx #{@time} minutes."
+        redirect_to customers_path
+      } 
+    end
   end
 
   protected

@@ -1,5 +1,3 @@
-$('.container').removeClass('blur');
-$('.load-ajax').hide()
-$('.form-control').val("")
+removeBlur()
 
 $('tbody').prepend("<%= j render(:partial => 'celebrity_table_row', :locals=> {:celebrity => @customer}) %>")

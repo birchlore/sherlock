@@ -40,4 +40,9 @@ class NotificationMailer < ApplicationMailer
     mail to: shop.email
   end
 
+
+  def nothing_to_scan(shop)
+    mail to: shop.email
+  end
+
 end

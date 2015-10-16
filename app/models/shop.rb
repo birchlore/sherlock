@@ -72,39 +72,40 @@ class Shop < ActiveRecord::Base
 
   def bulk_scan(num, include_previously_scanned)
 
-    if include_previously_scanned
-      shopify_customers = all_customers(num)
-    else
-      shopify_customers = unscanned_customers(num)
-    end
-
+    shopify_customers = shopify_customers(num, include_previously_scanned)
     scanned_count = shopify_customers.count
-    @celebrities_count = 0
 
-    emails_on = self.email_notifications
+    if scanned_count > 1
 
-    if emails_on
-      self.email_notifications = false
-    end
+      @celebrities_count = 0
 
-    shopify_customers.each do |shopify_customer|
-      customer = self.customers.new(
-                              first_name: shopify_customer.first_name,
-                              last_name: shopify_customer.last_name,
-                              email: shopify_customer.email,
-                              shopify_id: shopify_customer.id
-        )
+      emails_on = self.email_notifications
 
-      customer.scan if customer.save
-
-      if customer.celebrity?
-        @celebrities_count += 1 
+      if emails_on
+        self.email_notifications = false
       end
 
-    end
+      shopify_customers.each do |shopify_customer|
+        customer = self.customers.new(
+                                first_name: shopify_customer.first_name,
+                                last_name: shopify_customer.last_name,
+                                email: shopify_customer.email,
+                                shopify_id: shopify_customer.id
+          )
 
-    if emails_on
-      self.email_notifications = true
+
+        customer.scan if customer.save
+
+        if customer.celebrity?
+          @celebrities_count += 1 
+        end
+
+      end
+
+      if emails_on
+        self.email_notifications = true
+      end
+
     end
 
 
@@ -164,21 +165,12 @@ class Shop < ActiveRecord::Base
 
 
 
-  def shopify_customers
-    total_customers = ShopifyAPI::Customer.count
-    pages = (total_customers/250.to_f).ceil
-
-    @count = 1
-    @customers = []
-
-    pages.times do
-      result = ShopifyAPI::Customer.find(:all, :params => {:limit => 250, :page => @count})
-      @customers += result.to_a
-      @count += 1
+  def shopify_customers(num, include_previously_scanned)
+    if include_previously_scanned
+      all_customers(num)
+    else
+      unscanned_customers(num)
     end
-
-    @customers
-
   end
 
 
@@ -209,30 +201,33 @@ class Shop < ActiveRecord::Base
   def unscanned_customers(num)
     num = scans_remaining if num > scans_remaining
   
-    total_customers = ShopifyAPI::Customer.count
-    pages = (total_customers/250.to_f).ceil
+    @total_customers = ShopifyAPI::Customer.count
+    pages = (@total_customers/250.to_f).ceil
 
 
-    @page_count = 1
+    @page_count = 0
     @filtered_customers = []
 
 
-    while @filtered_customers.count < num && @page_count <= pages do
+    while @filtered_customers.count < num && @page_count < pages do
+     
+      @page_count += 1
       @all_customers = ShopifyAPI::Customer.find(:all, :params => {:limit => 250, :page => @page_count})
       
+
       @counter = 0
-
-
-      while @filtered_customers.count < num do
+      while @filtered_customers.count < num && @counter < @total_customers do
         customer = @all_customers[@counter]
 
-        unless customers.where(shopify_id: customer.id).first
+
+        if customers.where(shopify_id: customer.id).first.blank?
           @filtered_customers << customer
         end
+
         @counter += 1
       end
 
-      @page_count += 1
+      
 
     end
 
