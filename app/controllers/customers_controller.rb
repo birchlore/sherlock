@@ -29,15 +29,23 @@ class CustomersController < AuthenticatedController
   end
 
   def create
-    @customer = current_shop.customers.new(customer_params)
-    @customer.scan if @customer.save
 
-    if @customer.celebrity?
-      render 'create.js.erb'
+    if current_shop.scans_remaining > 0
+      @customer = current_shop.customers.new(customer_params)
+      @customer.scan if @customer.save
+
+      if @customer.celebrity?
+        render 'create.js.erb'
+      else
+        flash.now[:notice] = "That ain't no celebrity, kid."
+        render 'not_a_celebrity.js'
+      end
+
     else
-      flash.now[:notice] = "That ain't no celebrity, kid."
+      flash.now[:notice] = "You have no scans remaining this month :("
       render 'not_a_celebrity.js'
     end
+
   end
 
   def archive

@@ -13,6 +13,9 @@ class HooksController < ApplicationController
     
     shopify_domain = request.headers["HTTP_X_SHOPIFY_SHOP_DOMAIN"]
     shop = Shop.where(shopify_domain: shopify_domain).first
+
+    return unless shop.scans_remaining > 0
+    
     first_name = data["first_name"]
     last_name = data["last_name"]
     email = data["email"]
