@@ -13,8 +13,9 @@ class HooksController < ApplicationController
     
     shopify_domain = request.headers["HTTP_X_SHOPIFY_SHOP_DOMAIN"]
     shop = Shop.where(shopify_domain: shopify_domain).first
+    scans_remaining = shop.scans_remaining
 
-    return unless shop.scans_remaining > 0
+    return unless scans_remaining > 0
     
     first_name = data["first_name"]
     last_name = data["last_name"]
@@ -25,6 +26,7 @@ class HooksController < ApplicationController
 
      if shop && !customer.duplicate?
         customer.update_attributes(:first_name => first_name, :last_name => last_name, :email => email)
+        NotificationMailer.scans_depleted(shop).deliver_now if scans_remaining == 1
         customer.scan
         customer.save
      end

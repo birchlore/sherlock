@@ -46,6 +46,10 @@ class NotificationMailer < ApplicationMailer
     mail to: "jackson@pixelburst.co"
   end
 
+  def scans_depleted(shop)
+    mail to: shop.email
+  end
+
 
   def nothing_to_scan(shop)
     mail to: shop.email
