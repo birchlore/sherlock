@@ -162,9 +162,7 @@ class Shop < ActiveRecord::Base
       self.plan = plan
       self.charge_id = charge.id
       self.save
-      "You are now on the #{plan.capitalize} Groupie Plan. Yay!"
-    else
-      "Charge not processed properly, please try again"
+      plan
     end
   end
 

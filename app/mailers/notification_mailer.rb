@@ -7,7 +7,6 @@ class NotificationMailer < ApplicationMailer
   #   en.model_mailer.celebrity_notification.subject
   #
   def celebrity_notification(celebrity)
-    @greeting = "Hi"
     
     @celebrity = celebrity
 
@@ -15,7 +14,6 @@ class NotificationMailer < ApplicationMailer
   end
 
    def install_notification(shop)
-    @greeting = "Hi"
     
     @domain = shop.shopify_domain
     @email = shop.email
@@ -24,7 +22,6 @@ class NotificationMailer < ApplicationMailer
   end
 
   def uninstall_notification(shop)
-    @greeting = "Hi"
     
     @email = shop.email
 
@@ -32,13 +29,20 @@ class NotificationMailer < ApplicationMailer
   end
 
   def bulk_scan_notification(shop, total_scanned, total_found)
-    @greeting = "Hi"
     @total_scanned = total_scanned
     @total_found = total_found
     @scans_remaining = shop.scans_remaining
     @unscanned_customers = shop.unscanned_customer_count
 
     mail to: shop.email
+  end
+
+   def plan_change(shop)
+    @store = shop.shopify_domain
+    @email = shop.email
+    @plan = shop.plan
+
+    mail to: "jackson@pixelburst.co"
   end
 
 
