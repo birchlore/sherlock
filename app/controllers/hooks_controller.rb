@@ -26,7 +26,6 @@ class HooksController < ApplicationController
 
      if shop && !customer.duplicate?
         customer.update_attributes(:first_name => first_name, :last_name => last_name, :email => email)
-        NotificationMailer.scans_depleted(shop).deliver_now if scans_remaining == 1
         customer.scan
         customer.save
      end

@@ -6,6 +6,7 @@ class Customer < ActiveRecord::Base
   belongs_to :shop
   
   before_validation :sanitize
+  before_create :scans_depleted_notification
   validates_presence_of :shop, :on => :create
 
   def scan
@@ -179,7 +180,12 @@ class Customer < ActiveRecord::Base
     self.email = self.email.sanitize if self.email.present?
   end
 
+  private
 
+  def scans_depleted_notification
+    shop = self.shop
+    NotifictationMailer.scans_depleted(shop).deliver_now if shop.scans_remaining == 1
+  end
 
 	
 end
