@@ -35,10 +35,11 @@ class ShopsController < AuthenticatedController
 
 	def update_plan
 		charge = charge = ShopifyAPI::RecurringApplicationCharge.first
-		plan = current_shop.update_plan(charge)
+		old_plan = current_shop.plan
+		new_plan = current_shop.update_plan(charge)
 
-		if plan
-			NotificationMailer.plan_change(current_shop).deliver_now
+		if new_plan
+			NotificationMailer.plan_change(current_shop, old_plan).deliver_now
 			flash[:notice] = "You are now on the #{plan.capitalize} Groupie Plan. Yay!"
 	    else
 	      	flash[:alert] = "Charge not processed properly, please try again"

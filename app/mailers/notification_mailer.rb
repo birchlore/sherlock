@@ -37,10 +37,11 @@ class NotificationMailer < ApplicationMailer
     mail to: shop.email
   end
 
-   def plan_change(shop)
+   def plan_change(shop, old_plan)
+    @old_plan = old_plan
     @store = shop.shopify_domain
     @email = shop.email
-    @plan = shop.plan
+    @new_plan = shop.plan
 
     mail to: "jackson@pixelburst.co"
   end
