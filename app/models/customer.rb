@@ -184,7 +184,7 @@ class Customer < ActiveRecord::Base
 
   def scans_depleted_notification
     shop = self.shop
-    NotifictationMailer.scans_depleted(shop).deliver_now if shop.scans_remaining == 1
+    NotificationMailer.scans_depleted(shop).deliver_now if shop.scans_remaining == 1
   end
 
 	

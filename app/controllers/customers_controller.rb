@@ -29,7 +29,6 @@ class CustomersController < AuthenticatedController
   end
 
   def create
-
     if current_shop.scans_remaining > 0
       @customer = current_shop.customers.new(customer_params)
       @customer.scan if @customer.save

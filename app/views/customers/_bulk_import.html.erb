@@ -1,6 +1,6 @@
 <div class="spacer"></div>
 
-<%= form_tag bulk_scan_path, :remote => true do %>
+<%= form_tag bulk_scan_path, :id=>"bulk_scan_form", :remote => true do %>
 	<div class="row vertical-align bulk-import">
 	  <div class="text-center col-sm-4">
 	    <%= submit_tag "Bulk Scan", :class=>"btn btn-danger", :id => "bulk-scan" %>

@@ -9,7 +9,7 @@ $(function(){
 
   });
 
-  $('#bulk-scan').on('click', function(e){
+  $('#bulk_scan_form').on('submit', function(e){
     var num = $('#quantity').val()
     removeAlerts();
     var new_scans_available = ($('#scans-remaining').text() - $('#quantity').val())

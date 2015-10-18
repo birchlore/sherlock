@@ -77,10 +77,10 @@ class Shop < ActiveRecord::Base
 
   def bulk_scan(num, include_previously_scanned)
 
-    shopify_customers = shopify_customers(num, include_previously_scanned)
-    scanned_count = shopify_customers.count
+    customers_to_scan = shopify_customers(num, include_previously_scanned)
+    scanned_count = customers_to_scan.count
 
-    if scanned_count > 1
+    if scanned_count > 0
 
       @celebrities_count = 0
 
@@ -90,7 +90,7 @@ class Shop < ActiveRecord::Base
         self.email_notifications = false
       end
 
-      shopify_customers.each do |shopify_customer|
+      customers_to_scan.each do |shopify_customer|
         customer = self.customers.new(
                                 first_name: shopify_customer.first_name,
                                 last_name: shopify_customer.last_name,
