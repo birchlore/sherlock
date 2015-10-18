@@ -130,8 +130,10 @@ class Shop < ActiveRecord::Base
           self.charge_id = nil
         end
 
+        old_plan = self.plan
         self.plan = "free"
         self.save
+        NotificationMailer.plan_change(self, old_plan).deliver_now
         customers_url(:host => Figaro.env.root_uri)
      
       else
