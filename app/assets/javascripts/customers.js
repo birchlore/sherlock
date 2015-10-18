@@ -67,6 +67,7 @@ $(function(){
     var scansRemaining = $('#scans-remaining').text();
     if (scansRemaining < 1) {
         $('.btn.scan').prop('disabled', true)
+        $('#bulk-scan').prop('disabled', true)
     }   
   } 
  
