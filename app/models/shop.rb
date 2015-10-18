@@ -139,14 +139,13 @@ class Shop < ActiveRecord::Base
       else
         price = Plan.cost(shopify_plan)
         name = shopify_plan + " Groupie Plan"
-        return_url = update_plan_url(:host => Figaro.env.root_uri)
+        return_url = update_plan_step_2_url(:host => Figaro.env.root_uri)
         response = ShopifyAPI::RecurringApplicationCharge.create({
                               :name => name, 
                               :price => price, 
                               :return_url => return_url, 
                               :test=> !Rails.env.production? 
                               })
-
         response.confirmation_url
 
       end
@@ -157,7 +156,7 @@ class Shop < ActiveRecord::Base
   end
 
 
-  def update_plan(charge)
+  def update_plan_step_2(charge)
     if charge.status == "accepted"
       plan = charge.name.split.first
       charge.activate

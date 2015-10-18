@@ -18,7 +18,7 @@ class ShopsController < AuthenticatedController
 		end
 	end
 
-	def confirm_update
+	def update_plan_step_1
 		@plan = shop_params[:plan]
 		redirect_url = current_shop.confirm_plan(@plan)
 
@@ -27,16 +27,14 @@ class ShopsController < AuthenticatedController
 			redirect_to customers_url
 		else
 			gon.authorization_url = redirect_url
-			render :authorize_payment
+			render :redirect_to_shopify_auth
 		end
-		
-
 	end
 
-	def update_plan
+	def update_plan_step_2
 		charge = charge = ShopifyAPI::RecurringApplicationCharge.first
 		old_plan = current_shop.plan
-		new_plan = current_shop.update_plan(charge)
+		new_plan = current_shop.update_plan_step_2(charge)
 
 		if new_plan
 			NotificationMailer.plan_change(current_shop, old_plan).deliver_now
