@@ -1,5 +1,7 @@
 $(function(){
 
+  disableButton()
+
   $('#quantity').on('change', function(){
     var scans_remaining = parseInt($('#scans-remaining').text(), 10)
     var quantity = parseInt($('#quantity').val(), 10)

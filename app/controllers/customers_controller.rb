@@ -70,10 +70,7 @@ class CustomersController < AuthenticatedController
 
   def bulk_scan
 
-    if current_shop.scans_remaining < 1
-      flash[:notice] = "You have no scans remaining this month :("
-      render :nothing => true, :status => 200
-    end
+    return unless current_shop.scans_remaining > 0
 
     num = bulk_scan_params[:quantity].to_f
     scan_existing = bulk_scan_params[:include_scanned].present?
