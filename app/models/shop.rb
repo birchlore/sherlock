@@ -216,13 +216,12 @@ class Shop < ActiveRecord::Base
     while @filtered_customers.count < num && @page_count < pages do
      
       @page_count += 1
-      @all_customers = ShopifyAPI::Customer.find(:all, :params => {:limit => 250, :page => @page_count})
-      
+      @customers_on_page = ShopifyAPI::Customer.find(:all, :params => {:limit => 250, :page => @page_count})
 
       @counter = 0
-      while @filtered_customers.count < num && @counter < @total_customers do
-        customer = @all_customers[@counter]
 
+      while @filtered_customers.count < num && @counter < @customers_on_page.count do
+        customer = @customers_on_page[@counter]
 
         if customers.where(shopify_id: customer.id).first.blank?
           @filtered_customers << customer
