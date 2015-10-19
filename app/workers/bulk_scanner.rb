@@ -11,7 +11,7 @@ class BulkScanner
       total_found = result[1]
 
 	  if total_scanned > 0
-		  NotificationMailer.bulk_scan_notification(shop, total_scanned, total_found).deliver_now
+		  NotificationMailer.bulk_scan_notification(shop, total_scanned, total_found, shop.unscanned_customer_count).deliver_now
 	  else
 	  	  NotificationMailer.nothing_to_scan(shop).deliver_now
 	  end

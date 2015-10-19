@@ -28,11 +28,11 @@ class NotificationMailer < ApplicationMailer
     mail to: "jackson@pixelburst.co"
   end
 
-  def bulk_scan_notification(shop, total_scanned, total_found)
+  def bulk_scan_notification(shop, total_scanned, total_found, unscanned)
     @total_scanned = total_scanned
     @total_found = total_found
     @scans_remaining = shop.scans_remaining
-    @unscanned_customers = shop.unscanned_customer_count
+    @unscanned_customers = unscanned
 
     mail to: shop.email
   end
