@@ -71,6 +71,7 @@ class Shop < ActiveRecord::Base
   def unscanned_customer_count
     num = ShopifyAPI::Customer.count - self.customers.count
     num = 0 if num < 0
+    num
   end
 
 
