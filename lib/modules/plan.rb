@@ -4,9 +4,9 @@ module Plan
     if plan_type == "free"
       0
     elsif plan_type == "basic"
-      29
+      39
     elsif plan_type == "pro"
-      49
+      59
     elsif plan_type == "stalker"
       99
     end
