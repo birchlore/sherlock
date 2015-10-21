@@ -35,6 +35,7 @@ class ShopsController < AuthenticatedController
 		charge = charge = ShopifyAPI::RecurringApplicationCharge.first
 		old_plan = current_shop.plan
 		new_plan = current_shop.update_plan_step_2(charge)
+		current_shop.save
 
 		if new_plan
 			NotificationMailer.plan_change(current_shop, old_plan).deliver_now
