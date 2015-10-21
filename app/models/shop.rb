@@ -5,6 +5,7 @@ class Shop < ActiveRecord::Base
   include Plan
   include Rails.application.routes.url_helpers
   has_many :customers, :inverse_of => :shop, dependent: :destroy
+  has_many :celebrities, :inverse_of => :shop, dependent: :destroy
   # has_many :customers, :inverse_of => :shop, dependent: :destroy 
   # has_many :customer_records, dependent: :destroy
 
@@ -59,12 +60,18 @@ class Shop < ActiveRecord::Base
   end
 
 
-  def scans_performed
-    customers.where('created_at > ?', 30.days.ago).count
+  def scans_performed(days)
+    customers.where('created_at > ?', days.days.ago).count
   end
 
   def scans_remaining
-    sum = scans_allowed - scans_performed
+
+    if self.plan = "free"
+      sum = scans_allowed - scans_performed(3650)
+    else
+      sum = scans_allowed - scans_performed(30)
+    end
+
     sum < 0 ? 0 : sum
   end
 

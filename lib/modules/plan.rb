@@ -15,7 +15,7 @@ module Plan
 
    def self.scans(plan_type)
     if plan_type == "free"
-      30
+      10
     elsif plan_type == "basic"
       100
     elsif plan_type == "pro"

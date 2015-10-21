@@ -6,8 +6,11 @@ class CustomersController < AuthenticatedController
     @customer = current_shop.customers.new
     @celebrities = current_shop.celebrities.page(params[:page]).per(10)
     @scans_remaining = current_shop.scans_remaining
+    @plan = current_shop.plan
 
-    if @scans_remaining < 1
+    if @scans_remaining < 1 && current_shop.plan == "free"
+      flash[:alert] = "You have no more customer scans remaining. Upgrade your plan in settings."
+    elsif @scans_remaining < 1
       flash[:alert] = "You have no customer scans remaining this month. Change your plan in settings."
     end
 
@@ -41,7 +44,7 @@ class CustomersController < AuthenticatedController
       end
 
     else
-      flash.now[:notice] = "You have no scans remaining this month :("
+      flash.now[:notice] = "You have no scans remaining :("
       render 'not_a_celebrity.js'
     end
 

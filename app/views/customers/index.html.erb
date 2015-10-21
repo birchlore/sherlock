@@ -1,20 +1,27 @@
 <div class="container">
-<div class="spacer"></div>
- <div style="text-align:right;">
- 	<h4><span id="scans-remaining"><%= @scans_remaining %></span> customer scans remaining this month (<%= link_to "change plan", edit_shop_path(anchor: 'plan') %>)</h4 id="scans-remaining">
-    <%= link_to edit_shop_path do %>
-    	<i class="glyphicon glyphicon-cog"></i> Settings & Notifications
-   	<% end %>
-  </div>
 
-<%= render 'app_explanation' %>
+	<div class="spacer"></div>
 
-<%= render 'bulk_import' %>
+	<div style="text-align:right;">
+	<% if @plan == "free" %>
+	 	<h4><span id="scans-remaining"><%= @scans_remaining %></span> free customer scans remaining (<%= link_to "change plan", edit_shop_path(anchor: 'plan') %>)</h4>
+	<% else %>
+	 	<h4><span id="scans-remaining"><%= @scans_remaining %></span> customer scans remaining this month (<%= link_to "change plan", edit_shop_path(anchor: 'plan') %>)</h4>
+	<% end %>
 
-<%= render 'index_scanner' %>
+	    <%= link_to edit_shop_path do %>
+	    	<i class="glyphicon glyphicon-cog"></i> Settings & Notifications
+	   	<% end %>
+	  </div>
 
-<div class="celebs">
-  <%= render 'celebrity_table' %>
-</div>
+	<%= render 'app_explanation' %>
+
+	<%= render 'bulk_import' %>
+
+	<%= render 'index_scanner' %>
+
+	<div class="celebs">
+	  <%= render 'celebrity_table' %>
+	</div>
 
 </div>
