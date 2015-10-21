@@ -7,7 +7,6 @@ class CustomersController < AuthenticatedController
     @celebrities = current_shop.celebrities.page(params[:page]).per(10)
     @scans_remaining = current_shop.scans_remaining
     @plan = current_shop.plan
-
     if @scans_remaining < 1 && current_shop.plan == "free"
       flash[:alert] = "You have no more customer scans remaining. Upgrade your plan in settings."
     elsif @scans_remaining < 1

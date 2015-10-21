@@ -66,7 +66,7 @@ class Shop < ActiveRecord::Base
 
   def scans_remaining
 
-    if self.plan = "free"
+    if self.plan == "free"
       sum = scans_allowed - scans_performed(3650)
     else
       sum = scans_allowed - scans_performed(30)
@@ -170,7 +170,6 @@ class Shop < ActiveRecord::Base
       charge.activate
       self.plan = plan
       self.charge_id = charge.id
-      self.save
       plan
     end
   end
