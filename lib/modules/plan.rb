@@ -10,7 +10,7 @@ module Plan
     elsif plan_type == "stalker"
       99
     elsif plan_type == "god"
-      99
+      199
     end
   end
 
