@@ -9,6 +9,8 @@ module Plan
       39
     elsif plan_type == "stalker"
       99
+    elsif plan_type == "god"
+      99
     end
   end
 
@@ -22,6 +24,8 @@ module Plan
       500
     elsif plan_type == "stalker"
       2500
+    elsif plan_type == "god"
+      6000
     end
   end
 
