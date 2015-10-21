@@ -1,5 +1,7 @@
 $(function(){
 
+  disableButton()
+
   $('#quantity').on('change', function(){
     var scans_remaining = parseInt($('#scans-remaining').text(), 10)
     var quantity = parseInt($('#quantity').val(), 10)
@@ -65,6 +67,7 @@ $(function(){
     var scansRemaining = $('#scans-remaining').text();
     if (scansRemaining < 1) {
         $('.btn.scan').prop('disabled', true)
+        $('#bulk-scan').prop('disabled', true)
     }   
   } 
  
