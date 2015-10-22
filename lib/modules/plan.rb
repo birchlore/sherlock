@@ -7,6 +7,8 @@ module Plan
       19
     elsif plan_type == "pro"
       39
+    elsif plan_type == "creeper"
+      59
     elsif plan_type == "stalker"
       99
     elsif plan_type == "god"
@@ -22,6 +24,8 @@ module Plan
       100
     elsif plan_type == "pro"
       500
+    elsif plan_type == "creeper"
+      1000
     elsif plan_type == "stalker"
       2500
     elsif plan_type == "god"
