@@ -7,7 +7,7 @@ class IMDB
   def data
     source = "http://www.imdb.com/xml/find?json=1&nr=1&nm=on&q="+ @celebrity.first_name + "+" + @celebrity.last_name
     json = GetJSON.call(source)
-
+    return unless json
     if json["name_popular"].present?
       @imdb_data = json["name_popular"][0]
     elsif json["name_exact"].present?
