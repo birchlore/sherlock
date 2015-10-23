@@ -64,7 +64,7 @@ module CustomersHelper
 
   def youtube_subscriber_count(customer)
     if customer.youtube_celebrity? && customer.youtube_url
-      link_to subscribers, customer.youtube_url, :target=>"_blank"
+      link_to customer.youtube_subscribers, customer.youtube_url, :target=>"_blank"
     elsif customer.youtube_celebrity?
       subscribers
     else
