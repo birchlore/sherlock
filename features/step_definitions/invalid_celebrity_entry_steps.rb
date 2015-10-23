@@ -26,7 +26,7 @@ end
 
 
 Then "the customer should not be saved to the database" do
-  expect(Shop.last.celebrities.where(email: @customer.email).count).to eq(0)
+  expect(Shop.last.customers.where(email: @customer.email).count).to eq(0)
 end
 
 

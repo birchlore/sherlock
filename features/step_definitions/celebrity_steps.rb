@@ -50,9 +50,9 @@ end
 
 
 When /^I add the customer$/ do
-  fill_in :celebrity_email, :with => @customer.email
-  fill_in :celebrity_first_name, :with => @customer.first_name
-  fill_in :celebrity_last_name, :with => @customer.last_name
+  fill_in :customer_email, :with => @customer.email
+  fill_in :customer_first_name, :with => @customer.first_name
+  fill_in :customer_last_name, :with => @customer.last_name
   click_button 'Single Scan'
 end
 
@@ -61,7 +61,7 @@ Then /^I should see that the customer is a celebrity$/ do
 end
 
 Then "the customer should be saved to the database" do
-  expect(Shop.last.celebrities.where(email: @customer.email).count).to eq(1)
+  expect(Shop.last.customers.where(email: @customer.email).count).to eq(1)
 end
 
 When "pry" do

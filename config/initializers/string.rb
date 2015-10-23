@@ -13,8 +13,12 @@ class String
      self.include?("This is a redirect")
   end
 
-  def sanitize
+  def sanitize_name
     self.gsub(/\W+/, '').capitalize
+  end
+
+  def sanitize_email
+    self.gsub(/\s+/, "").capitalize
   end
 
 end
