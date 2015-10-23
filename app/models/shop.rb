@@ -47,14 +47,6 @@ class Shop < ActiveRecord::Base
   end
 
 
-
-  # def check_webhooks
-  #   unless Rails.env.test?
-  #     shopify_session
-
-  #   end
-  # end
-
   def scans_allowed
     Plan.scans(self.plan)
   end
