@@ -72,7 +72,7 @@ class CustomersController < AuthenticatedController
 
   def bulk_scan
 
-    return unless current_shop.scans_remaining > 0 && current_shop.plan != "free"
+    return unless current_shop.scans_remaining > 0
 
     num = bulk_scan_params[:quantity].to_f
     scan_existing = bulk_scan_params[:include_scanned].present?
