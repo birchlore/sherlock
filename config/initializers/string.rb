@@ -14,7 +14,7 @@ class String
   end
 
   def sanitize
-    self.gsub(/\s+/, "").capitalize
+    self.gsub(/\W+/, '').capitalize
   end
 
 end
