@@ -1,5 +1,12 @@
+require 'resque-retry'
+
 class BulkScanner
+	extend Resque::Plugins::Retry
+
 	@queue = :bulk_scanner_queue
+
+	@retry_limit = 3
+    @retry_delay = 60
 
 	def self.perform(shop_id, num, scan_existing)
 	  shop = Shop.find(shop_id)

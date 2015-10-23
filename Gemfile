@@ -22,6 +22,8 @@ gem "letter_opener", :group => :development
 gem 'nokogiri'
 gem 'kaminari'
 gem 'gon'
+gem 'resque-retry'
+gem 'resque-scheduler'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
