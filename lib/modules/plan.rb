@@ -4,10 +4,8 @@ module Plan
     if plan_type == "free"
       0
     elsif plan_type == "basic"
-      19
+      29
     elsif plan_type == "pro"
-      39
-    elsif plan_type == "creeper"
       59
     elsif plan_type == "stalker"
       99
@@ -19,12 +17,10 @@ module Plan
 
    def self.scans(plan_type)
     if plan_type == "free"
-      10
+      20
     elsif plan_type == "basic"
-      100
+      200
     elsif plan_type == "pro"
-      500
-    elsif plan_type == "creeper"
       1000
     elsif plan_type == "stalker"
       2500
