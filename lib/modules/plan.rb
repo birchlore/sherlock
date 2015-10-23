@@ -4,10 +4,8 @@ module Plan
     if plan_type == "free"
       0
     elsif plan_type == "basic"
-      19
+      29
     elsif plan_type == "pro"
-      39
-    elsif plan_type == "creeper"
       59
     elsif plan_type == "stalker"
       99
@@ -23,8 +21,6 @@ module Plan
     elsif plan_type == "basic"
       100
     elsif plan_type == "pro"
-      500
-    elsif plan_type == "creeper"
       1000
     elsif plan_type == "stalker"
       2500
