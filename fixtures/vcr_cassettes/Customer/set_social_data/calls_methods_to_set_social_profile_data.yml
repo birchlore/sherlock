@@ -1,0 +1,2892 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=John%20Travolta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Sun, 25 Oct 2015 00:14:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '251'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sun, 25 Oct 2015 03:14:22 GMT
+      X-Varnish:
+      - 3455360687, 1046615126 1046596110
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '16'
+      X-Cache:
+      - cp1067 miss (0), cp1053 frontend hit (5)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=25-Oct-2015;Path=/;HttpOnly;Expires=Thu, 26 Nov 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1;nocookies=1
+    body:
+      encoding: UTF-8
+      string: '["John Travolta",["John Travolta"],["John Joseph Travolta (born February
+        18, 1954) is an American actor, dancer, and singer. Travolta first became
+        known in the 1970s, after appearing on the television series Welcome Back,
+        Kotter and starring in the box office successes Saturday Night Fever and Grease."],["https://en.wikipedia.org/wiki/John_Travolta"]]'
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:38 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=John%20Travolta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Oct 2015 00:14:38 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYmf_kPZgJY2YSiJtUIXxsHa5FhS2rb9sq7MPZB0MDSFT90dOmq-BGGgEbtNR1hZ3zdohjqRg5c7kzDd5AF8fhidvH8duwsVkqVZYHQ8RJ6o8kZ7Xo0hKa_yBYmc6q7nmGK0o19H-IuQ9yl-oZ7Ym_OXJpFwu3TyYaHBxKR6ih5pHs;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_popular": [{ "id":"nm0000237", "title":"", "name":"John Travolta","description":"Actor, Pulp Fiction"}],"name_exact": [{ "id":"nm3923616", "title":"", "name":"Lisa M. Mangan","description":"Actress, Karla Faye Tucker: Forevermore"},{ "id":"nm6395283", "title":"", "name":"John Travolta","description":"Actor, Sex Freaks"}],"name_approx": [{ "id":"nm0871456", "title":"", "name":"Joey Travolta","description":"Actor, Beverly Hills Cop III"},{ "id":"nm6445718", "title":"", "name":"Joey Travolta","description":"Producer, Holiday Anonymous"},{ "id":"nm5975710", "title":"", "name":"Joey Travolta","description":"Actor, A Lousy 10 Grand"},{ "id":"nm4765562", "title":"", "name":"Jane Travolta","description":"Actress, Laro"},{ "id":"nm0871455", "title":"", "name":"Helen Travolta","description":"Actress, Saturday Night Fever"},{ "id":"nm0871452", "title":"", "name":"Ann Travolta","description":"Actress, Swordfish"},{ "id":"nm0871459", "title":"", "name":"Nicole Travolta","description":"Actress, The Utah Murder Project"},{ "id":"nm1596681", "title":"", "name":"Jett Travolta","description":"Thanks, Old Dogs"},{ "id":"nm0871461", "title":"", "name":"Sam Travolta","description":"Actor, Swordfish"},{ "id":"nm5529703", "title":"", "name":"John Trotta","description":"Sound Department, Seasons"},{ "id":"nm0236770", "title":"", "name":"John Dragotta","description":"Miscellaneous Crew, Kounterfeit"},{ "id":"nm7405534", "title":"", "name":"John Trotta","description":"Actor, Fred Mulligan&#x27;s Showcase of Stars Episode 2"},{ "id":"nm5919938", "title":"", "name":"John Radosta","description":"Actor, &#x27;79 Parts"},{ "id":"nm2762675", "title":"", "name":"John Dragotta","description":"Actor, Twinklight"},{ "id":"nm1598388", "title":"", "name":"Juan Trabolta","description":"Costume Designer, Killer Pussy 8"},{ "id":"nm3720555", "title":"", "name":"John Triola","description":"Director, Love Probe"},{ "id":"nm6023884", "title":"", "name":"John Reynald Tiangco","description":"Thanks, The Bourne Legacy"}]
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:38 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=Ericrobertmyers@Gmail.Com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sun, 25 Oct 2015 00:14:39 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '269'
+      X-Rate-Limit-Reset:
+      - '23'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "e48ddb92-b17d-4f5a-b2a6-9c39c20f2946",
+          "likelihood" : 0.93,
+          "photos" : [ {
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/04b33c22ccba69a49bb07fe154ec1011_59735eee583abad92906a3dcfee9685b0813ae5221f010c1ded78f28d036f4a8",
+            "isPrimary" : true
+          }, {
+            "type" : "other",
+            "typeId" : "other",
+            "typeName" : "Other",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2d2c28c0a2de7ccae81416e8bb6ba09d_06cf706dc72d423798d5f3edf89c48c5b297588ab81c2b86efe008c5b9082b01",
+            "isPrimary" : false
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/5f295e6b5883e962c1f643de46fb0da4_f9b04eda71634fa2bccad9381e2e4e89981e82874d2495c191a9b70fa90c8a95",
+            "isPrimary" : false
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2295bc2aeb8862e8fb2f9cdfbe74ec79_dc84ed7cdfe4f3d268c777cbde386b32fd7f397990ce83e1f5494496b906de5a",
+            "isPrimary" : false
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/fa0eeac58bbc534680ba8dfb02cbb7cf_e09adef25151a40dd283b84ad00f15386535a76ffc437d731cce9f1b1236ab02",
+            "isPrimary" : false
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/0050bd0da7a0d9c47fbe623d760b2ab1_ed9a6d3d008ff1bcf7891876f4bf8343e784d9b1a3b78c254a4de4346f25338e",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/d85298e9eb8e37a9a5a329a10ab97551_73c18996dd95d1585b8c7efc26d82bc495f794b78c70c6e4c68d18caa9452f3b",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "chats" : [ {
+              "client" : "aim",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "yahoo",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "skype",
+              "handle" : "EricBobMyers"
+            }, {
+              "client" : "gtalk",
+              "handle" : "ericrobertmyers@gmail.com"
+            } ],
+            "websites" : [ {
+              "url" : "http://blog.reachlocal.com/605582/2012/12/07/5-steps-to-getting-your-business-found-on-apple-maps.html"
+            }, {
+              "url" : "https://adwords.google.com/professionals/profile/ind?id=03622790389943358426&hl=en"
+            }, {
+              "url" : "http://www.verticalnerve.com/blog"
+            }, {
+              "url" : "http://www.digitizedallas.com"
+            }, {
+              "url" : "http://www.digitzekc.com"
+            }, {
+              "url" : "http://www.verticalnerve.com"
+            }, {
+              "url" : "http://www.findpeopleonplus.com/profiles/115257874832329284928"
+            } ],
+            "familyName" : "Myers",
+            "fullName" : "Eric Myers",
+            "givenName" : "Eric"
+          },
+          "organizations" : [ {
+            "isPrimary" : true,
+            "name" : "Overnight Prints",
+            "startDate" : "2015-02",
+            "title" : "Manager - Digital Analytics",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Tata Consultancy Services",
+            "startDate" : "2015",
+            "title" : "Google Analytics Technical Implementation Lead",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013-02",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Levy Online",
+            "startDate" : "2014",
+            "endDate" : "2015",
+            "title" : "SEM Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Overnight Prints",
+            "startDate" : "2015",
+            "endDate" : "2015",
+            "title" : "Manager - Digital Analytics",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013",
+            "endDate" : "2014",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-07",
+            "endDate" : "2013-02",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012",
+            "endDate" : "2013",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-01",
+            "endDate" : "2012-07",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011-03",
+            "endDate" : "2012-01",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Reachlocal",
+            "startDate" : "2011",
+            "endDate" : "2012",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2007-08",
+            "endDate" : "2011-04",
+            "title" : "CEO & Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2004",
+            "endDate" : "2011",
+            "title" : "Owner / Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011",
+            "endDate" : "2011",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2010-01",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College SIFE",
+            "startDate" : "2008-08",
+            "endDate" : "2009-01",
+            "title" : "Vice President of External Affairs & Communication",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007",
+            "endDate" : "2009",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2007-08",
+            "title" : "Office of Admission Web Designer",
+            "current" : false
+          } ],
+          "demographics" : {
+            "locationDeduced" : {
+              "normalizedLocation" : "Las Vegas, Nevada",
+              "deducedLocation" : "Las Vegas, Nevada, United States",
+              "city" : {
+                "deduced" : false,
+                "name" : "Las Vegas"
+              },
+              "state" : {
+                "deduced" : false,
+                "name" : "Nevada",
+                "code" : "NV"
+              },
+              "country" : {
+                "deduced" : true,
+                "name" : "United States",
+                "code" : "US"
+              },
+              "continent" : {
+                "deduced" : true,
+                "name" : "North America"
+              },
+              "county" : {
+                "deduced" : true,
+                "name" : "Clark",
+                "code" : "Clark"
+              },
+              "likelihood" : 1.0
+            },
+            "age" : "26",
+            "ageRange" : "25-34",
+            "gender" : "Male",
+            "locationGeneral" : "Las Vegas, NV"
+          },
+          "socialProfiles" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "1191540035"
+          }, {
+            "bio" : "Senior Account Manager | SEM | Analytics | Senior Digital Marketing Analyst",
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://www.linkedin.com/in/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "bio" : "Las Vegas Marketing Consultant that works with small business owners. A Lover of all things tech, random, and entertaining, you never know quite what you'll find.",
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "18374143"
+          }, {
+            "type" : "lastfm",
+            "typeId" : "lastfm",
+            "typeName" : "Last.FM",
+            "url" : "http://www.last.fm/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "27043"
+          }, {
+            "type" : "aboutme",
+            "typeId" : "aboutme",
+            "typeName" : "About.me",
+            "url" : "https://about.me/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "quora",
+            "typeId" : "quora",
+            "typeName" : "Quora",
+            "url" : "http://www.quora.com/eric-myers",
+            "username" : "eric-myers"
+          }, {
+            "bio" : "Dallas-based marketing consultant that works with small businesses. A lover of all things tech, entertaining, and random. I'm a Type 1 diabetic & info buffet.",
+            "followers" : 314,
+            "following" : 365,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/ericbobmyers/",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "bio" : "Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",
+            "followers" : 11,
+            "following" : 0,
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "998397"
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://profile.yahoo.com/YV36KZSMWG47UJY3WNPL43RL7U",
+            "id" : "YV36KZSMWG47UJY3WNPL43RL7U"
+          }, {
+            "bio" : "#Vegas-Based, Diabetic (#T1D) #SEM Account Director. Huge #Analytics, #PPC and #Social geek tweeting about whatever entertains me at that moment.",
+            "followers" : 1538,
+            "following" : 1139,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "15771736"
+          }, {
+            "type" : "youtube",
+            "typeId" : "youtube",
+            "typeName" : "YouTube",
+            "url" : "https://youtube.com/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://plus.google.com/u/0/115257874832329284928",
+            "id" : "115257874832329284928"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/48907847",
+            "id" : "48907847"
+          } ],
+          "digitalFootprint" : {
+            "scores" : [ {
+              "provider" : "klout",
+              "type" : "general",
+              "value" : 60
+            } ],
+            "topics" : [ {
+              "provider" : "aboutme",
+              "value" : "senior account manager"
+            }, {
+              "provider" : "aboutme",
+              "value" : "small business"
+            }, {
+              "provider" : "aboutme",
+              "value" : "reachlocal"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online marketing"
+            }, {
+              "provider" : "aboutme",
+              "value" : "adwords qualified individual"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online advertising"
+            }, {
+              "provider" : "aboutme",
+              "value" : "texas"
+            }, {
+              "provider" : "aboutme",
+              "value" : "dallas"
+            }, {
+              "provider" : "klout",
+              "value" : "Diabetes"
+            }, {
+              "provider" : "aboutme",
+              "value" : "campaign consultant"
+            }, {
+              "provider" : "aboutme",
+              "value" : "social media consultant"
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:39 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=John%20Travolta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Oct 2015 00:14:39 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYlykzh80IobSuXhOCXEkhBbEPAujrnR89Z-tcIyxNKlIXsJMzo3DRUH32bsbR4jO3xvWHT_8rc2q3zHb5D0sY2KXtxjs5v9-JwcDAxNvibA28UFgCfP2mnraCslhfIeAObU_C6nQT-5q9WfgIbbz7BmgbSBbWYck78T73K2tGDhHw;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_popular": [{ "id":"nm0000237", "title":"", "name":"John Travolta","description":"Actor, Pulp Fiction"}],"name_exact": [{ "id":"nm3923616", "title":"", "name":"Lisa M. Mangan","description":"Actress, Karla Faye Tucker: Forevermore"},{ "id":"nm6395283", "title":"", "name":"John Travolta","description":"Actor, Sex Freaks"}],"name_approx": [{ "id":"nm0871456", "title":"", "name":"Joey Travolta","description":"Actor, Beverly Hills Cop III"},{ "id":"nm6445718", "title":"", "name":"Joey Travolta","description":"Producer, Holiday Anonymous"},{ "id":"nm5975710", "title":"", "name":"Joey Travolta","description":"Actor, A Lousy 10 Grand"},{ "id":"nm4765562", "title":"", "name":"Jane Travolta","description":"Actress, Laro"},{ "id":"nm0871455", "title":"", "name":"Helen Travolta","description":"Actress, Saturday Night Fever"},{ "id":"nm0871452", "title":"", "name":"Ann Travolta","description":"Actress, Swordfish"},{ "id":"nm0871459", "title":"", "name":"Nicole Travolta","description":"Actress, The Utah Murder Project"},{ "id":"nm1596681", "title":"", "name":"Jett Travolta","description":"Thanks, Old Dogs"},{ "id":"nm0871461", "title":"", "name":"Sam Travolta","description":"Actor, Swordfish"},{ "id":"nm5529703", "title":"", "name":"John Trotta","description":"Sound Department, Seasons"},{ "id":"nm0236770", "title":"", "name":"John Dragotta","description":"Miscellaneous Crew, Kounterfeit"},{ "id":"nm7405534", "title":"", "name":"John Trotta","description":"Actor, Fred Mulligan&#x27;s Showcase of Stars Episode 2"},{ "id":"nm5919938", "title":"", "name":"John Radosta","description":"Actor, &#x27;79 Parts"},{ "id":"nm2762675", "title":"", "name":"John Dragotta","description":"Actor, Twinklight"},{ "id":"nm1598388", "title":"", "name":"Juan Trabolta","description":"Costume Designer, Killer Pussy 8"},{ "id":"nm3720555", "title":"", "name":"John Triola","description":"Director, Love Probe"},{ "id":"nm6023884", "title":"", "name":"John Reynald Tiangco","description":"Thanks, The Bourne Legacy"}]
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:40 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=John%20Travolta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Sun, 25 Oct 2015 00:14:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '251'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sun, 25 Oct 2015 03:14:22 GMT
+      X-Varnish:
+      - 3455360687, 1046617825 1046596110
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '18'
+      X-Cache:
+      - cp1067 miss (0), cp1053 frontend hit (6)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=25-Oct-2015;Path=/;HttpOnly;Expires=Thu, 26 Nov 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1;nocookies=1
+    body:
+      encoding: UTF-8
+      string: '["John Travolta",["John Travolta"],["John Joseph Travolta (born February
+        18, 1954) is an American actor, dancer, and singer. Travolta first became
+        known in the 1970s, after appearing on the television series Welcome Back,
+        Kotter and starring in the box office successes Saturday Night Fever and Grease."],["https://en.wikipedia.org/wiki/John_Travolta"]]'
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:40 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=Ericrobertmyers@Gmail.Com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sun, 25 Oct 2015 00:14:41 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '2857'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '268'
+      X-Rate-Limit-Reset:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "256b2285-1724-4108-8d9c-8ab80bebd974",
+          "likelihood" : 0.93,
+          "photos" : [ {
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/04b33c22ccba69a49bb07fe154ec1011_59735eee583abad92906a3dcfee9685b0813ae5221f010c1ded78f28d036f4a8",
+            "isPrimary" : true
+          }, {
+            "type" : "other",
+            "typeId" : "other",
+            "typeName" : "Other",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2d2c28c0a2de7ccae81416e8bb6ba09d_06cf706dc72d423798d5f3edf89c48c5b297588ab81c2b86efe008c5b9082b01",
+            "isPrimary" : false
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/5f295e6b5883e962c1f643de46fb0da4_f9b04eda71634fa2bccad9381e2e4e89981e82874d2495c191a9b70fa90c8a95",
+            "isPrimary" : false
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2295bc2aeb8862e8fb2f9cdfbe74ec79_dc84ed7cdfe4f3d268c777cbde386b32fd7f397990ce83e1f5494496b906de5a",
+            "isPrimary" : false
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/fa0eeac58bbc534680ba8dfb02cbb7cf_e09adef25151a40dd283b84ad00f15386535a76ffc437d731cce9f1b1236ab02",
+            "isPrimary" : false
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/0050bd0da7a0d9c47fbe623d760b2ab1_ed9a6d3d008ff1bcf7891876f4bf8343e784d9b1a3b78c254a4de4346f25338e",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/d85298e9eb8e37a9a5a329a10ab97551_73c18996dd95d1585b8c7efc26d82bc495f794b78c70c6e4c68d18caa9452f3b",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "chats" : [ {
+              "client" : "aim",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "yahoo",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "skype",
+              "handle" : "EricBobMyers"
+            }, {
+              "client" : "gtalk",
+              "handle" : "ericrobertmyers@gmail.com"
+            } ],
+            "websites" : [ {
+              "url" : "http://blog.reachlocal.com/605582/2012/12/07/5-steps-to-getting-your-business-found-on-apple-maps.html"
+            }, {
+              "url" : "https://adwords.google.com/professionals/profile/ind?id=03622790389943358426&hl=en"
+            }, {
+              "url" : "http://www.verticalnerve.com/blog"
+            }, {
+              "url" : "http://www.digitizedallas.com"
+            }, {
+              "url" : "http://www.digitzekc.com"
+            }, {
+              "url" : "http://www.verticalnerve.com"
+            }, {
+              "url" : "http://www.findpeopleonplus.com/profiles/115257874832329284928"
+            } ],
+            "familyName" : "Myers",
+            "fullName" : "Eric Myers",
+            "givenName" : "Eric"
+          },
+          "organizations" : [ {
+            "isPrimary" : true,
+            "name" : "Overnight Prints",
+            "startDate" : "2015-02",
+            "title" : "Manager - Digital Analytics",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Tata Consultancy Services",
+            "startDate" : "2015",
+            "title" : "Google Analytics Technical Implementation Lead",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013-02",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Levy Online",
+            "startDate" : "2014",
+            "endDate" : "2015",
+            "title" : "SEM Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Overnight Prints",
+            "startDate" : "2015",
+            "endDate" : "2015",
+            "title" : "Manager - Digital Analytics",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013",
+            "endDate" : "2014",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-07",
+            "endDate" : "2013-02",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012",
+            "endDate" : "2013",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-01",
+            "endDate" : "2012-07",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011-03",
+            "endDate" : "2012-01",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Reachlocal",
+            "startDate" : "2011",
+            "endDate" : "2012",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2007-08",
+            "endDate" : "2011-04",
+            "title" : "CEO & Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2004",
+            "endDate" : "2011",
+            "title" : "Owner / Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011",
+            "endDate" : "2011",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2010-01",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College SIFE",
+            "startDate" : "2008-08",
+            "endDate" : "2009-01",
+            "title" : "Vice President of External Affairs & Communication",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007",
+            "endDate" : "2009",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2007-08",
+            "title" : "Office of Admission Web Designer",
+            "current" : false
+          } ],
+          "demographics" : {
+            "locationDeduced" : {
+              "normalizedLocation" : "Las Vegas, Nevada",
+              "deducedLocation" : "Las Vegas, Nevada, United States",
+              "city" : {
+                "deduced" : false,
+                "name" : "Las Vegas"
+              },
+              "state" : {
+                "deduced" : false,
+                "name" : "Nevada",
+                "code" : "NV"
+              },
+              "country" : {
+                "deduced" : true,
+                "name" : "United States",
+                "code" : "US"
+              },
+              "continent" : {
+                "deduced" : true,
+                "name" : "North America"
+              },
+              "county" : {
+                "deduced" : true,
+                "name" : "Clark",
+                "code" : "Clark"
+              },
+              "likelihood" : 1.0
+            },
+            "age" : "26",
+            "locationGeneral" : "Las Vegas, NV",
+            "gender" : "Male",
+            "ageRange" : "25-34"
+          },
+          "socialProfiles" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "1191540035"
+          }, {
+            "bio" : "Senior Account Manager | SEM | Analytics | Senior Digital Marketing Analyst",
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://www.linkedin.com/in/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "bio" : "Las Vegas Marketing Consultant that works with small business owners. A Lover of all things tech, random, and entertaining, you never know quite what you'll find.",
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "18374143"
+          }, {
+            "type" : "lastfm",
+            "typeId" : "lastfm",
+            "typeName" : "Last.FM",
+            "url" : "http://www.last.fm/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "27043"
+          }, {
+            "type" : "aboutme",
+            "typeId" : "aboutme",
+            "typeName" : "About.me",
+            "url" : "https://about.me/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "quora",
+            "typeId" : "quora",
+            "typeName" : "Quora",
+            "url" : "http://www.quora.com/eric-myers",
+            "username" : "eric-myers"
+          }, {
+            "bio" : "Dallas-based marketing consultant that works with small businesses. A lover of all things tech, entertaining, and random. I'm a Type 1 diabetic & info buffet.",
+            "followers" : 314,
+            "following" : 365,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/ericbobmyers/",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "bio" : "Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",
+            "followers" : 11,
+            "following" : 0,
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "998397"
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://profile.yahoo.com/YV36KZSMWG47UJY3WNPL43RL7U",
+            "id" : "YV36KZSMWG47UJY3WNPL43RL7U"
+          }, {
+            "bio" : "#Vegas-Based, Diabetic (#T1D) #SEM Account Director. Huge #Analytics, #PPC and #Social geek tweeting about whatever entertains me at that moment.",
+            "followers" : 1538,
+            "following" : 1139,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "15771736"
+          }, {
+            "type" : "youtube",
+            "typeId" : "youtube",
+            "typeName" : "YouTube",
+            "url" : "https://youtube.com/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://plus.google.com/u/0/115257874832329284928",
+            "id" : "115257874832329284928"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/48907847",
+            "id" : "48907847"
+          } ],
+          "digitalFootprint" : {
+            "scores" : [ {
+              "provider" : "klout",
+              "type" : "general",
+              "value" : 60
+            } ],
+            "topics" : [ {
+              "provider" : "aboutme",
+              "value" : "senior account manager"
+            }, {
+              "provider" : "aboutme",
+              "value" : "small business"
+            }, {
+              "provider" : "aboutme",
+              "value" : "reachlocal"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online marketing"
+            }, {
+              "provider" : "aboutme",
+              "value" : "adwords qualified individual"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online advertising"
+            }, {
+              "provider" : "aboutme",
+              "value" : "texas"
+            }, {
+              "provider" : "aboutme",
+              "value" : "dallas"
+            }, {
+              "provider" : "klout",
+              "value" : "Diabetes"
+            }, {
+              "provider" : "aboutme",
+              "value" : "campaign consultant"
+            }, {
+              "provider" : "aboutme",
+              "value" : "social media consultant"
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:41 GMT
+- request:
+    method: get
+    uri: http://api.klout.com/v2/user.json/27043?key=zkrjuqr3t3a2hhv2z9mku222
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.klout.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cf-Ray:
+      - 23a9b64244b60657-SJC
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sun, 25 Oct 2015 00:12:48 GMT
+      Server:
+      - cloudflare-nginx
+      Set-Cookie:
+      - __cfduid=dbd38c871e4b6123e17ead6bdcce3cded1445731968; expires=Mon, 24-Oct-16
+        00:12:48 GMT; path=/; domain=.klout.com; HttpOnly
+      X-Apikey-Qps-Allotted:
+      - '10'
+      X-Apikey-Qps-Current:
+      - '1'
+      X-Apikey-Quota-Allotted:
+      - '20000'
+      X-Apikey-Quota-Current:
+      - '5'
+      X-Mashery-Responder:
+      - prod-j-worker-us-west-1c-55.mashery.com
+      X-Quota-Reset:
+      - Monday, October 26, 2015 12:00:00 AM GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"kloutId":"27043","nick":"Ericbobmyers","score":{"score":59.70803818367331,"bucket":"50-59"},"scoreDeltas":{"dayChange":0.1758032069785287,"weekChange":-1.3352325188099599,"monthChange":-2.4661114810645444}}'
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:41 GMT
+- request:
+    method: get
+    uri: http://klout.com/Ericbobmyers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Sun, 25 Oct 2015 00:14:41 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Content-Length:
+      - '64'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dbb9d19bb912047f8fbfc1e931382ec3d1445732081; expires=Mon, 24-Oct-16
+        00:14:41 GMT; path=/; domain=.klout.com; HttpOnly
+      - kvist=1; Max-Age=30; Path=/; Expires=Sun, 25 Oct 2015 00:15:11 GMT
+      - kvist=1; Max-Age=30; Path=/; Expires=Sun, 25 Oct 2015 00:15:11 GMT
+      - kvist=1; Max-Age=30; Path=/; Expires=Sun, 25 Oct 2015 00:15:11 GMT,kqst=null;
+        Path=/; Expires=Sun, 25 Oct 2015 00:44:41 GMT
+      - kvist=1; Max-Age=30; Path=/; Expires=Sun, 25 Oct 2015 00:15:11 GMT,kqst=null;
+        Path=/; Expires=Sun, 25 Oct 2015 00:44:41 GMT
+      - nksidd=s%3A694FOIrEmz6Kq6t3Z_h7Sw4ro1z4j-KH.yZD%2B7FNeGAPcrR5gJWSbTyQ%2Fg7rFXF7vd26h97MTqfY;
+        Domain=.klout.com; Path=/; Expires=Thu, 05 Nov 2015 17:51:21 GMT; HttpOnly
+      X-Powered-By:
+      - Express
+      X-Klout-Transaction-Id:
+      - 803ede02-532c-44c2-a7e5-ca1c5a44c13c
+      Location:
+      - https://klout.com/Ericbobmyers
+      Vary:
+      - Accept
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 23a9b904172e1bc7-SEA
+    body:
+      encoding: UTF-8
+      string: Moved Permanently. Redirecting to https://klout.com/Ericbobmyers
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:41 GMT
+- request:
+    method: get
+    uri: https://klout.com/Ericbobmyers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - __cfduid=dbb9d19bb912047f8fbfc1e931382ec3d1445732081; kvist=1; Max-Age=30;
+        nksidd=s%3A694FOIrEmz6Kq6t3Z_h7Sw4ro1z4j-KH.yZD%2B7FNeGAPcrR5gJWSbTyQ%2Fg7rFXF7vd26h97MTqfY
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 25 Oct 2015 00:14:41 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Klout-Transaction-Id:
+      - cd23e1ee-7319-4790-b7d8-7b275e0f0f41
+      Set-Cookie:
+      - kvist=1; Max-Age=30; Path=/; Expires=Sun, 25 Oct 2015 00:15:11 GMT
+      - kvist=1; Max-Age=30; Path=/; Expires=Sun, 25 Oct 2015 00:15:11 GMT
+      - kvist=1; Max-Age=30; Path=/; Expires=Sun, 25 Oct 2015 00:15:11 GMT,kqst=null;
+        Path=/; Expires=Sun, 25 Oct 2015 00:44:41 GMT
+      - kvist=1; Max-Age=30; Path=/; Expires=Sun, 25 Oct 2015 00:15:11 GMT,kqst=null;
+        Path=/; Expires=Sun, 25 Oct 2015 00:44:41 GMT
+      - nksidd=s%3A694FOIrEmz6Kq6t3Z_h7Sw4ro1z4j-KH.yZD%2B7FNeGAPcrR5gJWSbTyQ%2Fg7rFXF7vd26h97MTqfY;
+        Domain=.klout.com; Path=/; Expires=Thu, 05 Nov 2015 17:51:21 GMT; HttpOnly
+      Strict-Transport-Security:
+      - max-age=86400
+      Etag:
+      - W/"HDid2ZTU5w8JXsHjNcampg=="
+      Vary:
+      - Accept-Encoding
+      Cf-Ray:
+      - 23a9b904e19d2a1f-SEA
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PCFkb2N0eXBlIGh0bWw+CjxodG1sIHhtbG5zPSJodHRwOi8vd3d3LnczLm9y
+        Zy8xOTk5L3hodG1sIgogICAgICB4bWxuczpvZz0iaHR0cDovL29ncC5tZS9u
+        cyMiCiAgICAgIHhtbG5zOmZiPSJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS8y
+        MDA4L2ZibWwiCiAgICAgID4KPGhlYWQKICAgICAgcHJlZml4PSJvZzogaHR0
+        cDovL29ncC5tZS9ucyMgZmI6IGh0dHA6Ly9vZ3AubWUvbnMvZmIjIGtsb3V0
+        X186IGh0dHA6Ly9vZ3AubWUvbnMvZmIva2xvdXRfXyMiPgogICAgPG1ldGEg
+        Y2hhcnNldD0idXRmLTgiPgogICAgPG1ldGEgaHR0cC1lcXVpdj0iWC1VQS1D
+        b21wYXRpYmxlIiBjb250ZW50PSJJRT1lZGdlLGNocm9tZT0xIj4KICAgIDxt
+        ZXRhIG5hbWU9ImF1dGhvciIgY29udGVudD0iS2xvdXQsIEluYy4iPgogICAg
+        CiAgICA8bWV0YSBuYW1lPSJkZXNjcmlwdGlvbiIgY29udGVudD0iRXJpYyBN
+        eWVyczogLiBIYXJ0Zm9yZC1CYXNlZCwgRGlhYmV0aWMgKCNUMUQpIERpZ2l0
+        YWwgI0FuYWx5dGljcywgI01hcmtldGluZyAmICNTb2NpYWwgZ2VlayB0d2Vl
+        dGluZyBteSB3YXkgZG93biB0aGUgYXR0ZW50aW9uLWRlZmljaXQgZHJpdmVu
+        IHJvYWQgb2YgbGlmZS4iPgogICAgPG1ldGEgbmFtZT0iZ29vZ2xlLXNpdGUt
+        dmVyaWZpY2F0aW9uIiBjb250ZW50PSIzVkpJS1phSFhBVE1wOTdkQjN2TTF3
+        NFNJUG5YXzdXUXZnVUNrT2Q4OThjIj4KICAgIDxtZXRhIG5hbWU9InJvYm90
+        cyIgY29udGVudD0ibm9vZHAsbm95ZGlyIj4KICAgIAogICAgCiAgICA8bWV0
+        YSBwcm9wZXJ0eT0idHdpdHRlcjpjYXJkIiBjb250ZW50PSJzdW1tYXJ5Ij4K
+        ICAgIDxtZXRhIHByb3BlcnR5PSJ0d2l0dGVyOnRpdGxlIiBjb250ZW50PSJF
+        cmljIE15ZXJzIHwgS2xvdXQuY29tIj4KICAgIDxtZXRhIHByb3BlcnR5PSJ0
+        d2l0dGVyOmRlc2NyaXB0aW9uIiBjb250ZW50PSJFcmljIE15ZXJzOiAuIEhh
+        cnRmb3JkLUJhc2VkLCBEaWFiZXRpYyAoI1QxRCkgRGlnaXRhbCAjQW5hbHl0
+        aWNzLCAjTWFya2V0aW5nICYgI1NvY2lhbCBnZWVrIHR3ZWV0aW5nIG15IHdh
+        eSBkb3duIHRoZSBhdHRlbnRpb24tZGVmaWNpdCBkcml2ZW4gcm9hZCBvZiBs
+        aWZlLiI+CiAgICA8bWV0YSBwcm9wZXJ0eT0idHdpdHRlcjppbWFnZSIgY29u
+        dGVudD0iLy9wYnMudHdpbWcuY29tL3Byb2ZpbGVfaW1hZ2VzLzUzNDc4ODU4
+        MDMyMTY4NTUwNC9xQTRicDJYeS5qcGVnIj4KICAgIDxtZXRhIHByb3BlcnR5
+        PSJ0d2l0dGVyOnNpdGUiIGNvbnRlbnQ9IkBrbG91dCI+CiAgICA8bWV0YSBw
+        cm9wZXJ0eT0iZmI6YXBwX2lkIiBjb250ZW50PSIxMjgwODU4OTcyMTMzOTUi
+        PgogICAgPG1ldGEgcHJvcGVydHk9ImZiOmFkbWlucyIgY29udGVudD0iMjMz
+        MDY1OSw4MTEwMTcsOTExMzk4MCI+CiAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6
+        ZGVzY3JpcHRpb24iIGNvbnRlbnQ9IkVyaWMgTXllcnM6IC4gSGFydGZvcmQt
+        QmFzZWQsIERpYWJldGljICgjVDFEKSBEaWdpdGFsICNBbmFseXRpY3MsICNN
+        YXJrZXRpbmcgJiAjU29jaWFsIGdlZWsgdHdlZXRpbmcgbXkgd2F5IGRvd24g
+        dGhlIGF0dGVudGlvbi1kZWZpY2l0IGRyaXZlbiByb2FkIG9mIGxpZmUuIj4K
+        ICAgIDxtZXRhIHByb3BlcnR5PSJvZzppbWFnZSIgY29udGVudD0iLy9wYnMu
+        dHdpbWcuY29tL3Byb2ZpbGVfaW1hZ2VzLzUzNDc4ODU4MDMyMTY4NTUwNC9x
+        QTRicDJYeS5qcGVnIj4KICAgIDxtZXRhIHByb3BlcnR5PSJvZzpzaXRlX25h
+        bWUiIGNvbnRlbnQ9Iktsb3V0Ij4KICAgIDxtZXRhIHByb3BlcnR5PSJvZzp0
+        aXRsZSIgY29udGVudD0iRXJpYyBNeWVycyB8IEtsb3V0LmNvbSI+CiAgICAK
+        ICAgICAgICA8bWV0YSBwcm9wZXJ0eT0ib2c6dHlwZSIgY29udGVudD0id2Vi
+        c2l0ZSI+CiAgICAKICAgIDxtZXRhIHByb3BlcnR5PSJvZzp1cmwiIGNvbnRl
+        bnQ9Imh0dHBzOi8va2xvdXQuY29tL3VzZXIvRXJpY2JvYm15ZXJzIj4KCiAg
+        ICAKICAgICAgICA8c2NyaXB0PgogICAgICAgICAgICBpZiAobG9jYXRpb24u
+        aGFzaCAmJiBsb2NhdGlvbi5oYXNoLmluZGV4T2YoJyMvJykgPiAtMSkgewog
+        ICAgICAgICAgICAgICAgdmFyIGhvc3QgPSBsb2NhdGlvbi5ob3N0LAogICAg
+        ICAgICAgICAgICAgICAgIGhhc2hSb3V0ZSA9IGxvY2F0aW9uLmhhc2gucmVw
+        bGFjZSgnIycsICcnKTsKCiAgICAgICAgICAgICAgICBpZiAoaGFzaFJvdXRl
+        KSB7CiAgICAgICAgICAgICAgICAgICAgbG9jYXRpb24uaHJlZiA9ICdodHRw
+        Oi8vJyArIGhvc3QgKyBoYXNoUm91dGU7CiAgICAgICAgICAgICAgICB9CiAg
+        ICAgICAgICAgIH0KICAgICAgICA8L3NjcmlwdD4KICAgIAogICAgCiAgICA8
+        c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+dmFyIF9zZl9zdGFydHB0
+        PShuZXcgRGF0ZSgpKS5nZXRUaW1lKCk8L3NjcmlwdD4KICAgIDxsaW5rIHJl
+        bD0iaWNvbiIgdHlwZT0iaW1hZ2UvcG5nIiBocmVmPSIvaW1hZ2VzL2Zhdmlj
+        b24yLnBuZyI+CiAgICAKICAgICAgICA8c3R5bGUgdHlwZT0idGV4dC9jc3Mi
+        PgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIEBpbXBvcnQgdXJsKCIv
+        Y3NzL2ZvbnRzMS5jc3MiKTsKICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+        ICBAaW1wb3J0IHVybCgiL2Nzcy9zdHlsZXMtcGFydC0xLU1qQXhOVEV3TWpF
+        eE56UTRNekEuY3NzIik7CiAgICAgICAgICAgIAogICAgICAgICAgICA8L3N0
+        eWxlPgogICAgCgogICAgPHRpdGxlPkVyaWMgTXllcnMgfCBLbG91dC5jb208
+        L3RpdGxlPgo8L2hlYWQ+Cjxib2R5IGlkPSJrbG91dCIgY2xhc3M9Imtsb3V0
+        LWJhc2UiPgogICAgPGRpdiBpZD0ibWFpbi11aSI+CiAgICAgICAgPGRpdiBp
+        ZD0ibWFpbi1uYXZpZ2F0aW9uIiBjbGFzcz0ia2xvdXQtYmFzZSBwdWJsaWMi
+        PgogICAgPGRpdiBjbGFzcz0ibWFpbi1uYXZpZ2F0aW9uIj4KICAgICAgICAK
+        ICAgICAgICA8ZGl2IGNsYXNzPSJjdGEiPgogICAgICAgICAgICA8ZGl2IGNs
+        YXNzPSJjdGEtdGl0bGUiPkJlIGtub3duIGZvciB3aGF0IHlvdSBsb3ZlLjwv
+        ZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJjdGEtY2FwdGlvbiI+R3Jv
+        dyB5b3VyIGV4cGVydGlzZSAmYW1wOyBpbXByb3ZlIHlvdXIgc29jaWFsIG1l
+        ZGlhIHByZXNlbmNlLjwvZGl2PgogICAgICAgICAgICA8YSBjbGFzcz0iY3Rh
+        LWxpbmsiIGhyZWY9Ii9jb3JwL2Fib3V0Ij5MZWFybiBNb3JlPC9hPgogICAg
+        ICAgICAgICA8ZGl2IGlkPSJyZWdpc3Rlci1jb250YWluZXIiIGNsYXNzPSJj
+        dGEtYnV0dG9ucyI+CiAgICAgICAgICAgICAgICAKICAgIDxhIGNsYXNzPSJm
+        Yi1jb25uZWN0IGJ1dHRvbiIgaHJlZj0iL29hdXRoX2ZiP2J0bl9zcmM9bWFp
+        bi1uYXYmbmV4dD1FcmljYm9ibXllcnMiPgoKICAgIDxzcGFuIGNsYXNzPSJp
+        Y29uIGljb24tZmIiPjwvc3Bhbj4KICAgIDxzcGFuIGNsYXNzPSJidXR0b24t
+        dGV4dCI+U2lnbiBpbiB3aXRoIEZhY2Vib29rPC9zcGFuPgo8L2E+CgogICAg
+        PGEgY2xhc3M9InR3LWNvbm5lY3QgYnV0dG9uIiBocmVmPSIvb2F1dGg/YnRu
+        X3NyYz1tYWluLW5hdiZuZXh0PUVyaWNib2JteWVycyI+CgogICAgPHNwYW4g
+        Y2xhc3M9Imljb24gaWNvbi10dyI+PC9zcGFuPgogICAgPHNwYW4gY2xhc3M9
+        ImJ1dHRvbi10ZXh0Ij5TaWduIGluIHdpdGggVHdpdHRlcjwvc3Bhbj4KPC9h
+        PgoKICAgIDxhIGNsYXNzPSJlbWFpbC1jb25uZWN0IGJ1dHRvbiIgaHJlZj0i
+        L2xvZ2luP2J0bl9zcmM9aG9tZSI+CiAgICAgICAgPHNwYW4gY2xhc3M9Imlj
+        b24gaWNvbi1lbSI+PHN2ZyBjbGFzcz0iaWNvbi1lbnZlbG9wZSBzdmctaWNv
+        biIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAw
+        MC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hs
+        aW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMTZw
+        eCIgdmlld0JveD0iMCAwIDI0IDE2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3
+        IDAgMCAyNCAxNiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgogICAgPHBh
+        dGggZD0iTTEyLDEyTDAsMGgyNEwxMiwxMnogTTEyLDE0TDcsOWwtNyw3aDI0
+        bC03LTdMMTIsMTR6IE0xOCw4bDYsNlYyTDE4LDh6IE0wLDJ2MTJsNi02TDAs
+        MnoiLz4KPC9nPgo8L3N2Zz48L3NwYW4+CiAgICAgICAgPHNwYW4gY2xhc3M9
+        ImJ1dHRvbi10ZXh0Ij5TaWduIGluIHdpdGggRW1haWw8L3NwYW4+CiAgICA8
+        L2E+CgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAg
+        ICAKICAgIDwvZGl2Pgo8L2Rpdj4KICAgICAgICA8ZGl2IGlkPSJtYWluIj4K
+        ICAgICAgICAgICAgPGRpdiBjbGFzcz0idXNlci1wcm9maWxlLWNvbnRhaW5l
+        ciBwdWJsaWMiPgogICAgPGRpdiBjbGFzcz0iY2xhaW0tYWRkaXRpb25hbC10
+        b3BpY3Mtc2VjdGlvbiI+PC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJ1c2VyLXBy
+        b2ZpbGUtaGVhZGVyLWNvbnRhaW5lciI+CiAgICAgICAgCiAgICAgICAgICAg
+        IAo8ZGl2IGNsYXNzPSJ1c2VyLXByb2ZpbGUtaGVhZGVyIj4KICAgIDxkaXYg
+        Y2xhc3M9InByb2ZpbGUtbWV0YSI+CiAgICAgICAgPGRpdiBjbGFzcz0icHJv
+        ZmlsZSAiPgogICAgICAgICAgICAKPGRpdiBjbGFzcz0iYXZhdGFyMiBhdmF0
+        YXItcHJvZmlsZSI+CiAgICAKPGRpdiBjbGFzcz0idXNlci1pY29uICI+CiAg
+        ICA8ZGl2IGNsYXNzPSJwcm9maWxlLXBpY3R1cmUiIHN0eWxlPSJiYWNrZ3Jv
+        dW5kLWltYWdlOiB1cmwoLy9wYnMudHdpbWcuY29tL3Byb2ZpbGVfaW1hZ2Vz
+        LzUzNDc4ODU4MDMyMTY4NTUwNC9xQTRicDJYeS5qcGVnKSI+PC9kaXY+Cjwv
+        ZGl2PgogICAgPGRpdiBjbGFzcz0iZmxhZzIiPgogICAgPHNwYW4gY2xhc3M9
+        InNjb3JlIj42MDwvc3Bhbj4KPC9kaXY+CjwvZGl2PgogICAgICAgICAgICA8
+        ZGl2IGNsYXNzPSJ1c2VyLWRldGFpbHMtY29udGFpbmVyIj4KICAgICAgICAg
+        ICAgICAgIDxkaXYgY2xhc3M9Im5hbWUiPgogICAgICAgICAgICAgICAgICAg
+        IDxkaXYgY2xhc3M9ImZpcnN0LW5hbWUiPgogICAgICAgICAgICAgICAgICAg
+        ICAgICBFcmljCiAgICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAg
+        ICAgICAgICAgICAgPGRpdiBjbGFzcz0ibGFzdC1uYW1lIj4KICAgICAgICAg
+        ICAgICAgICAgICAgICAgTXllcnMKICAgICAgICAgICAgICAgICAgICA8L2Rp
+        dj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPHVs
+        IGNsYXNzPSJuZXR3b3JrcyI+CiAgICAgICAgICAgICAgICAgICAgCiAgICAg
+        ICAgICAgICAgICAgICAgICAgIDxsaSBjbGFzcz0iY29ubmVjdGVkLW5ldHdv
+        cmsga3MiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPGEgdGFyZ2V0
+        PSJfYmxhbmsiIGhyZWY9Ii91c2VyL0VyaWNib2JteWVycyI+CiAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgPGkgY2xhc3M9Imljb24ta2xvdXQi
+        PjwvaT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvYT4KICAgICAg
+        ICAgICAgICAgICAgICAgICAgPC9saT4KICAgICAgICAgICAgICAgICAgICAK
+        ICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAKICAg
+        ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICA8bGkgY2xhc3M9ImNvbm5lY3RlZC1uZXR3b3JrIHR3IiB0aXRsZT0i
+        VHdpdHRlciI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGEgdGFyZ2V0PSJfYmxh
+        bmsiIGhyZWY9IgogICAgaHR0cDovL3R3aXR0ZXIuY29tL0VyaWNib2JteWVy
+        cwoiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgPGkgY2xhc3M9Imljb24tdHdpdHRlciI+PC9pPgogICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICA8L2E+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICA8L2xpPgogICAgICAgICAgICAg
+        ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+        ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGkg
+        Y2xhc3M9ImNvbm5lY3RlZC1uZXR3b3JrIGZiIiB0aXRsZT0iRmFjZWJvb2si
+        PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgIDxhIHRhcmdldD0iX2JsYW5rIiBocmVm
+        PSIKICAgIGh0dHA6Ly93d3cuZmFjZWJvb2suY29tLzExOTE1NDAwMzUKIj4K
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgIDxpIGNsYXNzPSJpY29uLWZhY2Vib29rIj48L2k+CiAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        IDwvYT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgICAgICAg
+        ICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
+        ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsaSBjbGFz
+        cz0iY29ubmVjdGVkLW5ldHdvcmsgbGkiIHRpdGxlPSJMaW5rZWRJbiI+CiAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgPGEgdGFyZ2V0PSJfYmxhbmsiIGhyZWY9Igog
+        ICAgaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2VyaWNybXllcnMKIj4K
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgIDxpIGNsYXNzPSJpY29uLWxpbmtlZGluIj48L2k+CiAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        IDwvYT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgICAgICAg
+        ICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAg
+        ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsaSBjbGFz
+        cz0iY29ubmVjdGVkLW5ldHdvcmsgZnMiIHRpdGxlPSJGb3Vyc3F1YXJlIj4K
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICA8YSB0YXJnZXQ9Il9ibGFuayIgaHJlZj0i
+        CiAgICBodHRwOi8vZm91cnNxdWFyZS5jb20vdXNlci80ODkwNzg0NwoiPgog
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgPGkgY2xhc3M9Imljb24tZm91cnNxdWFyZSI+PC9pPgogICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICA8L2E+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICA8L2xpPgogICAgICAgICAgICAgICAg
+        ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
+        ICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGkgY2xh
+        c3M9ImNvbm5lY3RlZC1uZXR3b3JrIGlnIiB0aXRsZT0iSW5zdGFncmFtIj4K
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICA8YSB0YXJnZXQ9Il9ibGFuayIgaHJlZj0i
+        CiAgICBodHRwOi8va2xvdXQuY29tL2FwaS9pbnN0YWdyYW0vdXNlci8xMjcy
+        Mzk2CiI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAog
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICA8aSBjbGFzcz0iaWNvbi1pbnN0YWdyYW0iPjwvaT4KICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgPC9hPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        IAogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9saT4KICAgICAgICAg
+        ICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+        ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        PGxpIGNsYXNzPSJjb25uZWN0ZWQtbmV0d29yayBncCIgdGl0bGU9Ikdvb2ds
+        ZSsiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgIDxhIHRhcmdldD0iX2JsYW5rIiBo
+        cmVmPSIKICAgIGh0dHA6Ly9wbHVzLmdvb2dsZS5jb20vMTE1MjU3ODc0ODMy
+        MzI5Mjg0OTI4CiI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICA8aSBjbGFzcz0iaWNvbi1nb29nbGVwbHVzIj48
+        L2k+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgIDwvYT4KICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvbGk+CiAg
+        ICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAog
+        ICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgPC91bD4KICAg
+        ICAgICAgICAgICAgIDxkaXYgY2xhc3M9InVzZXItYmlvIj4KICAgICAgICAg
+        ICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgSGFydGZvcmQt
+        QmFzZWQsIERpYWJldGljICgjVDFEKSBEaWdpdGFsICNBbmFseXRpY3MsICNN
+        YXJrZXRpbmcgJiAjU29jaWFsIGdlZWsgdHdlZXRpbmcgbXkgd2F5IGRvd24g
+        dGhlIGF0dGVudGlvbi1kZWZpY2l0IGRyaXZlbiByb2FkIG9mIGxpZmUuCiAg
+        ICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICA8L2Rpdj4KICAg
+        ICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIDxkaXYgaWQ9InJh
+        bmtlZC10b3BpY3MiPgogICAgICAgICAgICAgICAgICAgICAgICAKCiAgICA8
+        ZGl2IGNsYXNzPSJyYW5rZWQtdG9waWNzIj4KICAgICAgICAKICAgICAgICAg
+        ICAgCjxkaXYgY2xhc3M9InRvcGljLXBpbGwiIGlkPSJhZHZlcnRpc2luZyI+
+        CiAgICA8ZGl2IGNsYXNzPSJwcm9maWxlLXRvcGljIGV4cGVydCI+CiAgICAg
+        ICAgPGRpdiBjbGFzcz0idG9waWMtbmFtZSI+CiAgICAgICAgICAgIEFkdmVy
+        dGlzaW5nCiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICAgIAogICAgICAg
+        IDxkaXYgY2xhc3M9ImV4cGVydGlzZSBpcy1wdWJsaWMiPgogICAgICAgICAg
+        ICA8ZGl2IGNsYXNzPSJ0b3AtZXhwZXJ0LXN0YXIiPgogICAgICAgICAgICAg
+        ICAgPHN2ZyBjbGFzcz0iaWNvbi1zdGFyIHN2Zy1pY29uIiB2ZXJzaW9uPSIx
+        LjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6
+        eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIg
+        eT0iMHB4IiB2aWV3Qm94PSIwIDAgNDggNDgiIGVuYWJsZS1iYWNrZ3JvdW5k
+        PSJuZXcgMCAwIDQ4IDQ4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGcgaWQ9
+        ImdseXBoaWNvbnMiPgogICAgPGcgaWQ9InN0YXIiPgogICAgICAgIDxwYXRo
+        IGQ9Ik0zNi45MDYsMjFoLTkuNDM4bC0yLjkyMi05bC0yLjk3MSw5SDEybDcu
+        NzU3LDUuNDU1bC0yLjkxMyw4Ljg2Mmw3LjY0OC01LjU2NGw3LjY3OSw1LjUw
+        OGwtMi45MDktOC44NUwzNi45MDYsMjF6Ii8+CiAgICA8L2c+CjwvZz4KPC9z
+        dmc+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNz
+        PSJleHBlcnQtdGV4dCI+RXhwZXJ0PC9kaXY+CiAgICAgICAgPC9kaXY+CiAg
+        ICAKICAgIDxkaXYgY2xhc3M9ImRlbGV0ZS10b3BpYyI+CiAgICAgICAgPHN2
+        ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAw
+        L3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxp
+        bmsiIHg9IjBweCIgeT0iMHB4IgogICAgIHZpZXdCb3g9Ii0yMi45IC0xLjIg
+        MjcuNSAyNS43IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC0yMi45IC0xLjIg
+        MjcuNSAyNS43IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGNpcmNsZSBjeD0i
+        LTkiIGN5PSIxMSIgcj0iOS41Ii8+Cjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYi
+        IHBvaW50cz0iLTQsNy4yIC01LjIsNiAtOSw5LjggLTEyLjgsNiAtMTQsNy4y
+        IC0xMC4yLDExIC0xNCwxNC44IC0xMi44LDE2IC05LDEyLjIgLTUuMiwxNiAt
+        NCwxNC44IC03LjgsMTEiLz4KPC9zdmc+CiAgICA8L2Rpdj4KPC9kaXY+CiAg
+        ICAgICAgCiAgICAgICAgICAgIAo8ZGl2IGNsYXNzPSJ0b3BpYy1waWxsIiBp
+        ZD0iYW5hbHl0aWNzIj4KICAgIDxkaXYgY2xhc3M9InByb2ZpbGUtdG9waWMg
+        ZXhwZXJ0Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJ0b3BpYy1uYW1lIj4KICAg
+        ICAgICAgICAgQW5hbHl0aWNzCiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4K
+        ICAgIAogICAgICAgIDxkaXYgY2xhc3M9ImV4cGVydGlzZSBpcy1wdWJsaWMi
+        PgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJ0b3AtZXhwZXJ0LXN0YXIiPgog
+        ICAgICAgICAgICAgICAgPHN2ZyBjbGFzcz0iaWNvbi1zdGFyIHN2Zy1pY29u
+        IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAw
+        L3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxp
+        bmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDggNDgiIGVuYWJs
+        ZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ4IDQ4IiB4bWw6c3BhY2U9InByZXNl
+        cnZlIj4KPGcgaWQ9ImdseXBoaWNvbnMiPgogICAgPGcgaWQ9InN0YXIiPgog
+        ICAgICAgIDxwYXRoIGQ9Ik0zNi45MDYsMjFoLTkuNDM4bC0yLjkyMi05bC0y
+        Ljk3MSw5SDEybDcuNzU3LDUuNDU1bC0yLjkxMyw4Ljg2Mmw3LjY0OC01LjU2
+        NGw3LjY3OSw1LjUwOGwtMi45MDktOC44NUwzNi45MDYsMjF6Ii8+CiAgICA8
+        L2c+CjwvZz4KPC9zdmc+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAg
+        ICA8ZGl2IGNsYXNzPSJleHBlcnQtdGV4dCI+RXhwZXJ0PC9kaXY+CiAgICAg
+        ICAgPC9kaXY+CiAgICAKICAgIDxkaXYgY2xhc3M9ImRlbGV0ZS10b3BpYyI+
+        CiAgICAgICAgPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3
+        LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu
+        b3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgogICAgIHZpZXdCb3g9
+        Ii0yMi45IC0xLjIgMjcuNSAyNS43IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3
+        IC0yMi45IC0xLjIgMjcuNSAyNS43IiB4bWw6c3BhY2U9InByZXNlcnZlIj4K
+        PGNpcmNsZSBjeD0iLTkiIGN5PSIxMSIgcj0iOS41Ii8+Cjxwb2x5Z29uIGZp
+        bGw9IiNGRkZGRkYiIHBvaW50cz0iLTQsNy4yIC01LjIsNiAtOSw5LjggLTEy
+        LjgsNiAtMTQsNy4yIC0xMC4yLDExIC0xNCwxNC44IC0xMi44LDE2IC05LDEy
+        LjIgLTUuMiwxNiAtNCwxNC44IC03LjgsMTEiLz4KPC9zdmc+CiAgICA8L2Rp
+        dj4KPC9kaXY+CiAgICAgICAgCiAgICAgICAgICAgIAo8ZGl2IGNsYXNzPSJ0
+        b3BpYy1waWxsIiBpZD0iZGlhYmV0ZXMiPgogICAgPGRpdiBjbGFzcz0icHJv
+        ZmlsZS10b3BpYyBleHBlcnQiPgogICAgICAgIDxkaXYgY2xhc3M9InRvcGlj
+        LW5hbWUiPgogICAgICAgICAgICBEaWFiZXRlcwogICAgICAgIDwvZGl2Pgog
+        ICAgPC9kaXY+CiAgICAKICAgICAgICA8ZGl2IGNsYXNzPSJleHBlcnRpc2Ug
+        aXMtcHVibGljIj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0idG9wLWV4cGVy
+        dC1zdGFyIj4KICAgICAgICAgICAgICAgIDxzdmcgY2xhc3M9Imljb24tc3Rh
+        ciBzdmctaWNvbiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53
+        My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9y
+        Zy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4
+        IDQ4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0OCA0OCIgeG1sOnNw
+        YWNlPSJwcmVzZXJ2ZSI+CjxnIGlkPSJnbHlwaGljb25zIj4KICAgIDxnIGlk
+        PSJzdGFyIj4KICAgICAgICA8cGF0aCBkPSJNMzYuOTA2LDIxaC05LjQzOGwt
+        Mi45MjItOWwtMi45NzEsOUgxMmw3Ljc1Nyw1LjQ1NWwtMi45MTMsOC44NjJs
+        Ny42NDgtNS41NjRsNy42NzksNS41MDhsLTIuOTA5LTguODVMMzYuOTA2LDIx
+        eiIvPgogICAgPC9nPgo8L2c+Cjwvc3ZnPgogICAgICAgICAgICA8L2Rpdj4K
+        ICAgICAgICAgICAgPGRpdiBjbGFzcz0iZXhwZXJ0LXRleHQiPkV4cGVydDwv
+        ZGl2PgogICAgICAgIDwvZGl2PgogICAgCiAgICA8ZGl2IGNsYXNzPSJkZWxl
+        dGUtdG9waWMiPgogICAgICAgIDxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0i
+        aHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRw
+        Oi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKICAg
+        ICB2aWV3Qm94PSItMjIuOSAtMS4yIDI3LjUgMjUuNyIgZW5hYmxlLWJhY2tn
+        cm91bmQ9Im5ldyAtMjIuOSAtMS4yIDI3LjUgMjUuNyIgeG1sOnNwYWNlPSJw
+        cmVzZXJ2ZSI+CjxjaXJjbGUgY3g9Ii05IiBjeT0iMTEiIHI9IjkuNSIvPgo8
+        cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ii00LDcuMiAtNS4yLDYg
+        LTksOS44IC0xMi44LDYgLTE0LDcuMiAtMTAuMiwxMSAtMTQsMTQuOCAtMTIu
+        OCwxNiAtOSwxMi4yIC01LjIsMTYgLTQsMTQuOCAtNy44LDExIi8+Cjwvc3Zn
+        PgogICAgPC9kaXY+CjwvZGl2PgogICAgICAgIAogICAgICAgICAgICAKPGRp
+        diBjbGFzcz0idG9waWMtcGlsbCIgaWQ9Imdvb2dsZS1hZHdvcmRzIj4KICAg
+        IDxkaXYgY2xhc3M9InByb2ZpbGUtdG9waWMgZXhwZXJ0Ij4KICAgICAgICA8
+        ZGl2IGNsYXNzPSJ0b3BpYy1uYW1lIj4KICAgICAgICAgICAgR29vZ2xlIEFk
+        d29yZHMKICAgICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAgCiAgICAgICAg
+        PGRpdiBjbGFzcz0iZXhwZXJ0aXNlIGlzLXB1YmxpYyI+CiAgICAgICAgICAg
+        IDxkaXYgY2xhc3M9InRvcC1leHBlcnQtc3RhciI+CiAgICAgICAgICAgICAg
+        ICA8c3ZnIGNsYXNzPSJpY29uLXN0YXIgc3ZnLWljb24iIHZlcnNpb249IjEu
+        MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4
+        bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5
+        PSIwcHgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZW5hYmxlLWJhY2tncm91bmQ9
+        Im5ldyAwIDAgNDggNDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8ZyBpZD0i
+        Z2x5cGhpY29ucyI+CiAgICA8ZyBpZD0ic3RhciI+CiAgICAgICAgPHBhdGgg
+        ZD0iTTM2LjkwNiwyMWgtOS40MzhsLTIuOTIyLTlsLTIuOTcxLDlIMTJsNy43
+        NTcsNS40NTVsLTIuOTEzLDguODYybDcuNjQ4LTUuNTY0bDcuNjc5LDUuNTA4
+        bC0yLjkwOS04Ljg1TDM2LjkwNiwyMXoiLz4KICAgIDwvZz4KPC9nPgo8L3N2
+        Zz4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9
+        ImV4cGVydC10ZXh0Ij5FeHBlcnQ8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAg
+        IAogICAgPGRpdiBjbGFzcz0iZGVsZXRlLXRvcGljIj4KICAgICAgICA8c3Zn
+        IHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAv
+        c3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGlu
+        ayIgeD0iMHB4IiB5PSIwcHgiCiAgICAgdmlld0JveD0iLTIyLjkgLTEuMiAy
+        Ny41IDI1LjciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgLTIyLjkgLTEuMiAy
+        Ny41IDI1LjciIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Y2lyY2xlIGN4PSIt
+        OSIgY3k9IjExIiByPSI5LjUiLz4KPHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIg
+        cG9pbnRzPSItNCw3LjIgLTUuMiw2IC05LDkuOCAtMTIuOCw2IC0xNCw3LjIg
+        LTEwLjIsMTEgLTE0LDE0LjggLTEyLjgsMTYgLTksMTIuMiAtNS4yLDE2IC00
+        LDE0LjggLTcuOCwxMSIvPgo8L3N2Zz4KICAgIDwvZGl2Pgo8L2Rpdj4KICAg
+        ICAgICAKICAgICAgICAgICAgCjxkaXYgY2xhc3M9InRvcGljLXBpbGwiIGlk
+        PSJsaW5rZWRpbiI+CiAgICA8ZGl2IGNsYXNzPSJwcm9maWxlLXRvcGljIGV4
+        cGVydCI+CiAgICAgICAgPGRpdiBjbGFzcz0idG9waWMtbmFtZSI+CiAgICAg
+        ICAgICAgIExpbmtlZEluCiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICAg
+        IAogICAgICAgIDxkaXYgY2xhc3M9ImV4cGVydGlzZSBpcy1wdWJsaWMiPgog
+        ICAgICAgICAgICA8ZGl2IGNsYXNzPSJ0b3AtZXhwZXJ0LXN0YXIiPgogICAg
+        ICAgICAgICAgICAgPHN2ZyBjbGFzcz0iaWNvbi1zdGFyIHN2Zy1pY29uIiB2
+        ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2
+        ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsi
+        IHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDggNDgiIGVuYWJsZS1i
+        YWNrZ3JvdW5kPSJuZXcgMCAwIDQ4IDQ4IiB4bWw6c3BhY2U9InByZXNlcnZl
+        Ij4KPGcgaWQ9ImdseXBoaWNvbnMiPgogICAgPGcgaWQ9InN0YXIiPgogICAg
+        ICAgIDxwYXRoIGQ9Ik0zNi45MDYsMjFoLTkuNDM4bC0yLjkyMi05bC0yLjk3
+        MSw5SDEybDcuNzU3LDUuNDU1bC0yLjkxMyw4Ljg2Mmw3LjY0OC01LjU2NGw3
+        LjY3OSw1LjUwOGwtMi45MDktOC44NUwzNi45MDYsMjF6Ii8+CiAgICA8L2c+
+        CjwvZz4KPC9zdmc+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8
+        ZGl2IGNsYXNzPSJleHBlcnQtdGV4dCI+RXhwZXJ0PC9kaXY+CiAgICAgICAg
+        PC9kaXY+CiAgICAKICAgIDxkaXYgY2xhc3M9ImRlbGV0ZS10b3BpYyI+CiAg
+        ICAgICAgPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3Lncz
+        Lm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3Jn
+        LzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgogICAgIHZpZXdCb3g9Ii0y
+        Mi45IC0xLjIgMjcuNSAyNS43IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC0y
+        Mi45IC0xLjIgMjcuNSAyNS43IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGNp
+        cmNsZSBjeD0iLTkiIGN5PSIxMSIgcj0iOS41Ii8+Cjxwb2x5Z29uIGZpbGw9
+        IiNGRkZGRkYiIHBvaW50cz0iLTQsNy4yIC01LjIsNiAtOSw5LjggLTEyLjgs
+        NiAtMTQsNy4yIC0xMC4yLDExIC0xNCwxNC44IC0xMi44LDE2IC05LDEyLjIg
+        LTUuMiwxNiAtNCwxNC44IC03LjgsMTEiLz4KPC9zdmc+CiAgICA8L2Rpdj4K
+        PC9kaXY+CiAgICAgICAgCiAgICAgICAgICAgIAo8ZGl2IGNsYXNzPSJ0b3Bp
+        Yy1waWxsIiBpZD0ibWFya2V0aW5nIj4KICAgIDxkaXYgY2xhc3M9InByb2Zp
+        bGUtdG9waWMgZXhwZXJ0Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJ0b3BpYy1u
+        YW1lIj4KICAgICAgICAgICAgTWFya2V0aW5nCiAgICAgICAgPC9kaXY+CiAg
+        ICA8L2Rpdj4KICAgIAogICAgICAgIDxkaXYgY2xhc3M9ImV4cGVydGlzZSBp
+        cy1wdWJsaWMiPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJ0b3AtZXhwZXJ0
+        LXN0YXIiPgogICAgICAgICAgICAgICAgPHN2ZyBjbGFzcz0iaWNvbi1zdGFy
+        IHN2Zy1pY29uIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3Lncz
+        Lm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3Jn
+        LzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDgg
+        NDgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ4IDQ4IiB4bWw6c3Bh
+        Y2U9InByZXNlcnZlIj4KPGcgaWQ9ImdseXBoaWNvbnMiPgogICAgPGcgaWQ9
+        InN0YXIiPgogICAgICAgIDxwYXRoIGQ9Ik0zNi45MDYsMjFoLTkuNDM4bC0y
+        LjkyMi05bC0yLjk3MSw5SDEybDcuNzU3LDUuNDU1bC0yLjkxMyw4Ljg2Mmw3
+        LjY0OC01LjU2NGw3LjY3OSw1LjUwOGwtMi45MDktOC44NUwzNi45MDYsMjF6
+        Ii8+CiAgICA8L2c+CjwvZz4KPC9zdmc+CiAgICAgICAgICAgIDwvZGl2Pgog
+        ICAgICAgICAgICA8ZGl2IGNsYXNzPSJleHBlcnQtdGV4dCI+RXhwZXJ0PC9k
+        aXY+CiAgICAgICAgPC9kaXY+CiAgICAKICAgIDxkaXYgY2xhc3M9ImRlbGV0
+        ZS10b3BpYyI+CiAgICAgICAgPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJo
+        dHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6
+        Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgogICAg
+        IHZpZXdCb3g9Ii0yMi45IC0xLjIgMjcuNSAyNS43IiBlbmFibGUtYmFja2dy
+        b3VuZD0ibmV3IC0yMi45IC0xLjIgMjcuNSAyNS43IiB4bWw6c3BhY2U9InBy
+        ZXNlcnZlIj4KPGNpcmNsZSBjeD0iLTkiIGN5PSIxMSIgcj0iOS41Ii8+Cjxw
+        b2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iLTQsNy4yIC01LjIsNiAt
+        OSw5LjggLTEyLjgsNiAtMTQsNy4yIC0xMC4yLDExIC0xNCwxNC44IC0xMi44
+        LDE2IC05LDEyLjIgLTUuMiwxNiAtNCwxNC44IC03LjgsMTEiLz4KPC9zdmc+
+        CiAgICA8L2Rpdj4KPC9kaXY+CiAgICAgICAgCiAgICAgICAgICAgIAo8ZGl2
+        IGNsYXNzPSJ0b3BpYy1waWxsIiBpZD0iaW50ZXJuZXQtbWFya2V0aW5nIj4K
+        ICAgIDxkaXYgY2xhc3M9InByb2ZpbGUtdG9waWMgIj4KICAgICAgICA8ZGl2
+        IGNsYXNzPSJ0b3BpYy1uYW1lIj4KICAgICAgICAgICAgRGlnaXRhbCBNYXJr
+        ZXRpbmcKICAgICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAgCiAgICA8ZGl2
+        IGNsYXNzPSJkZWxldGUtdG9waWMiPgogICAgICAgIDxzdmcgdmVyc2lvbj0i
+        MS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5z
+        OnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgi
+        IHk9IjBweCIKICAgICB2aWV3Qm94PSItMjIuOSAtMS4yIDI3LjUgMjUuNyIg
+        ZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAtMjIuOSAtMS4yIDI3LjUgMjUuNyIg
+        eG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxjaXJjbGUgY3g9Ii05IiBjeT0iMTEi
+        IHI9IjkuNSIvPgo8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ii00
+        LDcuMiAtNS4yLDYgLTksOS44IC0xMi44LDYgLTE0LDcuMiAtMTAuMiwxMSAt
+        MTQsMTQuOCAtMTIuOCwxNiAtOSwxMi4yIC01LjIsMTYgLTQsMTQuOCAtNy44
+        LDExIi8+Cjwvc3ZnPgogICAgPC9kaXY+CjwvZGl2PgogICAgICAgIAogICAg
+        ICAgICAgICAKPGRpdiBjbGFzcz0idG9waWMtcGlsbCIgaWQ9ImZhY2Vib29r
+        Ij4KICAgIDxkaXYgY2xhc3M9InByb2ZpbGUtdG9waWMgIj4KICAgICAgICA8
+        ZGl2IGNsYXNzPSJ0b3BpYy1uYW1lIj4KICAgICAgICAgICAgRmFjZWJvb2sK
+        ICAgICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAgCiAgICA8ZGl2IGNsYXNz
+        PSJkZWxldGUtdG9waWMiPgogICAgICAgIDxzdmcgdmVyc2lvbj0iMS4xIiB4
+        bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5r
+        PSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBw
+        eCIKICAgICB2aWV3Qm94PSItMjIuOSAtMS4yIDI3LjUgMjUuNyIgZW5hYmxl
+        LWJhY2tncm91bmQ9Im5ldyAtMjIuOSAtMS4yIDI3LjUgMjUuNyIgeG1sOnNw
+        YWNlPSJwcmVzZXJ2ZSI+CjxjaXJjbGUgY3g9Ii05IiBjeT0iMTEiIHI9Ijku
+        NSIvPgo8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ii00LDcuMiAt
+        NS4yLDYgLTksOS44IC0xMi44LDYgLTE0LDcuMiAtMTAuMiwxMSAtMTQsMTQu
+        OCAtMTIuOCwxNiAtOSwxMi4yIC01LjIsMTYgLTQsMTQuOCAtNy44LDExIi8+
+        Cjwvc3ZnPgogICAgPC9kaXY+CjwvZGl2PgogICAgICAgIAogICAgPC9kaXY+
+        CgogICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAg
+        CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9kaXY+
+        CjwvZGl2PgogICAgICAgIAogICAgPC9kaXY+CiAgICAKICAgICAgICA8ZGl2
+        IGNsYXNzPSJoaWRkZW4tbW9tZW50cyI+CiAgICA8YSBocmVmPSIvIj5TaWdu
+        IGluPC9hPiB0byB2aWV3IHdoYXQgRXJpYyBNeWVycyBoYXMgYmVlbiB1cCB0
+        byBvbiB0aGVpciBzb2NpYWwgY2hhbm5lbHMhCjwvZGl2PgogICAgCjwvZGl2
+        PgogICAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgICAKICAgIDxzY3JpcHQg
+        dHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii9qcy92ZW5kb3IvZXh0ZXI3
+        LmpzIj48L3NjcmlwdD4KCgo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlw
+        dCIgc3JjPSIvL3BsYXRmb3JtLnR3aXR0ZXIuY29tL3dpZGdldHMuanMiPjwv
+        c2NyaXB0PgoKICAgIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4K
+        ICAgIChmdW5jdGlvbih3KSB7CiAgICAgICAgdy5hbXBoZXRhbWluZSA9IHcu
+        YW1waGV0YW1pbmUgfHwge307CiAgICAgICAgYW1waGV0YW1pbmUuY29uZmln
+        ID0gewogICAgICAgICAgICBtaXhwYW5lbDogeyJvdmVyYWxsIjoiNTYxM2E1
+        ZWU1MGMxYjUyZGJkYWY1NTAzODhjNDUwNjciLCJ2aXJhbFNlbmQiOiI0YmQ1
+        NTk4MzM2MzFhNDJjZDQwOWYwYWQ2OWVmYTRiMyIsInZpcmFsQ2xpY2siOiI4
+        Yzk3N2E2ODhhNTNjYmU4OWE3ZTA0NjkxNmFiMTI5YSIsInZpcmFsU3VibWl0
+        IjoiOWU2NzExNjRkNDVlZDljNjBiMGIwZTMwMTUzMmZkMmEiLCJudXgiOiJl
+        NTNkNTAwNjhhMjM5ZTQwZWUxNGZlMWZmOWZmYjM4YSIsInZpcmFsVGVzdHMi
+        OiJhMDliMmNkZGU1NDZiZDY5NzJjNzFhYTM4MDkwMmE1MSIsImNsaWNrIjoi
+        MTI0ZDFkZDljYTA4MDZlNzkyYjk5NWI2ODg0YjE1OTYiLCJpbXByZXNzaW9u
+        IjoiMGUxYWU3YmVhNzUxZDM3MjI1ZWU1YTdhYzViMGZjZDIiLCJpbXByZXNz
+        aW9ucyI6IjBlMWFlN2JlYTc1MWQzNzIyNWVlNWE3YWM1YjBmY2QyIiwicGx1
+        c0siOiJkZDcyZjQzMjZjN2JhMjVjZGIwMmRkMjA3NDI3MzAwMyIsImhvbWVw
+        YWdlVGVzdHMiOiIzZDlkMzBmZTNhNmVmNDRkMDJjNDE1MDRlOTczYzVjZCIs
+        Im5vdGlmcyI6IjVlNWU4Nzk3NTY0ZWMyMjI1MGEzY2YwMmM2ZDQ2M2I3Iiwi
+        b3B0b3V0IjoiMjJlM2VlMDE3ODViZWVhYzdkNjM5YTFjNmRjYmY1YzQiLCJk
+        YXNoYm9hcmRUZXN0cyI6IjE2NjQ2NmU5ZWQ0YWIwYWRmYjIzMDkzNWVhMjc3
+        MGU2IiwiYWR2aWNlLXdlYiI6IjAyYjZhNTk0ODc0ZDhmYzUzZjQ1NjMxN2Y0
+        ZTcxOTAzIiwia2xvdXRNb2JpbGUiOiI0M2MyNmM3NjA4MzQ1NTQ0MjJlM2U0
+        YTAyNDcyZjJlNSIsInBlcmtzVGVzdHMiOiI2MjgzZGMxY2RiZTk1NTIwOWEw
+        OGMxYmZmZjFlZjg4NyIsImtsb3V0IjoiNzUzMTg1NDA4MzkwMzBjNTg1Y2Y3
+        MjEyNjIxZGRlZTYiLCJrbG91dFRyYW5zZmVyIjoiZTZiNjQxYjYwOWY2ODhl
+        MWQ0ZGM2Njg3NDMwNTFhMDciLCJrbG91dE1vYmlsZVYxIjoiNjZmNWJiN2Ex
+        MWZhNzJhZDVlYzdmNjYwYjJkMzRmNTIiLCJzdGFnaW5nIjoiOTZkOGFmNzM5
+        MDNjYTcwNjRlNzIzY2QwNTJiYjBlYjIifQogICAgICAgIH07CiAgICAgICAg
+        YW1waGV0YW1pbmUuY29uZmlnLm1peHBhbmVsUHJvcGVydGllcyA9IHsidHJh
+        ZmZpY19pZCI6MSwibGFzdF91dG1fc291cmNlIjoiZGlyZWN0In07CiAgICAg
+        ICAgYW1waGV0YW1pbmUuY29uZmlnLmhvc3QgPSBsb2NhdGlvbi5wcm90b2Nv
+        bCArICcvLycgKyBsb2NhdGlvbi5ob3N0bmFtZSArIChsb2NhdGlvbi5wb3J0
+        ID8gJzonICsgbG9jYXRpb24ucG9ydCA6ICcnKTsKICAgICAgICBhbXBoZXRh
+        bWluZS5jb25maWcuZGV2ID0gZmFsc2U7CiAgICAgICAgYW1waGV0YW1pbmUu
+        Y29uZmlnLmZiQXBwSWQgPSAxMjgwODU4OTcyMTMzOTU7CiAgICAgICAgYW1w
+        aGV0YW1pbmUuY29uZmlnLnN0YXRpY1NlcnZlciA9ICcvJzsKICAgICAgICBh
+        bXBoZXRhbWluZS5jb25maWcuZW1haWxSZWdleCA9IC9eKChbQS1aYS16MC05
+        XSl8KFx3Wy1cd1wuXCtdKltcd1wrXSkpQChbLUEtWmEtejAtOV0rXC4pK1tB
+        LVphLXpdezIsNn0kLzsKICAgICAgICBhbXBoZXRhbWluZS5jb25maWcuc3Bl
+        Y2lhbENoYXJzUmVnZXggPSAvWy0hQCNcJCVeJiooKV8rfH49YHt9XFtcXToi
+        Oyc8Pj8sLlwvXS87CiAgICAgICAgYW1waGV0YW1pbmUudXNlciA9IHsga3NV
+        SUQ6IG51bGwgfTsKICAgICAgICBhbXBoZXRhbWluZS51c2VyLnRlc3RHcm91
+        cHMgPSBhbXBoZXRhbWluZS51c2VyLnRlc3RHcm91cHMgfHwge307CiAgICAg
+        ICAgYW1waGV0YW1pbmUuY29uZmlnLnBocmFzZXMgPSB7ImNvdW50cnlMaXN0
+        Ijp7IkFYIjoiQWFsYW5kIElzbGFuZHMiLCJBRiI6IkFmZ2hhbmlzdGFuIiwi
+        QUwiOiJBbGJhbmlhIiwiRFoiOiJBbGdlcmlhIiwiQVMiOiJBbWVyaWNhbiBT
+        YW1vYSIsIkFEIjoiQW5kb3JyYSIsIkFPIjoiQW5nb2xhIiwiQUkiOiJBbmd1
+        aWxsYSIsIkFRIjoiQW50YXJjdGljYSIsIkFHIjoiQW50aWd1YSBBbmQgQmFy
+        YnVkYSIsIkFSIjoiQXJnZW50aW5hIiwiQU0iOiJBcm1lbmlhIiwiQVciOiJB
+        cnViYSIsIkFVIjoiQXVzdHJhbGlhIiwiQVQiOiJBdXN0cmlhIiwiQVoiOiJB
+        emVyYmFpamFuIiwiQlMiOiJCYWhhbWFzIiwiQkgiOiJCYWhyYWluIiwiQkQi
+        OiJCYW5nbGFkZXNoIiwiQkIiOiJCYXJiYWRvcyIsIkJZIjoiQmVsYXJ1cyIs
+        IkJFIjoiQmVsZ2l1bSIsIkJaIjoiQmVsaXplIiwiQkoiOiJCZW5pbiIsIkJN
+        IjoiQmVybXVkYSIsIkJUIjoiQmh1dGFuIiwiQk8iOiJCb2xpdmlhIiwiQkEi
+        OiJCb3NuaWEgQW5kIEhlcnplZ293aW5hIiwiQlciOiJCb3Rzd2FuYSIsIkJW
+        IjoiQm91dmV0IElzbGFuZCIsIkJSIjoiQnJhemlsIiwiSU8iOiJCcml0aXNo
+        IEluZGlhbiBPY2VhbiBUZXJyaXRvcnkiLCJCTiI6IkJydW5laSBEYXJ1c3Nh
+        bGFtIiwiQkciOiJCdWxnYXJpYSIsIkJGIjoiQnVya2luYSBGYXNvIiwiQkki
+        OiJCdXJ1bmRpIiwiS0giOiJDYW1ib2RpYSIsIkNNIjoiQ2FtZXJvb24iLCJD
+        QSI6IkNhbmFkYSIsIkNWIjoiQ2FwZSBWZXJkZSIsIktZIjoiQ2F5bWFuIElz
+        bGFuZHMiLCJDRiI6IkNlbnRyYWwgQWZyaWNhbiBSZXB1YmxpYyIsIlREIjoi
+        Q2hhZCIsIkNMIjoiQ2hpbGUiLCJDTiI6IkNoaW5hIiwiQ1giOiJDaHJpc3Rt
+        YXMgSXNsYW5kIiwiQ0MiOiJDb2NvcyAoS2VlbGluZykgSXNsYW5kcyIsIkNP
+        IjoiQ29sb21iaWEiLCJLTSI6IkNvbW9yb3MiLCJDRCI6IkNvbmdvLCBEZW1v
+        Y3JhdGljIFJlcHVibGljIE9mIiwiQ0ciOiJDb25nbywgUmVwdWJsaWMgT2Yi
+        LCJDSyI6IkNvb2sgSXNsYW5kcyIsIkNSIjoiQ29zdGEgUmljYSIsIkNJIjoi
+        Q290ZSBEJmFwb3M7aXZvaXJlIiwiSFIiOiJDcm9hdGlhIiwiQ1UiOiJDdWJh
+        IiwiQ1kiOiJDeXBydXMiLCJDWiI6IkN6ZWNoIFJlcHVibGljIiwiREsiOiJE
+        ZW5tYXJrIiwiREoiOiJEamlib3V0aSIsIkRNIjoiRG9taW5pY2EiLCJETyI6
+        IkRvbWluaWNhbiBSZXB1YmxpYyIsIkVDIjoiRWN1YWRvciIsIkVHIjoiRWd5
+        cHQiLCJTViI6IkVsIFNhbHZhZG9yIiwiR1EiOiJFcXVhdG9yaWFsIEd1aW5l
+        YSIsIkVSIjoiRXJpdHJlYSIsIkVFIjoiRXN0b25pYSIsIkVUIjoiRXRoaW9w
+        aWEiLCJGSyI6IkZhbGtsYW5kIElzbGFuZHMgKE1hbHZpbmFzKSIsIkZPIjoi
+        RmFyb2UgSXNsYW5kcyIsIkZKIjoiRmlqaSIsIkZJIjoiRmlubGFuZCIsIkZS
+        IjoiRnJhbmNlIiwiR0YiOiJGcmVuY2ggR3VpYW5hIiwiUEYiOiJGcmVuY2gg
+        UG9seW5lc2lhIiwiVEYiOiJGcmVuY2ggU291dGhlcm4gVGVycml0b3JpZXMi
+        LCJHQSI6IkdhYm9uIiwiR00iOiJHYW1iaWEiLCJHRSI6Ikdlb3JnaWEiLCJE
+        RSI6Ikdlcm1hbnkiLCJHSCI6IkdoYW5hIiwiR0kiOiJHaWJyYWx0YXIiLCJH
+        UiI6IkdyZWVjZSIsIkdMIjoiR3JlZW5sYW5kIiwiR0QiOiJHcmVuYWRhIiwi
+        R1AiOiJHdWFkZWxvdXBlIiwiR1UiOiJHdWFtIiwiR1QiOiJHdWF0ZW1hbGEi
+        LCJHTiI6Ikd1aW5lYSIsIkdXIjoiR3VpbmVhLWJpc3NhdSIsIkdZIjoiR3V5
+        YW5hIiwiSFQiOiJIYWl0aSIsIkhNIjoiSGVhcmQgQW5kIE1jIERvbmFsZCBJ
+        c2xhbmRzIiwiSE4iOiJIb25kdXJhcyIsIkhLIjoiSG9uZyBLb25nIiwiSFUi
+        OiJIdW5nYXJ5IiwiSVMiOiJJY2VsYW5kIiwiSU4iOiJJbmRpYSIsIklEIjoi
+        SW5kb25lc2lhIiwiSVIiOiJJcmFuIChJc2xhbWljIFJlcHVibGljIE9mKSIs
+        IklRIjoiSXJhcSIsIklFIjoiSXJlbGFuZCIsIklMIjoiSXNyYWVsIiwiSVQi
+        OiJJdGFseSIsIkpNIjoiSmFtYWljYSIsIkpQIjoiSmFwYW4iLCJKTyI6Ikpv
+        cmRhbiIsIktaIjoiS2F6YWtoc3RhbiIsIktFIjoiS2VueWEiLCJLSSI6Iktp
+        cmliYXRpIiwiS1AiOiJLb3JlYSwgRGVtb2NyYXRpYyBQZW9wbGUmYXBvcztz
+        IFJlcHVibGljIE9mIiwiS1IiOiJLb3JlYSwgUmVwdWJsaWMgT2YiLCJLViI6
+        Iktvc292byIsIktXIjoiS3V3YWl0IiwiS0ciOiJLeXJneXpzdGFuIiwiTEEi
+        OiJMYW8gUGVvcGxlJmFwb3M7cyBEZW1vY3JhdGljIFJlcHVibGljIiwiTFYi
+        OiJMYXR2aWEiLCJMQiI6IkxlYmFub24iLCJMUyI6Ikxlc290aG8iLCJMUiI6
+        IkxpYmVyaWEiLCJMWSI6IkxpYnlhbiBBcmFiIEphbWFoaXJpeWEiLCJMSSI6
+        IkxpZWNodGVuc3RlaW4iLCJMVCI6IkxpdGh1YW5pYSIsIkxVIjoiTHV4ZW1i
+        b3VyZyIsIk1PIjoiTWFjYXUiLCJNSyI6Ik1hY2Vkb25pYSwgVGhlIEZvcm1l
+        ciBZdWdvc2xhdiBSZXB1YmxpYyBPZiIsIk1HIjoiTWFkYWdhc2NhciIsIk1X
+        IjoiTWFsYXdpIiwiTVkiOiJNYWxheXNpYSIsIk1WIjoiTWFsZGl2ZXMiLCJN
+        TCI6Ik1hbGkiLCJNVCI6Ik1hbHRhIiwiTUgiOiJNYXJzaGFsbCBJc2xhbmRz
+        IiwiTVEiOiJNYXJ0aW5pcXVlIiwiTVIiOiJNYXVyaXRhbmlhIiwiTVUiOiJN
+        YXVyaXRpdXMiLCJZVCI6Ik1heW90dGUiLCJNWCI6Ik1leGljbyIsIkZNIjoi
+        TWljcm9uZXNpYSwgRmVkZXJhdGVkIFN0YXRlcyBPZiIsIk1EIjoiTW9sZG92
+        YSwgUmVwdWJsaWMgT2YiLCJNQyI6Ik1vbmFjbyIsIk1OIjoiTW9uZ29saWEi
+        LCJNUyI6Ik1vbnRzZXJyYXQiLCJNQSI6Ik1vcm9jY28iLCJNWiI6Ik1vemFt
+        YmlxdWUiLCJNTSI6Ik15YW5tYXIiLCJOQSI6Ik5hbWliaWEiLCJOUiI6Ik5h
+        dXJ1IiwiTlAiOiJOZXBhbCIsIk5MIjoiTmV0aGVybGFuZHMiLCJBTiI6Ik5l
+        dGhlcmxhbmRzIEFudGlsbGVzIiwiTkMiOiJOZXcgQ2FsZWRvbmlhIiwiTloi
+        OiJOZXcgWmVhbGFuZCIsIk5JIjoiTmljYXJhZ3VhIiwiTkUiOiJOaWdlciIs
+        Ik5HIjoiTmlnZXJpYSIsIk5VIjoiTml1ZSIsIk5GIjoiTm9yZm9sayBJc2xh
+        bmQiLCJNUCI6Ik5vcnRoZXJuIE1hcmlhbmEgSXNsYW5kcyIsIk5PIjoiTm9y
+        d2F5IiwiT00iOiJPbWFuIiwiUEsiOiJQYWtpc3RhbiIsIlBXIjoiUGFsYXUi
+        LCJQUyI6IlBhbGVzdGluaWFuIFRlcnJpdG9yeSwgT2NjdXBpZWQiLCJQQSI6
+        IlBhbmFtYSIsIlBHIjoiUGFwdWEgTmV3IEd1aW5lYSIsIlBZIjoiUGFyYWd1
+        YXkiLCJQRSI6IlBlcnUiLCJQSCI6IlBoaWxpcHBpbmVzIiwiUE4iOiJQaXRj
+        YWlybiIsIlBMIjoiUG9sYW5kIiwiUFQiOiJQb3J0dWdhbCIsIlBSIjoiUHVl
+        cnRvIFJpY28iLCJRQSI6IlFhdGFyIiwiUkUiOiJSZXVuaW9uIiwiUk8iOiJS
+        b21hbmlhIiwiUlUiOiJSdXNzaWFuIEZlZGVyYXRpb24iLCJSVyI6IlJ3YW5k
+        YSIsIlNIIjoiU2FpbnQgSGVsZW5hIiwiS04iOiJTYWludCBLaXR0cyBBbmQg
+        TmV2aXMiLCJMQyI6IlNhaW50IEx1Y2lhIiwiUE0iOiJTYWludCBQaWVycmUg
+        QW5kIE1pcXVlbG9uIiwiVkMiOiJTYWludCBWaW5jZW50IEFuZCBUaGUgR3Jl
+        bmFkaW5lcyIsIldTIjoiU2Ftb2EiLCJTTSI6IlNhbiBNYXJpbm8iLCJTVCI6
+        IlNhbyBUb21lIEFuZCBQcmluY2lwZSIsIlNBIjoiU2F1ZGkgQXJhYmlhIiwi
+        U04iOiJTZW5lZ2FsIiwiQ1MiOiJTZXJiaWEgQW5kIE1vbnRlbmVncm8iLCJT
+        QyI6IlNleWNoZWxsZXMiLCJTTCI6IlNpZXJyYSBMZW9uZSIsIlNHIjoiU2lu
+        Z2Fwb3JlIiwiU0siOiJTbG92YWtpYSIsIlNJIjoiU2xvdmVuaWEiLCJTQiI6
+        IlNvbG9tb24gSXNsYW5kcyIsIlNPIjoiU29tYWxpYSIsIlpBIjoiU291dGgg
+        QWZyaWNhIiwiR1MiOiJTb3V0aCBHZW9yZ2lhIEFuZCBUaGUgU291dGggU2Fu
+        ZHdpY2ggSXNsYW5kcyIsIkVTIjoiU3BhaW4iLCJMSyI6IlNyaSBMYW5rYSIs
+        IlNEIjoiU3VkYW4iLCJTUiI6IlN1cmluYW1lIiwiU0oiOiJTdmFsYmFyZCBB
+        bmQgSmFuIE1heWVuIElzbGFuZHMiLCJTWiI6IlN3YXppbGFuZCIsIlNFIjoi
+        U3dlZGVuIiwiQ0giOiJTd2l0emVybGFuZCIsIlNZIjoiU3lyaWFuIEFyYWIg
+        UmVwdWJsaWMiLCJUVyI6IlRhaXdhbiIsIlRKIjoiVGFqaWtpc3RhbiIsIlRa
+        IjoiVGFuemFuaWEsIFVuaXRlZCBSZXB1YmxpYyBPZiIsIlRIIjoiVGhhaWxh
+        bmQiLCJUTCI6IlRpbW9yLWxlc3RlIiwiVEciOiJUb2dvIiwiVEsiOiJUb2tl
+        bGF1IiwiVE8iOiJUb25nYSIsIlRUIjoiVHJpbmlkYWQgQW5kIFRvYmFnbyIs
+        IlROIjoiVHVuaXNpYSIsIlRSIjoiVHVya2V5IiwiVE0iOiJUdXJrbWVuaXN0
+        YW4iLCJUQyI6IlR1cmtzIEFuZCBDYWljb3MgSXNsYW5kcyIsIlRWIjoiVHV2
+        YWx1IiwiVUciOiJVZ2FuZGEiLCJVQSI6IlVrcmFpbmUiLCJBRSI6IlVuaXRl
+        ZCBBcmFiIEVtaXJhdGVzIiwiR0IiOiJVbml0ZWQgS2luZ2RvbSIsIlVNIjoi
+        VW5pdGVkIFN0YXRlcyBNaW5vciBPdXRseWluZyBJc2xhbmRzIiwiVVMiOiJV
+        bml0ZWQgU3RhdGVzIiwiVVkiOiJVcnVndWF5IiwiVVoiOiJVemJla2lzdGFu
+        IiwiVlUiOiJWYW51YXR1IiwiVkEiOiJWYXRpY2FuIENpdHkgU3RhdGUgKEhv
+        bHkgU2VlKSIsIlZFIjoiVmVuZXp1ZWxhIiwiVk4iOiJWaWV0bmFtIiwiVkci
+        OiJWaXJnaW4gSXNsYW5kcyAoQnJpdGlzaCkiLCJWSSI6IlZpcmdpbiBJc2xh
+        bmRzIChVLnMuKSIsIldGIjoiV2FsbGlzIEFuZCBGdXR1bmEgSXNsYW5kcyIs
+        IkVIIjoiV2VzdGVybiBTYWhhcmEiLCJZRSI6IlllbWVuIiwiWk0iOiJaYW1i
+        aWEiLCJaVyI6IlppbWJhYndlIn0sImNyZWF0ZSI6eyJwb3N0LWVycm9yIjp7
+        InNlbmRpbmciOiJVaCBvaC4gVGhlcmUgd2FzIGFuIGVycm9yIHNlbmRpbmcg
+        eW91ciBwb3N0LiIsInNjaGVkdWxpbmciOiJVaCBvaC4gVGhlcmUgd2FzIGFu
+        IGVycm9yIHNjaGVkdWxpbmcgeW91ciBwb3N0LiJ9fSwiY29udGVzdFBlcmsi
+        OnsiY2hyeXNsZXItY29udGVzdCI6eyJzaGFyZVR3IjoiU2hhcmUgb24gVHdp
+        dHRlciIsInNoYXJlRmIiOiJTaGFyZSBvbiBGYWNlYm9vayJ9LCJndW5zLW4t
+        cm9zZXMtY29udGVzdCI6eyJzaGFyZVR3IjoiU2hhcmUgb24gVHdpdHRlciIs
+        InNoYXJlRmIiOiJTaGFyZSBvbiBGYWNlYm9vayJ9fSwiZGF0ZVBpY2tlciI6
+        eyJkYXRlLXBpY2tlci10aW1lLXBpY2tlciI6eyJwbSI6IlBNIiwiYW0iOiJB
+        TSIsImN1c3RvbSI6IlNldCBhIGN1c3RvbSB0aW1lOiJ9fSwiZXJyb3JzIjp7
+        InRvcGljLWFkZC1lcnJvciI6eyJub3RhcHByb3ByaWF0ZSI6IiV7dG9waWN9
+        IGlzIG5vdCBhbiBhcHByb3ByaWF0ZSB0b3BpYyBmb3IgJXtmaXJzdE5hbWV9
+        LiBQbGVhc2UgdHJ5IGFkZGluZyBhIGRpZmZlcmVudCB0b3BpYy4ifSwiaW52
+        YWxpZC1leHBsb3JlLXRvcGljIjoiVGhlIHRvcGljICV7dG9waWN9IGRvZXMg
+        bm90IGV4aXN0IHlldC4ifSwiZXhwbG9yZSI6eyJsb2dnZWQtb3V0LWV4cGFu
+        ZGVkLWNvbnRlbnQtaXRlbSI6eyJwcm9tb3RlZEJ5IjoiUHJvbW90ZWQgQnkg
+        JXticmFuZE5hbWV9IiwiZXhwbGFuYXRpb24iOnsidHJlbmRpbmciOiJUaGlz
+        IGlzIHN0YXJ0aW5nIHRvIHRyZW5kICV7dmFsdWV9eCBhYm92ZSB0aGUgYXZl
+        cmFnZSBzaGFyZSByYXRlLiIsImZyZXNoIjoiVGhpcyBhcnRpY2xlIHdhcyBw
+        dWJsaXNoZWQgJXt2YWx1ZX0gaG91ciBhZ28uIiwiZnJlc2hQbHVyYWwiOiJU
+        aGlzIGFydGljbGUgd2FzIHB1Ymxpc2hlZCAle3ZhbHVlfSBob3VycyBhZ28u
+        IiwiYmxhc3QtZnJvbS10aGUtcGFzdCI6IlRoaXMgaXMgYSBwb3B1bGFyIGFy
+        dGljbGUgeW91IG1heSBoYXZlIG1pc3NlZC4iLCJ1bmRpc2NvdmVyZWQiOiJP
+        bmx5IGEgJXt2YWx1ZX0lIGNoYW5jZSB5b3VyIGF1ZGllbmNlIGhhcyBzZWVu
+        IHRoaXMgbGluay4iLCJjcm93ZC1wbGVhc2VyIjoiT3ZlciAle3ZhbHVlfSUg
+        b2YgeW91ciBUd2l0dGVyIGF1ZGllbmNlIGlzIGludGVyZXN0ZWQgaW4gdGhp
+        cyB0b3BpYy4iLCJmYi1jcm93ZC1wbGVhc2VyIjoiT3ZlciAle3ZhbHVlfSUg
+        b2YgeW91ciBGYWNlYm9vayBhdWRpZW5jZSBpcyBpbnRlcmVzdGVkIGluIHRo
+        aXMgdG9waWMuIn19LCJzcGVjaWZpYy10b3BpYy1oZWFkZXIiOnsibWF4VG9w
+        aWNzIjoiWW91JmFwb3M7dmUgcmVhY2hlZCA8c3BhbiBjbGFzcz1cImVtcGhh
+        c2lzXCI+JXttYXhUb3BpY3N9LyV7bWF4VG9waWNzfTwvc3Bhbj4gdG9waWNz
+        IGluIHlvdXIgcHJvZmlsZS4ifSwiZXhwYW5kZWQtY29udGVudC1pdGVtIjp7
+        InByb21vdGVkQnkiOiJQcm9tb3RlZCBCeSAle2JyYW5kTmFtZX0iLCJleHBs
+        YW5hdGlvbiI6eyJ0cmVuZGluZyI6IlRoaXMgaXMgc3RhcnRpbmcgdG8gdHJl
+        bmQgJXt2YWx1ZX14IGFib3ZlIHRoZSBhdmVyYWdlIHNoYXJlIHJhdGUuIiwi
+        ZnJlc2giOiJUaGlzIGFydGljbGUgd2FzIHB1Ymxpc2hlZCAle3ZhbHVlfSBo
+        b3VyIGFnby4iLCJmcmVzaFBsdXJhbCI6IlRoaXMgYXJ0aWNsZSB3YXMgcHVi
+        bGlzaGVkICV7dmFsdWV9IGhvdXJzIGFnby4iLCJibGFzdC1mcm9tLXRoZS1w
+        YXN0IjoiVGhpcyBpcyBhIHBvcHVsYXIgYXJ0aWNsZSB5b3UgbWF5IGhhdmUg
+        bWlzc2VkLiIsInVuZGlzY292ZXJlZCI6Ik9ubHkgYSAle3ZhbHVlfSUgY2hh
+        bmNlIHlvdXIgYXVkaWVuY2UgaGFzIHNlZW4gdGhpcyBsaW5rLiIsImNyb3dk
+        LXBsZWFzZXIiOiJPdmVyICV7dmFsdWV9JSBvZiB5b3VyIFR3aXR0ZXIgYXVk
+        aWVuY2UgaXMgaW50ZXJlc3RlZCBpbiB0aGlzIHRvcGljLiIsImZiLWNyb3dk
+        LXBsZWFzZXIiOiJPdmVyICV7dmFsdWV9JSBvZiB5b3VyIEZhY2Vib29rIGF1
+        ZGllbmNlIGlzIGludGVyZXN0ZWQgaW4gdGhpcyB0b3BpYy4ifSwidG9kYXki
+        OiJUb2RheSJ9LCJoZWFkZXItdG9waWMtYWxlcnQiOnsibm90aWNlVG9wRXhw
+        ZXJ0IjoiWW91JmFwb3M7cmUgYW1vbmdzdCB0aGUgdG9wICV7dG9waWNQZXJj
+        ZW50YWdlfSUgb2YgcGVvcGxlIHRhbGtpbmcgYWJvdXQgJXt0b3BpY0Rpc3Bs
+        YXlOYW1lfS4ifSwidG9waWNzLWV4cGVydGlzZS1hZGQtc3VjY2VzcyI6IiV7
+        dG9waWNEaXNwbGF5TmFtZX0gaGFzIGJlZW4gYWRkZWQgdG8geW91ciBsaXN0
+        IG9mIHRvcGljcyIsInRvcGljcy1leHBlcnRpc2UtYWRkLWVycm9yIjoiJXt0
+        b3BpY0Rpc3BsYXlOYW1lfSBjb3VsZCBub3QgYmUgYWRkZWQgdG8geW91ciBs
+        aXN0IG9mIHRvcGljcyIsImV4cGVydHNJZGVudGlmaWVkIjoiPHNwYW4gY2xh
+        c3M9XCJudW0tZXhwZXJ0c1wiPiV7bnVtRXhwZXJ0c308L3NwYW4+IGV4cGVy
+        dHMgaWRlbnRpZmllZCBieSBLbG91dCBmb3IgdGhpcyB0b3BpYy4iLCJjb250
+        ZW50LWRpc2NvdmVyeS11bmRvLXZvdGUiOnsibGlua1ZvdGVkIjoiVGhlIGxp
+        bmsgaGFzIGJlZW4gJXtkaXJlY3Rpb259dm90ZWQuIn19LCJmbHlvdXQiOnsi
+        cGx1cy1rLWZseW91dCI6eyJoZWFkZXIiOiJZb3UgZ2F2ZSAle3JlY2lwaWVu
+        dE5hbWV9ICtLIGFib3V0ICV7dG9waWNEaXNwbGF5fSIsIndhbGxldCI6Illv
+        dSBoYXZlICV7d2FsbGV0fSArSyA8c3BhbiBjbGFzcz1cInBsdXMtay1tb2R1
+        bGVcIj50byBnaXZlIG90aGVycyB0b2RheSE8L3NwYW4+Iiwibm9XYWxsZXQi
+        OiJZb3UgaGF2ZSAle3dhbGxldH0gK0sgdG8gZ2l2ZSBvdGhlcnMgdG9kYXkh
+        In19LCJpbXBvcnRhbnRNZXNzYWdlcyI6eyJyZWF1dGgiOnsic3VjY2VzcyI6
+        IllvdSBzdWNjZXNzZnVsbHkgcmUtYXV0aG9yaXplZCB5b3VyICV7bmV0d29y
+        a30gYWNjb3VudC4iLCJmYWlsIjoiVW5mb3J0dW5hdGVseSwgd2Ugd2VyZSB1
+        bmFibGUgdG8gcmUtYXV0aG9yaXplIHlvdXIgJXtuZXR3b3JrfSBhY2NvdW50
+        LiA8c3Bhbj5UcnkgYWdhaW48L3NwYW4+PyJ9LCJpbnZhbGlkVG9rZW4iOnsi
+        cmVhdXRoIjoiUGxlYXNlIHJlLWF1dGhvcml6ZSAle25ldHdvcmt9IG5ldHdv
+        cmsgZm9yIGEgbW9yZSBhY2N1cmF0ZSBLbG91dCBTY29yZS4gPHNwYW4+UmVh
+        dXRob3JpemUgbm93PC9zcGFuPi4gfHx8fCBQbGVhc2UgcmUtYXV0aG9yaXpl
+        ICV7bmV0d29ya30gYW5kICV7Y291bnR9IG90aGVyIG5ldHdvcmtzIGZvciBh
+        IG1vcmUgYWNjdXJhdGUgS2xvdXQgU2NvcmUuIDxzcGFuPlJlYXV0aG9yaXpl
+        IG5vdzwvc3Bhbj4uIn0sImRvd25sb2FkLWV4dGVuc2lvbiI6eyJ0aXRsZSI6
+        IkRvd25sb2FkIG91ciA8c3BhbiBjbGFzcz1cImVtXCI+JXticm93c2VyfTwv
+        c3Bhbj4gZXh0ZW5zaW9uIHRvIHNoYXJlIGNvbnRlbnQgZnJvbSBhbGwgb3Zl
+        ciB0aGUgd2ViIHdpdGgganVzdCBvbmUgY2xpY2suIn0sInVuc3VwcG9ydGVk
+        TGFuZ3VhZ2UiOnsibWVzc2FnZSI6IkV4cGVydGlzZSB0b3BpY3MgYW5kIHN1
+        Z2dlc3RlZCBjb250ZW50IHdpbGwgYmUgYXZhaWxhYmxlIGluIEVuZ2xpc2gg
+        c29vbi4ifX0sImludml0ZVN1Z2dlc3Rpb25zIjp7Imludml0ZS1zdWdnZXN0
+        aW9ucyI6eyJmcmllbmRzIjoiJXtmaXJzdE5hbWV9LCB5b3UgaGF2ZSA8c3Bh
+        biBjbGFzcz1cImNvdW50ZXItbGFiZWxcIj4le3NtYXJ0X2NvdW50fTwvc3Bh
+        bj4gZnJpZW5kIG9uIEtsb3V0IHx8fHwgJXtmaXJzdE5hbWV9LCB5b3UgaGF2
+        ZSA8c3BhbiBjbGFzcz1cImNvdW50ZXItbGFiZWxcIj4le3NtYXJ0X2NvdW50
+        fTwvc3Bhbj4gZnJpZW5kcyBvbiBLbG91dCIsImZyaWVuZHNOb05hbWUiOiJZ
+        b3UgaGF2ZSA8c3BhbiBjbGFzcz1cImNvdW50ZXItbGFiZWxcIj4le3NtYXJ0
+        X2NvdW50fTwvc3Bhbj4gZnJpZW5kIG9uIEtsb3V0IHx8fHwgWW91IGhhdmUg
+        PHNwYW4gY2xhc3M9XCJjb3VudGVyLWxhYmVsXCI+JXtzbWFydF9jb3VudH08
+        L3NwYW4+IGZyaWVuZHMgb24gS2xvdXQiLCJub0ZyaWVuZHMiOiIle2ZpcnN0
+        TmFtZX0sIGdyb3cgeW91ciBpbmZsdWVuY2UgbmV0d29yayBvbiBLbG91dCIs
+        Im5vRnJpZW5kc05vTmFtZSI6Ikdyb3cgeW91ciBpbmZsdWVuY2UgbmV0d29y
+        ayBvbiBLbG91dCIsImZiIjoiJXtmaXJzdE5hbWV9LCB5b3UgaGF2ZSBzdWNj
+        ZXNzZnVsbHkgY29ubmVjdGVkIHRvIEZhY2Vib29rLiJ9fSwiaW52aXRlVmll
+        dyI6eyJzZWFyY2hJbnZpdGVIZWFkZXIiOiJUZWxsICV7bmFtZX0gYW5kIG90
+        aGVycyBhYm91dCBLbG91dCIsInNlYXJjaEludml0ZUNhcHRpb24iOiIle25h
+        bWV9IGlzIG5vdCB5ZXQgb24gS2xvdXQuIEludml0ZSAle2ZpcnN0TmFtZX0g
+        YW5kIG90aGVycyB0byBjb21wYXJlIHNjb3JlcyEiLCJwZXJrQ2xhaW1lZEhl
+        YWRlciI6IllvdSBqdXN0IGNsYWltZWQgdGhlICV7cGVya1RpdGxlfSBQZXJr
+        IiwiaW52aXRlRnJpZW5kSGVhZGVyVGV4dCI6IiV7ZnJpZW5kTmFtZX0gYW5k
+        IG90aGVycyBhYm91dCBLbG91dCIsImludml0ZUZyaWVuZENhcHRpb25UZXh0
+        IjoiJXtmcmllbmROYW1lfSBpcyBub3QgeWV0IG9uIEtsb3V0LiBJbnZpdGUg
+        JXtmcmllbmRGaXJzdE5hbWV9IGFuZCBvdGhlcnMgdG8gY29tcGFyZSBzY29y
+        ZXMhIiwia2xvdXQtaXMtYmV0dGVyLXdpdGgtZnJpZW5kcyI6Iktsb3V0IGlz
+        IGJldHRlciB3aXRoIGZyaWVuZHMuIiwidW5yZWdpc3RlcmVkIjoiVW5yZWdp
+        c3RlcmVkIiwiYWxsIjoiQWxsIiwiY29udGludWUiOiJDb250aW51ZSJ9LCJt
+        YW5hZ2VUb3BpY3MiOnsiZWRpdC10b3BpY3MiOnsiZWRpdCI6IkVkaXQiLCJh
+        ZGQiOiJBZGQgVG9waWNzIn19LCJtZXJnZSI6eyJtZXJnZSI6eyJhbHJlYWR5
+        Q29ubmVjdGVkIjoiVGhpcyAle2FjY291bnR9IGFjY291bnQgaGFzIGFscmVh
+        ZHkgYmVlbiBjb25uZWN0ZWQgdG8gS2xvdXQuIiwiYXJlU3VyZSI6IkFyZSB5
+        b3Ugc3VyZSB5b3Ugd2FudCB0byBtZXJnZSB5b3VyIGFjY291bnQgd2l0aCAl
+        e25hbWV9PyJ9fSwibW9kYWwiOnsiZXJyb3ItZGlhbG9nIjp7InVubWVyZ2Vh
+        YmxlIjp7ImZiT3ZlcmxhcCI6IlRoZXJlIHdhcyBhbiBlcnJvciBjb25uZWN0
+        aW5nIHlvdXIgJXthY2NvdW50fSBhY2NvdW50LiBJdCBpcyBhbHJlYWR5IGNv
+        bm5lY3RlZCB0byBhbm90aGVyIEtsb3V0IGFjY291bnQgdGhhdCBoYXMgb3Ro
+        ZXIgbmV0d29ya3MgY29ubmVjdGVkIHRvIGl0IHRoYXQgb3ZlcmxhcCB3aXRo
+        IG5ldHdvcmtzIGNvbm5lY3RlZCB0byB5b3Vycy4ifX0sImZiLWZyaWVuZC1q
+        b2luIjp7ImZyaWVuZE9uS2xvdXQiOnsiZGVzY3JpcHRpb24iOiJHb29kIG5l
+        d3MhIDxhIGNsYXNzPVwicHJvZmlsZS1saW5rXCIgaHJlZj1cIi91c2VyLyV7
+        YWN0b3JOaWNrfVwiPiV7YWN0b3JOYW1lfTwvYT4gaXMgbm93IG9uIEtsb3V0
+        LiIsImluZmx1ZW5jZXIiOiIgIEFkZCAle2FjdG9yRmlyc3ROYW1lfSBhcyBh
+        biBpbmZsdWVuY2VyLiAifX0sImZiSW52aXRlVXNlcklzUmVnaXN0ZXJlZCI6
+        eyJzZW50RmJSZXF1ZXN0IjoiJXthY3Rvck5hbWV9IHNlbnQgeW91IGEgRmFj
+        ZWJvb2sgcmVxdWVzdCIsImluZmx1ZW5jZVJhbmsiOiJNeSBLbG91dCBTY29y
+        ZSBpcyAle2tTY29yZX0uIFdoZXJlIGRvZXMgeW91ciBpbmZsdWVuY2UgcmFu
+        az8iLCJpbmZsdWVuY2VSZWNlbnRseSI6IkRpZCAle2FjdG9yTmFtZX0gaW5m
+        bHVlbmNlIHlvdSByZWNlbnRseT8gR2l2ZSArSyBvciBhZGQgYSB0b3BpYyB0
+        byAle2FjdG9yTmFtZX0mYXBvcztzIHByb2ZpbGUuIiwidmlld1Byb2ZpbGUi
+        OiJWaWV3ICV7YWN0b3JGaXJzdE5hbWV9JmFwb3M7cyBQcm9maWxlIn0sImZl
+        ZWRiYWNrIjp7InN1Ym1pdEZlZWRiYWNrIjoiWW91IGFyZSBzdWJtaXR0aW5n
+        IHRoaXMgZmVlZGJhY2sgYXMgJXt1c2VyRnVsbE5hbWV9LiJ9LCJuZXR3b3Jr
+        RmVlZGJhY2siOnsic3VibWl0RmVlZGJhY2siOiJZb3UgYXJlIHN1Ym1pdHRp
+        bmcgdGhpcyBmZWVkYmFjayBhcyAle3VzZXJGdWxsTmFtZX0uIn0sImludml0
+        ZS1zdWdnZXN0aW9ucy1tb2RhbCI6eyJpbnZpdGVPbmUiOiIle2ludml0ZXN9
+        IGludml0ZSB3YXMgc2VudCB0byB5b3VyIGZyaWVuZC4gQ29udGludWUgdG8g
+        aW52aXRlIG1vcmUuIiwiaW52aXRlTXVsdGlwbGUiOiIle2ludml0ZXN9IGlu
+        dml0ZXMgd2VyZSBzZW50IHRvIHlvdXIgZnJpZW5kcy4gQ29udGludWUgdG8g
+        aW52aXRlIG1vcmUuIn0sIm5ldHdvcmstY29ubmVjdCI6eyJuZXR3b3JrQ29u
+        bmVjdGVkIjoiJXtuZXR3b3JrfSBpcyBub3cgY29ubmVjdGVkLiIsImluY29y
+        cG9yYXRlU2VhcmNoIjoiV2UmYXBvcztyZSB3b3JraW5nIG9uIHdheXMgdG8g
+        aW5jb3Jwb3JhdGUgc2VhcmNoIGludG8geW91ciBLbG91dCBTY29yZS4gV2Um
+        YXBvcztsbCBrZWVwIHlvdSBwb3N0ZWQuIiwic3lzdGVtVXBkYXRlTWVzc2Fn
+        ZSI6IldlIGFwcHJlY2lhdGUgeW91ciBwYXRpZW5jZSBhcyBvdXIgc3lzdGVt
+        cyB1cGRhdGUuIEluZm9ybWF0aW9uIHdpbGwgYmUgcmVmbGVjdGVkIGluIDI0
+        LTQ4IGhvdXJzLiIsInN5c3RlbVVwZGF0ZU1lc3NhZ2VMaSI6IldlIGFwcHJl
+        Y2lhdGUgeW91ciBwYXRpZW5jZSBhcyBvdXIgc3lzdGVtcyB1cGRhdGUuIElu
+        Zm9ybWF0aW9uLCBpbmNsdWRpbmcgeW91ciBqb2IgdGl0bGUsIHdpbGwgYmUg
+        cmVmbGVjdGVkIGluIDI0LTQ4IGhvdXJzLiIsImxvZ2luRnAiOiJUbyBzaWdu
+        IGluIHRvIEtsb3V0IGluIHRoZSBmdXR1cmUsIHVzZSB5b3VyIFR3aXR0ZXIg
+        YWNjb3VudC4gPHN0cm9uZz5GYWNlYm9vayBhbmQgS2xvdXQgZG8gbm90IHN1
+        cHBvcnQgc2lnbmluZyBpbiBhcyBhIEZhY2Vib29rIFBhZ2UuIiwic2hhcmVZ
+        YW1tZXIiOiJTaGFyZSBvbiBZYW1tZXIhIn0sInlhbW1lci12aXJhbCI6eyJt
+        eUtsb3V0U2NvcmUiOiJNeSBLbG91dCBTY29yZSBpcyAle2tTY29yZX0uICJ9
+        LCJuZXR3b3JrLWNvbm5lY3QtbnV4Ijp7ImxpbmtlZEFjY291bnQiOiJZb3Ug
+        bGlua2VkIHlvdXIgS2xvdXQgYWNjb3VudCB3aXRoIHlvdXIgJXtjb25uZWN0
+        ZWROZXR3b3JrfSBhY2NvdW50LiJ9LCJub3RpZi1zaGFyZSI6eyJoZWFkZXIi
+        OiJUaGFuayAle2FjdG9yfSBmb3IgdGhlICtLIGFib3V0ICV7dG9waWNEaXNw
+        bGF5TmFtZX0ifSwibmV3LXVzZXItd2VsY29tZSI6eyJ3ZWxjb21lTWVzc2Fn
+        ZSI6IkhpICV7Zmlyc3ROYW1lfSwgd2VsY29tZSB0byBLbG91dCEgWW91ciBL
+        bG91dCBTY29yZSBpcyBjdXJyZW50bHkgPHNwYW4gY2xhc3M9XCJuZXctdXNl
+        ci1jb3VudFwiPiV7c2NvcmV9PC9zcGFuPi4ifSwiY29udGVudC1mZWF0dXJl
+        cy13ZWxjb21lIjp7IndlbGNvbWVCYWNrIjoiSGkgJXtmaXJzdE5hbWV9LCB3
+        ZWxjb21lIGJhY2sgdG8gS2xvdXQhIiwidG9wU2NvcmUiOiJZb3VyIEtsb3V0
+        IFNjb3JlIG9mIDxzcGFuIGNsYXNzPVwic2NvcmVcIj4le2tTY29yZX08L3Nw
+        YW4+IHB1dHMgeW91IGluIHRoZSB0b3AgJXtwZXJjZW50aWxlfSBvZiBzb2Np
+        YWwgbWVkaWEgdXNlcnMuIiwiY3VycmVudFNjb3JlIjoiWW91ciBLbG91dCBT
+        Y29yZSBpcyBjdXJyZW50bHkgPHNwYW4gY2xhc3M9XCJzY29yZVwiPiV7a1Nj
+        b3JlfTwvc3Bhbj4uIn0sImRpc2Nvbm5lY3QtbmV0d29yay1oZWFkZXIiOiJE
+        aXNjb25uZWN0ICV7bmV0d29ya05hbWV9IiwiZGlzY29ubmVjdC1uZXR3b3Jr
+        LW1lc3NhZ2UiOiJBcmUgeW91IHN1cmUgeW91IHdhbnQgdG8gZGlzY29ubmVj
+        dCB5b3VyICV7bmV0d29ya05hbWV9IGFjY291bnQgZnJvbSBLbG91dD8gUmVt
+        b3ZpbmcgYSBuZXR3b3JrIHdpbGwgZGVjcmVhc2UgdGhlIGFjY3VyYWN5IG9m
+        IHlvdXIgS2xvdXQgU2NvcmUuIiwicHJvZmlsZS10b3BpY3MtZmVlZGJhY2si
+        OnsiaSI6IkkiLCJzZW5kRmVlZGJhY2siOiJQbGVhc2Ugc2VuZCB1cyBmZWVk
+        YmFjayIsInNlbmRGZWVkYmFjazIiOiJZb3VyIGZlZWRiYWNrIGhlbHBzIHVz
+        IGltcHJvdmUgS2xvdXQuIFRoYW5rcyBpbiBhZHZhbmNlISIsInJhbmtlZEhp
+        Z2hlciI6IiV7bmFtZX0gc2hvdWxkIGJlIHJhbmtlZCBoaWdoZXIgZm9yIHRo
+        aXMgdG9waWMiLCJyYW5rZWRIaWdoZXJJIjoiJXtuYW1lfSBzaG91bGQgYmUg
+        cmFua2VkIGhpZ2hlciBmb3IgdGhpcyB0b3BpYyIsInJhbmtlZExvd2VyIjoi
+        JXtuYW1lfSBzaG91bGQgYmUgcmFua2VkIGxvd2VyIGZvciB0aGlzIHRvcGlj
+        IiwicmFua2VkTG93ZXJJIjoiJXtuYW1lfSBzaG91bGQgYmUgcmFua2VkIGxv
+        d2VyIGZvciB0aGlzIHRvcGljIiwibm90UmFua2VkIjoiJXtuYW1lfSBzaG91
+        bGQgbm90IGJlIHJhbmtlZCBmb3IgdGhpcyB0b3BpYyIsIm5vdFJhbmtlZEki
+        OiIle25hbWV9IHNob3VsZCBub3QgYmUgcmFua2VkIGZvciB0aGlzIHRvcGlj
+        Iiwibm9TZW5zZSI6IlRoaXMgdG9waWMgZG9lc24mYXBvczt0IG1ha2Ugc2Vu
+        c2UiLCJiYWRUcmFuc2xhdGlvbiI6IlRoaXMgdG9waWMgaXMgcG9vcmx5IHRy
+        YW5zbGF0ZWQiLCJhbnlPdGhlckZlZWRiYWNrIjoiQW55IG90aGVyIGZlZWRi
+        YWNrPyIsImVudGVyQ29tbWVudHMiOiJFbnRlciB5b3VyIGNvbW1lbnRzIGhl
+        cmUiLCJzdWJtaXRGZWVkYmFjayI6IlN1Ym1pdCBGZWVkYmFjayJ9LCJjbGFp
+        bS10b3BpY3MiOnsiY29uZ3JhdHVsYXRpb25zIjoiQ29uZ3JhdHVsYXRpb25z
+        IDxzcGFuIGNsYXNzPVwibmFtZVwiPiV7bmFtZX0hIiwibm90aWNlZEV4cGVy
+        dCI6IldlJmFwb3M7dmUgbm90aWNlZCB0aGF0IHlvdSZhcG9zO3JlIGFuIGV4
+        cGVydCBpbiB0aGUgZm9sbG93aW5nIHRvcGljcy4iLCJnb3RvUHJvZmlsZSI6
+        IkdvIHRvIHlvdXIgcHJvZmlsZSB0byBhZGQgdGhlc2UgdG9waWNzISIsImdv
+        dG9NeVByb2ZpbGUiOiJHbyB0byBNeSBQcm9maWxlIn0sIm5vIjoiTm8iLCJ5
+        ZXMiOiJZZXMiLCJkZWxldGUtdG9waWMtZnJvbS1wcm9maWxlIjoiQXJlIHlv
+        dSBzdXJlIHlvdSB3YW50IHRvIGRlbGV0ZSAle2Rpc3BsYXlOYW1lfSBmcm9t
+        IHlvdXIgcHJvZmlsZT8iLCJkZWxldGUtdG9waWMtZnJvbS13aWRnZXQiOiJB
+        cmUgeW91IHN1cmUgeW91IHdhbnQgdG8gZGVsZXRlICV7ZGlzcGxheU5hbWV9
+        IGZyb20gdGhlIGxpc3Q/In0sIm1vZGFsQWxlcnQiOnsidHdpdHRlci1vYXV0
+        aC1hY2NvdW50LW1pc21hdGNoIjoiWW91IGFyZSBjb25uZWN0ZWQgdG8gS2xv
+        dXQgYXMgQCV7bmlja30gYnV0IHNpZ25lZCBpbiB3aXRoIFR3aXR0ZXIgYXMg
+        QCV7c2NyZWVuTmFtZX0uIFBsZWFzZSBzaWduIGluIHdpdGggVHdpdHRlciBh
+        cyBAJXtuaWNrfSBhbmQgdHJ5IGFnYWluLiJ9LCJtb2RhbENvbmZpcm0iOnsi
+        bmV0d29yay1kaXNjb25uZWN0ZWQiOiJZb3UgZG8gbm90IGN1cnJlbnRseSBo
+        YXZlIGEgJXtuZXR3b3JrfSBhY2NvdW50IGNvbm5lY3RlZCB0byBLbG91dC4g
+        V291bGQgeW91IGxpa2UgdG8gcmVjb25uZWN0PyJ9LCJtb21lbnRFbGVtZW50
+        cyI6eyJoZWFkbGluZSI6IiV7d2hvfSBlbmdhZ2VkIHdpdGggdGhlICV7d2hh
+        dH0geW91ICV7YWN0aW9ufSBvbiAle25ldHdvcmt9IiwiaGVhZGxpbmVQb3Nz
+        ZXNzaXZlIjoiJXt3aG99ICV7YWN0aW9ufSBhICV7d2hhdH0gb24gJXtuZXR3
+        b3JrfSIsImhlYWRsaW5lUG9zc2Vzc2l2ZVRoaXJkUGVyc29uIjoiPCU9IHdo
+        byAlPiA8JT0gYWN0aW9uICU+IHlvdSA8JT0gd2hhdCAlPiBvbiA8JT0gbmV0
+        d29yayAlPiJ9LCJtb21lbnRzU3RyZWFtIjp7ImVtcHR5LXN0YXRlLW5ldHdv
+        cmstbm90LWNvbm5lY3RlZCI6eyJjb25uZWN0IjoiQ29ubmVjdCAle2FjdGl2
+        ZU5ldHdvcmtGdWxsTmFtZX0iLCJkZXNjcmlwdGlvbiI6IlNvcnJ5LCB3ZSBj
+        YW4mYXBvczt0IGFuYWx5emUgeW91ciAle2FjdGl2ZU5ldHdvcmtGdWxsTmFt
+        ZX0gYWN0aXZpdHkgYmVjYXVzZSB5b3UgZG9uJmFwb3M7dCBoYXZlIGl0IGNv
+        bm5lY3RlZC48YnI+Q29ubmVjdCB5b3VyICV7YWN0aXZlTmV0d29ya0Z1bGxO
+        YW1lfSB0byBtYXhpbWl6ZSB5b3VyIGltcGFjdCEifSwiZW1wdHktc3RhdGUt
+        dGhhbmtzLWZvci1jb25uZWN0aW5nIjp7ImRlc2NyaXB0aW9uIjoiVGhhbmtz
+        IGZvciBjb25uZWN0aW5nICV7YXJndW1lbnQwfS4gSXQgbWF5IHRha2UgdXAg
+        dG8gNzIgaG91cnMgZm9yIGFjdGl2aXR5IHRvIGFwcGVhci4ifSwiZmItc3Ry
+        ZWFtLWl0ZW0iOnsic2hhcmVkQUxpbmsiOiJZb3Ugc2hhcmVkIDxhIGhyZWY9
+        XCIle29yaWdpbmFsQ29udGVudFVybH1cIiB0YXJnZXQ9XCJfYmxhbmtcIj5h
+        IGxpbms8L2E+LiJ9LCJmYi1zdHJlYW0tbW9tZW50LXRleHQiOnsiY2hlY2tJ
+        blRleHQiOiIle2F1dGhvcn0gdGFnZ2VkIHlvdSBpbiBhIGNoZWNrLWluOiIs
+        ImludGVyYWN0ZWRUZXh0IjoiJXthdXRob3J9IGludGVyYWN0ZWQgd2l0aCB5
+        b3Ugb24gRmFjZWJvb2s6In0sImZzLXN0cmVhbS1pdGVtIjp7ImNoZWNrZWRJ
+        biI6IllvdSBjaGVja2VkIGluIGF0IDxhIGhyZWY9XCIle2NvbnRlbnRVcmx9
+        XCIgdGFyZ2V0PVwiX2JsYW5rXCI+JXtsb2NhdGlvbk5hbWV9PC9hPiBvbiBG
+        b3Vyc3F1YXJlLiJ9LCJrcy1zdHJlYW0taXRlbSI6eyJnYXZlWW91UGx1c0si
+        OiI8YSBocmVmPVwiL3VzZXIvJXthdXRob3JOaWNrfVwiPiV7YXV0aG9yRGlz
+        cGxheU5hbWV9PC9hPiBnYXZlIHlvdSArSyBpbiAle29yaWdpbmFsRmVhdHVy
+        ZXNUb3BpY30uIn19LCJub3RpZnMiOnsiZmJJbnZpdGVVc2VySXNSZWdpc3Rl
+        cmVkIjp7InNlbnRGYlJlcXVlc3QiOiI8c3BhbiBjbGFzcz1cInByb2ZpbGVc
+        Ij4le2ZyaWVuZEZ1bGxOYW1lfTwvc3Bhbj5zZW50IHlvdSBhIEZhY2Vib29r
+        IHJlcXVlc3QuIn0sInBsdXNLIjp7ImdhdmVUb3BpYyI6IjxzcGFuIGNsYXNz
+        PVwicHJvZmlsZVwiPiV7YWN0b3J9PC9zcGFuPiBnYXZlIHlvdSArSyBhYm91
+        dCA8c3BhbiBjbGFzcz1cInBsdXMtay10b3BpY1wiPiV7dG9waWNEaXNwbGF5
+        TmFtZX08L3NwYW4+IiwiZ2F2ZSI6IjxzcGFuIGNsYXNzPVwicHJvZmlsZVwi
+        PiV7YWN0b3J9PC9zcGFuPiBnYXZlIHlvdSArSyJ9LCJxdWVzdEZlZWRiYWNr
+        UmVtaW5kZXIiOnsiZmVlZGJhY2tSZW1pbmRlciI6IkZlZWRiYWNrIHJlbWlu
+        ZGVyIGZvciB0aGUgXCIle3F1ZXN0VGl0bGV9XCIgUGVyay4ifSwicXVlc3RV
+        c2VyRmVlZGJhY2siOnsiaGVhckZyb20iOiI8c3BhbiBjbGFzcz1cInByb2Zp
+        bGVcIj4le2FjdG9yfTwvc3Bhbj4gV2FudHMgdG8gSGVhciBmcm9tIFlvdS4i
+        fSwicXVlc3RMaXZlIjp7InJlY2VpdmVkUGVya0Zyb20iOiJZb3UmYXBvczt2
+        ZSBSZWNlaXZlZCBhIFBlcmsgZnJvbSA8c3BhbiBjbGFzcz1cInByb2ZpbGVc
+        Ij4le2FjdG9yfS48L3NwYW4+In19LCJudXgiOnsibmV3LXVzZXItZXhwZXJp
+        ZW5jZSI6eyJza2lwQ2xhaW1QZXJrIjoiPGEgaHJlZj1cIiV7cGFzc2Fsb25n
+        TmV4dH0mc2tpcE51eD0xXCI+IFNraXAgdGhpcyBzdGVwPC9hPiBhbmQgcHJv
+        Y2VlZCB0byBjbGFpbWluZyB5b3VyIFBlcmsifSwicmVnaXN0cmF0aW9uIjp7
+        InNpZ25VcCI6eyJpbmRpdmlkdWFsIjoiU2lnbiB1cCBhcyBhbiBJbmRpdmlk
+        dWFsIiwiYnJhbmQiOiJTaWduIHVwIGFzIGEgQnJhbmQifX0sImVycm9yLW1l
+        c3NhZ2UtZW1haWwtdGFrZW4iOnsic29ycnlUdyI6IlNvcnJ5LCB0aGF0IGVt
+        YWlsIGFscmVhZHkgYmVsb25ncyB0byBAJXt0d0hhbmRsZX0iLCJpc1RoYXRZ
+        b3UiOiJJcyB0aGF0IHlvdT8gPGEgaHJlZj1cIi9yZWdpc3Rlci9hYm9ydD9u
+        ZXR3b3JrPTwlPSBzZXJ2aWNlSWQgJT5cIj5TaWduIGluIHdpdGggJXtzZXJ2
+        aWNlfTwvYT4gb3IgPGEgaHJlZj1cIi9sb2dvdXRcIj5TaWduIG91dDwvYT4i
+        fX0sInBlcmtzIjp7ImVsaWdpYmxlLXBlcmtzIjp7InZpZXdDb25maXJtYXRp
+        b24iOiI8YnI+PGEgaHJlZj1cIi8jL2JyYW5kLyV7cGVya1F1ZXN0U2x1Z30v
+        Y2xhaW1cIj5WaWV3IGNvbmZpcm1hdGlvbjwvYT4iLCJmcm9tIjoiZnJvbSJ9
+        fSwicHJvZmlsZSI6eyJsYXlvdXQiOnsiY29udGVudCI6IkNvbnRlbnQiLCJi
+        ZXRhIjoiQmV0YSIsImNvbnRlbnRCZXRhIjoiQ29udGVudCBCZXRhIiwibW9t
+        ZW50cyI6Ik1vbWVudHMiLCJleHBsYW5hdGlvbiI6IlRoaXMgZmVhdHVyZSBp
+        ZGVudGlmaWVzIGNvbnRlbnQgcG9zc2libHkgYXV0aG9yZWQgYnkgb3IgYXNz
+        b2NpYXRlZCB3aXRoIHRoaXMgS2xvdXQgUHJvZmlsZS4gU2luY2UgdGhpcyBm
+        ZWF0dXJlIGlzIGN1cnJlbnRseSBpbiBiZXRhLCBtaXNpZGVudGlmaWNhdGlv
+        bnMgbWF5IG9jY3VyLiJ9LCJoaWRkZW4tbW9tZW50cyI6IjxhIGhyZWY9XCIv
+        XCI+U2lnbiBpbjwvYT4gdG8gdmlldyB3aGF0ICV7dXNlckZpcnN0TmFtZX0g
+        JXt1c2VyTGFzdE5hbWV9IGhhcyBiZWVuIHVwIHRvIG9uIHRoZWlyIHNvY2lh
+        bCBjaGFubmVscyEiLCJwcm9maWxlLWhvdmVyY2FyZC1jb250ZW50Ijp7InJh
+        bmtlZFRleHQiOiJSYW5rZWQgYW1vbmcgdGhlIDxzcGFuIGNsYXNzPVwidG9w
+        LXRleHRcIj50b3AgJXtwZXJjZW50YWdlfSU8L3NwYW4+IG9mIHBlb3BsZSB0
+        YWxraW5nIGFib3V0ICA8ZGl2IGNsYXNzPVwidG9wLXRleHQgdG9wLXRvcGlj
+        XCIgaWQ9XCIle3NsdWd9XCI+JXt0b3BpY05hbWV9PC9kaXY+In0sInBlcnNv
+        bi1ob3ZlcmNhcmQtY29udGVudCI6eyJyYW5rZWRUZXh0IjoiUmFua2VkIGFt
+        b25nIHRoZSA8c3BhbiBjbGFzcz1cInRvcC10ZXh0XCI+dG9wICV7cGVyY2Vu
+        dGFnZX0lPC9zcGFuPiBvZiBwZW9wbGUgdGFsa2luZyBhYm91dCAgPGRpdiBj
+        bGFzcz1cInRvcC10ZXh0IHRvcC10b3BpY1wiIGlkPVwiJXtzbHVnfVwiPiV7
+        dG9waWNOYW1lfTwvZGl2PiJ9LCJnaXZlLXBsdXMtayI6eyJnaXZlUmVjb2du
+        aXRpb24iOiJHaXZlICV7dXNlcn0gcmVjb2duaXRpb24gZm9yIHRoaXMgdG9w
+        aWMifSwiY29uZ3JhdHMtcGx1cy1rIjp7ImNvbmdyYXRzIjoiQ29uZ3JhdHVs
+        YXRlICV7dXNlcn0gZm9yIHRoaXMgdG9waWNhbCBleHBlcnRpc2UifSwiZ2F2
+        ZS1wbHVzLWsiOnsiZ2F2ZSI6IllvdSBnYXZlICV7dXNlcn0gK0sgYWJvdXQg
+        JXt0b3BpY05hbWV9IiwicmVtYWluaW5nIjoiWW91IGhhdmUgJXtyZW1haW5p
+        bmdQbHVzS30gK0sgdG8gZ2l2ZSBvdGhlcnMgdG9kYXkifSwidmlyYWwtc2hh
+        cmUtbWVzc2FnZS1mb3ItZXhwZXJ0cyI6eyJtZXNzYWdlT3duUHJvZmlsZSI6
+        Iktsb3V0IHJhbmtlZCBtZSBhbW9uZyB0aGUgdG9wICV7cGVyY2VudGFnZX0l
+        IG9mIHBlb3BsZSB0YWxraW5nIGFib3V0ICV7dG9waWNOYW1lfS4iLCJtZXNz
+        YWdlTm90T3duUHJvZmlsZSI6Ikdvb2Qgam9iICV7c29jaWFsSGFuZGxlfSEg
+        WW91JmFwb3M7cmUgYW1vbmcgdGhlIHRvcCAle3BlcmNlbnRhZ2V9JSBvZiBw
+        ZW9wbGUgdGFsa2luZyBhYm91dCAle3RvcGljTmFtZX0uIn0sInZpcmFsLXNo
+        YXJlLW1lc3NhZ2UtZm9yLXBsdXMtayI6eyJtZXNzYWdlRmIiOiJJIGdhdmUg
+        JXtzb2NpYWxIYW5kbGV9IGEgK0sgb24gJXt0b3BpY05hbWV9LiIsIm1lc3Nh
+        Z2VUdyI6IkkgZ2F2ZSAle3NvY2lhbEhhbmRsZX0gYSArSyBvbiAle3RvcGlj
+        TmFtZX0uIn0sImNsYWltLWFkZGl0aW9uYWwtdG9waWNzIjp7ImFkZGl0aW9u
+        YWxUb3BpY3MiOiJZb3UmYXBvcztyZSBhbiBleHBlcnQgaW4gJXtudW1Ub3Bp
+        Y3N9IG1vcmUgdG9waWMuIiwiYWRkaXRpb25hbFRvcGljc1BsdXJhbCI6Illv
+        dSZhcG9zO3JlIGFuIGV4cGVydCBpbiAle251bVRvcGljc30gbW9yZSB0b3Bp
+        Y3MuIn0sImNvbnRlbnQtd2lkZ2V0Ijp7Im5vQ29udGVudCI6IjxkaXYgY2xh
+        c3M9XCJlbXBoYXNpc1wiPlNvcnJ5LCB3ZSBoYXZlbiZhcG9zO3QgY29sbGVj
+        dGVkIGFueSBjb250ZW50IHdyaXR0ZW4gYnkgb3IgYXNzb2NpYXRlZCB3aXRo
+        IHlvdS48L2Rpdj48ZGl2IGNsYXNzPVwiZW1wdHktYWxlcnQtc3ViaGVhZGVy
+        XCI+UHVibGlzaCBjb250ZW50IHRvIGJsb2dzIGFuZCBvdGhlciBzaXRlcyB3
+        aXRoIFJTUyBmZWVkcyBhbmQgd2UgbWF5IGFkZCB5b3VyIGNvbnRlbnQgdG8g
+        S2xvdXQuY29tLjwvZGl2PiIsIm5vVGhlaXJDb250ZW50IjoiV2UgaGF2ZW4m
+        YXBvczt0IGZvdW5kIGFueSBhcnRpY2xlcyB3cml0dGVuIGJ5IG9yIGFzc29j
+        aWF0ZWQgd2l0aCB0aGlzIHVzZXIuIn19LCJxdWVzdCI6eyJxdWVzdC1zdGFy
+        dCI6eyJwZXJrIjp7InNlbGVjdEZvciI6IldlIHNlbGVjdGVkIHlvdSBmb3Ig
+        dGhpcyBQZXJrIGJlY2F1c2UgeW91IGNyZWF0ZSBlbmdhZ2luZyBjb250ZW50
+        LiIsIm1pbmltdW1BZ2UiOiJZb3UgbXVzdCBiZSAle2FnZX0gb3Igb3ZlciB0
+        byBjbGFpbSB0aGlzIFBlcmsuIiwiYWRkV2FpdGxpc3QiOiJBZGQgdG8gV2Fp
+        dGxpc3QiLCJzdGFydE5vdyI6IkdldCBTdGFydGVkIE5vdyIsInRlcm1zIjoi
+        VGVybXMiLCJub1RoYW5rcyI6Ik5vIHRoYW5rcyJ9fSwicXVlc3QtY29udGVz
+        dC1zdGFydCI6eyJleGNsdXNpdmUiOiJLbG91dCBFeGNsdXNpdmU6ICV7dGl0
+        bGV9IiwibWluaW11bUFnZSI6IllvdSBtdXN0IGJlICV7bWluQWdlfSBvciBv
+        dmVyIGFuZCBpbiB0aGUgVW5pdGVkIFN0YXRlcyB0byBqb2luLiJ9LCJhZ2Ui
+        OnsiZWxpZ2libGUiOiJUbyBiZSBlbGlnaWJsZSBmb3IgdGhpcyBQZXJrLCB5
+        b3UgbXVzdCBiZSAle21pbkFnZX0gb3Igb2xkZXIifSwia2xvdXQtc2NvcmUi
+        OnsiZWxpZ2libGUiOiJUbyBiZSBlbGlnaWJsZSBmb3IgdGhpcyBQZXJrLCB5
+        b3VyIEtsb3V0IHNjb3JlIG11c3QgYmUgYWJvdmUgJXttaW5TY29yZX0ifSwi
+        Y29udGVzdC1wZXJrIjp7ImV4Y2x1c2l2ZSI6Iktsb3V0IEV4Y2x1c2l2ZTog
+        JXt0aXRsZX0ifSwicGVyay1mZWVkYmFjay10dy12aXJhbCI6eyJnYXZlUGVy
+        a1JhdGluZyI6IkkgZ2F2ZSBteSBQZXJrIGZyb20gQCV7YnJhbmRIYW5kbGV9
+        ICV7cmF0aW5nfSBvdXQgb2YgNSBzdGFycyAle2hhc2h0YWdzfSJ9fSwicmVn
+        aXN0cmF0aW9uRGFzaGJvYXJkIjp7InJlZ2lzdHJhdGlvbnMtZGFzaGJvYXJk
+        Ijp7InJlZ2lzdHJhdGlvbnMiOnsiZnJvbVllc3RlcmRheSI6IiV7ZGVsdGF9
+        JSBmcm9tIHllc3RlcmRheSIsInJlZ2lzdHJhdGlvbnNGb3IiOiJSZWdpc3Ry
+        YXRpb25zIGZvciAle21vbnRofSIsImZyb21MYXN0TW9udGgiOiIle2RlbHRh
+        fSUgZnJvbSBsYXN0IG1vbnRoIn19fSwic2NoZWR1bGUiOnsic2NoZWR1bGVk
+        LXBvc3QtZGF5Ijp7InRvZGF5IjoiVG9kYXkiLCJ0b21vcnJvdyI6IlRvbW9y
+        cm93In19LCJzZXR0aW5nIjp7Im5ldHdvcmstZGlzY29ubmVjdC1yZWRpcmVj
+        dCI6eyJub3dEaXNjIjoiJXtuZXR3b3JrfSBpcyBub3cgZGlzY29ubmVjdGVk
+        IGZyb20geW91ciBLbG91dCBhY2NvdW50LiIsInRvQ29tcGxldGUiOiJUbyBj
+        b21wbGV0ZSB0aGUgcHJvY2VzcywgdmlzaXQgeW91ciA8YSBocmVmPVwiJXts
+        aW5rfVwiIHRhcmdldD1cIl9ibGFua1wiPmFwcGxpY2F0aW9uIHNldHRpbmdz
+        PC9hPiBvbiAle25ldHdvcmt9IGFuZCByZW1vdmUgS2xvdXQgZnJvbSB0aGUg
+        bGlzdCBvZiBhdXRob3JpemVkIGFwcHMuIn19LCJzZXR0aW5ncyI6eyJwcm9m
+        aWxlIjp7InNlbGVjdExhbmd1YWdlIjoiU2VsZWN0IHlvdXIgbGFuZ3VhZ2Ui
+        LCJsYW5ndWFnZXMiOnsiZW4iOiJFbmdsaXNoIiwiZnIiOiJGcmFuw6dhaXMi
+        LCJkZSI6IkRldXRzY2giLCJlcyI6IkVzcGHDsW9sIiwiYXIiOiLYp9mE2LnY
+        sdio2YrYqSJ9fSwicGFzc3dvcmQtbGluayI6eyJjaGFuZ2VQYXNzd29yZCI6
+        IkNoYW5nZSBQYXNzd29yZCIsImNyZWF0ZVBhc3N3b3JkIjoiQ3JlYXRlIFBh
+        c3N3b3JkIn0sInByb2ZpbGUtbmFtZS1maWVsZHMiOnsic3dpdGNoIjoiU3dp
+        dGNoIHRvIDwlPSAle2lzQnJhbmR9ID8gJmFwb3M7aW5kaXZpZHVhbCZhcG9z
+        OyA6ICZhcG9zO2JyYW5kJmFwb3M7ICU+IGFjY291bnQiLCJzd2l0Y2gtaW5k
+        aXZpZHVhbCI6IlN3aXRjaCB0byBpbmRpdmlkdWFsIGFjY291bnQiLCJzd2l0
+        Y2gtYnJhbmQiOiJTd2l0Y2ggdG8gYnJhbmQgYWNjb3VudCJ9LCJjb25uZWN0
+        ZWQtc2VydmljZSI6eyJjb25uZWN0aW9uRXJyb3IiOiI8c3BhbiBjbGFzcz1c
+        Im5vdGljZS10eXBlXCI+Q29ubmVjdGlvbiBFcnJvcjo8L3NwYW4+IFBsZWFz
+        ZSByZWF1dGhvcml6ZSBvciA8YSBjbGFzcz1cImRpc2Nvbm5lY3QtYnV0dG9u
+        ICV7c2hvcnRuYW1lfVwiPnVubGluayB0aGlzIG5ldHdvcms8L2E+IiwiZGlz
+        Y29ubmVjdCI6IkRpc2Nvbm5lY3QgJXtkaXNwbGF5TmFtZX0iLCJyZWF1dGhv
+        cml6ZSI6IlJlYXV0aG9yaXplIiwic2hvdyI6IlNob3ciLCJoaWRlIjoiSGlk
+        ZSJ9LCJkaXNjb25uZWN0ZWQtc2VydmljZSI6eyJjb25uZWN0IjoiQ29ubmVj
+        dCJ9LCJhZGRpdGlvbmFsLW5ldHdvcmtzLXRvZ2dsZS10ZXh0Ijp7ImhpZGUi
+        OiJIaWRlIGFkZGl0aW9uYWwgbmV0d29ya3MiLCJ2aWV3IjoiVmlldyBhZGRp
+        dGlvbmFsIG5ldHdvcmtzIn0sInBlcmtzIjp7InNlbGVjdENvdW50cnkiOiJT
+        ZWxlY3QgeW91ciBjb3VudHJ5In0sInNhdmUtZXJyb3IiOnsib29wcyI6Ik9v
+        cHMhIFRoZXJlIHdhcyBhbiBlcnJvciBzYXZpbmcgeW91ciBzZXR0aW5ncy4i
+        LCJlcnJvciI6IiV7ZXJyb3J9In0sInNlcnZpY2UiOnsiY29ubmVjdGlvbkVy
+        cm9yIjoiPHNwYW4gY2xhc3M9XCJub3RpY2UtdHlwZVwiPkNvbm5lY3Rpb24g
+        RXJyb3I6PC9zcGFuPiBQbGVhc2UgcmVhdXRob3JpemUgb3IgPGEgY2xhc3M9
+        XCJkaXNjb25uZWN0LWJ1dHRvbiAle3Nob3J0bmFtZX1cIj51bmxpbmsgdGhp
+        cyBuZXR3b3JrPC9hPiIsImRpc2Nvbm5lY3QiOiJEaXNjb25uZWN0ICV7ZGlz
+        cGxheU5hbWV9Iiwic2hvd1RpdGxlIjoiU2hvdyBteSB0aXRsZSIsImhpZGVU
+        aXRsZSI6IkhpZGUgbXkgdGl0bGUifSwibGl0aGl1bUNvbW11bml0aWVzIjp7
+        ImRpc2Nvbm5lY3QiOiJEaXNjb25uZWN0ICV7ZnVsbE5hbWV9In19LCJzaG93
+        Y2FzZSI6eyJmYWNlYm9vayI6IkZhY2Vib29rIiwiZmItcGFnZSI6IkZhY2Vi
+        b29rIFBhZ2UiLCJ0d2l0dGVyIjoiVHdpdHRlciIsImluc3RhZ3JhbSI6Iklu
+        c3RhZ3JhbSIsInRleHQiOiJUZXh0IiwicGhvdG8iOiJQaG90byJ9LCJ1c2Vy
+        U3RhdHMiOnsic3RhdHNDaGFydHNOZXR3b3JrVG9vbFRpcCI6IjxiPiV7bmFt
+        ZX0gQ29udHJpYnV0aW9uPC9iPjxici8+PGI+dG8geW91ciBLbG91dCBTY29y
+        ZTogPC9iPiV7cGVyY2VudGFnZX0lIiwic3RhdHNDaGFydHNOZXR3b3JrTGVn
+        ZW5kIjp7Im5ldHdvcmtOYW1lIjoiJXtuZXR3b3JrTmFtZX06ICJ9LCJzY29y
+        ZUhpc3RvcnlDaGFydFRvb2xUaXAiOiJLbG91dCBTY29yZTogJXtzY29yZX0i
+        fSwidmlldyI6eyJtb250aCI6eyJtb250aCI6eyIwIjoiSmFudWFyeSIsIjEi
+        OiJGZWJydWFyeSIsIjIiOiJNYXJjaCIsIjMiOiJBcHJpbCIsIjQiOiJNYXki
+        LCI1IjoiSnVuZSIsIjYiOiJKdWx5IiwiNyI6IkF1Z3VzdCIsIjgiOiJTZXB0
+        ZW1iZXIiLCI5IjoiT2N0b2JlciIsIjEwIjoiTm92ZW1iZXIiLCIxMSI6IkRl
+        Y2VtYmVyIn19fSwidmlyYWwiOnsiZ2F2ZVBsdXNLIjp7InRvcGljT25OZXR3
+        b3JrIjoiSSBnYXZlICV7cmVjaXBpZW50fSArSyBhYm91dCAle3RvcGljfSBv
+        biAle25ldHdvcmt9Iiwib25OZXR3b3JrIjoiSSBnYXZlICV7cmVjaXBpZW50
+        fSArSyBvbiAle25ldHdvcmt9IiwicmVjZWl2ZWRQZXJrRnJvbSI6IllvdSZh
+        cG9zO3ZlIFJlY2VpdmVkIGEgUGVyayBmcm9tIDxzcGFuIGNsYXNzPVwicHJv
+        ZmlsZVwiPiV7YWN0b3J9Ljwvc3Bhbj4ifX0sInRvcGljRXhwbG9yZXIiOnsi
+        aGVhZGVyIjoiWW91JmFwb3M7dmUgc2VsZWN0ZWQgPGVtIGNsYXNzPVwiY291
+        bnRcIj4le2NvdW50fS8zMCB0b3BpY3M8L2VtPiBmb3IgeW91ciBwdWJsaWMg
+        cHJvZmlsZS4iLCJ0b3BpY0NvdW50IjoiJXtjb3VudH0vMzAgdG9waWNzIiwi
+        cmVjb21tZW5kZWRUb3BpY3MiOnsiVW5saXN0ZWRFeHBlcnRpc2VIZWFkZXIi
+        OiJFeHBlcnRpc2UiLCJVbmxpc3RlZEV4cGVydGlzZUluZm8iOiJXZSBub3Rp
+        Y2VkIHRoYXQgeW91IGNyZWF0ZSBlbmdhZ2luZyBjb250ZW50IGFib3V0IHRo
+        ZXNlIHRvcGljcy4iLCJpbnRlcmVzdEhlYWRlciI6IkludGVyZXN0IiwiaW50
+        ZXJlc3RJbmZvIjoiV2Ugbm90aWNlZCB0aGF0IHlvdSBlbmdhZ2Ugd2l0aCBj
+        b250ZW50IGFib3V0IHRoZXNlIHRvcGljcy4ifX19OwogICAgICAgIAogICAg
+        ICAgIGFtcGhldGFtaW5lLmNvbmZpZy5pc1B1YmxpYyA9IHRydWU7CiAgICAg
+        ICAgCiAgICAgICAgCiAgICAgICAgCiAgICAgICAgCiAgICB9KSh3aW5kb3cp
+        Owo8L3NjcmlwdD4KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgog
+        ICAgLyogTWl4cGFuZWwgKi8KICAgIChmdW5jdGlvbiAoYywgYSkgewogICAg
+        ICAgIHdpbmRvdy5taXhwYW5lbCA9IGE7CiAgICAgICAgdmFyIGIsIGQsIGgs
+        IGU7CiAgICAgICAgYiA9IGMuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7CiAg
+        ICAgICAgYi50eXBlID0gInRleHQvamF2YXNjcmlwdCI7CiAgICAgICAgYi5h
+        c3luYyA9ICEwOwogICAgICAgIGIuc3JjID0gKCJodHRwczoiID09PSBjLmxv
+        Y2F0aW9uLnByb3RvY29sID8gImh0dHBzOiIgOiAiaHR0cDoiKSArCiAgICAg
+        ICAgICAgICcvL2Nkbi5teHBubC5jb20vbGlicy9taXhwYW5lbC0yLjIubWlu
+        LmpzJzsKICAgICAgICBkID0gYy5nZXRFbGVtZW50c0J5VGFnTmFtZSgic2Ny
+        aXB0IilbMF07CiAgICAgICAgZC5wYXJlbnROb2RlLmluc2VydEJlZm9yZShi
+        LCBkKTsKICAgICAgICBhLl9pID0gW107CiAgICAgICAgYS5pbml0ID0gZnVu
+        Y3Rpb24gKGIsIGMsIGYpIHsKICAgICAgICAgICAgZnVuY3Rpb24gZChhLCBi
+        KSB7CiAgICAgICAgICAgICAgICB2YXIgYyA9IGIuc3BsaXQoIi4iKTsKICAg
+        ICAgICAgICAgICAgIDIgPT0gYy5sZW5ndGggJiYgKGEgPSBhW2NbMF1dLCBi
+        ID0gY1sxXSk7CiAgICAgICAgICAgICAgICBhW2JdID0gZnVuY3Rpb24gKCkg
+        ewogICAgICAgICAgICAgICAgICAgIGEucHVzaChbYl0uY29uY2F0KAogICAg
+        ICAgICAgICAgICAgICAgIEFycmF5LnByb3RvdHlwZS5zbGljZS5jYWxsKGFy
+        Z3VtZW50cywgMCkpKQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9
+        CiAgICAgICAgICAgIHZhciBnID0gYTsKICAgICAgICAgICAgInVuZGVmaW5l
+        ZCIgIT09IHR5cGVvZiBmID8gZyA9IGFbZl0gPSBbXSA6IGYgPSAibWl4cGFu
+        ZWwiOwogICAgICAgICAgICBnLnBlb3BsZSA9IGcucGVvcGxlIHx8IFtdOwog
+        ICAgICAgICAgICBoID0gWydkaXNhYmxlJywgJ3RyYWNrJywgJ3RyYWNrX3Bh
+        Z2V2aWV3JywgJ3RyYWNrX2xpbmtzJywKICAgICAgICAgICAgICAgICd0cmFj
+        a19mb3JtcycsICdyZWdpc3RlcicsICdyZWdpc3Rlcl9vbmNlJywgJ3VucmVn
+        aXN0ZXInLCAnaWRlbnRpZnknLCAnYWxpYXMnLCAnbmFtZV90YWcnLAogICAg
+        ICAgICAgICAgICAgJ3NldF9jb25maWcnLCAncGVvcGxlLnNldCcsICdwZW9w
+        bGUuaW5jcmVtZW50JywgJ3Blb3BsZS50cmFja19jaGFyZ2UnLCAncGVvcGxl
+        LmFwcGVuZCddOwogICAgICAgICAgICBmb3IgKGUgPSAwOyBlIDwgaC5sZW5n
+        dGg7IGUrKykgZChnLCBoW2VdKTsKICAgICAgICAgICAgYS5faS5wdXNoKFti
+        LCBjLCBmXSkKICAgICAgICB9OwogICAgICAgIGEuX19TViA9IDEuMjsKICAg
+        IH0pKGRvY3VtZW50LCB3aW5kb3cubWl4cGFuZWwgfHwgW10pOwoKICAgIC8q
+        IEdvb2dsZSBBbmFseXRpY3MgKi8KICAgIHZhciBfZ2FxID0gX2dhcSB8fCBb
+        XTsKICAgICAgICBfZ2FxLnB1c2goWydfc2V0QWNjb3VudCcsICdVQS0yMjU3
+        MTMzNS0xJ10pOwogICAgICAgIF9nYXEucHVzaChbJ190cmFja1BhZ2V2aWV3
+        J10pOwoKICAgIChmdW5jdGlvbiAoKSB7CiAgICAgICAgdmFyIGdhID0gZG9j
+        dW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7CiAgICAgICAgZ2EudHlw
+        ZSA9ICd0ZXh0L2phdmFzY3JpcHQnOwogICAgICAgIGdhLmFzeW5jID0gdHJ1
+        ZTsKICAgICAgICBnYS5zcmMgPSAoJ2h0dHBzOicgPT0gZG9jdW1lbnQubG9j
+        YXRpb24ucHJvdG9jb2wgPyAnaHR0cHM6Ly9zc2wnIDogJ2h0dHA6Ly93d3cn
+        KSArICcuZ29vZ2xlLWFuYWx5dGljcy5jb20vZ2EuanMnOwogICAgICAgIHZh
+        ciBzID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcp
+        WzBdOwogICAgICAgIHMucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoZ2EsIHMp
+        OwogICAgfSkoKTsKCiAgICAvKiBDaGFydGJlYXQgKi8KICAgIChmdW5jdGlv
+        biAoKSB7CiAgICAgICAgd2luZG93Ll9zZl9hc3luY19jb25maWcgPSB7IHVp
+        ZDogMjE2NSwgZG9tYWluOiAiYmV0YS5rbG91dC5jb20iIH07CiAgICAgICAg
+        d2luZG93Ll9zZl9lbmRwdCA9ICtuZXcgRGF0ZTsKICAgICAgICB2YXIgcyA9
+        IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ1NDUklQVCcpLCBzMCA9IGRvY3Vt
+        ZW50LmdldEVsZW1lbnRzQnlUYWdOYW1lKCdTQ1JJUFQnKVswXTsKICAgICAg
+        ICBzLnNyYyA9ICdodHRwczonID09IGxvY2F0aW9uLnByb3RvY29sID8gJ2h0
+        dHBzOi8vYTI0OC5lLmFrYW1haS5uZXQvY2hhcnRiZWF0LmRvd25sb2FkLmFr
+        YW1haS5jb20vMTAyNTA4L2pzL2NoYXJ0YmVhdC5qcycgOiAnaHR0cDovL3N0
+        YXRpYy5jaGFydGJlYXQuY29tL2pzL2NoYXJ0YmVhdC5qcyc7CiAgICAgICAg
+        cy5hc3luYyA9IHRydWU7CiAgICAgICAgcy50eXBlID0gJ3RleHQvamF2YXNj
+        cmlwdCc7CiAgICAgICAgczAucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUocywg
+        czApOwogICAgfSkoKTsKPC9zY3JpcHQ+Cgo8IS0tIFF1YW50Y2FzdCBUYWcg
+        LS0+CjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4KICAgIHZhciBf
+        cWV2ZW50cyA9IF9xZXZlbnRzIHx8IFtdOwoKICAgIChmdW5jdGlvbiAoKSB7
+        CiAgICAgICAgdmFyIGVsZW0gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdz
+        Y3JpcHQnKTsKICAgICAgICBlbGVtLnNyYyA9IChkb2N1bWVudC5sb2NhdGlv
+        bi5wcm90b2NvbCA9PSAiaHR0cHM6IiA/ICJodHRwczovL3NlY3VyZSIgOiAi
+        aHR0cDovL2VkZ2UiKSArICIucXVhbnRzZXJ2ZS5jb20vcXVhbnQuanMiOwog
+        ICAgICAgIGVsZW0uYXN5bmMgPSB0cnVlOwogICAgICAgIGVsZW0udHlwZSA9
+        ICJ0ZXh0L2phdmFzY3JpcHQiOwogICAgICAgIHZhciBzY3B0ID0gZG9jdW1l
+        bnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOwogICAgICAg
+        IHNjcHQucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoZWxlbSwgc2NwdCk7CiAg
+        ICB9KSgpOwoKICAgIF9xZXZlbnRzLnB1c2goewogICAgICAgIHFhY2N0OiAi
+        cC1hZUtqbEpYQml1ZVBBIgogICAgfSk7Cjwvc2NyaXB0PgoKPG5vc2NyaXB0
+        PgogICAgPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+CiAgICAgICAgPGlt
+        ZyBzcmM9Ii8vcGl4ZWwucXVhbnRzZXJ2ZS5jb20vcGl4ZWwvcC1hZUtqbEpY
+        Qml1ZVBBLmdpZiIgYm9yZGVyPSIwIiBoZWlnaHQ9IjEiIHdpZHRoPSIxIiBh
+        bHQ9IlF1YW50Y2FzdCIvPgogICAgPC9kaXY+Cjwvbm9zY3JpcHQ+CjwhLS0g
+        RW5kIFF1YW50Y2FzdCB0YWcgLS0+Cgo8IS0tIEZhY2Vib29rIEpTIFNESyAt
+        LT4KPGRpdiBpZD0iZmItcm9vdCI+PC9kaXY+CjxzY3JpcHQ+CiAgICB3aW5k
+        b3cuZmJBc3luY0luaXQgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgRkIuaW5p
+        dCh7CiAgICAgICAgICAgIGFwcElkIDogJzEyODA4NTg5NzIxMzM5NScsCiAg
+        ICAgICAgICAgIHZlcnNpb246ICd2Mi4yJywKICAgICAgICAgICAgc3RhdHVz
+        OiB0cnVlLAogICAgICAgICAgICBjb29raWU6IHRydWUsCiAgICAgICAgICAg
+        IHhmYm1sIDogdHJ1ZQogICAgICAgIH0pOwogICAgfTsKICAgIChmdW5jdGlv
+        bihkKXsKICAgICAgICB2YXIganMsIGlkID0gJ2ZhY2Vib29rLWpzc2RrJywg
+        cmVmID0gZC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07CiAg
+        ICAgICAgaWYgKGQuZ2V0RWxlbWVudEJ5SWQoaWQpKSB7IHJldHVybjsgfQog
+        ICAgICAgIGpzID0gZC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsKICAgICAg
+        ICBqcy5pZCA9IGlkOwogICAgICAgIGpzLmFzeW5jID0gdHJ1ZTsKICAgICAg
+        ICBqcy5zcmMgPSAnLy9jb25uZWN0LmZhY2Vib29rLm5ldC8nICsgKGFtcGhl
+        dGFtaW5lLmNvbmZpZy5sYW5nID09ICdmcicgPyAnZnJfRlInIDogYW1waGV0
+        YW1pbmUuY29uZmlnLmxhbmcgPT0gJ2pwJyA/ICdqYV9KUCcgOiAnZW5fVVMn
+        KSArICcvYWxsLmpzJzsKICAgICAgICByZWYucGFyZW50Tm9kZS5pbnNlcnRC
+        ZWZvcmUoanMsIHJlZik7CiAgICB9KGRvY3VtZW50KSk7Cjwvc2NyaXB0PgoK
+        PCEtLSBHb29nbGUgKzEgLS0+CjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2Ny
+        aXB0IiBzcmM9Imh0dHBzOi8vYXBpcy5nb29nbGUuY29tL2pzL3BsdXNvbmUu
+        anMiPgogICAgeyJwYXJzZXRhZ3MiOiAiZXhwbGljaXQifQo8L3NjcmlwdD4K
+        CjwhLS0gbW9tZW50IGpzIHdpdGggbG9jYWxlIC0tPgo8c2NyaXB0IHR5cGU9
+        InRleHQvamF2YXNjcmlwdCI+CiAgICB2YXIgbGFuZyA9ICdlbic7CiAgICBp
+        ZiAobGFuZyA9PT0gJ2FyJykgewogICAgICAgIG1vbWVudC5sb2NhbGUoJ2Fy
+        LW1hJyk7CiAgICB9IGVsc2UgewogICAgICAgIG1vbWVudC5sb2NhbGUobGFu
+        Zyk7CiAgICB9Cjwvc2NyaXB0PgoKICAgIAogICAgPHNjcmlwdCB0eXBlPSJ0
+        ZXh0L2phdmFzY3JpcHQiIHNyYz0iL2pzL2tzLWludGVybmFsLWVuLU1qQXhO
+        VEV3TWpFeE56UTRNekEuanMiPjwvc2NyaXB0PgoKPHNjcmlwdD4KICAgIHZh
+        ciBrbG91dEkxOG5OdW1iZXJzID0ga2xvdXRJMThuTnVtYmVycy5pbml0KCdl
+        bicpOwo8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:41 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/1272396/?client_id=f93100f5c0d843809f07f94367795fb0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.instagram.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 25 Oct 2015 00:14:42 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=5224f398288468744ff4d1868d69242b; expires=Sun, 23-Oct-2016 00:14:42
+        GMT; Max-Age=31449600; Path=/
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4999'
+      Content-Length:
+      - '360'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":{"username":"ericbobmyers","bio":"Senior
+        analyst based in Hartford. I''ve got a severe nerdy streak \u0026 dry sense
+        of humor. Enjoy mix of entertainment \u0026 ADD-fueled fascination.","website":"http:\/\/about.me\/ericbobmyers","profile_picture":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11330809_1634634546820830_1421562166_a.jpg","full_name":"Eric
+        Myers","counts":{"media":259,"followed_by":428,"follows":504},"id":"1272396"}}'
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:42 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=Ericrobertmyers@Gmail.Com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sun, 25 Oct 2015 00:14:42 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '2855'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '267'
+      X-Rate-Limit-Reset:
+      - '20'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "1e6af47a-2715-4c60-b1b4-6a49a05bd1f0",
+          "likelihood" : 0.93,
+          "photos" : [ {
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/04b33c22ccba69a49bb07fe154ec1011_59735eee583abad92906a3dcfee9685b0813ae5221f010c1ded78f28d036f4a8",
+            "isPrimary" : true
+          }, {
+            "type" : "other",
+            "typeId" : "other",
+            "typeName" : "Other",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2d2c28c0a2de7ccae81416e8bb6ba09d_06cf706dc72d423798d5f3edf89c48c5b297588ab81c2b86efe008c5b9082b01",
+            "isPrimary" : false
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/5f295e6b5883e962c1f643de46fb0da4_f9b04eda71634fa2bccad9381e2e4e89981e82874d2495c191a9b70fa90c8a95",
+            "isPrimary" : false
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2295bc2aeb8862e8fb2f9cdfbe74ec79_dc84ed7cdfe4f3d268c777cbde386b32fd7f397990ce83e1f5494496b906de5a",
+            "isPrimary" : false
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/fa0eeac58bbc534680ba8dfb02cbb7cf_e09adef25151a40dd283b84ad00f15386535a76ffc437d731cce9f1b1236ab02",
+            "isPrimary" : false
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/0050bd0da7a0d9c47fbe623d760b2ab1_ed9a6d3d008ff1bcf7891876f4bf8343e784d9b1a3b78c254a4de4346f25338e",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/d85298e9eb8e37a9a5a329a10ab97551_73c18996dd95d1585b8c7efc26d82bc495f794b78c70c6e4c68d18caa9452f3b",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "chats" : [ {
+              "client" : "aim",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "yahoo",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "skype",
+              "handle" : "EricBobMyers"
+            }, {
+              "client" : "gtalk",
+              "handle" : "ericrobertmyers@gmail.com"
+            } ],
+            "websites" : [ {
+              "url" : "http://blog.reachlocal.com/605582/2012/12/07/5-steps-to-getting-your-business-found-on-apple-maps.html"
+            }, {
+              "url" : "https://adwords.google.com/professionals/profile/ind?id=03622790389943358426&hl=en"
+            }, {
+              "url" : "http://www.verticalnerve.com/blog"
+            }, {
+              "url" : "http://www.digitizedallas.com"
+            }, {
+              "url" : "http://www.digitzekc.com"
+            }, {
+              "url" : "http://www.verticalnerve.com"
+            }, {
+              "url" : "http://www.findpeopleonplus.com/profiles/115257874832329284928"
+            } ],
+            "familyName" : "Myers",
+            "fullName" : "Eric Myers",
+            "givenName" : "Eric"
+          },
+          "organizations" : [ {
+            "isPrimary" : true,
+            "name" : "Overnight Prints",
+            "startDate" : "2015-02",
+            "title" : "Manager - Digital Analytics",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Tata Consultancy Services",
+            "startDate" : "2015",
+            "title" : "Google Analytics Technical Implementation Lead",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013-02",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Levy Online",
+            "startDate" : "2014",
+            "endDate" : "2015",
+            "title" : "SEM Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Overnight Prints",
+            "startDate" : "2015",
+            "endDate" : "2015",
+            "title" : "Manager - Digital Analytics",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013",
+            "endDate" : "2014",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-07",
+            "endDate" : "2013-02",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012",
+            "endDate" : "2013",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-01",
+            "endDate" : "2012-07",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011-03",
+            "endDate" : "2012-01",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Reachlocal",
+            "startDate" : "2011",
+            "endDate" : "2012",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2007-08",
+            "endDate" : "2011-04",
+            "title" : "CEO & Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2004",
+            "endDate" : "2011",
+            "title" : "Owner / Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011",
+            "endDate" : "2011",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2010-01",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College SIFE",
+            "startDate" : "2008-08",
+            "endDate" : "2009-01",
+            "title" : "Vice President of External Affairs & Communication",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007",
+            "endDate" : "2009",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2007-08",
+            "title" : "Office of Admission Web Designer",
+            "current" : false
+          } ],
+          "demographics" : {
+            "locationDeduced" : {
+              "normalizedLocation" : "Las Vegas, Nevada",
+              "deducedLocation" : "Las Vegas, Nevada, United States",
+              "city" : {
+                "deduced" : false,
+                "name" : "Las Vegas"
+              },
+              "state" : {
+                "deduced" : false,
+                "name" : "Nevada",
+                "code" : "NV"
+              },
+              "country" : {
+                "deduced" : true,
+                "name" : "United States",
+                "code" : "US"
+              },
+              "continent" : {
+                "deduced" : true,
+                "name" : "North America"
+              },
+              "county" : {
+                "deduced" : true,
+                "name" : "Clark",
+                "code" : "Clark"
+              },
+              "likelihood" : 1.0
+            },
+            "age" : "26",
+            "ageRange" : "25-34",
+            "gender" : "Male",
+            "locationGeneral" : "Las Vegas, NV"
+          },
+          "socialProfiles" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "1191540035"
+          }, {
+            "bio" : "Senior Account Manager | SEM | Analytics | Senior Digital Marketing Analyst",
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://www.linkedin.com/in/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "bio" : "Las Vegas Marketing Consultant that works with small business owners. A Lover of all things tech, random, and entertaining, you never know quite what you'll find.",
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "18374143"
+          }, {
+            "type" : "lastfm",
+            "typeId" : "lastfm",
+            "typeName" : "Last.FM",
+            "url" : "http://www.last.fm/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "27043"
+          }, {
+            "type" : "aboutme",
+            "typeId" : "aboutme",
+            "typeName" : "About.me",
+            "url" : "https://about.me/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "quora",
+            "typeId" : "quora",
+            "typeName" : "Quora",
+            "url" : "http://www.quora.com/eric-myers",
+            "username" : "eric-myers"
+          }, {
+            "bio" : "Dallas-based marketing consultant that works with small businesses. A lover of all things tech, entertaining, and random. I'm a Type 1 diabetic & info buffet.",
+            "followers" : 314,
+            "following" : 365,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/ericbobmyers/",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "bio" : "Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",
+            "followers" : 11,
+            "following" : 0,
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "998397"
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://profile.yahoo.com/YV36KZSMWG47UJY3WNPL43RL7U",
+            "id" : "YV36KZSMWG47UJY3WNPL43RL7U"
+          }, {
+            "bio" : "#Vegas-Based, Diabetic (#T1D) #SEM Account Director. Huge #Analytics, #PPC and #Social geek tweeting about whatever entertains me at that moment.",
+            "followers" : 1538,
+            "following" : 1139,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "15771736"
+          }, {
+            "type" : "youtube",
+            "typeId" : "youtube",
+            "typeName" : "YouTube",
+            "url" : "https://youtube.com/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://plus.google.com/u/0/115257874832329284928",
+            "id" : "115257874832329284928"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/48907847",
+            "id" : "48907847"
+          } ],
+          "digitalFootprint" : {
+            "scores" : [ {
+              "provider" : "klout",
+              "type" : "general",
+              "value" : 60
+            } ],
+            "topics" : [ {
+              "provider" : "aboutme",
+              "value" : "senior account manager"
+            }, {
+              "provider" : "aboutme",
+              "value" : "small business"
+            }, {
+              "provider" : "aboutme",
+              "value" : "reachlocal"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online marketing"
+            }, {
+              "provider" : "aboutme",
+              "value" : "adwords qualified individual"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online advertising"
+            }, {
+              "provider" : "aboutme",
+              "value" : "texas"
+            }, {
+              "provider" : "aboutme",
+              "value" : "dallas"
+            }, {
+              "provider" : "klout",
+              "value" : "Diabetes"
+            }, {
+              "provider" : "aboutme",
+              "value" : "campaign consultant"
+            }, {
+              "provider" : "aboutme",
+              "value" : "social media consultant"
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:42 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/channels?forUsername=ericbobmyers&key=AIzaSyAUjDU4wIp2S-8GkxK05rY2k4gJWkSQqP4&part=statistics
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.googleapis.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 25 Oct 2015 00:14:43 GMT
+      Date:
+      - Sun, 25 Oct 2015 00:14:43 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"0KG1mRN7bm3nResDPKHQZpg5-do/n28gDRPxzVzRJunBKM6KXVAijhs"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '501'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#channelListResponse",
+         "etag": "\"0KG1mRN7bm3nResDPKHQZpg5-do/n28gDRPxzVzRJunBKM6KXVAijhs\"",
+         "pageInfo": {
+          "totalResults": 1,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#channel",
+           "etag": "\"0KG1mRN7bm3nResDPKHQZpg5-do/_CIYTxTjusrrFiH5Gc_aLZouMXk\"",
+           "id": "UCp1fDRkGaB-p8PtzmbHVpUA",
+           "statistics": {
+            "viewCount": "698",
+            "commentCount": "0",
+            "subscriberCount": "1",
+            "hiddenSubscriberCount": false,
+            "videoCount": "1"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:43 GMT
+recorded_with: VCR 2.9.3

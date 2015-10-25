@@ -61,7 +61,7 @@ Then /^I should see that the customer is a celebrity$/ do
 end
 
 Then "the customer should be saved to the database" do
-  expect(Shop.last.customers.where(email: @customer.email).count).to eq(1)
+  expect(Shop.last.customers.where(email: @customer.email.capitalize).count).to eq(1)
 end
 
 When "pry" do

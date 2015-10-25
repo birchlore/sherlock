@@ -58,14 +58,3 @@ task :transfer_celebrities_to_customers => :environment do
 	end
 	@customers
 end
-
-
-task :transfer_creeper_to_pro => :environment do
-  Shop.where(plan:"creeper").each do |shop|
-    shop.plan = "pro"
-    shop.save
-  end
-end
-
-
-

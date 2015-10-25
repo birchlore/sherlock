@@ -1,0 +1,881 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=Ericrobertmyers@Gmail.Com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sun, 25 Oct 2015 00:15:43 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '2856'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '262'
+      X-Rate-Limit-Reset:
+      - '20'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "9b3ae8a6-189d-42a1-bcc9-ee8d65d2f16a",
+          "likelihood" : 0.93,
+          "photos" : [ {
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/04b33c22ccba69a49bb07fe154ec1011_59735eee583abad92906a3dcfee9685b0813ae5221f010c1ded78f28d036f4a8",
+            "isPrimary" : true
+          }, {
+            "type" : "other",
+            "typeId" : "other",
+            "typeName" : "Other",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2d2c28c0a2de7ccae81416e8bb6ba09d_06cf706dc72d423798d5f3edf89c48c5b297588ab81c2b86efe008c5b9082b01",
+            "isPrimary" : false
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/5f295e6b5883e962c1f643de46fb0da4_f9b04eda71634fa2bccad9381e2e4e89981e82874d2495c191a9b70fa90c8a95",
+            "isPrimary" : false
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2295bc2aeb8862e8fb2f9cdfbe74ec79_dc84ed7cdfe4f3d268c777cbde386b32fd7f397990ce83e1f5494496b906de5a",
+            "isPrimary" : false
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/fa0eeac58bbc534680ba8dfb02cbb7cf_e09adef25151a40dd283b84ad00f15386535a76ffc437d731cce9f1b1236ab02",
+            "isPrimary" : false
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/0050bd0da7a0d9c47fbe623d760b2ab1_ed9a6d3d008ff1bcf7891876f4bf8343e784d9b1a3b78c254a4de4346f25338e",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/d85298e9eb8e37a9a5a329a10ab97551_73c18996dd95d1585b8c7efc26d82bc495f794b78c70c6e4c68d18caa9452f3b",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "chats" : [ {
+              "client" : "aim",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "yahoo",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "skype",
+              "handle" : "EricBobMyers"
+            }, {
+              "client" : "gtalk",
+              "handle" : "ericrobertmyers@gmail.com"
+            } ],
+            "websites" : [ {
+              "url" : "http://blog.reachlocal.com/605582/2012/12/07/5-steps-to-getting-your-business-found-on-apple-maps.html"
+            }, {
+              "url" : "https://adwords.google.com/professionals/profile/ind?id=03622790389943358426&hl=en"
+            }, {
+              "url" : "http://www.verticalnerve.com/blog"
+            }, {
+              "url" : "http://www.digitizedallas.com"
+            }, {
+              "url" : "http://www.digitzekc.com"
+            }, {
+              "url" : "http://www.verticalnerve.com"
+            }, {
+              "url" : "http://www.findpeopleonplus.com/profiles/115257874832329284928"
+            } ],
+            "familyName" : "Myers",
+            "fullName" : "Eric Myers",
+            "givenName" : "Eric"
+          },
+          "organizations" : [ {
+            "isPrimary" : true,
+            "name" : "Overnight Prints",
+            "startDate" : "2015-02",
+            "title" : "Manager - Digital Analytics",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Tata Consultancy Services",
+            "startDate" : "2015",
+            "title" : "Google Analytics Technical Implementation Lead",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013-02",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Levy Online",
+            "startDate" : "2014",
+            "endDate" : "2015",
+            "title" : "SEM Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Overnight Prints",
+            "startDate" : "2015",
+            "endDate" : "2015",
+            "title" : "Manager - Digital Analytics",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013",
+            "endDate" : "2014",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-07",
+            "endDate" : "2013-02",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012",
+            "endDate" : "2013",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-01",
+            "endDate" : "2012-07",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011-03",
+            "endDate" : "2012-01",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Reachlocal",
+            "startDate" : "2011",
+            "endDate" : "2012",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2007-08",
+            "endDate" : "2011-04",
+            "title" : "CEO & Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2004",
+            "endDate" : "2011",
+            "title" : "Owner / Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011",
+            "endDate" : "2011",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2010-01",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College SIFE",
+            "startDate" : "2008-08",
+            "endDate" : "2009-01",
+            "title" : "Vice President of External Affairs & Communication",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007",
+            "endDate" : "2009",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2007-08",
+            "title" : "Office of Admission Web Designer",
+            "current" : false
+          } ],
+          "demographics" : {
+            "locationDeduced" : {
+              "normalizedLocation" : "Las Vegas, Nevada",
+              "deducedLocation" : "Las Vegas, Nevada, United States",
+              "city" : {
+                "deduced" : false,
+                "name" : "Las Vegas"
+              },
+              "state" : {
+                "deduced" : false,
+                "name" : "Nevada",
+                "code" : "NV"
+              },
+              "country" : {
+                "deduced" : true,
+                "name" : "United States",
+                "code" : "US"
+              },
+              "continent" : {
+                "deduced" : true,
+                "name" : "North America"
+              },
+              "county" : {
+                "deduced" : true,
+                "name" : "Clark",
+                "code" : "Clark"
+              },
+              "likelihood" : 1.0
+            },
+            "age" : "26",
+            "locationGeneral" : "Las Vegas, NV",
+            "gender" : "Male",
+            "ageRange" : "25-34"
+          },
+          "socialProfiles" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "1191540035"
+          }, {
+            "bio" : "Senior Account Manager | SEM | Analytics | Senior Digital Marketing Analyst",
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://www.linkedin.com/in/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "bio" : "Las Vegas Marketing Consultant that works with small business owners. A Lover of all things tech, random, and entertaining, you never know quite what you'll find.",
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "18374143"
+          }, {
+            "type" : "lastfm",
+            "typeId" : "lastfm",
+            "typeName" : "Last.FM",
+            "url" : "http://www.last.fm/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "27043"
+          }, {
+            "type" : "aboutme",
+            "typeId" : "aboutme",
+            "typeName" : "About.me",
+            "url" : "https://about.me/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "quora",
+            "typeId" : "quora",
+            "typeName" : "Quora",
+            "url" : "http://www.quora.com/eric-myers",
+            "username" : "eric-myers"
+          }, {
+            "bio" : "Dallas-based marketing consultant that works with small businesses. A lover of all things tech, entertaining, and random. I'm a Type 1 diabetic & info buffet.",
+            "followers" : 314,
+            "following" : 365,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/ericbobmyers/",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "bio" : "Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",
+            "followers" : 11,
+            "following" : 0,
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "998397"
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://profile.yahoo.com/YV36KZSMWG47UJY3WNPL43RL7U",
+            "id" : "YV36KZSMWG47UJY3WNPL43RL7U"
+          }, {
+            "bio" : "#Vegas-Based, Diabetic (#T1D) #SEM Account Director. Huge #Analytics, #PPC and #Social geek tweeting about whatever entertains me at that moment.",
+            "followers" : 1538,
+            "following" : 1139,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "15771736"
+          }, {
+            "type" : "youtube",
+            "typeId" : "youtube",
+            "typeName" : "YouTube",
+            "url" : "https://youtube.com/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://plus.google.com/u/0/115257874832329284928",
+            "id" : "115257874832329284928"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/48907847",
+            "id" : "48907847"
+          } ],
+          "digitalFootprint" : {
+            "scores" : [ {
+              "provider" : "klout",
+              "type" : "general",
+              "value" : 60
+            } ],
+            "topics" : [ {
+              "provider" : "aboutme",
+              "value" : "senior account manager"
+            }, {
+              "provider" : "aboutme",
+              "value" : "small business"
+            }, {
+              "provider" : "aboutme",
+              "value" : "reachlocal"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online marketing"
+            }, {
+              "provider" : "aboutme",
+              "value" : "adwords qualified individual"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online advertising"
+            }, {
+              "provider" : "aboutme",
+              "value" : "texas"
+            }, {
+              "provider" : "aboutme",
+              "value" : "dallas"
+            }, {
+              "provider" : "klout",
+              "value" : "Diabetes"
+            }, {
+              "provider" : "aboutme",
+              "value" : "campaign consultant"
+            }, {
+              "provider" : "aboutme",
+              "value" : "social media consultant"
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:15:43 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=John%20Travolta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Sun, 25 Oct 2015 00:15:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '251'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sun, 25 Oct 2015 03:14:22 GMT
+      X-Varnish:
+      - 3455360687, 1046712075 1046596110
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '82'
+      X-Cache:
+      - cp1067 miss (0), cp1053 frontend hit (34)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=25-Oct-2015;Path=/;HttpOnly;Expires=Thu, 26 Nov 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1;nocookies=1
+    body:
+      encoding: UTF-8
+      string: '["John Travolta",["John Travolta"],["John Joseph Travolta (born February
+        18, 1954) is an American actor, dancer, and singer. Travolta first became
+        known in the 1970s, after appearing on the television series Welcome Back,
+        Kotter and starring in the box office successes Saturday Night Fever and Grease."],["https://en.wikipedia.org/wiki/John_Travolta"]]'
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:15:44 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=John%20Travolta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Oct 2015 00:15:44 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYtiLvmCWhycb017t3-6C-ThsbRsDmLv2SSHYGUfqQXizZKu1VHQVklUh5Rn-7Vh7nCG4_ENFCUNyZxp0rK8P9XWOL2HOiAysp5l7QOMihSv7UadxGH-6UFQSNiY8cX7B56DxnzLhiwU8N_SwTOxTWkJGS1WexBK2hqXuQaSahdLVo;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_popular": [{ "id":"nm0000237", "title":"", "name":"John Travolta","description":"Actor, Pulp Fiction"}],"name_exact": [{ "id":"nm3923616", "title":"", "name":"Lisa M. Mangan","description":"Actress, Karla Faye Tucker: Forevermore"},{ "id":"nm6395283", "title":"", "name":"John Travolta","description":"Actor, Sex Freaks"}],"name_approx": [{ "id":"nm0871456", "title":"", "name":"Joey Travolta","description":"Actor, Beverly Hills Cop III"},{ "id":"nm6445718", "title":"", "name":"Joey Travolta","description":"Producer, Holiday Anonymous"},{ "id":"nm5975710", "title":"", "name":"Joey Travolta","description":"Actor, A Lousy 10 Grand"},{ "id":"nm4765562", "title":"", "name":"Jane Travolta","description":"Actress, Laro"},{ "id":"nm0871455", "title":"", "name":"Helen Travolta","description":"Actress, Saturday Night Fever"},{ "id":"nm0871452", "title":"", "name":"Ann Travolta","description":"Actress, Swordfish"},{ "id":"nm0871459", "title":"", "name":"Nicole Travolta","description":"Actress, The Utah Murder Project"},{ "id":"nm1596681", "title":"", "name":"Jett Travolta","description":"Thanks, Old Dogs"},{ "id":"nm0871461", "title":"", "name":"Sam Travolta","description":"Actor, Swordfish"},{ "id":"nm5529703", "title":"", "name":"John Trotta","description":"Sound Department, Seasons"},{ "id":"nm0236770", "title":"", "name":"John Dragotta","description":"Miscellaneous Crew, Kounterfeit"},{ "id":"nm7405534", "title":"", "name":"John Trotta","description":"Actor, Fred Mulligan&#x27;s Showcase of Stars Episode 2"},{ "id":"nm5919938", "title":"", "name":"John Radosta","description":"Actor, &#x27;79 Parts"},{ "id":"nm2762675", "title":"", "name":"John Dragotta","description":"Actor, Twinklight"},{ "id":"nm1598388", "title":"", "name":"Juan Trabolta","description":"Costume Designer, Killer Pussy 8"},{ "id":"nm3720555", "title":"", "name":"John Triola","description":"Director, Love Probe"},{ "id":"nm6023884", "title":"", "name":"John Reynald Tiangco","description":"Thanks, The Bourne Legacy"}]
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:15:44 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Noah%20Kagan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Sun, 25 Oct 2015 00:15:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '132'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sun, 25 Oct 2015 03:05:19 GMT
+      X-Varnish:
+      - 3947806190, 1046712897 1045759814
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '626'
+      X-Cache:
+      - cp1052 miss (0), cp1053 frontend hit (16)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=25-Oct-2015;Path=/;HttpOnly;Expires=Thu, 26 Nov 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1;nocookies=1
+    body:
+      encoding: UTF-8
+      string: '["Noah Kagan",["Noah Kagan"],["Noah Kagan is an American Internet entrepreneur
+        and the founder of AppSumo."],["https://en.wikipedia.org/wiki/Noah_Kagan"]]'
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:15:44 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Noah%20Kagan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Oct 2015 00:15:45 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYjMOjjN_k_f87mb5P-pvh6rcVHhS44lCN64-AFHmMIeZY8_gFLUddL7IG5FSXEO3KDyIOMl8cFOKda9kwYdZGBKDKqAAWKi1K27WzosmckSJir2pHm-f1fe16HmtlYQMHn1x5JXMIF9vG0fxcwIZrzvb8fq-btg16VAVzpHJyycls;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm5861888", "title":"", "name":"Noah Kazanjian","description":"Actor, Late"},{ "id":"nm0863532", "title":"", "name":"Noah Timan","description":"Sound Department, Fantastic Mr. Fox"},{ "id":"nm5742208", "title":"", "name":"Jonah Kagan","description":"Writer, Donner Party: The Musical"},{ "id":"nm0810101", "title":"", "name":"Taran Noah Smith","description":"Actor, Little Bigfoot 2: The Journey Home"},{ "id":"nm0781913", "title":"", "name":"Noah Segan","description":"Actor, Looper"},{ "id":"nm6547344", "title":"", "name":"Noah Kaplan","description":"Writer, Raw Nerve"},{ "id":"nm1818048", "title":"", "name":"Kagan Goh","description":"Director, Stolen Memories"},{ "id":"nm5657500", "title":"", "name":"Noah Kaai","description":"Director, Maasai Voices on Climate Change: and Other Changes, Too"},{ "id":"nm3386285", "title":"", "name":"Noah Faran","description":"Miscellaneous Crew, Beaufort"},{ "id":"nm6154452", "title":"", "name":"Noah Hogan","description":"Visual Effects, #BreakfastInBedTour"},{ "id":"nm2264256", "title":"", "name":"Alan Noah","description":"Producer, Logo Movie Special: &#x27;Brokeback Mountain&#x27;"},{ "id":"nm3394949", "title":"", "name":"Emil Kagandahan","description":"Second Unit Director or Assistant Director, Takot ako, eh!"},{ "id":"nm3846679", "title":"", "name":"Noah ben Hagay","description":"Editor, Haya Bli Ima"},{ "id":"nm3660651", "title":"", "name":"Noah Hogan","description":"Animation Department, Motorcycle Dreams"},{ "id":"nm2789136", "title":"", "name":"Noah Philip Lagin","description":"Director, Warsaw"},{ "id":"nm5079489", "title":"", "name":"Noah Derek Logan","description":"Art Director, V/H/S/2"},{ "id":"nm5210140", "title":"", "name":"Noah Khan","description":"Actor, Part Time Fabulous"},{ "id":"nm3110828", "title":"", "name":"Josh Kagan","description":"Producer, Unmade Man"},{ "id":"nm4565073", "title":"", "name":"Rosh Kagan","description":"Actress, Golden: How to Make a Billion Dollars the Easy Way"},{ "id":"nm2666777", "title":"", "name":"Noah Kaplan","description":"Actor, Chance of a Lifetime"}]
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:15:45 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sun, 25 Oct 2015 00:15:45 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '261'
+      X-Rate-Limit-Reset:
+      - '18'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "b179d813-0caf-410a-864e-556607398734"
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:15:45 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Noah%20Kagan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Oct 2015 00:15:45 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYt-zSh01HgFE-jeU08_ayfjjxuto63davCMnUkWx39OD8-mhApfPdfgRRUJTjEDyNBxaOIZtUMTCaqLwE43sLpXopcuzz8O_lkgrKJLwUSXvzdBLZiRoayFSArcHsVGkb9qsC95YG4qojZdz1ZLbuVCF6fCNah797XyMygR2OBs-Q;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_approx": [{ "id":"nm5861888", "title":"", "name":"Noah Kazanjian","description":"Actor, Late"},{ "id":"nm0863532", "title":"", "name":"Noah Timan","description":"Sound Department, Fantastic Mr. Fox"},{ "id":"nm5742208", "title":"", "name":"Jonah Kagan","description":"Writer, Donner Party: The Musical"},{ "id":"nm0810101", "title":"", "name":"Taran Noah Smith","description":"Actor, Little Bigfoot 2: The Journey Home"},{ "id":"nm0781913", "title":"", "name":"Noah Segan","description":"Actor, Looper"},{ "id":"nm6547344", "title":"", "name":"Noah Kaplan","description":"Writer, Raw Nerve"},{ "id":"nm1818048", "title":"", "name":"Kagan Goh","description":"Director, Stolen Memories"},{ "id":"nm5657500", "title":"", "name":"Noah Kaai","description":"Director, Maasai Voices on Climate Change: and Other Changes, Too"},{ "id":"nm3386285", "title":"", "name":"Noah Faran","description":"Miscellaneous Crew, Beaufort"},{ "id":"nm6154452", "title":"", "name":"Noah Hogan","description":"Visual Effects, #BreakfastInBedTour"},{ "id":"nm2264256", "title":"", "name":"Alan Noah","description":"Producer, Logo Movie Special: &#x27;Brokeback Mountain&#x27;"},{ "id":"nm3394949", "title":"", "name":"Emil Kagandahan","description":"Second Unit Director or Assistant Director, Takot ako, eh!"},{ "id":"nm3846679", "title":"", "name":"Noah ben Hagay","description":"Editor, Haya Bli Ima"},{ "id":"nm3660651", "title":"", "name":"Noah Hogan","description":"Animation Department, Motorcycle Dreams"},{ "id":"nm2789136", "title":"", "name":"Noah Philip Lagin","description":"Director, Warsaw"},{ "id":"nm5079489", "title":"", "name":"Noah Derek Logan","description":"Art Director, V/H/S/2"},{ "id":"nm5210140", "title":"", "name":"Noah Khan","description":"Actor, Part Time Fabulous"},{ "id":"nm3110828", "title":"", "name":"Josh Kagan","description":"Producer, Unmade Man"},{ "id":"nm4565073", "title":"", "name":"Rosh Kagan","description":"Actress, Golden: How to Make a Billion Dollars the Easy Way"},{ "id":"nm2666777", "title":"", "name":"Noah Kaplan","description":"Actor, Chance of a Lifetime"}]
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:15:45 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Noah%20Kagan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Sun, 25 Oct 2015 00:15:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '132'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sun, 25 Oct 2015 03:05:19 GMT
+      X-Varnish:
+      - 3947806190, 1046714406 1045759814
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '627'
+      X-Cache:
+      - cp1052 miss (0), cp1053 frontend hit (17)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=25-Oct-2015;Path=/;HttpOnly;Expires=Thu, 26 Nov 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1;nocookies=1
+    body:
+      encoding: UTF-8
+      string: '["Noah Kagan",["Noah Kagan"],["Noah Kagan is an American Internet entrepreneur
+        and the founder of AppSumo."],["https://en.wikipedia.org/wiki/Noah_Kagan"]]'
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:15:46 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sun, 25 Oct 2015 00:15:46 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '260'
+      X-Rate-Limit-Reset:
+      - '17'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "6b2c2fb3-4d1f-40f8-baf7-3f878f93c667"
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:15:46 GMT
+recorded_with: VCR 2.9.3

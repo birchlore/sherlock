@@ -171,7 +171,6 @@ class Customer < ActiveRecord::Base
     set_imdb if @imdb_data && self.shop.imdb_notification
     set_wikipedia if @wikipedia_data && self.shop.wikipedia_notification
     set_social_data if @fullcontact_data
-    # errors.add(:body, "This ain't no celebrity, kid") unless celebrity?
   end
 
   def sanitize

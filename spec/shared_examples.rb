@@ -266,8 +266,8 @@ shared_context "shared examples" do
 
     # Use build instead of create as celebrity validation will fail
     # on create and won't be able to create it in first place
-    let(:celebrity) { FactoryGirl.build(:celebrity) }
-    let(:twitter_celebrity) { FactoryGirl.create(:celebrity, twitter_followers: 2, email: "jacksondcunningham@gmail.com") }
+    let(:customer) { FactoryGirl.build(:customer) }
+    let(:twitter_celebrity) { FactoryGirl.create(:customer, twitter_followers: 2, email: "jacksondcunningham@gmail.com") }
     let(:imdb_celebrity) { FactoryGirl.create(:imdb_celebrity) }
     let(:instagram_celebrity) { FactoryGirl.create(:instagram_celebrity) }
     let(:wikipedia_celebrity) { FactoryGirl.create(:wikipedia_celebrity) }

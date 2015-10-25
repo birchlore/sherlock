@@ -1,0 +1,925 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=Ericrobertmyers@Gmail.Com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sun, 25 Oct 2015 00:14:57 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '2855'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '251'
+      X-Rate-Limit-Reset:
+      - '5'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "5dfd130f-23fa-4992-9132-6ace6ea59cae",
+          "likelihood" : 0.93,
+          "photos" : [ {
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/04b33c22ccba69a49bb07fe154ec1011_59735eee583abad92906a3dcfee9685b0813ae5221f010c1ded78f28d036f4a8",
+            "isPrimary" : true
+          }, {
+            "type" : "other",
+            "typeId" : "other",
+            "typeName" : "Other",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2d2c28c0a2de7ccae81416e8bb6ba09d_06cf706dc72d423798d5f3edf89c48c5b297588ab81c2b86efe008c5b9082b01",
+            "isPrimary" : false
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/5f295e6b5883e962c1f643de46fb0da4_f9b04eda71634fa2bccad9381e2e4e89981e82874d2495c191a9b70fa90c8a95",
+            "isPrimary" : false
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/2295bc2aeb8862e8fb2f9cdfbe74ec79_dc84ed7cdfe4f3d268c777cbde386b32fd7f397990ce83e1f5494496b906de5a",
+            "isPrimary" : false
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/fa0eeac58bbc534680ba8dfb02cbb7cf_e09adef25151a40dd283b84ad00f15386535a76ffc437d731cce9f1b1236ab02",
+            "isPrimary" : false
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/0050bd0da7a0d9c47fbe623d760b2ab1_ed9a6d3d008ff1bcf7891876f4bf8343e784d9b1a3b78c254a4de4346f25338e",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/d85298e9eb8e37a9a5a329a10ab97551_73c18996dd95d1585b8c7efc26d82bc495f794b78c70c6e4c68d18caa9452f3b",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "chats" : [ {
+              "client" : "aim",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "yahoo",
+              "handle" : "ericbobmyers"
+            }, {
+              "client" : "skype",
+              "handle" : "EricBobMyers"
+            }, {
+              "client" : "gtalk",
+              "handle" : "ericrobertmyers@gmail.com"
+            } ],
+            "websites" : [ {
+              "url" : "http://blog.reachlocal.com/605582/2012/12/07/5-steps-to-getting-your-business-found-on-apple-maps.html"
+            }, {
+              "url" : "https://adwords.google.com/professionals/profile/ind?id=03622790389943358426&hl=en"
+            }, {
+              "url" : "http://www.verticalnerve.com/blog"
+            }, {
+              "url" : "http://www.digitizedallas.com"
+            }, {
+              "url" : "http://www.digitzekc.com"
+            }, {
+              "url" : "http://www.verticalnerve.com"
+            }, {
+              "url" : "http://www.findpeopleonplus.com/profiles/115257874832329284928"
+            } ],
+            "familyName" : "Myers",
+            "fullName" : "Eric Myers",
+            "givenName" : "Eric"
+          },
+          "organizations" : [ {
+            "isPrimary" : true,
+            "name" : "Overnight Prints",
+            "startDate" : "2015-02",
+            "title" : "Manager - Digital Analytics",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Tata Consultancy Services",
+            "startDate" : "2015",
+            "title" : "Google Analytics Technical Implementation Lead",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013-02",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : true
+          }, {
+            "isPrimary" : false,
+            "name" : "Levy Online",
+            "startDate" : "2014",
+            "endDate" : "2015",
+            "title" : "SEM Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Overnight Prints",
+            "startDate" : "2015",
+            "endDate" : "2015",
+            "title" : "Manager - Digital Analytics",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Vertical Nerve",
+            "startDate" : "2013",
+            "endDate" : "2014",
+            "title" : "Senior Account Manager - Search Engine Marketing",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-07",
+            "endDate" : "2013-02",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012",
+            "endDate" : "2013",
+            "title" : "Campaign Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2012-01",
+            "endDate" : "2012-07",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011-03",
+            "endDate" : "2012-01",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Reachlocal",
+            "startDate" : "2011",
+            "endDate" : "2012",
+            "title" : "Account Manager",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2007-08",
+            "endDate" : "2011-04",
+            "title" : "CEO & Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "Burgeon Communications",
+            "startDate" : "2004",
+            "endDate" : "2011",
+            "title" : "Owner / Chief Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "ReachLocal",
+            "startDate" : "2011",
+            "endDate" : "2011",
+            "title" : "Internet Marketing Consultant",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2010-01",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College SIFE",
+            "startDate" : "2008-08",
+            "endDate" : "2009-01",
+            "title" : "Vice President of External Affairs & Communication",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007",
+            "endDate" : "2009",
+            "title" : "Media Content Management Intern",
+            "current" : false
+          }, {
+            "isPrimary" : false,
+            "name" : "William Jewell College",
+            "startDate" : "2007-05",
+            "endDate" : "2007-08",
+            "title" : "Office of Admission Web Designer",
+            "current" : false
+          } ],
+          "demographics" : {
+            "locationDeduced" : {
+              "normalizedLocation" : "Las Vegas, Nevada",
+              "deducedLocation" : "Las Vegas, Nevada, United States",
+              "city" : {
+                "deduced" : false,
+                "name" : "Las Vegas"
+              },
+              "state" : {
+                "deduced" : false,
+                "name" : "Nevada",
+                "code" : "NV"
+              },
+              "country" : {
+                "deduced" : true,
+                "name" : "United States",
+                "code" : "US"
+              },
+              "continent" : {
+                "deduced" : true,
+                "name" : "North America"
+              },
+              "county" : {
+                "deduced" : true,
+                "name" : "Clark",
+                "code" : "Clark"
+              },
+              "likelihood" : 1.0
+            },
+            "age" : "26",
+            "ageRange" : "25-34",
+            "gender" : "Male",
+            "locationGeneral" : "Las Vegas, NV"
+          },
+          "socialProfiles" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "1191540035"
+          }, {
+            "bio" : "Senior Account Manager | SEM | Analytics | Senior Digital Marketing Analyst",
+            "type" : "linkedin",
+            "typeId" : "linkedin",
+            "typeName" : "LinkedIn",
+            "url" : "https://www.linkedin.com/in/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "bio" : "Las Vegas Marketing Consultant that works with small business owners. A Lover of all things tech, random, and entertaining, you never know quite what you'll find.",
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "18374143"
+          }, {
+            "type" : "lastfm",
+            "typeId" : "lastfm",
+            "typeName" : "Last.FM",
+            "url" : "http://www.last.fm/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "27043"
+          }, {
+            "type" : "aboutme",
+            "typeId" : "aboutme",
+            "typeName" : "About.me",
+            "url" : "https://about.me/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "quora",
+            "typeId" : "quora",
+            "typeName" : "Quora",
+            "url" : "http://www.quora.com/eric-myers",
+            "username" : "eric-myers"
+          }, {
+            "bio" : "Dallas-based marketing consultant that works with small businesses. A lover of all things tech, entertaining, and random. I'm a Type 1 diabetic & info buffet.",
+            "followers" : 314,
+            "following" : 365,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/ericbobmyers/",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/ericrmyers",
+            "username" : "ericrmyers"
+          }, {
+            "bio" : "Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",
+            "followers" : 11,
+            "following" : 0,
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/ericbobmyers",
+            "username" : "ericbobmyers",
+            "id" : "998397"
+          }, {
+            "type" : "yahoo",
+            "typeId" : "yahoo",
+            "typeName" : "Yahoo",
+            "url" : "https://profile.yahoo.com/YV36KZSMWG47UJY3WNPL43RL7U",
+            "id" : "YV36KZSMWG47UJY3WNPL43RL7U"
+          }, {
+            "bio" : "#Vegas-Based, Diabetic (#T1D) #SEM Account Director. Huge #Analytics, #PPC and #Social geek tweeting about whatever entertains me at that moment.",
+            "followers" : 1538,
+            "following" : 1139,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/Ericbobmyers",
+            "username" : "Ericbobmyers",
+            "id" : "15771736"
+          }, {
+            "type" : "youtube",
+            "typeId" : "youtube",
+            "typeName" : "YouTube",
+            "url" : "https://youtube.com/user/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "googleplus",
+            "typeId" : "googleplus",
+            "typeName" : "GooglePlus",
+            "url" : "https://plus.google.com/u/0/115257874832329284928",
+            "id" : "115257874832329284928"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/ericbobmyers",
+            "username" : "ericbobmyers"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/48907847",
+            "id" : "48907847"
+          } ],
+          "digitalFootprint" : {
+            "scores" : [ {
+              "provider" : "klout",
+              "type" : "general",
+              "value" : 60
+            } ],
+            "topics" : [ {
+              "provider" : "aboutme",
+              "value" : "senior account manager"
+            }, {
+              "provider" : "aboutme",
+              "value" : "small business"
+            }, {
+              "provider" : "aboutme",
+              "value" : "reachlocal"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online marketing"
+            }, {
+              "provider" : "aboutme",
+              "value" : "adwords qualified individual"
+            }, {
+              "provider" : "aboutme",
+              "value" : "online advertising"
+            }, {
+              "provider" : "aboutme",
+              "value" : "texas"
+            }, {
+              "provider" : "aboutme",
+              "value" : "dallas"
+            }, {
+              "provider" : "klout",
+              "value" : "Diabetes"
+            }, {
+              "provider" : "aboutme",
+              "value" : "campaign consultant"
+            }, {
+              "provider" : "aboutme",
+              "value" : "social media consultant"
+            } ]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:57 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=John%20Travolta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Sun, 25 Oct 2015 00:14:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '251'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sun, 25 Oct 2015 03:14:22 GMT
+      X-Varnish:
+      - 3455360687, 1046652262 1046596110
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '36'
+      X-Cache:
+      - cp1067 miss (0), cp1053 frontend hit (10)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=25-Oct-2015;Path=/;HttpOnly;Expires=Thu, 26 Nov 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1;nocookies=1
+    body:
+      encoding: UTF-8
+      string: '["John Travolta",["John Travolta"],["John Joseph Travolta (born February
+        18, 1954) is an American actor, dancer, and singer. Travolta first became
+        known in the 1970s, after appearing on the television series Welcome Back,
+        Kotter and starring in the box office successes Saturday Night Fever and Grease."],["https://en.wikipedia.org/wiki/John_Travolta"]]'
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:58 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=John%20Travolta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Oct 2015 00:14:58 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYhhuexjkYnJWKe4g79vAcu8fTnOVXzeyoudDh7ohu2PJ0wzKxf2dzWCzuMnFJXYAxGMo_LBBL-d80PWdU5cX09McllST1fF60-_iMYhbjOly0PM4essD6rg8M9R54qKqcGKZfCLqyOuS5HUehsLXJAXSafxHEWupG9itQlPTpWLak;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_popular": [{ "id":"nm0000237", "title":"", "name":"John Travolta","description":"Actor, Pulp Fiction"}],"name_exact": [{ "id":"nm3923616", "title":"", "name":"Lisa M. Mangan","description":"Actress, Karla Faye Tucker: Forevermore"},{ "id":"nm6395283", "title":"", "name":"John Travolta","description":"Actor, Sex Freaks"}],"name_approx": [{ "id":"nm0871456", "title":"", "name":"Joey Travolta","description":"Actor, Beverly Hills Cop III"},{ "id":"nm6445718", "title":"", "name":"Joey Travolta","description":"Producer, Holiday Anonymous"},{ "id":"nm5975710", "title":"", "name":"Joey Travolta","description":"Actor, A Lousy 10 Grand"},{ "id":"nm4765562", "title":"", "name":"Jane Travolta","description":"Actress, Laro"},{ "id":"nm0871455", "title":"", "name":"Helen Travolta","description":"Actress, Saturday Night Fever"},{ "id":"nm0871452", "title":"", "name":"Ann Travolta","description":"Actress, Swordfish"},{ "id":"nm0871459", "title":"", "name":"Nicole Travolta","description":"Actress, The Utah Murder Project"},{ "id":"nm1596681", "title":"", "name":"Jett Travolta","description":"Thanks, Old Dogs"},{ "id":"nm0871461", "title":"", "name":"Sam Travolta","description":"Actor, Swordfish"},{ "id":"nm5529703", "title":"", "name":"John Trotta","description":"Sound Department, Seasons"},{ "id":"nm0236770", "title":"", "name":"John Dragotta","description":"Miscellaneous Crew, Kounterfeit"},{ "id":"nm7405534", "title":"", "name":"John Trotta","description":"Actor, Fred Mulligan&#x27;s Showcase of Stars Episode 2"},{ "id":"nm5919938", "title":"", "name":"John Radosta","description":"Actor, &#x27;79 Parts"},{ "id":"nm2762675", "title":"", "name":"John Dragotta","description":"Actor, Twinklight"},{ "id":"nm1598388", "title":"", "name":"Juan Trabolta","description":"Costume Designer, Killer Pussy 8"},{ "id":"nm3720555", "title":"", "name":"John Triola","description":"Director, Love Probe"},{ "id":"nm6023884", "title":"", "name":"John Reynald Tiangco","description":"Thanks, The Bourne Legacy"}]
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:58 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Sun, 25 Oct 2015 00:14:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sun, 25 Oct 2015 03:05:41 GMT
+      X-Varnish:
+      - 315741973, 1046653485 1045799852
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '557'
+      X-Cache:
+      - cp1054 miss (0), cp1053 frontend hit (7)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=25-Oct-2015;Path=/;HttpOnly;Expires=Thu, 26 Nov 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1;nocookies=1
+    body:
+      encoding: UTF-8
+      string: '["Jackson Cunningham",[],[],[]]'
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:58 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Oct 2015 00:14:58 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYtzlzRo9ONuG8ICWPvSfbiHD2xw65BoCXHfle92cJJW1pX0YjVB2uLOQ7iSi0kUm8J1jSS1Vn3WhUbyoDl25cI_PSpiaX3UPcVCTahXbqk-rS8Lc0lrebUby2DTNcaCNZQjljRyBp2U8M3BN0FE4p4knvohYDnNv5Wx5Yje634djs;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm1080980", "title":"", "name":"Jackson Cunningham","description":"Actor, 10-Speed"}],"name_approx": [{ "id":"nm2998651", "title":"", "name":"Jason Blaise Cunningham","description":"Camera and Electrical Department, Dawn of the Planet of the Apes"},{ "id":"nm0192336", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Road Trip"},{ "id":"nm1899417", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Stuck in the Middle with You"},{ "id":"nm3483519", "title":"", "name":"Jason Cunningham","description":"Thanks, The Signal"},{ "id":"nm6377923", "title":"", "name":"Jameson Cunningham","description":"Sound Department, Amor"},{ "id":"nm7308883", "title":"", "name":"Jameson Cunningham","description":"Camera and Electrical Department, Electric"},{ "id":"nm3175205", "title":"", "name":"Jason Cunningham","description":"Writer, All American Addict"},{ "id":"nm3784096", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Now, What?"},{ "id":"nm2553697", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Dale&#x27;s Supermarket Sweep"},{ "id":"nm6125182", "title":"", "name":"Jason Cunningham","description":"Thanks, Dirty Beautiful"},{ "id":"nm4963372", "title":"", "name":"Jason Cunningham","description":"Thanks, Haunt"},{ "id":"nm6367389", "title":"", "name":"Jameson Cunningham","description":"Uncategorised"},{ "id":"nm5439317", "title":"", "name":"Clare Alison Cunningham","description":"Director, The Ancient Arts of Qigong &#x26; Tai Chi"},{ "id":"nm0192328", "title":"", "name":"Jack Cunningham","description":"Second Unit Director or Assistant Director, The Great Race"},{ "id":"nm2731697", "title":"", "name":"Carson Cunningham","description":"Camera and Electrical Department, One Day More: Part 2"},{ "id":"nm0192278", "title":"", "name":"Dan Cunningham","description":"Actor, Richard III"},{ "id":"nm4765145", "title":"", "name":"Jaclyn Cunningham","description":"Actress, Forever"},{ "id":"nm0192256", "title":"", "name":"Cason Cunningham","description":"Actor, Black Girl"},{ "id":"nm3160705", "title":"", "name":"Jacob Cunningham","description":"Writer, Thy Will Be Done"}]
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:58 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sun, 25 Oct 2015 00:14:59 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '250'
+      X-Rate-Limit-Reset:
+      - '3'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "dddfdadb-c1aa-4251-a90a-b9f3d8e2f09b"
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:59 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/xml/find?json=1&nm=on&nr=1&q=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.imdb.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 25 Oct 2015 00:14:59 GMT
+      Server:
+      - HTTPDaemon
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYqqQo47bnzCBU2KRUixrg44vMQ8_8Tj2YrkRZ5hORKPWa8r-3TdO0ZkUyZkm6jvgCPCGeClQFHj4AmB3xVKruCOutfnuYa_HM6vxJ40vLQC_E4a4BfHCvhI4vdvJ9YOkEn1yRHKgTaVNtGFyxPdp1jOt5ScXFRNTw3JcaJlGIlhe0;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |2
+
+        {
+        "name_exact": [{ "id":"nm1080980", "title":"", "name":"Jackson Cunningham","description":"Actor, 10-Speed"}],"name_approx": [{ "id":"nm2998651", "title":"", "name":"Jason Blaise Cunningham","description":"Camera and Electrical Department, Dawn of the Planet of the Apes"},{ "id":"nm0192336", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Road Trip"},{ "id":"nm1899417", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Stuck in the Middle with You"},{ "id":"nm3483519", "title":"", "name":"Jason Cunningham","description":"Thanks, The Signal"},{ "id":"nm6377923", "title":"", "name":"Jameson Cunningham","description":"Sound Department, Amor"},{ "id":"nm7308883", "title":"", "name":"Jameson Cunningham","description":"Camera and Electrical Department, Electric"},{ "id":"nm3175205", "title":"", "name":"Jason Cunningham","description":"Writer, All American Addict"},{ "id":"nm3784096", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Now, What?"},{ "id":"nm2553697", "title":"", "name":"Jason Cunningham","description":"Miscellaneous Crew, Dale&#x27;s Supermarket Sweep"},{ "id":"nm6125182", "title":"", "name":"Jason Cunningham","description":"Thanks, Dirty Beautiful"},{ "id":"nm4963372", "title":"", "name":"Jason Cunningham","description":"Thanks, Haunt"},{ "id":"nm6367389", "title":"", "name":"Jameson Cunningham","description":"Uncategorised"},{ "id":"nm5439317", "title":"", "name":"Clare Alison Cunningham","description":"Director, The Ancient Arts of Qigong &#x26; Tai Chi"},{ "id":"nm0192328", "title":"", "name":"Jack Cunningham","description":"Second Unit Director or Assistant Director, The Great Race"},{ "id":"nm2731697", "title":"", "name":"Carson Cunningham","description":"Camera and Electrical Department, One Day More: Part 2"},{ "id":"nm0192278", "title":"", "name":"Dan Cunningham","description":"Actor, Richard III"},{ "id":"nm4765145", "title":"", "name":"Jaclyn Cunningham","description":"Actress, Forever"},{ "id":"nm0192256", "title":"", "name":"Cason Cunningham","description":"Actor, Black Girl"},{ "id":"nm3160705", "title":"", "name":"Jacob Cunningham","description":"Writer, Thy Will Be Done"}]
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:59 GMT
+- request:
+    method: get
+    uri: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=1&namespace=0&search=Jackson%20Cunningham
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - en.wikipedia.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.4
+      Date:
+      - Sun, 25 Oct 2015 00:14:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '46'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - HHVM/3.6.5
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=10800, s-maxage=10800, public
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
+      Expires:
+      - Sun, 25 Oct 2015 03:05:41 GMT
+      X-Varnish:
+      - 315741973, 1046655571 1045799852
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '558'
+      X-Cache:
+      - cp1054 miss (0), cp1053 frontend hit (8)
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Set-Cookie:
+      - GeoIP=CA:BC:Vancouver:49.26:-123.07:v4; Path=/; Domain=.wikipedia.org
+      - WMF-Last-Access=25-Oct-2015;Path=/;HttpOnly;Expires=Thu, 26 Nov 2015 00:00:00
+        GMT
+      X-Analytics:
+      - https=1;nocookies=1
+    body:
+      encoding: UTF-8
+      string: '["Jackson Cunningham",[],[],[]]'
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:14:59 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sun, 25 Oct 2015 00:15:00 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '249'
+      X-Rate-Limit-Reset:
+      - '3'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "f2f99d5b-c7de-4e1a-8d5c-0a1ba9ee18bc"
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 00:15:00 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=Falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Sun, 25 Oct 2015 01:06:13 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '299'
+      X-Rate-Limit-Reset:
+      - '60'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "6689bafd-cd5a-4b88-b1e6-34f82ec93ab2"
+        }
+    http_version: 
+  recorded_at: Sun, 25 Oct 2015 01:06:13 GMT
+recorded_with: VCR 2.9.3
