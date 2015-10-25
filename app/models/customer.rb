@@ -109,6 +109,50 @@ class Customer < ActiveRecord::Base
   end
 
 
+  ## analytics data
+
+  def self.percentage_with_imdb_match
+    @count ||= Customer.count.to_f
+    imdb_count = self.where("imdb_url IS NOT NULL").count
+    (imdb_count).percent_of(@count)
+  end
+
+  def self.percentage_with_wikipedia_match
+    @count ||= Customer.count
+    wikipedia_count = self.where("wikipedia_url IS NOT NULL").count
+    (wikipedia_count).percent_of(@count)
+  end
+
+  def self.percentage_with_followers(num_followers)
+    @count ||= Customer.count
+    twitter_followers = self.where("twitter_followers > ?", num_followers).count
+    instagram_followers = self.where("instagram_followers > ?", num_followers).count
+    youtube_subscribers = self.where("youtube_subscribers > ?", num_followers).count
+    followers_count = twitter_followers + instagram_followers + youtube_subscribers
+    (followers_count).percent_of(@count)
+  end
+
+  def self.percentage_with_klout_score(score)
+    @count ||= Customer.count
+    klout_count = self.where("klout_score > ?", score).count
+    (klout_count).percent_of(@count)
+  end
+
+  def self.scans_until_match(match_type, options = {score: 0, followers: 0})
+    score = options[:score]
+    num_followers = options[:followers]
+
+    if match_type == "imdb"
+      (100 / self.percentage_with_imdb_match).ceil
+    elsif match_type == "wikipedia"
+      (100 / self.percentage_with_wikipedia_match).ceil
+    elsif match_type == "klout"
+      (100 / self.percentage_with_klout_score(score)).ceil
+    elsif match_type == "followers"
+      (100 / self.percentage_with_followers(num_followers)).ceil
+    end
+  end
+
 
   protected
 
