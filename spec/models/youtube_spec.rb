@@ -8,7 +8,7 @@ describe Youtube, :vcr do
      before(:all) do
         shop = build(:shop)
         youtube_celebrity = build(:super_celebrity, shop: shop, youtube_username: "ericbobmyers")
-        regular_customer = build(:celebrity, shop: shop)
+        regular_customer = build(:customer, shop: shop)
         @youtube = Youtube.new(youtube_celebrity)
         @no_youtube = Youtube.new(regular_customer)
      end

@@ -1,21 +1,21 @@
-Given "the customer is a celebrity with incorrect whitespaces" do
-  @customer = build(:celebrity, :first_name=>"  Noah", :last_name=>"Kagan ")
+Given "the customer has incorrect whitespaces" do
+  @customer = build(:customer, :first_name=>"  Noah", :last_name=>"Kagan ")
 end
 
-Given "the customer is a celebrity with incorrect capitalization" do
-  @customer = build(:celebrity, :first_name=>"hArRy", :last_name=>"tRUman")
+Given "the customer has incorrect capitalization" do
+  @customer = build(:customer, :first_name=>"hArRy", :last_name=>"tRUman")
 end
 
-Given "the customer is a celebrity who is dead" do
-  @customer = build(:celebrity, :first_name=>"Robert", :last_name=>"Frost")
+Given "the customer is dead" do
+  @customer = build(:customer, :first_name=>"Robert", :last_name=>"Frost")
 end
 
 Given "the customer is not a celebrity" do
-  @customer = build(:celebrity, :first_name=>"Birglend", :last_name=>"Firglingham", :email=>"birglendfirglingham@gmail.com")
+  @customer = build(:customer, :first_name=>"Birglend", :last_name=>"Firglingham", :email=>"birglendfirglingham@gmail.com")
 end
 
-Given "the customer is a celebrity with a common name" do
-	@customer = build(:celebrity, :first_name=>"Sarah", :last_name=>"Smith")
+Given "the customer has a common name" do
+	@customer = build(:customer, :first_name=>"Sarah", :last_name=>"Smith")
   @customer.shop.imdb_notification = false
 end
 

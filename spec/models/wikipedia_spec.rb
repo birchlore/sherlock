@@ -9,7 +9,7 @@ describe Wikipedia, :vcr do
     before(:all) do
         shop = build(:shop)
         wikipedia_celebrity = build(:wikipedia_celebrity, shop: shop)
-        regular_customer = build(:celebrity, shop: shop)
+        regular_customer = build(:customer, shop: shop)
         @wikipedia = Wikipedia.new(wikipedia_celebrity)
         @no_wikipedia = Wikipedia.new(regular_customer)
     end
