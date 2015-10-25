@@ -8,9 +8,9 @@ describe Fullcontact, :vcr do
 before(:all) do
   shop = build(:shop)
   super_celebrity = build(:super_celebrity, shop: shop)
-  celebrity = build(:celebrity, shop: shop)
+  customer = build(:customer, shop: shop)
   @fullcontact = Fullcontact.new(super_celebrity)
-  @fullcontact_dud = Fullcontact.new(celebrity)
+  @fullcontact_dud = Fullcontact.new(customer)
 end
 
   describe "data" do
