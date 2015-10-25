@@ -8,7 +8,7 @@ describe IMDB, :vcr do
     before(:all) do
         shop = build(:shop)
         imdb_celebrity = build(:imdb_celebrity, shop: shop)
-        regular_customer = build(:celebrity, shop: shop)
+        regular_customer = build(:customer, shop: shop)
         @imdb = IMDB.new(imdb_celebrity)
         @no_imdb = IMDB.new(regular_customer)
     end
