@@ -10,6 +10,7 @@ describe Instagram, :vcr do
         super_celebrity = build(:super_celebrity, shop: shop, klout_url: "http://klout.com/Ericbobmyers")
         regular_customer = build(:twitter_celebrity, shop: shop)
         @instagram = Instagram.new(super_celebrity)
+        @klout = Klout.new(super_celebrity)
         @no_instagram = Instagram.new(regular_customer)
     end
 
@@ -19,7 +20,7 @@ describe Instagram, :vcr do
     describe "id" do
         context "when customer has an Instagram profile" do
             it "returns the instagram ID" do
-                expect(@instagram.id).to be_an(Integer)
+                expect(@instagram.id).to be_an(String)
             end
         end
 
