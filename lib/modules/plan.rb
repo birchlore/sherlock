@@ -19,13 +19,13 @@ module Plan
     if plan_type == "free"
       20
     elsif plan_type == "basic"
-      200
+      220
     elsif plan_type == "pro"
-      1000
+      1020
     elsif plan_type == "stalker"
-      2500
+      2520
     elsif plan_type == "god"
-      6000
+      6020
     end
   end
 
