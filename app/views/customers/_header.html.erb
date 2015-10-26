@@ -1,5 +1,9 @@
 <div class="spacer"></div>
 
+<div style="text-align:left">
+	<%= link_to image_tag('logo.png', :height=>"50px"), root_url %>
+</div>
+
 <div style="text-align:right;">
 	<% if @plan == "free" %>
 	 	<h4><span id="scans-remaining"><%= @scans_remaining %></span> free customer scans remaining (<%= link_to "change plan", plan_path %>)</h4>
