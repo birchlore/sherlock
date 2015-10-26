@@ -10,6 +10,7 @@ class Customer < ActiveRecord::Base
   validates_presence_of :shop, :on => :create
 
   def scan
+    self.sanitize
     data = self.get_external_data
     return unless data
     self.get_celebrity_status

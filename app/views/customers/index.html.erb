@@ -4,9 +4,9 @@
 
 	<div style="text-align:right;">
 	<% if @plan == "free" %>
-	 	<h4><span id="scans-remaining"><%= @scans_remaining %></span> free customer scans remaining (<%= link_to "change plan", edit_shop_path(anchor: 'plan') %>)</h4>
+	 	<h4><span id="scans-remaining"><%= @scans_remaining %></span> free customer scans remaining (<%= link_to "change plan", plan_path %>)</h4>
 	<% else %>
-	 	<h4><span id="scans-remaining"><%= @scans_remaining %></span> customer scans remaining this month (<%= link_to "change plan", edit_shop_path(anchor: 'plan') %>)</h4>
+	 	<h4><span id="scans-remaining"><%= @scans_remaining %></span> customer scans remaining this month (<%= link_to "change plan", plan_path %>)</h4>
 	<% end %>
 
 	    <%= link_to edit_shop_path do %>

@@ -14,9 +14,13 @@
 	 <div class="panel-body">
 		  <%= form_for @shop do |f| %>
 
-			 <p>Email Notifications: <%= f.check_box :email_notifications, :data => { :toggle => 'toggle', :onstyle=>"info", :size=>"mini" } %></p>
+		      <h2>Current Plan: <%= @shop.plan.titleize %></h2>
+		      <p><%= @scans_remaining %> Scans remaining this month (<%= link_to 'edit plan', plan_path %>)</p>
 
 			 <div class="spacer"></div>
+
+			 <p>Email Notifications: <%= f.check_box :email_notifications, :data => { :toggle => 'toggle', :onstyle=>"info", :size=>"mini" } %></p>
+
 
 			 <p>Customers who have Wikipedia pages should be considered celebrities: <%= f.check_box :wikipedia_notification, :data => { :toggle => 'toggle', :on => "Yes", :off => "No", :onstyle=>"success", :size=>"mini" } %></p>
 			 <p>Customers who have IMDB pages should be considered celebrities: <%= f.check_box :imdb_notification, :data => { :toggle => 'toggle', :on => "Yes", :off => "No", :onstyle=>"success", :size=>"mini" } %></p>
@@ -39,57 +43,6 @@
 	         
 
 			<%= f.submit 'Update Settings', :class=>"btn btn-default" %>
-
-		<% end %>
-		  </div>
-  </div>
-
-  <div class="spacer clearfix"></div>
-  <a name="plan"></a>
-  <div class="panel panel-default col-lg-8 col-lg-offset-2 text-center">
-	 <div class="panel-body">
-		  <%= form_for @shop, :url => update_plan_step_1_path do |f| %>
-
-
-	         <div>
-	         	<h2>Current Plan</h2>
-	         	<%= f.radio_button :plan, 'free', :checked => true %> 
-	         	<%= label :plan_free, 'Free' %>
-	         	<%= f.radio_button :plan, 'basic' %> 
-	         	<%= label :plan_basic, 'Basic' %>
-	         	<%= f.radio_button :plan, 'pro' %>
-	         	<%= label :plan_pro, 'Pro' %>
-	         	<%= f.radio_button :plan, 'stalker' %>
-	         	<%= label :plan_stalker, 'Stalker' %>
-	         	<%= f.radio_button :plan, 'god' %>
-	         	<%= label :plan_god, 'God Mode' %>
-	         </div>
-
-	         <div class="spacer">
-	         	<table class="table table-bordered">
-		         	<thead>
-	      				<tr><th></th><th>Free</th><th>Basic ($29/mo)</th><th>Pro ($59/mo)</th><th>Stalker ($99/mo)</th><th>God Mode ($199/mo)</th></tr>
-	      			</thead>
-	      			<tbody>
-	      				<tr><td>Scans</td><td>20 free scans</td><td>200 scans/mo</td><td>1000 scans/mo</td><td>2500 scans/mo</td><td>6000 scans/mo</td></tr>
-
-	      			</tbody>
-	         	</table>
-	         	<div class="text-center">
-	         		<p>Need more than 6000 scans per month? <%= link_to 'Contact us', 'mailto:jackson@pixelburst.co' %></p>
-	         	</div>
-	         </div>
-<!-- 
-	         	<tr><td>Wikipedia Scanning</td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td></tr>
-	      				<tr><td>IMDB Scanning</td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td></tr>
-	      				<tr><td>Twitter Scanning</td><td><i class="glyphicon glyphicon-ok"></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td></tr>
-	      				<tr><td>Instagram Scanning</td><td><i class="glyphicon glyphicon-ok"></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td></tr>
-	      				<tr><td>Youtube Scanning</td><td><i class="glyphicon glyphicon-ok"></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td></tr>
-	      				<tr><td>Klout Scanning</td><td><i class="glyphicon glyphicon-ok"></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td><td><i class="glyphicon glyphicon-ok"></i></td></tr>
- -->
-	         
-
-			<%= f.submit 'Update Plan', :class=>"btn btn-default" %>
 
 		<% end %>
 		  </div>

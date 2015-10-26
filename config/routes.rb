@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   
   resources :customers, :only=> [:index, :show, :new, :create, :destroy]
   resource :shop, :only=> [:edit, :update]
+  get '/shop/plan' => 'shops#plan', as: :plan
   get '/shop/plans/update_plan_step_2' => 'shops#update_plan_step_2', as: :update_plan_step_2
   patch '/shop/plans/update_plan_step_1' => 'shops#update_plan_step_1', as: :update_plan_step_1
   post '/customer/bulk_scan' => 'customers#bulk_scan', as: :bulk_scan

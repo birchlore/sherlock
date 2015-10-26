@@ -5,6 +5,12 @@ class ShopsController < AuthenticatedController
 
 	def edit
 		@shop = current_shop
+		@scans_remaining = current_shop.scans_remaining
+	end
+
+	def plan
+		@shop = current_shop
+		@scans_remaining = current_shop.scans_remaining
 	end
 
 	def update
