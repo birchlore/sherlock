@@ -3,7 +3,13 @@
 <%= form_tag bulk_scan_path, :id=>"bulk_scan_form", :remote => true do %>
 	<div class="row vertical-align bulk-import">
 	  <div class="text-center col-sm-4">
-	    <%= submit_tag "Bulk Scan", :class=>"btn btn-danger", :id => "bulk-scan" %>
+	    <% if @bulk_scans_allowed %>
+	    	<%= submit_tag "Bulk Scan", :class=>"btn btn-danger", :id => "bulk-scan" %>
+	    <% else %>
+	    	<div class="tooltip-wrapper" data-title="upgrade plan to access bulk scanner">
+	    		<%= submit_tag "Bulk Scan", :class=>"btn btn-danger btn-disabled", :id => "bulk-scan", :disabled=> true %>
+	    	</div>
+	    <% end %>
 	  </div>
 	  <div class="col-sm-8">
 	     <p>Scan your <%= number_field_tag 'quantity', 10, in: 1..@scans_remaining %> most recent unscanned customers. Double check your <%= link_to 'celebrity settings', edit_shop_path %> first.</p>

@@ -58,3 +58,10 @@ task :transfer_celebrities_to_customers => :environment do
 	end
 	@customers
 end
+
+task :add_scanned_on_social => :environment do
+  Customer.all.each do |customer|
+    customer.scanned_on_social = true
+    customer.save
+  end
+end

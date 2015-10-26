@@ -6,6 +6,7 @@ class CustomersController < AuthenticatedController
     @customer = current_shop.customers.new
     @celebrities = current_shop.celebrities.page(params[:page]).per(10)
     @scans_remaining = current_shop.scans_remaining
+    @bulk_scans_allowed = Plan.bulk_scans_allowed?(current_shop.plan)
     @plan = current_shop.plan
     if @scans_remaining < 1 && current_shop.plan == "free"
       flash[:alert] = "You have no more customer scans remaining. Upgrade your plan in settings."
@@ -73,7 +74,7 @@ class CustomersController < AuthenticatedController
 
   def bulk_scan
 
-    return unless current_shop.scans_remaining > 0
+    return unless current_shop.scans_remaining > 0 && Plan.bulk_scans_allowed?(current_shop.plan)
 
     num = bulk_scan_params[:quantity].to_f
     scan_existing = bulk_scan_params[:include_scanned].present?

@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151019224909) do
+ActiveRecord::Schema.define(version: 20151026231604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "celebrities", force: :cascade do |t|
     t.string   "first_name"
@@ -92,6 +93,7 @@ ActiveRecord::Schema.define(version: 20151019224909) do
     t.string   "shopify_url"
     t.string   "status",                        default: "regular"
     t.boolean  "archived",                      default: false
+    t.boolean  "scanned_on_social",             default: false
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
