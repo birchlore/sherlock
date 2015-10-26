@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container settings">
+	<%= render 'customers/scans_remaining' %>
   <div class="spacer clearfix"></div>
   <div class="col-lg-8 col-lg-offset-2">
   <h1>You are on the <%= @shop.plan.titleize %> Groupie Plan</h1>
@@ -9,7 +10,6 @@
  <div class="clearfix spacer"></div>
   <a name="plan"></a>
   <div class="panel panel-default col-lg-8 col-lg-offset-2 text-center">
-   <h2>You have <%= @scans_remaining %> scans remaining this month</h2>
 	 <div class="panel-body">
 		  <%= form_for @shop, :url => update_plan_step_1_path do |f| %>
 
