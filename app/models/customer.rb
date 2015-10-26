@@ -17,7 +17,6 @@ class Customer < ActiveRecord::Base
     if self.celebrity?
       self.shop.send_celebrity_notification(self) 
       self.status = "celebrity"
-      self.save
     end
   end
 
@@ -41,13 +40,12 @@ class Customer < ActiveRecord::Base
   end
 
   def set_social_data
-    shop = self.shop
-    set_twitter if shop.twitter_follower_threshold
+    set_twitter
     set_linkedin
     set_angellist
-    set_klout if shop.klout_score_threshold
-    set_instagram  if shop.twitter_follower_threshold
-    set_youtube if shop.youtube_subscriber_threshold
+    set_klout
+    set_instagram
+    set_youtube
   end
 
   def fullcontact_data
@@ -212,8 +210,8 @@ class Customer < ActiveRecord::Base
   end
 
    def get_celebrity_status
-    set_imdb if @imdb_data && self.shop.imdb_notification
-    set_wikipedia if @wikipedia_data && self.shop.wikipedia_notification
+    set_imdb if @imdb_data
+    set_wikipedia if @wikipedia_data
     set_social_data if @fullcontact_data
   end
 
