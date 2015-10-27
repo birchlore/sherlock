@@ -6,13 +6,14 @@
 	    <% if @bulk_scans_allowed %>
 	    	<%= submit_tag "Bulk Scan", :class=>"btn btn-danger", :id => "bulk-scan" %>
 	    <% else %>
-	    	<div class="tooltip-wrapper" data-title="upgrade plan to access bulk scanner">
+	    	<div class="tooltip-wrapper">
+	    		<div class="tooltip">Upgrade plan to access bulk scanner</div>
 	    		<%= submit_tag "Bulk Scan", :class=>"btn btn-danger btn-disabled", :id => "bulk-scan", :disabled=> true %>
 	    	</div>
 	    <% end %>
 	  </div>
 	  <div class="col-sm-8">
-	     <p>Scan your <%= number_field_tag 'quantity', 10, in: 1..@scans_remaining %> most recent unscanned customers. Double check your <%= link_to 'celebrity settings', edit_shop_path %> first.</p>
+	     <p>Scan your <%= number_field_tag 'quantity', 10, in: 1..@social_scans_remaining %> most recent unscanned customers. Double check your <%= link_to 'celebrity settings', edit_shop_path %> first.</p>
 	     <%= hidden_field_tag :include_scanned, '' %>
 	     <%= check_box_tag :include_scanned %> <em>Include customers who have already been scanned by Groupie</em>
 	  </div>

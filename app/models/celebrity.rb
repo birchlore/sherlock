@@ -156,7 +156,7 @@ class Celebrity < ActiveRecord::Base
   private
 
    def check_scans_remaining
-     return false unless shop && shop.scans_remaining > 0
+     return false unless shop && shop.basic_scans_remaining > 0
    end
   
   def get_celebrity_status

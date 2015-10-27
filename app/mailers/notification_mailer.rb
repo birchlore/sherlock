@@ -31,7 +31,7 @@ class NotificationMailer < ApplicationMailer
   def bulk_scan_notification(shop, total_scanned, total_found, unscanned)
     @total_scanned = total_scanned
     @total_found = total_found
-    @scans_remaining = shop.scans_remaining
+    @scans_remaining = shop.social_scans_remaining
     @unscanned_customers = unscanned
 
     mail to: shop.email

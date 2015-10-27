@@ -5,13 +5,13 @@ class CustomersController < AuthenticatedController
   def index
     @customer = current_shop.customers.new
     @celebrities = current_shop.celebrities.page(params[:page]).per(10)
-    @scans_remaining = current_shop.scans_remaining
-    @bulk_scans_allowed = Plan.bulk_scans_allowed?(current_shop.plan)
     @plan = current_shop.plan
-    if @scans_remaining < 1 && current_shop.plan == "free"
+    @basic_scans_remaining = current_shop.basic_scans_remaining
+    @social_scans_remaining = current_shop.social_scans_remaining
+    @bulk_scans_allowed = Plan.bulk_scans_allowed?(@plan)
+    
+    if @basic_scans_remaining < 1
       flash[:alert] = "You have no more customer scans remaining. Upgrade your plan in settings."
-    elsif @scans_remaining < 1
-      flash[:alert] = "You have no customer scans remaining this month. Change your plan in settings."
     end
 
   end
@@ -32,7 +32,7 @@ class CustomersController < AuthenticatedController
   end
 
   def create
-    if current_shop.scans_remaining > 0
+    if current_shop.basic_scans_remaining > 0
       @customer = current_shop.customers.new(customer_params)
       @customer.scan
       @customer.save
@@ -74,7 +74,7 @@ class CustomersController < AuthenticatedController
 
   def bulk_scan
 
-    return unless current_shop.scans_remaining > 0 && Plan.bulk_scans_allowed?(current_shop.plan)
+    return unless current_shop.basic_scans_remaining > 0 && Plan.bulk_scans_allowed?(current_shop.plan)
 
     num = bulk_scan_params[:quantity].to_f
     scan_existing = bulk_scan_params[:include_scanned].present?

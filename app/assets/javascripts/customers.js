@@ -1,9 +1,6 @@
 $(function(){
 
 
-  $('.tooltip-wrapper').tooltip({position: "bottom"});
-
-
   disableButton()
 
   $('#quantity').on('change', function(){

@@ -47,25 +47,41 @@ class Shop < ActiveRecord::Base
   end
 
 
-  def scans_allowed
-    Plan.scans(self.plan)
+  def basic_scans_allowed
+    Plan.basic_scans(self.plan)
   end
 
 
-  def scans_performed(days)
+  def basic_scans_performed(days)
     customers.where('created_at > ?', days.days.ago).count
   end
 
-  def scans_remaining
-
+  def basic_scans_remaining
     if self.plan == "free"
-      sum = scans_allowed - scans_performed(3650)
+      sum = basic_scans_allowed - basic_scans_performed(3650)
     else
-      sum = scans_allowed - scans_performed(30)
+      sum = basic_scans_allowed - basic_scans_performed(30)
     end
 
     sum < 0 ? 0 : sum
   end
+
+
+  def social_scans_allowed
+    Plan.social_scans(self.plan)
+  end
+
+  def social_scans_performed(days)
+    customers.where('created_at > ?', days.days.ago).where(scanned_on_social: true).count
+  end
+
+  def social_scans_remaining
+    sum = social_scans_allowed - social_scans_performed(30)
+    sum = 0 if self.plan == "free"
+    sum < 0 ? 0 : sum
+  end
+
+
 
   def unscanned_customer_count
     num = ShopifyAPI::Customer.count - self.customers.count

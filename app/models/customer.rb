@@ -51,13 +51,14 @@ class Customer < ActiveRecord::Base
 
   def fullcontact_data
     @fullcontact ||= Fullcontact.new(self)
+    self.scanned_on_social = true
     fullcontact_data ||= @fullcontact.data
   end
 
   def get_external_data
     @wikipedia_data = wikipedia_data
     @imdb_data = imdb_data
-    @fullcontact_data = fullcontact_data
+    @fullcontact_data = fullcontact_data if self.shop.social_scans_remaining > 0
     true if @wikipedia_data || @imdb_data || @fullcontact_data
   end
 
@@ -226,7 +227,7 @@ class Customer < ActiveRecord::Base
 
   def scans_depleted_notification
     shop = self.shop
-    NotificationMailer.scans_depleted(shop).deliver_now if shop.scans_remaining == 1
+    NotificationMailer.scans_depleted(shop).deliver_now if shop.social_scans_remaining == 1
   end
 
 	
