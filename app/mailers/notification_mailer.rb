@@ -51,7 +51,7 @@ class NotificationMailer < ApplicationMailer
   end
 
   def teaser(customer)
-    @customer = customer
+    @celebrity = customer
     mail to: customer.shop.email
   end
 

@@ -133,7 +133,7 @@ class Customer < ActiveRecord::Base
   end
 
   def teaser_celebrity?
-    true if twitter_followers > 5000 || youtube_subscribers > 5000 || instagram_followers > 5000
+    true if twitter_followers && twitter_followers > 5000 || youtube_subscribers && youtube_subscribers > 5000 || instagram_followers && instagram_followers > 5000
   end
 
 
