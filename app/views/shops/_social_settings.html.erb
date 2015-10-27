@@ -1,0 +1,38 @@
+<% unless @shop.plan == "free" || @shop.plan == "basic" %>
+	<div>
+		<p>Customers who have over <%= f.number_field :twitter_follower_threshold, :style=>"width:75px;" %> Twitter followers should be considered celebrities.</p>
+	</div>
+
+	<div>
+		<p>Customers who have over <%= f.number_field :youtube_subscriber_threshold, :style=>"width:75px;" %> Youtube subscribers should be considered celebrities.</p>
+	</div>
+
+	<div>
+		<p>Customers who have over <%= f.number_field :instagram_follower_threshold, :style=>"width:75px;" %> Instagram followers should be considered celebrities.</p>
+	</div>
+
+	<div>
+		<p>Customers who have a Klout score over <%= f.number_field :klout_score_threshold, :style=>"width:75px;", :max=> 100 %> should be considered celebrities.</p>
+	</div>
+<% else %>
+ 	<div class="alert alert-info">
+ 		<%= link_to "Upgrade", plan_path %> your plan to scan for Twitter, Youtube, and Instagram follower counts.
+ 	</div>
+ 	<div class="disabled-social-data">
+	 	<div>
+			<p>Customers who have over <%= f.number_field :twitter_follower_threshold, :style=>"width:75px;" %> Twitter followers should be considered celebrities. <%= f.check_box :twitter_follower_threshold, :data => { :toggle => 'toggle', :onstyle=>"info", :size=>"mini" }, :disabled=> true %></p>
+		</div>
+
+		<div>
+			<p>Customers who have over <%= f.number_field :youtube_subscriber_threshold, :style=>"width:75px;" %> Youtube subscribers should be considered celebrities. <%= f.check_box :youtube_subscriber_threshold, :data => { :toggle => 'toggle', :onstyle=>"info", :size=>"mini" }, :disabled=> true %></p>
+		</div>
+
+		<div>
+			<p>Customers who have over <%= f.number_field :instagram_follower_threshold, :style=>"width:75px;" %> Instagram followers should be considered celebrities. <%= f.check_box :instagram_follower_threshold, :data => { :toggle => 'toggle', :onstyle=>"info", :size=>"mini" }, :disabled=> true %></p>
+		</div>
+
+		<div>
+			<p>Customers who have a Klout score over <%= f.number_field :klout_score_threshold, :style=>"width:75px;", :max=> 100 %> should be considered celebrities. <%= f.check_box :klout_score_threshold, :data => { :toggle => 'toggle', :onstyle=>"info", :size=>"mini" }, :disabled=> true %></p>
+		</div>
+	</div>
+<% end %>

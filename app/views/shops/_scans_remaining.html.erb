@@ -1,0 +1,7 @@
+<% if @shop.plan == "free" %>
+	<p><%= @basic_scans_remaining %> Wikipedia/IMDB scans remaining</p>
+<% elsif @shop.plan == "basic" %>
+    <p>Unlimited Wikipedia/IMDB scans remaining</p>
+<% else %>
+	<p>Unlimited Wikipedia/IMDB scans and <span id="scans-remaining"><%= @social_scans_remaining %></span> social scans remaining this month</p>
+<% end %>

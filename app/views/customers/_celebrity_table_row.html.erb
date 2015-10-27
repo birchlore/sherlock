@@ -16,19 +16,10 @@
      <td><%= imdb_link(celebrity) %></td>
    <% end %>
 
-   <% if current_shop.klout_score_threshold %>
+   <% unless current_shop.plan == "free" || current_shop.plan == "basic" %>
      <td><%= klout_score(celebrity) %></td>
-   <% end %>
-
-    <% if current_shop.youtube_subscriber_threshold %>
      <td><%= youtube_subscriber_count(celebrity) %></td>
-   <% end %>
-
-   <% if current_shop.twitter_follower_threshold %>
      <td><%= twitter_follower_count(celebrity) %></td>
-   <% end %>
-
-   <% if current_shop.instagram_follower_threshold %>
      <td><%= instagram_follower_count(celebrity) %></td>
    <% end %>
 

@@ -2,7 +2,6 @@
 
 <div class="container settings">
 <%= render 'customers/header' %>
-<div class="spacer"></div>
 <div class="col-lg-8 col-lg-offset-2">
   <h1>Settings</h1>
   <%= link_to "< Back to Celebrities & Influencers", customers_path %>
@@ -16,8 +15,9 @@
 		  <%= form_for @shop do |f| %>
 
 		      <h2>Current Plan: <%= @shop.plan.titleize %></h2>
-		      <p><%= @scans_remaining %> Scans remaining this month (<%= link_to 'edit plan', plan_path %>)</p>
-
+		      <%= link_to 'edit plan', plan_path %>
+		  
+		    
 			 <div class="spacer"></div>
 
 			 <p>Email Notifications: <%= f.check_box :email_notifications, :data => { :toggle => 'toggle', :onstyle=>"info", :size=>"mini" } %></p>
@@ -25,28 +25,16 @@
 
 			 <p>Customers who have Wikipedia pages should be considered celebrities: <%= f.check_box :wikipedia_notification, :data => { :toggle => 'toggle', :on => "Yes", :off => "No", :onstyle=>"success", :size=>"mini" } %></p>
 			 <p>Customers who have IMDB pages should be considered celebrities: <%= f.check_box :imdb_notification, :data => { :toggle => 'toggle', :on => "Yes", :off => "No", :onstyle=>"success", :size=>"mini" } %></p>
-			 <div id="slider">
-			  	<p>Customers who have over <%= f.number_field :twitter_follower_threshold, :style=>"width:75px;" %> Twitter followers should be considered celebrities.</p>
-			 </div>
 
-	         <div>
-	           <p>Customers who have over <%= f.number_field :youtube_subscriber_threshold, :style=>"width:75px;" %> Youtube subscribers should be considered celebrities.</p>
-	         </div>
+			 <%= render 'social_settings', :f => f %>
+			  
 
-	         <div>
-	           <p>Customers who have over <%= f.number_field :instagram_follower_threshold, :style=>"width:75px;" %> Instagram followers should be considered celebrities.</p>
-	         </div>
-
-	         <div>
-	           <p>Customers who have a Klout score over <%= f.number_field :klout_score_threshold, :style=>"width:75px;", :max=> 100 %> should be considered celebrities.</p>
-	         </div>
-
-	         
-
-			<%= f.submit 'Update Settings', :class=>"btn btn-default" %>
+			<%= f.submit 'Save Settings', :class=>"btn btn-default" %>
 
 		<% end %>
 		  </div>
+
+		  
   </div>
 
 

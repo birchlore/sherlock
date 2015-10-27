@@ -6,11 +6,13 @@ class ShopsController < AuthenticatedController
 	def edit
 		@shop = current_shop
 		@basic_scans_remaining = current_shop.basic_scans_remaining
+		@social_scans_remaining = current_shop.social_scans_remaining
 	end
 
 	def plan
 		@shop = current_shop
 		@basic_scans_remaining = current_shop.basic_scans_remaining
+		@social_scans_remaining = current_shop.social_scans_remaining
 	end
 
 	def update

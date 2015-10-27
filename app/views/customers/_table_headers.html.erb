@@ -10,18 +10,9 @@
   <th>IMDB</th>
 <% end %>
 
-<% if current_shop.klout_score_threshold %>
+<% unless current_shop.plan == "free" || current_shop.plan == "basic" %>
   <th>Klout</th>
-<% end %>
-
-<% if current_shop.youtube_subscriber_threshold %>
   <th>Youtube</th>
-<% end %>
-
-<% if current_shop.twitter_follower_threshold %>
   <th>Twitter</th>
-<% end %>
-
-<% if current_shop.instagram_follower_threshold %>
   <th>Instagram</th>
 <% end %>

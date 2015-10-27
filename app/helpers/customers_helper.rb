@@ -17,7 +17,9 @@ module CustomersHelper
   end
 
   def twitter_follower_count(customer)
-    if customer.twitter_celebrity? && customer.twitter_url
+    if !customer.scanned_on_social?
+        "—"
+    elsif customer.twitter_celebrity? && customer.twitter_url
       link_to customer.twitter_followers, customer.twitter_url, :target=>"_blank"
     elsif customer.twitter_celebrity?
       customer.twitter_followers
@@ -55,7 +57,9 @@ module CustomersHelper
   end
 
   def klout_score(customer)
-    if customer.klout_celebrity?
+    if !customer.scanned_on_social?
+        "—"
+    elsif customer.klout_celebrity?
       link_to customer.klout_score, "https://klout.com/corp/score", :target=>"_blank"
     else
       "—"
@@ -63,7 +67,9 @@ module CustomersHelper
   end
 
   def youtube_subscriber_count(customer)
-    if customer.youtube_celebrity? && customer.youtube_url
+    if !customer.scanned_on_social?
+        "—"
+    elsif customer.youtube_celebrity? && customer.youtube_url
       link_to customer.youtube_subscribers, customer.youtube_url, :target=>"_blank"
     elsif customer.youtube_celebrity?
       subscribers
@@ -73,7 +79,9 @@ module CustomersHelper
   end
 
   def instagram_follower_count(customer)
-    if customer.instagram_celebrity? && customer.instagram_url
+    if !customer.scanned_on_social?
+        "—"
+    elsif customer.instagram_celebrity? && customer.instagram_url
       link_to customer.instagram_followers, customer.instagram_url, :target=>"_blank"
     elsif customer.instagram_celebrity?
       customer.instagram_followers

@@ -5,7 +5,7 @@
 </div>
 
 <div style="text-align:right;">
-	<h4><span id="scans-remaining"><%= @scans_remaining %></span> scans remaining this month (<%= link_to "change plan", plan_path %>)</h4>
+	<%= render 'shops/scans_remaining' %>
 
 
 	    <%= link_to edit_shop_path do %>
