@@ -21,13 +21,19 @@ class HooksController < ApplicationController
     id = data["id"]
     customer = shop.customers.new(:shopify_id => id)
 
-     if shop && !customer.duplicate? && basic_scans_remaining > 0
+     if shop && !customer.duplicate?
         customer.update_attributes(:first_name => first_name, :last_name => last_name, :email => email)
-        customer.scan
-        customer.save
+
+        if basic_scans_remaining > 0
+          customer.scan
+          customer.save
+        end
+
+        customer.teaser_scan if shop.teaser_scans_running?
+
      end
 
-     customer.teaser_scan if shop.teaser_scans_running? && shop && !customer.duplicate?
+     
 
   end
 
