@@ -29,7 +29,6 @@ class ShopsController < AuthenticatedController
 	def update_plan_step_1
 		@plan = shop_params[:plan]
 		redirect_url = current_shop.confirm_plan(@plan)
-
 		if redirect_url == customers_url
 			flash[:success] = "Groupie Plan Updated! You are now on the #{@plan} plan."
 			redirect_to customers_url

@@ -22,6 +22,36 @@ class Customer < ActiveRecord::Base
   end
 
 
+  def teaser_scan
+    return if self.shop.teaser_celebrity
+    data = fullcontact_data
+    return unless data
+
+    set_social_data
+
+    if self.teaser_celebrity?
+      self.shop.teaser_celebrity = true
+      self.shop.save
+      NotificationMailer.teaser(self).deliver_now
+    end
+  end
+
+
+  def get_external_data
+    @wikipedia_data = wikipedia_data
+    @imdb_data = imdb_data
+    @fullcontact_data = fullcontact_data if self.shop.social_scans_remaining > 0
+    true if @wikipedia_data || @imdb_data || @fullcontact_data
+  end
+
+
+  def get_celebrity_status
+    set_imdb if @imdb_data
+    set_wikipedia if @wikipedia_data
+    set_social_data if @fullcontact_data
+  end
+
+
   def celebrity?
     imdb_celebrity? || 
     wikipedia_celebrity? || 
@@ -55,12 +85,6 @@ class Customer < ActiveRecord::Base
     fullcontact_data ||= @fullcontact.data
   end
 
-  def get_external_data
-    @wikipedia_data = wikipedia_data
-    @imdb_data = imdb_data
-    @fullcontact_data = fullcontact_data if self.shop.social_scans_remaining > 0
-    true if @wikipedia_data || @imdb_data || @fullcontact_data
-  end
 
   def imdb_celebrity?
     imdb_url && shop.imdb_notification
@@ -108,6 +132,10 @@ class Customer < ActiveRecord::Base
    true if self.shop.customers.where(shopify_id: self.shopify_id).first || self.shop.celebrities.where(shopify_id: self.shopify_id).first
   end
 
+  def teaser_celebrity?
+    true if twitter_followers > 5000 || youtube_subscribers > 5000 || instagram_followers > 5000
+  end
+
 
   ## analytics data
 
@@ -124,7 +152,7 @@ class Customer < ActiveRecord::Base
   end
 
   def self.percentage_with_followers(num_followers)
-    @count ||= Customer.count
+    @count ||= Customer.where(scanned_on_social: true).count
     twitter_followers = self.where("twitter_followers > ?", num_followers).count
     instagram_followers = self.where("instagram_followers > ?", num_followers).count
     youtube_subscribers = self.where("youtube_subscribers > ?", num_followers).count
@@ -133,7 +161,7 @@ class Customer < ActiveRecord::Base
   end
 
   def self.percentage_with_klout_score(score)
-    @count ||= Customer.count
+    @count ||= Customer.where(scanned_on_social: true).count
     klout_count = self.where("klout_score > ?", score).count
     (klout_count).percent_of(@count)
   end
@@ -209,12 +237,6 @@ class Customer < ActiveRecord::Base
     self.youtube_subscribers = youtube.subscribers
     self.youtube_views = youtube.views
 
-  end
-
-   def get_celebrity_status
-    set_imdb if @imdb_data
-    set_wikipedia if @wikipedia_data
-    set_social_data if @fullcontact_data
   end
 
   def sanitize

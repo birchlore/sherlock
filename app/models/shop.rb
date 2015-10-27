@@ -90,6 +90,11 @@ class Shop < ActiveRecord::Base
   end
 
 
+  def teaser_scans_running?
+    !shop.social_scans_allowed && !shop.teaser_celebrity
+  end
+
+
 
   def bulk_scan(num, include_previously_scanned)
 
@@ -163,7 +168,6 @@ class Shop < ActiveRecord::Base
                               :test=> !Rails.env.production? 
                               })
         response.confirmation_url
-
       end
 
     else

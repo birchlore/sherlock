@@ -1,0 +1,39 @@
+<h1>You just made a sale to <%= name(@celebrity) %></h1>
+
+<p>We've been scanning your customer followers so that we can show you the Benefits of Groupie, and we found a major influencer:</p>
+
+<p><%= bio(@celebrity) %></p>
+
+<ul>
+  <% if @celebrity.youtube_celebrity? %>
+   <li>Youtube Subscribers: <%= youtube_subscriber_count(@celebrity) %></li>
+ <% end %>
+
+ <% if @celebrity.twitter_celebrity? %>
+   <li>Twitter Followers: <%= twitter_follower_count(@celebrity) %></li>
+ <% end %>
+
+ <% if @celebrity.instagram_celebrity? %>
+   <li>Instagram Followers: <%= instagram_follower_count(@celebrity) %></li>
+ <% end %>
+</ul>
+
+<p>You should reach out to this customer as soon as possible, here are the best ways to get a response:</p>
+<ul>
+  <li>For a major celebrity - send a personal email, mention you are fans, and say that you are including some of your favorite products for free. Don't as for anything in return yet, but followup at a later date</li>
+  <li>For influencers (but not major celebrities), send an email saying that your store is offering a promotion for an extra free product in return for a Twitter/Instagram/Youtube mention.</li>
+</ul>
+<p>Unfortunately we can't continue scanning your customers unless you <%= link_to 'upgrade', plan_path %>.</p>
+
+<div class="text-center">
+Please consider leaving Groupie a review <%= link_to "here", "https://apps.shopify.com/groupie" %> if you're enjoying it. More reviews will help us make it better.
+</div>
+
+
+   
+
+
+
+
+
+

@@ -77,20 +77,9 @@ describe Customer, :vcr do
 
 
   describe "get_celebrity_status" do
-    before(:each) do
-      super_celebrity = build(:super_celebrity)
-      super_celebrity.get_external_data
-
-      celebrity = build(:customer)
-      celebrity.get_external_data
-
-      no_name = build(:customer, first_name: nil)
-      no_name.get_external_data
-    end
 
       context "when customer has social data" do
         it "checks the different social channels for hits" do
-          
           expect(super_celebrity).to receive(:set_imdb)
           expect(super_celebrity).to receive(:set_wikipedia)
           expect(super_celebrity).to receive(:set_social_data)

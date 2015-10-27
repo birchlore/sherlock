@@ -6,8 +6,6 @@ class HooksController < ApplicationController
 
   def new_customer_callback
     data = ActiveSupport::JSON.decode(request.body.read)
-    # confirms customer has made at least one order, to avoid abandoned cart customers being created
-    # if data["last_order_id"]
 
     head :ok
     
@@ -15,27 +13,21 @@ class HooksController < ApplicationController
     shop = Shop.where(shopify_domain: shopify_domain).first
     basic_scans_remaining = shop.basic_scans_remaining
 
-    return unless basic_scans_remaining > 0
+    return if basic_scans_remaining < 1 && shop.teaser_celebrity
     
     first_name = data["first_name"]
     last_name = data["last_name"]
     email = data["email"]
     id = data["id"]
-    # duplicate_celebrity = Celebrity.where(shopify_id: id).first
     customer = shop.customers.new(:shopify_id => id)
 
-     if shop && !customer.duplicate?
+     if shop && !customer.duplicate? && basic_scans_remaining > 0
         customer.update_attributes(:first_name => first_name, :last_name => last_name, :email => email)
         customer.scan
         customer.save
      end
 
-      
-
-
-     # end
-
-      
+     customer.teaser_scan if shop.teaser_scans_running? && shop && !customer.duplicate?
 
   end
 

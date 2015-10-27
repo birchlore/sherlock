@@ -40,6 +40,9 @@ class CustomersController < AuthenticatedController
 
       if @customer.celebrity?
         render 'create.js.erb'
+      elsif current_shop.social_scans_remaining < 1
+        flash.now[:notice] = "No Wikipedia or IMDB Match."
+        render 'not_a_celebrity.js'
       else
         flash.now[:notice] = "That ain't no celebrity, kid."
         render 'not_a_celebrity.js'

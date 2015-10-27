@@ -50,6 +50,10 @@ class NotificationMailer < ApplicationMailer
     mail to: shop.email
   end
 
+  def teaser(customer)
+    @customer = customer
+    mail to: customer.shop.email
+  end
 
   def nothing_to_scan(shop)
     mail to: shop.email

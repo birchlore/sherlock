@@ -31,6 +31,14 @@ When "I am a logged in user" do
   step "I get taken to the app index page"
 end
 
+When /^I am on the (.+) plan$/ do |plan|
+  click_link_or_button "Settings & Notifications"
+  click_link_or_button "edit plan"
+  choose("shop_plan_#{plan}")
+  click_link_or_button "Update Plan"
+  click_link_or_button "Approve charge"
+end
+
 Then "I install the app" do
   click_link_or_button "Install Groupie Test Environment"
 end
