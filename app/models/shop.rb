@@ -46,6 +46,10 @@ class Shop < ActiveRecord::Base
     ShopifyAPI::Base.activate_session(shop_session)
   end
 
+  def free_influencer_scans_remaining
+    self.teaser_celebrity ? 0 : 1  
+  end
+
 
   def basic_scans_allowed
     Plan.basic_scans(self.plan)
@@ -91,7 +95,7 @@ class Shop < ActiveRecord::Base
 
 
   def teaser_scans_running?
-    !shop.social_scans_allowed && !shop.teaser_celebrity
+    !Plan.social_scans_enabled?(self.plan) && !teaser_celebrity
   end
 
 

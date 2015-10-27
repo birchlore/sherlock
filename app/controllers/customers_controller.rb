@@ -9,6 +9,7 @@ class CustomersController < AuthenticatedController
     @plan = current_shop.plan
     @basic_scans_remaining = current_shop.basic_scans_remaining
     @social_scans_remaining = current_shop.social_scans_remaining
+    @free_influencer_scans_remaining = current_shop.free_influencer_scans_remaining
     @bulk_scans_allowed = Plan.bulk_scans_allowed?(@plan)
     
     if @basic_scans_remaining < 1

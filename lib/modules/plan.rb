@@ -65,4 +65,18 @@ module Plan
     end
   end
 
+  def self.social_scans_enabled?(plan_type)
+    if plan_type == "free"
+      false
+    elsif plan_type == "basic"
+      false
+    elsif plan_type == "pro"
+      true
+    elsif plan_type == "stalker"
+      true
+    elsif plan_type == "god"
+      true
+    end
+  end
+
 end

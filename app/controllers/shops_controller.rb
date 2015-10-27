@@ -7,12 +7,14 @@ class ShopsController < AuthenticatedController
 		@shop = current_shop
 		@basic_scans_remaining = current_shop.basic_scans_remaining
 		@social_scans_remaining = current_shop.social_scans_remaining
+		@free_influencer_scans_remaining = current_shop.free_influencer_scans_remaining
 	end
 
 	def plan
 		@shop = current_shop
 		@basic_scans_remaining = current_shop.basic_scans_remaining
 		@social_scans_remaining = current_shop.social_scans_remaining
+		@free_influencer_scans_remaining = current_shop.free_influencer_scans_remaining
 	end
 
 	def update
