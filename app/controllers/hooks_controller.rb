@@ -27,8 +27,7 @@ class HooksController < ApplicationController
         customer.update_attributes(:first_name => first_name, :last_name => last_name, :email => email)
 
         if basic_scans_remaining > 0
-          customer.save
-          Resque.enqueue(HookScanner, shop.id, customer.id)
+          Resque.enqueue(HookScanner, shop.id, id, first_name, last_name, email)
         end
 
         Resque.enqueue(HookScanner, shop.id, id, first_name, last_name, email) if shop.teaser_scans_running?
