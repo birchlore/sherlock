@@ -13,7 +13,7 @@ class TeaserScanner
 	  shop_session = Shop.retrieve(shop_id)
 	  ShopifyAPI::Base.activate_session(shop_session)
 
-	  customer = customer
+	  customer = shop.customers.new(:shopify_id => id, :first_name => first_name, :last_name => last_name, :email => email)
 	  customer.teaser_scan
 	end
 

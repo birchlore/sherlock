@@ -31,11 +31,9 @@ class HooksController < ApplicationController
           Resque.enqueue(HookScanner, shop.id, customer.id)
         end
 
-        Resque.enqueue(HookScanner, shop.id, customer) if shop.teaser_scans_running?
+        Resque.enqueue(HookScanner, shop.id, id, first_name, last_name, email) if shop.teaser_scans_running?
 
      end
-
-     
 
   end
 
