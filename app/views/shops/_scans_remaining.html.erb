@@ -1,9 +1,7 @@
 <% if @shop.plan == "free" %>
-	<%= @basic_scans_remaining %> Wikipedia/IMDB scans remaining</p>
-	<p>Follower counts disabled</p>
+	<%= @basic_scans_remaining %> Wikipedia/IMDB scans remaining (follower counts disabled)</p>
 <% elsif @shop.plan == "basic" %>
-	<p><%= @free_influencer_scans_remaining %> Major Influencer Notification & Unlimited Wikipedia/IMDB scans remaining</p>
-    <p>Follower counts disabled</p>
+	<p>Unlimited Wikipedia/IMDB scans (follower counts disabled)</p>
 <% else %>
 	<p>Unlimited Wikipedia/IMDB scans and <span id="scans-remaining"><%= @social_scans_remaining %></span> social scans remaining this month</p>
 <% end %>
