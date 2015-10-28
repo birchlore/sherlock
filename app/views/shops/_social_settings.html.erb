@@ -16,8 +16,9 @@
 	</div>
 <% else %>
  	<div class="alert alert-info">
- 		<%= link_to "Upgrade", plan_path %> your plan to scan for Twitter, Youtube, and Instagram follower counts.
+ 		<p>Follower count scanning is disabled on some plans, but we'll notify you of your first major influencer for free (over 5 followers).</p>
  	</div>
+	<p> Or you can <%= link_to 'upgrade', plan_path %> your plan</p>
  	<div class="disabled-social-data">
 	 	<div>
 			<p>Customers who have over <%= f.number_field :twitter_follower_threshold, :style=>"width:75px;" %> Twitter followers should be considered celebrities. <%= f.check_box :twitter_follower_threshold, :data => { :toggle => 'toggle', :onstyle=>"info", :size=>"mini" }, :disabled=> true %></p>

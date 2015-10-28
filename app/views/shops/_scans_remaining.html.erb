@@ -1,4 +1,8 @@
-<% if @shop.plan == "free" %>
+<% if current_shop.teaser_scans_running? %>
+    <p>We'll let you know when you receive your first major influencer for free (over 5k followers).</p>
+<% end %>
+
+     <% if @shop.plan == "free" %>
 	<%= @basic_scans_remaining %> Wikipedia/IMDB scans remaining (follower counts disabled)</p>
 <% elsif @shop.plan == "basic" %>
 	<p>Unlimited Wikipedia/IMDB scans (follower counts disabled)</p>
