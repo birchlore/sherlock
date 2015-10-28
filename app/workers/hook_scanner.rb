@@ -13,11 +13,26 @@ class HookScanner
 	  shop_session = Shop.retrieve(shop_id)
 	  ShopifyAPI::Base.activate_session(shop_session)
 
-	  customer = shop.customers.new(:shopify_id => shopify_id, :first_name => first_name, :last_name => last_name, :email => email)
-	  customer.scan 
-	  customer.save
+	  basic_scans_remaining = shop.basic_scans_remaining
+	  customer = shop.customers.new(:shopify_id => shopify_id)
+
+	  if shop && !customer.duplicate?
+    
+	     customer.update_attributes(:first_name => first_name, :last_name => last_name, :email => email)
+	    
+	     if basic_scans_remaining > 0
+	       customer.scan 
+		   customer.save
+	     end
+
+	     customer.teaser_scan if shop.teaser_scans_running?
+	  end
+	   
 	end
 
 end
 
-#commit
+
+
+
+ 

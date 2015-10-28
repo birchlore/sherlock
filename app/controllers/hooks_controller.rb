@@ -15,25 +15,13 @@ class HooksController < ApplicationController
 
     return if basic_scans_remaining < 1 && shop.teaser_celebrity
 
-    
-    
     first_name = data["first_name"]
     last_name = data["last_name"]
     email = data["email"]
-    id = data["id"]
-    customer = shop.customers.new(:shopify_id => id)
+    shopify_id = data["id"]
+    customer = shop.customers.new(:shopify_id => shopify_id)
 
-     if shop && !customer.duplicate?
-        customer.update_attributes(:first_name => first_name, :last_name => last_name, :email => email)
-
-        if basic_scans_remaining > 0
-          Resque.enqueue(HookScanner, shop.id, id, first_name, last_name, email)
-        end
-
-        Resque.enqueue(TeaserScanner, shop.id, id, first_name, last_name, email) if shop.teaser_scans_running?
-
-     end
-
+    Resque.enqueue(HookScanner, shop.id, shopify_id, first_name, last_name, email)
   end
 
   def app_uninstalled_callback
