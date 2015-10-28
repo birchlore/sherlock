@@ -6,14 +6,16 @@ class HooksController < ApplicationController
 
   def new_customer_callback
     data = ActiveSupport::JSON.decode(request.body.read)
-
-    head :ok
     
     shopify_domain = request.headers["HTTP_X_SHOPIFY_SHOP_DOMAIN"]
     shop = Shop.where(shopify_domain: shopify_domain).first
     basic_scans_remaining = shop.basic_scans_remaining
 
+    head :ok
+
     return if basic_scans_remaining < 1 && shop.teaser_celebrity
+
+    
     
     first_name = data["first_name"]
     last_name = data["last_name"]
@@ -25,11 +27,11 @@ class HooksController < ApplicationController
         customer.update_attributes(:first_name => first_name, :last_name => last_name, :email => email)
 
         if basic_scans_remaining > 0
-          customer.scan
           customer.save
+          Resque.enqueue(HookScanner, shop.id, customer.id)
         end
 
-        customer.teaser_scan if shop.teaser_scans_running?
+        Resque.enqueue(HookScanner, shop.id, customer) if shop.teaser_scans_running?
 
      end
 
