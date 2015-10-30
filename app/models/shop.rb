@@ -32,6 +32,16 @@ class Shop < ActiveRecord::Base
   
   end
 
+
+  def self.mrr
+    @mrr = 0
+    Plan.names.each do |plan|
+      mrr = Shop.where(plan: plan).count * Plan.cost(plan)
+      @mrr += mrr
+    end
+    @mrr
+  end
+
   def install
     shopify_session
     set_email

@@ -1,5 +1,9 @@
 module Plan
 
+  def self.names
+    ["free", "basic", "pro", "stalker", "god"]
+  end
+
   def self.cost(plan_type)
     if plan_type == "free"
       0
