@@ -3,7 +3,6 @@ Feature: User adds a celebrity
 
   Background:
     Given I am a logged in user
-    When I am on the god plan
 
   Scenario: User adds a customer who is not a celebrity
     Given the customer is not a celebrity

@@ -22,21 +22,13 @@ When "I supply my shopify credentials" do
 end
 
 Then "I get taken to the app index page" do
-  expect(page).to have_content("We'll automatically")
+  expect(page).to have_content("automatically")
 end
 
 When "I am a logged in user" do
   step "I visit the login page"
   step "I supply my shopify url"
   step "I get taken to the app index page"
-end
-
-When /^I am on the (.+) plan$/ do |plan|
-  click_link_or_button "Settings & Notifications"
-  click_link_or_button "edit plan"
-  choose("shop_plan_#{plan}")
-  click_link_or_button "Update Plan"
-  click_link_or_button "Approve charge"
 end
 
 Then "I install the app" do
