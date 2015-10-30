@@ -32,7 +32,7 @@ class ShopsController < AuthenticatedController
 		@plan = shop_params[:plan]
 		redirect_url = current_shop.confirm_charge(@plan)
 		if redirect_url == customers_url
-			flash[:success] = "Groupie Plan Updated! You are now on the #{@plan} plan."
+			flash[:success] = "Groupie Plan Updated! You are now on the #{@plan} plan. Yay!"
 			redirect_to customers_url
 		else
 			gon.authorization_url = redirect_url
