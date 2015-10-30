@@ -17,6 +17,11 @@ end
   config.cache_classes = true
   config.log_level = :debug 
 
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = false
+
+  # Print deprecation notices to the Rails logger.
+  config.active_support.deprecation = :log
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
   # preloads Rails for running tests, you may have to set it to true.

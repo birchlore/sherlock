@@ -153,7 +153,7 @@ class Shop < ActiveRecord::Base
     
   end
 
-  def confirm_plan(shopify_plan)
+  def confirm_charge(shopify_plan)
 
     if shopify_plan != self.plan
 
@@ -190,7 +190,7 @@ class Shop < ActiveRecord::Base
   end
 
 
-  def update_plan_step_2(charge)
+  def activate_charge(charge)
     if charge.status == "accepted"
       plan = charge.name.split.first
       charge.activate

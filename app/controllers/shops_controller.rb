@@ -30,7 +30,7 @@ class ShopsController < AuthenticatedController
 
 	def update_plan_step_1
 		@plan = shop_params[:plan]
-		redirect_url = current_shop.confirm_plan(@plan)
+		redirect_url = current_shop.confirm_charge(@plan)
 		if redirect_url == customers_url
 			flash[:success] = "Groupie Plan Updated! You are now on the #{@plan} plan."
 			redirect_to customers_url
@@ -43,7 +43,7 @@ class ShopsController < AuthenticatedController
 	def update_plan_step_2
 		charge = charge = ShopifyAPI::RecurringApplicationCharge.first
 		old_plan = current_shop.plan
-		new_plan = current_shop.update_plan_step_2(charge)
+		new_plan = current_shop.activate_charge(charge)
 		current_shop.save
 
 		if new_plan

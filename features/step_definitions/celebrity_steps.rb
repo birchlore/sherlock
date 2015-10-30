@@ -22,7 +22,7 @@ When "I supply my shopify credentials" do
 end
 
 Then "I get taken to the app index page" do
-  expect(page).to have_content("automatically")
+  expect(page).to have_content("Groupie will automatically")
 end
 
 When "I am a logged in user" do

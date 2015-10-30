@@ -166,6 +166,8 @@ class Customer < ActiveRecord::Base
     (klout_count).percent_of(@count)
   end
 
+#e.g.  Customer.scans_until_match("followers", {followers:50000})  --> 1200
+
   def self.scans_until_match(match_type, options = {score: 0, followers: 0})
     score = options[:score]
     num_followers = options[:followers]

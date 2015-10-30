@@ -3,6 +3,7 @@ Feature: User adds an invalid celebrity
 
   Background:
     Given I am a logged in user
+    Given I upgrade to the god plan 
 
   Scenario: User adds a customer who has a common name
     Given the customer has a common name
