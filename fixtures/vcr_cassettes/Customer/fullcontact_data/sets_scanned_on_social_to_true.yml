@@ -1,0 +1,200 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=falwiejf@asldfij.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Fri, 30 Oct 2015 23:09:54 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '154'
+      Connection:
+      - keep-alive
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '293'
+      X-Rate-Limit-Reset:
+      - '13'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 404,
+          "message" : "Searched within last 24 hours. No results found for this Id.",
+          "requestId" : "1c665587-0965-4928-83a4-81525b9359a6"
+        }
+    http_version: 
+  recorded_at: Fri, 30 Oct 2015 23:09:54 GMT
+- request:
+    method: get
+    uri: https://api.fullcontact.com/v2/person.json?apiKey=62615ace74c7283e&email=Jacksondcunningham@gmail.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.fullcontact.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.9.3
+      Date:
+      - Fri, 30 Oct 2015 23:11:31 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '1031'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding, User-Agent
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '293'
+      X-Rate-Limit-Reset:
+      - '47'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status" : 200,
+          "requestId" : "e993556a-6cc6-46ef-93dc-e405237e6264",
+          "likelihood" : 0.89,
+          "photos" : [ {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/4e80ff844f22afda13846a74a907145d_428fa8c194b62fdd1ab92e016b8a8a820b8591c5f46c4d3af9c4e881ebaee977",
+            "isPrimary" : true
+          }, {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/cb4b8940a243011bf048a238793f5db8_77695323073aa04faa5abc2b390bbe4c63b41d50725489729acacad80a060a5d",
+            "isPrimary" : false
+          }, {
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/918dd143bf2a769907ea76e7011a22c4_98a924c61a33a2aeab731d6a01ca49eff4bec4f7539f62f8197e76a527302001",
+            "isPrimary" : false
+          }, {
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "https://d2ojpxxtu63wzl.cloudfront.net/static/9142a5dccd08f59a91bf26ef13459f30_3967463042becaf71131b4dd02b19cdff8425570346ca634bad572beefa4f42c",
+            "isPrimary" : false
+          } ],
+          "contactInfo" : {
+            "websites" : [ {
+              "url" : "http://www.brokerengine.ca"
+            } ],
+            "familyName" : "Cunningham",
+            "fullName" : "Jackson Cunningham",
+            "givenName" : "Jackson"
+          },
+          "demographics" : {
+            "gender" : "Male"
+          },
+          "socialProfiles" : [ {
+            "bio" : "Beautiful websites designed specifically for Mortgage Brokers.",
+            "followers" : 743,
+            "following" : 1263,
+            "type" : "twitter",
+            "typeId" : "twitter",
+            "typeName" : "Twitter",
+            "url" : "https://twitter.com/BrokerEngine",
+            "username" : "BrokerEngine",
+            "id" : "344946262"
+          }, {
+            "type" : "klout",
+            "typeId" : "klout",
+            "typeName" : "Klout",
+            "url" : "http://klout.com/brokerengine",
+            "username" : "brokerengine"
+          }, {
+            "type" : "gravatar",
+            "typeId" : "gravatar",
+            "typeName" : "Gravatar",
+            "url" : "https://gravatar.com/mortgage604test",
+            "username" : "mortgage604test",
+            "id" : "14434136"
+          }, {
+            "type" : "flickr",
+            "typeId" : "flickr",
+            "typeName" : "Flickr",
+            "url" : "https://www.flickr.com/people/brokerengine",
+            "username" : "brokerengine",
+            "id" : "64935056@n07"
+          }, {
+            "type" : "vimeo",
+            "typeId" : "vimeo",
+            "typeName" : "Vimeo",
+            "url" : "http://vimeo.com/user11693023",
+            "id" : "11693023"
+          }, {
+            "followers" : 75,
+            "following" : 38,
+            "type" : "pinterest",
+            "typeId" : "pinterest",
+            "typeName" : "Pinterest",
+            "url" : "http://www.pinterest.com/birchlore/",
+            "username" : "birchlore"
+          }, {
+            "type" : "facebook",
+            "typeId" : "facebook",
+            "typeName" : "Facebook",
+            "url" : "https://www.facebook.com/jacksoncunningham",
+            "username" : "jacksoncunningham",
+            "id" : "172000479"
+          }, {
+            "followers" : 6,
+            "following" : 0,
+            "type" : "angellist",
+            "typeId" : "angellist",
+            "typeName" : "AngelList",
+            "url" : "https://angel.co/jacksoncunningham",
+            "username" : "jacksoncunningham",
+            "id" : "761520"
+          }, {
+            "type" : "foursquare",
+            "typeId" : "foursquare",
+            "typeName" : "Foursquare",
+            "url" : "https://foursquare.com/user/6424042",
+            "id" : "6424042"
+          } ]
+        }
+    http_version: 
+  recorded_at: Fri, 30 Oct 2015 23:11:32 GMT
+recorded_with: VCR 2.9.3

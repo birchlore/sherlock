@@ -19,6 +19,7 @@ shared_context "shared examples" do
      }
    }
 
+
    let(:super_fullcontact_array) {
       [
         {"bio"=>"Performance Driven, Return-Focused Digital Marketing and Demand-Generation Manager & Analyst",

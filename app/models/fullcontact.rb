@@ -5,11 +5,13 @@ class Fullcontact
   end
 
   def data
+    binding.pry
     return unless @customer.email.present?
     source = "https://api.fullcontact.com/v2/person.json?email=" + @customer.email + "&apiKey=" + ENV['full_contact_api_key']
     json = GetJSON.call(source)
     return if !json || json["message"] && json["message"].include?("Queued")
     @data ||= json["socialProfiles"]
+
   end
 
   def profile_hash(profile_name)

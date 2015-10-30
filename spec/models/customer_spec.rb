@@ -39,7 +39,6 @@ describe Customer, :vcr do
 
   it { should respond_to (:full_name)}
   it { should respond_to (:celebrity?)}
-  it { should respond_to (:set_social_data)}
 
 
   it "has a valid celebrity factory" do
@@ -89,8 +88,10 @@ describe Customer, :vcr do
         end
       end
 
+
+
       context "when customer does not have social data" do
-        it  "doesnt check fullcontact" do
+        it "doesnt check fullcontact" do
           expect(customer).not_to receive(:set_imdb)
           expect(customer).not_to receive(:set_wikipedia)
           expect(customer).not_to receive(:set_social_data)
@@ -101,7 +102,7 @@ describe Customer, :vcr do
       end
 
       context "when customer is invalid" do
-        it  "doesnt check any external sources" do
+        it "doesnt check any external sources" do
           expect(customer).not_to receive(:set_imdb)
           expect(customer).not_to receive(:set_wikipedia)
           expect(customer).not_to receive(:set_social_data)
@@ -110,6 +111,39 @@ describe Customer, :vcr do
       end
 
   end
+
+  # describe "scan" do 
+
+  #   shop_with_high_standards = build(:shop, :twitter_follower_threshold => 500000, :klout_score_threshold => 99, :instagram_follower_threshold => 100000)
+  #   customer = build(:twitter_celebrity, :shop => shop_with_high_standards)
+  #   customer.scan
+
+  #   twitter_celebrity = build(:twitter_celebrity)
+  #   twitter_celebrity.scan
+
+
+  #   context "when customer's social data does not meet store min threshold" do
+  #     it "saves the data" do
+  #       expect(customer.twitter_followers).to be > 500
+  #     end
+
+  #     it "is not a celebrity" do
+  #       expect(customer.status).to eq("regular")
+  #     end
+  #   end
+
+
+  #   context "when customer's social data does meet store min threshold" do
+  #     it "saves the data" do
+  #       expect(twitter_celebrity.twitter_followers).to be > 500
+  #     end
+
+  #     it "is  a celebrity" do
+  #       expect(twitter_celebrity.status).to eq("celebrity")
+  #     end
+  #   end
+  # end
+
 
   describe "set_social_data" do
     it "calls methods to set social profile data" do
@@ -122,6 +156,7 @@ describe Customer, :vcr do
       super_celebrity.set_social_data
     end
   end
+
 
 
   describe "social_data" do
@@ -181,14 +216,14 @@ describe Customer, :vcr do
 
 
   describe "setting social profiles" do
-    before(:each) do
-      super_celebrity = build(:super_celebrity)
-    end
+
+    super_celebrity = build(:super_celebrity)
+    super_celebrity.fullcontact_data
 
     describe "set_twitter" do
+
       context "customer has a twitter profile" do
         it "sets the customers twitter data" do
-          super_celebrity.fullcontact_data
           super_celebrity.send(:set_twitter)
           expect(super_celebrity.twitter_followers).to be
           expect(super_celebrity.twitter_url).to be
@@ -201,12 +236,13 @@ describe Customer, :vcr do
           expect(imdb_celebrity.send(:set_twitter)).not_to be
         end
       end
+
     end
 
     describe "set_youtube" do
+
       context "customer has a youtube profile" do
         it "sets the customers youtube data" do
-          super_celebrity.fullcontact_data
           super_celebrity.send(:set_youtube)
           expect(super_celebrity.youtube_subscribers).to be
           expect(super_celebrity.youtube_username).to be
@@ -221,9 +257,11 @@ describe Customer, :vcr do
           expect(imdb_celebrity.send(:set_youtube)).to be nil
         end
       end
+
     end
 
     describe "set_instagram" do
+
       context "customer has a instagram profile" do
         it "sets the customers instagram data" do
           super_celebrity.get_external_data
@@ -240,12 +278,13 @@ describe Customer, :vcr do
           expect(imdb_celebrity.send(:set_instagram)).to be nil
         end
       end
+
     end
 
     describe "set_linkedin" do
+
       context "customer has a linkedin profile" do
         it "sets the customers linkedin data" do
-          super_celebrity.fullcontact_data
           super_celebrity.send(:set_linkedin)
           expect(super_celebrity.linkedin_bio).to be
           expect(super_celebrity.linkedin_url).to be
@@ -258,12 +297,13 @@ describe Customer, :vcr do
           expect(imdb_celebrity.send(:set_linkedin)).to be nil
         end
       end
+
     end
 
     describe "set_angellist" do
+
       context "customer has a angellist profile" do
         it "sets the customers angellist data" do
-          super_celebrity.fullcontact_data
           super_celebrity.send(:set_angellist)
           expect(super_celebrity.angellist_url).to be
           expect(super_celebrity.angellist_bio).to be
@@ -276,9 +316,11 @@ describe Customer, :vcr do
           expect(imdb_celebrity.send(:set_angellist)).to be nil
         end
       end
+
     end
 
     describe "set_wikipedia" do
+
       context "customer has a wikipedia profile" do
         it "sets the customers wikipedia data" do
           super_celebrity.wikipedia_data
@@ -294,9 +336,11 @@ describe Customer, :vcr do
           expect(imdb_celebrity.send(:set_wikipedia)).to be nil
         end
       end
+
     end
 
     describe "set_imdb" do
+
       context "customer has a imdb profile" do
         it "sets the customers imdb data" do
           super_celebrity.imdb_data
@@ -312,7 +356,9 @@ describe Customer, :vcr do
           expect(wikipedia_celebrity.send(:set_imdb)).to be nil
         end
       end
+
     end
+
   end
 
   describe "get external data" do
@@ -335,12 +381,20 @@ describe Customer, :vcr do
     end
   end
 
-  describe "fullcontact_data" do
-    it "gets a fullcontact data array" do
-    end
-  end
+#   describe "fullcontact_data" do
 
-end
+#     celebrity = build(:twitter_celebrity)
+
+#     it "instantiates a fullcontact object" do
+#       expect(Fullcontact).to receive(:new)
+#     end
+
+#     it "sets scanned on social to true" do
+#       expect(celebrity.scanned_on_social).to be
+#     end
+#   end
+
+# end
 
 
 
