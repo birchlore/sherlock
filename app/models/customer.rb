@@ -14,7 +14,6 @@ class Customer < ActiveRecord::Base
     data = self.get_external_data
     return unless data
     self.get_celebrity_status
-
     if self.celebrity?
       self.shop.send_celebrity_notification(self) 
       self.status = "celebrity"
