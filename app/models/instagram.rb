@@ -20,7 +20,7 @@ class Instagram
 
 
   def username
-    return unless self.url
+    return unless self.url.present?
     self.url.scan(/instagram.com\/.+\//).first.scan(/\/.+\//).first.scan(/[^\/]/).join
   end
 
