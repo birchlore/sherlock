@@ -21,7 +21,7 @@ class ShopsController < AuthenticatedController
 		@shop = current_shop
 
 		if @shop.update_attributes(shop_params)
-			Resque.enqueue(CelebrityUpdater, shop.id)
+			Resque.enqueue(CelebrityUpdater, @shop.id)
 			flash[:success] = "Settings Successfully Saved"
 			redirect_to customers_url
 		else
