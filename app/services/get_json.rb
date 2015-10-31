@@ -1,14 +1,21 @@
 class GetJSON
    def self.call(source)
-    uri = URI.parse(source)
+
+    begin
+      uri = URI.parse(source)
+    rescue URI::InvalidURIError => e
+      Rollbar.error e
+    end
+
+    return unless uri
 
     begin
   		res = Net::HTTP.get_response(uri)
-	rescue Net::ReadTimeout => e
-	  Rollbar.error e
-	end
+	  rescue Net::ReadTimeout => e
+	    Rollbar.error e
+	  end
 
-    return unless res.is_a?(Net::HTTPSuccess)
+    return unless res && res.is_a?(Net::HTTPSuccess)
     JSON.parse(res.body)
   end
 end
