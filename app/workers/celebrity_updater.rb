@@ -9,7 +9,7 @@ class CelebrityUpdater
     @retry_delay = 60
 
 	def self.perform(shop_id)
-	  shop = Shop.find(id)
+	  shop = Shop.find(shop_id)
 
 	  shop.customers.each do |customer|
 
@@ -22,7 +22,7 @@ class CelebrityUpdater
       	end
 
       	customer.save if customer.status != original_status
-      	
+
     end
 	   
 	end
