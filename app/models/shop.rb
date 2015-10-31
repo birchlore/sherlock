@@ -214,7 +214,7 @@ class Shop < ActiveRecord::Base
 
   def all_customers(num)
     pages = 1
-    num = scans_remaining if num > scans_remaining
+    num = basic_scans_remaining if num > basic_scans_remaining
 
     if num > 250
       num = 250
@@ -236,7 +236,7 @@ class Shop < ActiveRecord::Base
 
 
   def unscanned_customers(num)
-    num = scans_remaining if num > scans_remaining
+    num = basic_scans_remaining if num > basic_scans_remaining
   
     @total_customers = ShopifyAPI::Customer.count
     pages = (@total_customers/250.to_f).ceil
