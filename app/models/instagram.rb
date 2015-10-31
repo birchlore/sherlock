@@ -21,7 +21,11 @@ class Instagram
 
   def username
     return unless self.url
-    self.url.scan(/\/instagram.com\/(\w+)\//).first.first
+    username = self.url.scan(/\/instagram.com\/(\w+)\//)
+    return unless username
+    username = username.first
+    return unless username
+    username.first
   end
 
   def get_id
