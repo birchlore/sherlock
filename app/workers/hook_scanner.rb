@@ -22,6 +22,7 @@ class HookScanner
 	    
 	     if basic_scans_remaining > 0
 	       customer.scan 
+	       customer.save
 	     end
 
 	     customer.teaser_scan if shop.teaser_scans_running?

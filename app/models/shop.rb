@@ -134,7 +134,9 @@ class Shop < ActiveRecord::Base
           )
 
 
-        customer.scan if customer.save
+        customer.scan
+        customer.save
+        
         if customer.celebrity?
           @celebrities_count += 1 
         end

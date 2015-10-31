@@ -19,9 +19,6 @@ class Customer < ActiveRecord::Base
       self.shop.send_celebrity_notification(self) 
       self.status = "celebrity"
     end
-
-    self.save
-    
   end
 
 
