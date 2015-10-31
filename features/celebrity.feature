@@ -3,7 +3,7 @@ Feature: User adds a celebrity
 
   Background:
     Given I am a logged in user
-    Given I upgrade to the god plan 
+    Given I upgrade to the stalker plan 
 
   Scenario: User adds a customer who is not a celebrity
     Given the customer is not a celebrity

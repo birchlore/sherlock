@@ -3,7 +3,7 @@ Feature: User adds a wikipedia celebrity
 
   Background:
     Given I am a logged in user
-    Given I upgrade to the god plan 
+    Given I upgrade to the stalker plan 
     And the customer is a wikipedia celebrity
 
   Scenario: User adds a customer who is a wikipedia celebrity

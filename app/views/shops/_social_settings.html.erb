@@ -1,4 +1,4 @@
-<% unless @shop.plan == "free" || @shop.plan == "basic" %>
+<% unless @shop.plan == "free" || @shop.plan == "junior" %>
 	<div>
 		<p>Customers who have over <%= f.number_field :twitter_follower_threshold, :style=>"width:75px;" %> Twitter followers should be considered celebrities.</p>
 	</div>

@@ -14,9 +14,9 @@ Feature: User changes plan
     Then I should not be able to bulk scan
     Then I should see the teaser scan description
 
-  Scenario: User upgrades to basic plan
+  Scenario: User upgrades to junior plan
     Given I am at the homepage
-    When I upgrade to the basic plan
+    When I upgrade to the junior plan
     Then I should see my plan is upgraded
     Then I should have unlimited imdb scans remaining
     Then I should have no social scans remaining
@@ -24,9 +24,9 @@ Feature: User changes plan
     Then I should see the teaser scan description
 
 
-  Scenario: User upgrades to pro plan
+  Scenario: User upgrades to basic plan
     Given I am at the homepage
-    When I upgrade to the pro plan
+    When I upgrade to the basic plan
     Then I should see my plan is upgraded
     Then I should have unlimited imdb scans remaining
     Then I should have 200 social scans remaining
@@ -34,9 +34,9 @@ Feature: User changes plan
     Then I should not see the teaser scan description
 
 
-  Scenario: User upgrades to stalker plan
+  Scenario: User upgrades to pro plan
     Given I am at the homepage
-    When I upgrade to the stalker plan
+    When I upgrade to the pro plan
     Then I should see my plan is upgraded
     Then I should have unlimited imdb scans remaining
     Then I should have 1000 social scans remaining
@@ -44,9 +44,9 @@ Feature: User changes plan
     Then I should not see the teaser scan description
 
 
-  Scenario: User upgrades to god plan
+  Scenario: User upgrades to stalker plan
     Given I am at the homepage
-    When I upgrade to the god plan
+    When I upgrade to the stalker plan
     Then I should see my plan is upgraded
     Then I should have unlimited imdb scans remaining
     Then I should have 2500 social scans remaining

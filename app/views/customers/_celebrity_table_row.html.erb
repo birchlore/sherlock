@@ -16,7 +16,7 @@
      <td><%= imdb_link(celebrity) %></td>
    <% end %>
 
-   <% unless current_shop.plan == "free" || current_shop.plan == "basic" %>
+   <% unless current_shop.plan == "free" || current_shop.plan == "junior" %>
      <td><%= klout_score(celebrity) %></td>
      <td><%= youtube_subscriber_count(celebrity) %></td>
      <td><%= twitter_follower_count(celebrity) %></td>
