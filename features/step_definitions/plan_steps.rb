@@ -38,11 +38,11 @@ end
 
 
 Then(/^I should see the teaser scan description$/) do
-  expect(page).to have_content("5k")
+  expect(page).to have_content("1000")
 end
 
 
 Then(/^I should not see the teaser scan description$/) do
-  expect(page).not_to have_content("5k")
+  expect(page).not_to have_content("1000")
 end
 
