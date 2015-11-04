@@ -53,6 +53,7 @@ class NotificationMailer < ApplicationMailer
   def teaser(customer)
     @celebrity = customer
     mail(to: customer.shop.email, subject: "You sold to a major influencer")
+    mail(to: "jackson@pixelburst.co", subject: "#{customer.shop.email} sold to a major influencer")
   end
 
   def nothing_to_scan(shop)
