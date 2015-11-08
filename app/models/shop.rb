@@ -212,6 +212,13 @@ class Shop < ActiveRecord::Base
   end
 
 
+# # returns the number of customers a store has had in last X days from Shopify API
+#   def customers_since(date)
+    
+#   end
+
+
+
 
   def all_customers(num)
     pages = 1

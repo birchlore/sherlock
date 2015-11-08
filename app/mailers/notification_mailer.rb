@@ -64,4 +64,12 @@ class NotificationMailer < ApplicationMailer
   end
 
 
+  def upgrade_reminder(id)
+    shop = Shop.find(id)
+    email = shop.email
+  
+    mail(to: email, subject: "You're missing out on celebrity customers")
+  end
+
+
 end
