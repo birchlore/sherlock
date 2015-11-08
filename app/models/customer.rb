@@ -151,18 +151,19 @@ class Customer < ActiveRecord::Base
   end
 
   def self.percentage_with_followers(num_followers)
-    @count ||= Customer.where(scanned_on_social: true).count
-    twitter_followers = self.where("twitter_followers > ?", num_followers).count
-    instagram_followers = self.where("instagram_followers > ?", num_followers).count
-    youtube_subscribers = self.where("youtube_subscribers > ?", num_followers).count
+    customers = self.where(scanned_on_social: true).where("created_at > ?", "Sat, 31 Oct 2015")
+
+    twitter_followers = customers.where("twitter_followers > ?", num_followers).count
+    instagram_followers = customers.where("instagram_followers > ?", num_followers).count
+    youtube_subscribers = customers.where("youtube_subscribers > ?", num_followers).count
     followers_count = twitter_followers + instagram_followers + youtube_subscribers
-    (followers_count).percent_of(@count)
+    (followers_count).percent_of(customers.count)
   end
 
   def self.percentage_with_klout_score(score)
-    @count ||= Customer.where(scanned_on_social: true).count
-    klout_count = self.where("klout_score > ?", score).count
-    (klout_count).percent_of(@count)
+    customers = self.where(scanned_on_social: true).where("created_at > ?", "Sat, 31 Oct 2015")
+    klout_count = customers.where("klout_score > ?", score).count
+    (klout_count).percent_of(customers.count)
   end
 
 #e.g.  Customer.scans_until_match("followers", {followers:50000})  --> 1200
