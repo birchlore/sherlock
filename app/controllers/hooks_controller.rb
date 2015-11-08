@@ -31,6 +31,7 @@ class HooksController < ApplicationController
     shop.installed = false
     shop.save!
     DelayedMailer.uninstall_feedback(shop).deliver_now
+    DelayedMailer.uninstall_feedback(shop).deliver_in(1.minute)
     NotificationMailer.uninstall_notification(shop).deliver_now
     head :ok
   end
