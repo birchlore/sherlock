@@ -30,7 +30,7 @@ class HooksController < ApplicationController
     shop = Shop.where(shopify_domain: shopify_domain).first
     shop.installed = false
     shop.save!
-    Resque.enqueue_in(1.minute, SendUninstallFeedbackEmail, shop.id)
+    Resque.enqueue(SendUninstallFeedbackEmail, shop.id)
     NotificationMailer.uninstall_notification(shop).deliver_now
     head :ok
   end
