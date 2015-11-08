@@ -21,10 +21,8 @@ class NotificationMailer < ApplicationMailer
     mail to: "jackson@pixelburst.co"
   end
 
-  def uninstall_notification(shop)
-    
+  def uninstall_notification(shop)   
     @email = shop.email
-
     mail to: "jackson@pixelburst.co"
   end
 
@@ -56,8 +54,10 @@ class NotificationMailer < ApplicationMailer
     mail(to: "jackson@pixelburst.co", subject: "#{customer.shop.email} sold to a major influencer")
   end
 
+
   def nothing_to_scan(shop)
     mail to: shop.email
   end
+
 
 end
