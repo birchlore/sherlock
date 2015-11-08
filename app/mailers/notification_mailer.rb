@@ -26,6 +26,10 @@ class NotificationMailer < ApplicationMailer
     mail to: "jackson@pixelburst.co"
   end
 
+  def uninstall_feedback(shop)
+    mail(to: shop.email, subject: "celebrity app")
+  end
+
   def bulk_scan_notification(shop, total_scanned, total_found, unscanned)
     @total_scanned = total_scanned
     @total_found = total_found
