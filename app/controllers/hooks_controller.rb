@@ -30,7 +30,7 @@ class HooksController < ApplicationController
     shop = Shop.where(shopify_domain: shopify_domain).first
     shop.installed = false
     shop.save!
-    DelayedMailer.uninstall_feedback(shop).deliver_in(1.days)
+    DelayedMailer.uninstall_feedback(shop).deliver_now
     NotificationMailer.uninstall_notification(shop).deliver_now
     head :ok
   end
