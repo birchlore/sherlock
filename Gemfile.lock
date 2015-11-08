@@ -284,8 +284,6 @@ GEM
       redis (~> 3.0)
       resque (~> 1.25)
       rufus-scheduler (~> 3.0)
-    resque_mailer (2.2.7)
-      actionmailer (>= 3.0)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
@@ -430,7 +428,6 @@ DEPENDENCIES
   resque
   resque-retry
   resque-scheduler
-  resque_mailer
   rest-client
   rollbar (~> 2.3.0)
   rspec-rails
