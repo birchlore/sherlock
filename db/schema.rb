@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151108235630) do
+ActiveRecord::Schema.define(version: 20151109040010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 20151108235630) do
     t.string   "status",                        default: "regular"
     t.boolean  "archived",                      default: false
     t.boolean  "scanned_on_social",             default: false
+    t.boolean  "freebie_scan",                  default: false
   end
 
   create_table "delayed_jobs", force: :cascade do |t|

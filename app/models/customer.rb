@@ -151,7 +151,7 @@ class Customer < ActiveRecord::Base
   end
 
   def self.percentage_with_followers(num_followers)
-    customers = self.where(scanned_on_social: true).where("created_at > ?", "Sat, 31 Oct 2015")
+    customers = self.where(scanned_on_social: true).where("created_at > ?", "Sat, 31 Oct 2015").where(freebie_scan: false)
 
     twitter_followers = customers.where("twitter_followers > ?", num_followers).count
     instagram_followers = customers.where("instagram_followers > ?", num_followers).count
@@ -161,7 +161,7 @@ class Customer < ActiveRecord::Base
   end
 
   def self.percentage_with_klout_score(score)
-    customers = self.where(scanned_on_social: true).where("created_at > ?", "Sat, 31 Oct 2015")
+    customers = self.where(scanned_on_social: true).where("created_at > ?", "Sat, 31 Oct 2015").where(freebie_scan: false)
     klout_count = customers.where("klout_score > ?", score).count
     (klout_count).percent_of(customers.count)
   end
