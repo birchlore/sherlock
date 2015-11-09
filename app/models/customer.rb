@@ -22,7 +22,7 @@ class Customer < ActiveRecord::Base
 
 
   def teaser_scan
-    return if self.shop.teaser_celebrity
+    return if self.shop.onboarded
     data = fullcontact_data
     return unless data
 

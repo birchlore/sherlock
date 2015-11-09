@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027173435) do
+ActiveRecord::Schema.define(version: 20151108235630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -129,6 +129,7 @@ ActiveRecord::Schema.define(version: 20151027173435) do
     t.string   "plan",                         default: "free"
     t.integer  "charge_id"
     t.boolean  "teaser_celebrity",             default: false
+    t.boolean  "onboarded",                    default: false
   end
 
   add_index "shops", ["shopify_domain"], name: "index_shops_on_shopify_domain", unique: true, using: :btree

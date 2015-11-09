@@ -65,3 +65,7 @@ task :add_scanned_on_social => :environment do
     customer.save
   end
 end
+
+task :add_onboarded_to_existing => :environment do
+  Shop.update_all(onboarded: true)
+end

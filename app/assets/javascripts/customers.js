@@ -46,8 +46,7 @@ $(function(){
     } else {
       $('#scans-remaining').text(scans_remaining - 1)
       disableButton()
-      $('.container').addClass('blur');
-      $('.load-ajax').show()
+      addBlur()
       $("#new_customer").submit();
     }
    
@@ -70,10 +69,23 @@ $(function(){
         $('#bulk-scan').prop('disabled', true)
     }   
   } 
+
+  function addBlur() {
+    $('.container').addClass('blur');
+    $('.load-ajax').show()
+  }
+
+  function addOnboardBlur() {
+    $('.container').addClass('blur');
+    $('.load-ajax-onboard').show()
+  }
+
+  
  
  function removeBlur(){
   $('.container').removeClass('blur');
   $('.load-ajax').hide()
+  $('.load-ajax-onboard').hide()
   $('.form-control').val("")
  }
 

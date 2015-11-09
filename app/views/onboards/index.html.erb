@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="spacer text-center">
+		<%= image_tag("logo-red") %>
+	</div>
+
+	<div class="text-center">
+		<h1>Thanks for installing Groupie. Let us show you how it works.</h1>
+
+		<%= link_to welcome_scan_path, :id=>"onboard-scanner" do %>
+			<div class="btn btn-info text-center small-spacer" style="padding: 10px 40px;">
+				<h4>Find an influencer in my store</h4>
+			</div>
+		<% end %>
+
+		<p><%= link_to "No thanks, take me directly to the app >", customers_path %></p>
+	</div>
+
+</div>

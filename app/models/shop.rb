@@ -109,6 +109,45 @@ class Shop < ActiveRecord::Base
   end
 
 
+  def onboard_scan
+    customers_to_scan = all_customers(750)
+
+    @celebrity = nil
+    @celebrities_count = 0
+    @count = 0
+
+    self.email_notifications = false
+
+    while @celebrities_count == 0 && @count < 750 || @count >= customers_to_scan.count
+        shopify_customer = customers_to_scan[@count]
+        customer = self.customers.new(
+                                first_name: shopify_customer.first_name,
+                                last_name: shopify_customer.last_name,
+                                email: shopify_customer.email,
+                                shopify_id: shopify_customer.id
+          )
+
+
+        customer.teaser_scan
+        @count += 1
+        
+        if customer.teaser_celebrity?
+          @celebrity = customer
+          @celebrity.status = "celebrity"
+          @celebrity.save
+          @celebrities_count += 1 
+        end
+
+    end
+
+
+    self.email_notifications = true
+
+    @celebrity
+
+  end
+
+
 
   def bulk_scan(num, include_previously_scanned)
 
@@ -222,7 +261,6 @@ class Shop < ActiveRecord::Base
 
   def all_customers(num)
     pages = 1
-    num = basic_scans_remaining if num > basic_scans_remaining
 
     if num > 250
       num = 250

@@ -24,8 +24,8 @@ class HookScanner
 	       customer.scan 
 	       customer.save
 	     end
-
-	     customer.teaser_scan if shop.teaser_scans_running?
+	     
+	     # customer.teaser_scan if shop.teaser_scans_running?
 	  end
 	   
 	end

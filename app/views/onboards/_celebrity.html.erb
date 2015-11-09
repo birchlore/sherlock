@@ -1,0 +1,58 @@
+<div class="text-center">
+	<div class="spacer">
+		<h1>Boom! We found an influencer:</h1>
+		<h5>You should offer this customer a free product in return for a shout out on social.</h5>
+	</div>
+
+	<div class="well">
+
+		<h2><%= name(@celebrity) %></h2>
+
+		<p><%= bio(@celebrity) %></p>
+
+		<ul>
+		<% if @celebrity.wikipedia_celebrity? %>
+		   <li>Wikipedia Page: <%= wikipedia_link(@celebrity) %></li>
+		 <% end %>
+
+		  <% if @celebrity.imdb_celebrity? %>
+		   <li>IMDB Page: <%= imdb_link(@celebrity) %></li>
+		 <% end %>
+
+		 <% if @celebrity.klout_celebrity? %>
+		   <li>Klout Score: <%= klout_score(@celebrity) %></li>
+		 <% end %>
+
+		  <% if @celebrity.youtube_celebrity? %>
+		   <li>Youtube Subscribers: <%= youtube_subscriber_count(@celebrity) %></li>
+		 <% end %>
+
+		 <% if @celebrity.twitter_celebrity? %>
+		   <li>Twitter Followers: <%= twitter_follower_count(@celebrity) %></li>
+		 <% end %>
+
+		 <% if @celebrity.instagram_celebrity? %>
+		   <li>Instagram Followers: <%= instagram_follower_count(@celebrity) %></li>
+		 <% end %>
+		</ul>
+
+	</div>
+
+
+	<%= link_to plan_path do %>
+		<div class="btn btn-info text-center small-spacer" style="padding: 10px 40px;">
+			<h4>Upgrade plan to continue scanning</h4>
+		</div>
+	<% end %>
+
+
+	<p><%= link_to "Continue to the app >", customers_path %></p>
+</div>
+
+   
+
+
+
+
+
+

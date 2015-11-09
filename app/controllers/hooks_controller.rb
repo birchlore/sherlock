@@ -13,7 +13,7 @@ class HooksController < ApplicationController
 
     head :ok
 
-    return if basic_scans_remaining < 1 && shop.teaser_celebrity
+    return if basic_scans_remaining < 1
 
     first_name = data["first_name"]
     last_name = data["last_name"]

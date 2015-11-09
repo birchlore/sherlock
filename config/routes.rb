@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   patch '/shop/plans/update_plan_step_1' => 'shops#update_plan_step_1', as: :update_plan_step_1
   post '/customer/bulk_scan' => 'customers#bulk_scan', as: :bulk_scan
 
+  get '/welcome' => 'onboards#index', as: :welcome
+  get '/welcome/scan' => 'onboards#scan', as: :welcome_scan
+  get '/welcome/result' => 'onboards#result', as: :onboard_result
 
   scope '/hooks', :controller => :hooks do
     post :new_customer_callback
