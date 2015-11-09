@@ -381,6 +381,8 @@ describe Customer, :vcr do
     end
   end
 
+end
+
 #   describe "fullcontact_data" do
 
 #     celebrity = build(:twitter_celebrity)
