@@ -120,6 +120,7 @@ class Shop < ActiveRecord::Base
 
     while @celebrities_count == 0 && @count < 750 || @count >= customers_to_scan.count
         shopify_customer = customers_to_scan[@count]
+        return unless shopify_customer
         customer = self.customers.new(
                                 first_name: shopify_customer.first_name,
                                 last_name: shopify_customer.last_name,
