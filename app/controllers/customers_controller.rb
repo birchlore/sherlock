@@ -3,6 +3,9 @@ class CustomersController < AuthenticatedController
   layout "true" == Figaro.env.shopify_embedded_app ? 'embedded_app' : 'application'
 
   def index
+
+    redirect_to welcome_path if !current_shop.onboarded
+
     @shop = current_shop
     @customer = current_shop.customers.new
     @celebrities = current_shop.celebrities.page(params[:page]).per(10)
