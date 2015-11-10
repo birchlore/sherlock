@@ -7,6 +7,7 @@ class Wikipedia
   def data
     source = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + @customer.first_name + "%20" + @customer.last_name + "&limit=1&namespace=0&format=json"
     data ||= GetJSON.call(source)
+    return unless data
     bio = data[2].first
     return if bio.blank? || bio.is_common? || bio.is_dead?
     return unless data[0].present? && data[0].upcase == @customer.full_name.upcase
