@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  root :to => 'customers#index'
+  root :to => 'onboards#index'
   mount ShopifyApp::Engine, at: '/'
   mount Resque::Server, :at => "/resque"
 

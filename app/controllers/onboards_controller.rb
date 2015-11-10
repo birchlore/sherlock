@@ -1,6 +1,7 @@
 class OnboardsController < AuthenticatedController
 
 	def index
+		redirect_to customers_path if current_shop.onboarded
 	end
 
 	def scan

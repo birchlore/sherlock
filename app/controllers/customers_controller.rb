@@ -4,8 +4,6 @@ class CustomersController < AuthenticatedController
 
   def index
 
-    redirect_to welcome_path if !current_shop.onboarded
-
     @shop = current_shop
     @customer = current_shop.customers.new
     @celebrities = current_shop.celebrities.page(params[:page]).per(10)
