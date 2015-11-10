@@ -13,6 +13,7 @@ class GetJSON
   		res = Net::HTTP.get_response(uri)
 	  rescue Net::ReadTimeout => e
 	    Rollbar.error e
+      res = nil
 	  end
 
     return unless res && res.is_a?(Net::HTTPSuccess)
