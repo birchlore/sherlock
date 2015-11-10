@@ -10,7 +10,9 @@
   <th>IMDB</th>
 <% end %>
 
-<% unless current_shop.plan == "free" || current_shop.plan == "junior" %>
+<% if current_shop.plan == "free" || current_shop.plan == "junior" %>
+  <th>Social Follower Counts</th>
+<% else %>
   <th>Klout</th>
   <th>Youtube</th>
   <th>Twitter</th>

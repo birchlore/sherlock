@@ -16,7 +16,9 @@
      <td><%= imdb_link(celebrity) %></td>
    <% end %>
 
-   <% unless current_shop.plan == "free" || current_shop.plan == "junior" %>
+   <% if current_shop.plan == "free" || current_shop.plan == "junior" %>
+    <td><em>upgrade to enable</em></td>
+   <% else %>
      <td><%= klout_score(celebrity) %></td>
      <td><%= youtube_subscriber_count(celebrity) %></td>
      <td><%= twitter_follower_count(celebrity) %></td>
