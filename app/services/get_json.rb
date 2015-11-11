@@ -3,8 +3,8 @@ class GetJSON
 
     begin
       uri = URI.parse(source)
-    rescue URI::InvalidURIError => e
-      Rollbar.error e
+    rescue
+      uri = nil
     end
 
     return unless uri
@@ -12,7 +12,6 @@ class GetJSON
     begin
   		res = Net::HTTP.get_response(uri)
 	  rescue Net::ReadTimeout => e
-	    Rollbar.error e
       res = nil
 	  end
 
