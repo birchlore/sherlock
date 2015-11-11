@@ -9,6 +9,7 @@ class HooksController < ApplicationController
     
     shopify_domain = request.headers["HTTP_X_SHOPIFY_SHOP_DOMAIN"]
     shop = Shop.where(shopify_domain: shopify_domain).first
+    return unless shop
     basic_scans_remaining = shop.basic_scans_remaining
 
     head :ok
@@ -28,6 +29,7 @@ class HooksController < ApplicationController
     data = ActiveSupport::JSON.decode(request.body.read)
     shopify_domain = request.headers["HTTP_X_SHOPIFY_SHOP_DOMAIN"]
     shop = Shop.where(shopify_domain: shopify_domain).first
+    return unless shop
     shop.installed = false
     shop.save!
     Resque.enqueue_in(1.hour, SendUninstallFeedbackEmail, shop.id)
