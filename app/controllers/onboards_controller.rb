@@ -1,4 +1,5 @@
 class OnboardsController < AuthenticatedController
+	respond_to :html, :json
 
 	def index
 		redirect_to customers_path if current_shop.onboarded
@@ -6,10 +7,9 @@ class OnboardsController < AuthenticatedController
 
 	def scan
 		if !current_shop.onboarded
-			@celebrity = current_shop.onboard_scan
-			current_shop.onboarded = true
-			current_shop.save
-			redirect_to onboard_result_path
+			Resque.enqueue(Onboard, current_shop.id)
+			shop.update_attributes :onboard_status => "queued"
+			head :ok
 		else
 			flash[:info] = "You've already used your free scan :("
 			redirect_to customers_path
@@ -17,9 +17,12 @@ class OnboardsController < AuthenticatedController
 		
 	end
 
+	def scan_status
+	end
+
 
 	def result
-		@celebrity = current_shop.celebrities.last
+		# @celebrity = current_shop.celebrities.last
 	end
 
 end
