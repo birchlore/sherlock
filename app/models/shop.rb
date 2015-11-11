@@ -125,7 +125,8 @@ class Shop < ActiveRecord::Base
                                 first_name: shopify_customer.first_name,
                                 last_name: shopify_customer.last_name,
                                 email: shopify_customer.email,
-                                shopify_id: shopify_customer.id
+                                shopify_id: shopify_customer.id,
+                                freebie_scan: true
           )
 
 
@@ -135,7 +136,6 @@ class Shop < ActiveRecord::Base
         if customer.teaser_celebrity?
           @celebrity = customer
           @celebrity.status = "celebrity"
-          @celebrity.freebie_scan = true
           @celebrity.save
           @celebrities_count += 1 
         end
