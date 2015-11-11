@@ -29,12 +29,15 @@ class HooksController < ApplicationController
     data = ActiveSupport::JSON.decode(request.body.read)
     shopify_domain = request.headers["HTTP_X_SHOPIFY_SHOP_DOMAIN"]
     shop = Shop.where(shopify_domain: shopify_domain).first
+
+    head :ok
+
     return unless shop
+    
     shop.installed = false
     shop.save!
     Resque.enqueue_in(1.hour, SendUninstallFeedbackEmail, shop.id)
     NotificationMailer.uninstall_notification(shop).deliver_now
-    head :ok
   end
 
   private
