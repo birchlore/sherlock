@@ -67,7 +67,7 @@ class Shop < ActiveRecord::Base
 
 
   def basic_scans_performed(days)
-    customers.where('created_at > ?', days.days.ago).count
+    customers.where('created_at > ?', days.days.ago).where(freebie_scan: false).count
   end
 
   def basic_scans_remaining
@@ -86,7 +86,7 @@ class Shop < ActiveRecord::Base
   end
 
   def social_scans_performed(days)
-    customers.where('created_at > ?', days.days.ago).where(scanned_on_social: true).count
+    customers.where('created_at > ?', days.days.ago).where(scanned_on_social: true).where(freebie_scan: false).count
   end
 
   def social_scans_remaining
