@@ -4,6 +4,7 @@ end
 
 Given "I am at the homepage" do
   visit root_path
+  click_link_or_button 'No thanks, take me directly to the app >'
 end
 
 When "I supply my shopify url" do
@@ -25,9 +26,14 @@ Then "I get taken to the app index page" do
   expect(page).to have_content("Groupie will automatically")
 end
 
+When "I skip the onboarding process" do
+  click_link_or_button 'No thanks, take me directly to the app >'
+end
+
 When "I am a logged in user" do
   step "I visit the login page"
   step "I supply my shopify url"
+  step "I skip the onboarding process"
   step "I get taken to the app index page"
 end
 

@@ -1,4 +1,12 @@
 <div class="text-center">
-	<h1>Dang, we couldn't find any influencers in your current customer base.</h1>
-	<p><%= link_to "Continue to the app >", customers_path %></p>
+	<h1>Dang, we couldn't find any influencers in our initial scan.</h1>
+
+	<%= link_to customers_path do %>
+		<div class="btn btn-info text-center small-spacer" style="padding: 10px 40px;">
+			<h4>Continue to the app ></h4>
+		</div>
+	<% end %>
+
 </div>
+
+<div class="spacer"></div>

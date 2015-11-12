@@ -59,6 +59,7 @@ def install_app
   step "I supply my shopify credentials"
   result = unless page.has_content?('Logged in')
     step "I install the app"
+    step "I skip the onboarding process"
     step "I get taken to the app index page"
     true
   else
