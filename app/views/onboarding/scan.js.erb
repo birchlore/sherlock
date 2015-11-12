@@ -1,5 +1,5 @@
 
-// stop polling after 1.5 minutes (while count is less  than 40)
+// stop polling after ~2 minutes (while count is less  than 50)
 var count = 0
 
 var OnboardingPoller;
@@ -24,7 +24,7 @@ OnboardingPoller = {
         success: function(data){
             console.log(data.onboard_status)
 
-            if (data.onboard_status == "queued" && count < 40){
+            if (data.onboard_status == "queued" && count < 50){
               OnboardingPoller.poll();
             } 
             else {

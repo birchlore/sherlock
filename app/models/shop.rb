@@ -113,8 +113,6 @@ class Shop < ActiveRecord::Base
 
     return if self.onboarded
 
-    self.update_attributes :onboarded => true
-    
     customers_to_scan = all_customers(750)
 
     @celebrity = nil
@@ -147,8 +145,9 @@ class Shop < ActiveRecord::Base
 
     end
 
-
+    self.onboarded => true
     self.email_notifications = true
+    self.save
 
     @celebrity
 
