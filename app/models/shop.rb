@@ -145,7 +145,7 @@ class Shop < ActiveRecord::Base
 
     end
 
-    self.onboarded => true
+    self.onboarded = true
     self.email_notifications = true
     self.save
 
