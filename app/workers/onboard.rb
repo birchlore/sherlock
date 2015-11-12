@@ -10,6 +10,8 @@ class Onboard
 
 	def self.perform(shop_id)
 	  shop = Shop.find(shop_id)
+	  shop_session = Shop.retrieve(shop_id)
+	  ShopifyAPI::Base.activate_session(shop_session)
 
 	  begin
 		  shop.update_attributes :onboard_status => "started"
