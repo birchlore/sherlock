@@ -7,8 +7,11 @@ class OnboardingController < AuthenticatedController
 
 	def scan
 		if !current_shop.onboarded
+
 			Resque.enqueue(Onboard, current_shop.id)
-			current_shop.update_attributes :onboard_status => "queued"
+			current_shop.onboarded = true
+			current_shop.onboard_status = "queued"
+			current_shop.save
 		else
 			flash[:info] = "You've already used your free scan :("
 			render :js => "window.location = '#{customers_path}'"
