@@ -112,6 +112,8 @@ class Shop < ActiveRecord::Base
   def onboard_scan
 
     return if self.onboarded
+
+    self.update_attributes :onboarded => true
     
     customers_to_scan = all_customers(750)
 
