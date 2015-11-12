@@ -15,6 +15,7 @@ class Onboard
 
 	  begin
 		  @celebrity = shop.onboard_scan
+		  @celebrity.save
 		  shop.update_attributes :onboard_status => "success"
 	   rescue Exception => e
 	   	   Rollbar.error(e)
