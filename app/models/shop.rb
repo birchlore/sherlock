@@ -110,6 +110,9 @@ class Shop < ActiveRecord::Base
 
 
   def onboard_scan
+
+    return if self.onboarded
+    
     customers_to_scan = all_customers(750)
 
     @celebrity = nil

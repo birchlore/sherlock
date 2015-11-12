@@ -1,0 +1,43 @@
+
+// stop polling after 1.5 minutes (while count is less  than 40)
+var count = 0
+
+var OnboardingPoller;
+
+
+OnboardingPoller = {
+  poll: function() {
+    console.log('scanning')
+    count += 1
+    console.log(count)
+    return setTimeout(this.request, 2500);
+  },
+  request: function() {
+    var status_url = $('.status').data('url')
+    var result_url = $('.result').data('url')
+
+
+    $.ajax({
+        type: "GET",
+        url: status_url,
+        dataType: "json",
+        success: function(data){
+            console.log(data.onboard_status)
+
+            if (data.onboard_status == "queued" && count < 40){
+              OnboardingPoller.poll();
+            } 
+            else {
+              window.location = result_url
+            }
+        }  
+
+    });
+    
+  }
+};
+
+$(function() {
+  return OnboardingPoller.poll();
+});
+

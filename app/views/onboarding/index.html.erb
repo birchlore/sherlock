@@ -6,13 +6,18 @@
 	<div class="text-center">
 		<h1>Thanks for installing Groupie. Let us show you how it works.</h1>
 
-		<%= link_to welcome_scan_path, :id=>"onboard-scanner" do %>
+		<%= link_to welcome_scan_path, :id=>"onboard-scanner", :remote => true do %>
 			<div class="btn btn-info text-center small-spacer" style="padding: 10px 40px;">
 				<h4>Find an influencer in my store</h4>
 			</div>
 		<% end %>
 
 		<p><%= link_to "No thanks, take me directly to the app >", customers_path %></p>
+	</div>
+
+	<div class="status" data-url="<%= welcome_status_path %>">
+	</div>
+	<div class="result" data-url="<%= welcome_result_path %>">
 	</div>
 
 </div>

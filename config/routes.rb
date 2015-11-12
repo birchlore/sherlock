@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
 
-  root :to => 'onboards#index'
+  root :to => 'onboarding#index'
   mount ShopifyApp::Engine, at: '/'
   mount Resque::Server, :at => "/resque"
+
+  get '/welcome' => 'onboarding#index', as: :welcome
+  get '/welcome/scan' => 'onboarding#scan', as: :welcome_scan
+  get '/welcome/status' => 'onboarding#status', as: :welcome_status
+  get '/welcome/result' => 'onboarding#result', as: :welcome_result
 
   get '/customer/archive/:id' => 'customers#archive', as: :customer_archive
   get '/customer/unarchive/:id' => 'customers#unarchive', as: :customer_unarchive
@@ -14,10 +19,6 @@ Rails.application.routes.draw do
   get '/shop/plans/update_plan_step_2' => 'shops#update_plan_step_2', as: :update_plan_step_2
   patch '/shop/plans/update_plan_step_1' => 'shops#update_plan_step_1', as: :update_plan_step_1
   post '/customer/bulk_scan' => 'customers#bulk_scan', as: :bulk_scan
-
-  get '/welcome' => 'onboards#index', as: :welcome
-  get '/welcome/scan' => 'onboards#scan', as: :welcome_scan
-  get '/welcome/result' => 'onboards#result', as: :onboard_result
 
   scope '/hooks', :controller => :hooks do
     post :new_customer_callback
