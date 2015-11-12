@@ -14,7 +14,6 @@ class Onboard
 	  ShopifyAPI::Base.activate_session(shop_session)
 
 	  begin
-		  shop.update_attributes :onboard_status => "started"
 		  @celebrity = shop.onboard_scan
 		  shop.update_attributes :onboard_status => "success"
 	   rescue Exception => e
