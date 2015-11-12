@@ -17,7 +17,8 @@ class Onboard
 		  shop.onboarded = true
 		  shop.onboard_status = "success"
 	  	  shop.save
-	   rescue
+	   rescue Exception => e
+	   	   Rollbar.error(e)
 	   	  shop.update_attributes :onboard_status => "error"
 	   end
 	end
