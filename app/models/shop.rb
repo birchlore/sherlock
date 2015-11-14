@@ -36,7 +36,7 @@ class Shop < ActiveRecord::Base
   def self.mrr
     @mrr = 0
     Plan.names.each do |plan|
-      mrr = Shop.where(plan: plan).count * Plan.cost(plan)
+      mrr = Shop.where(installed: true).where(plan: plan).count * Plan.cost(plan)
       @mrr += mrr
     end
     @mrr
