@@ -6,6 +6,14 @@ Core features:
 
 * "Celebrity Settings": Store owners can adjust their celebrity settings to determine what they deem a "celebrity". They can adjust follower thresholds for Twitter, Instagram, Youtube, Klout scores, Wikipedia Tracking, or IMDB Tracking.
 
+*Wikipedia matches: Groupie checks MediaWiki to see if there is a match with customer name
+
+*IMDB matches: Groupie checks IMDB url to see if there is any returned data for the customers name
+
+*Twitter/YouTube/Klout: Groupie uses FullContact API to get follower counts
+
+*Instagram count: Groupie scrapes the customers Klout url if it exists to find Instagram ID, then pings the Instagram API to get Instagram follower count (not included in Fullcontact response)
+
 * Shopify Customer Webhooks: Whenever a new customer is created in Shopify, the object is sent to Groupie hooks controller for us to scan the customer
 
 * Bulk Scans: Store Owners can bulk scan their past X customers using the bulk scan feature
