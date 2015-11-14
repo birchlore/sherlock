@@ -2,4 +2,18 @@
 
 Groupie is a Shopify rails app that scans customers to see if they have a matching Wikipedia page, IMDB page, or large social following. Wikipedia + IMDB matches are solely based on the customer name, whereas social followings are found by matching customer emails to Fullcontact API.
 
+Core features:
 
+* "Celebrity Settings": Store owners can adjust their celebrity settings to determine what they deem a "celebrity". They can adjust follower thresholds for Twitter, Instagram, Youtube, Klout scores, Wikipedia Tracking, or IMDB Tracking.
+
+* Shopify Customer Webhooks: Whenever a new customer is created in Shopify, the object is sent to Groupie hooks controller for us to scan the customer
+
+* Bulk Scans: Store Owners can bulk scan their past X customers using the bulk scan feature
+
+* Teaser Scan: When store owners first install the app, we give them the option to scan their past customers until we find an influencer with 1000+ followers (on average this takes ~120 scans)
+
+* Celebrity Analytics: Some methods have been built to help us determine how often celebrities are found so we can better inform store owners the likelihood of getting a match
+
+* Most heavy processes are handled as background jobs using Resque (groupie.pixelburst.co/resque to see active jobs).
+
+* Error logging is tracked on Rollbar.
