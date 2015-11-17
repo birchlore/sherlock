@@ -4,7 +4,7 @@ require 'pry'
 
 class Customer < ActiveRecord::Base
   belongs_to :shop
-  
+
   before_validation :sanitize
   before_create :scans_depleted_notification
   validates_presence_of :shop, :on => :create
@@ -15,12 +15,12 @@ class Customer < ActiveRecord::Base
     return unless data
     self.get_celebrity_status
     if self.celebrity?
-      self.shop.send_celebrity_notification(self) 
+      self.shop.send_celebrity_notification(self)
       self.status = "celebrity"
     end
   end
 
-
+  # DM: What is a teaser scan?  I find this naming confusing.
   def teaser_scan
     return if self.shop.onboarded
     data = fullcontact_data
@@ -52,11 +52,11 @@ class Customer < ActiveRecord::Base
 
 
   def celebrity?
-    imdb_celebrity? || 
-    wikipedia_celebrity? || 
-    twitter_celebrity? || 
-    instagram_celebrity? || 
-    youtube_celebrity? || 
+    imdb_celebrity? ||
+    wikipedia_celebrity? ||
+    twitter_celebrity? ||
+    instagram_celebrity? ||
+    youtube_celebrity? ||
     klout_celebrity?
   end
 
@@ -118,7 +118,7 @@ class Customer < ActiveRecord::Base
   def wikipedia_data
     return unless first_name.present? && last_name.present? && full_name.ascii_only?
     @wikipedia ||= Wikipedia.new(self)
-    data = @wikipedia.data 
+    data = @wikipedia.data
   end
 
   def self.search(search, page)
@@ -131,6 +131,9 @@ class Customer < ActiveRecord::Base
    true if self.shop.customers.where(shopify_id: self.shopify_id).first || self.shop.celebrities.where(shopify_id: self.shopify_id).first
   end
 
+  # DM: Why is this method called teaser_celebrity?
+  # From what I can see it returns true if the customer is a celeb.
+  # I find the naming confusing.
   def teaser_celebrity?
     true if twitter_followers && twitter_followers > 1000 || youtube_subscribers && youtube_subscribers > 1000 || instagram_followers && instagram_followers > 1000
   end
@@ -241,6 +244,8 @@ class Customer < ActiveRecord::Base
 
   end
 
+  # DM: feels wrong having all of these methods on a string class.
+  # Why not have a sanitizer class that you pass things into for formatting/cleanup instead?
   def sanitize
     self.first_name = self.first_name.sanitize_name if self.first_name.present?
     self.last_name = self.last_name.sanitize_name if self.last_name.present?
@@ -254,5 +259,5 @@ class Customer < ActiveRecord::Base
     NotificationMailer.scans_depleted(shop).deliver_now if shop.social_scans_remaining == 1
   end
 
-	
+
 end

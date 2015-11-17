@@ -1,5 +1,5 @@
 class Youtube
-  
+
   def initialize(customer)
     @customer = customer
     @social_data = @customer.fullcontact_data
@@ -23,6 +23,8 @@ class Youtube
     return unless @hash
     @views ||= @hash.try(:[],'viewCount').try(:to_i)
   end
+
+    # DM: remove commented out method below
 
     # def get_hash(celebrity)
     #   username = celebrity.youtube_username

@@ -1,5 +1,5 @@
 class CustomersController < AuthenticatedController
-  
+
   layout "true" == Figaro.env.shopify_embedded_app ? 'embedded_app' : 'application'
 
   def index
@@ -12,19 +12,20 @@ class CustomersController < AuthenticatedController
     @social_scans_remaining = current_shop.social_scans_remaining
     @free_influencer_scans_remaining = current_shop.free_influencer_scans_remaining
     @bulk_scans_allowed = Plan.bulk_scans_allowed?(@plan)
-    
+
     if @basic_scans_remaining < 1
       flash[:alert] = "You have no more customer scans remaining. Upgrade your plan in settings."
     end
 
   end
 
+  # DM remove method if not using it
   def show
   end
 
   def destroy
     @celebrity = current_shop.customers.find(params[:id])
-    
+
     if @celebrity.destroy
       redirect_to customers_path
     else
@@ -78,6 +79,7 @@ class CustomersController < AuthenticatedController
     end
   end
 
+  # DM: huge method - piecemeal into smaller ones.
   def bulk_scan
 
     return unless current_shop.basic_scans_remaining > 0 && Plan.bulk_scans_allowed?(current_shop.plan)
@@ -90,14 +92,14 @@ class CustomersController < AuthenticatedController
     @time = (num/6).ceil
 
     respond_to do |format|
-      format.js { 
+      format.js {
         flash.now[:success] = "Bulk celebrity scan processing. We'll send you an email in approx #{@time} minutes."
-        render :bulk_scan  
+        render :bulk_scan
        }
       format.html {
         flash[:notice] = "Bulk celebrity scan processing. We'll send you an email in approx #{@time} minutes."
         redirect_to customers_path
-      } 
+      }
     end
   end
 
