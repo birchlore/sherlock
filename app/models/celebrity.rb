@@ -6,6 +6,7 @@ require 'pry'
 class Celebrity < ActiveRecord::Base
   belongs_to :shop
 
+  # DM: is it necessary to specify :on => :create?
   validates_presence_of :first_name, :on => :create
   validates_presence_of :last_name, :on => :create
   validates_presence_of :shop, :on => :create
@@ -19,11 +20,11 @@ class Celebrity < ActiveRecord::Base
 
 
   def celebrity?
-    imdb_celebrity? || 
-    wikipedia_celebrity? || 
-    twitter_celebrity? || 
-    instagram_celebrity? || 
-    youtube_celebrity? || 
+    imdb_celebrity? ||
+    wikipedia_celebrity? ||
+    twitter_celebrity? ||
+    instagram_celebrity? ||
+    youtube_celebrity? ||
     klout_celebrity?
   end
 
@@ -86,7 +87,7 @@ class Celebrity < ActiveRecord::Base
   def wikipedia_data
     return unless first_name.present? && last_name.present? && full_name.ascii_only?
     @wikipedia ||= Wikipedia.new(self)
-    data ||= @wikipedia.data 
+    data ||= @wikipedia.data
   end
 
   def self.search(search, page)
@@ -158,7 +159,7 @@ class Celebrity < ActiveRecord::Base
    def check_scans_remaining
      return false unless shop && shop.basic_scans_remaining > 0
    end
-  
+
   def get_celebrity_status
     set_imdb if imdb_data && self.shop.imdb_notification
     set_wikipedia if wikipedia_data && self.shop.wikipedia_notification
@@ -169,7 +170,7 @@ class Celebrity < ActiveRecord::Base
   def sanitize
     return unless first_name && last_name
     fields = ["first_name", "last_name"]
-    fields.each do |field| 
+    fields.each do |field|
       self[field] && self[field] = self[field].gsub(/\s+/, "").capitalize
     end
   end

@@ -6,8 +6,9 @@ class Shop < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   has_many :customers, :inverse_of => :shop, dependent: :destroy
   has_many :celebrities, :inverse_of => :shop, dependent: :destroy
-  # has_many :customers, :inverse_of => :shop, dependent: :destroy 
+  # has_many :customers, :inverse_of => :shop, dependent: :destroy
   # has_many :customer_records, dependent: :destroy
+  # DM: safe to remove the commented out lines above?
 
   def self.store(session)
 
@@ -25,11 +26,11 @@ class Shop < ActiveRecord::Base
   end
 
   def self.retrieve(id)
-    
+
     return unless shop = Shop.where(:id => id).first
 
-    ShopifyAPI::Session.new(shop.shopify_domain, shop.shopify_token) 
-  
+    ShopifyAPI::Session.new(shop.shopify_domain, shop.shopify_token)
+
   end
 
 
@@ -57,7 +58,7 @@ class Shop < ActiveRecord::Base
   end
 
   def free_influencer_scans_remaining
-    self.teaser_celebrity ? 0 : 1  
+    self.teaser_celebrity ? 0 : 1
   end
 
 
@@ -108,7 +109,7 @@ class Shop < ActiveRecord::Base
     !Plan.social_scans_enabled?(self.plan) && !teaser_celebrity
   end
 
-
+  # DM: this method is massive - try breaking out into smaller ones
   def onboard_scan
 
     return if self.onboarded
@@ -135,12 +136,12 @@ class Shop < ActiveRecord::Base
 
         customer.teaser_scan
         @count += 1
-        
+
         if customer.teaser_celebrity?
           @celebrity = customer
           @celebrity.status = "celebrity"
           @celebrity.save
-          @celebrities_count += 1 
+          @celebrities_count += 1
         end
 
     end
@@ -154,7 +155,7 @@ class Shop < ActiveRecord::Base
   end
 
 
-
+  # DM: this method is massive - try breaking out into smaller ones
   def bulk_scan(num, include_previously_scanned)
 
     customers_to_scan = shopify_customers(num, include_previously_scanned)
@@ -169,7 +170,9 @@ class Shop < ActiveRecord::Base
       if emails_on
         self.email_notifications = false
       end
-
+      # DM: looks similar to code contained in onboard_scan
+      # try to pull this out into a method that both onboard_scan and
+      # bulk_scan can use to DRY up the code.
       customers_to_scan.each do |shopify_customer|
         customer = self.customers.new(
                                 first_name: shopify_customer.first_name,
@@ -181,9 +184,9 @@ class Shop < ActiveRecord::Base
 
         customer.scan
         customer.save
-        
+
         if customer.celebrity?
-          @celebrities_count += 1 
+          @celebrities_count += 1
         end
 
       end
@@ -196,9 +199,10 @@ class Shop < ActiveRecord::Base
 
 
     [scanned_count, @celebrities_count]
-    
+
   end
 
+  # DM: this method is massive - try breaking out into smaller ones
   def confirm_charge(shopify_plan)
 
     if shopify_plan != self.plan
@@ -216,16 +220,16 @@ class Shop < ActiveRecord::Base
         self.save
         NotificationMailer.plan_change(self, old_plan).deliver_now
         customers_url(:host => Figaro.env.root_uri)
-     
+
       else
         price = Plan.cost(shopify_plan)
         name = shopify_plan + " Groupie Plan"
         return_url = update_plan_step_2_url(:host => Figaro.env.root_uri)
         response = ShopifyAPI::RecurringApplicationCharge.create({
-                              :name => name, 
-                              :price => price, 
-                              :return_url => return_url, 
-                              :test=> !Rails.env.production? 
+                              :name => name,
+                              :price => price,
+                              :return_url => return_url,
+                              :test=> !Rails.env.production?
                               })
         response.confirmation_url
       end
@@ -257,14 +261,15 @@ class Shop < ActiveRecord::Base
   end
 
 
+# DM: safe to remove commented out method below?
 # # returns the number of customers a store has had in last X days from Shopify API
 #   def customers_since(date)
-    
+
 #   end
 
 
 
-
+  # DM: this method is massive - try breaking out into smaller ones
   def all_customers(num)
     pages = 1
 
@@ -286,10 +291,10 @@ class Shop < ActiveRecord::Base
      @customers.first(num)
   end
 
-
+  # DM: this method is massive - try breaking out into smaller ones
   def unscanned_customers(num)
     num = basic_scans_remaining if num > basic_scans_remaining
-  
+
     @total_customers = ShopifyAPI::Customer.count
     pages = (@total_customers/250.to_f).ceil
 
@@ -299,7 +304,7 @@ class Shop < ActiveRecord::Base
 
 
     while @filtered_customers.count < num && @page_count < pages do
-     
+
       @page_count += 1
       @customers_on_page = ShopifyAPI::Customer.find(:all, :params => {:limit => 250, :page => @page_count})
 
@@ -315,14 +320,14 @@ class Shop < ActiveRecord::Base
         @counter += 1
       end
 
-      
+
 
     end
 
      @filtered_customers
   end
 
-  
+
 
   def init_webhooks
     unless Rails.env.test?
@@ -331,13 +336,13 @@ class Shop < ActiveRecord::Base
 
       new_customer_webhook = ShopifyAPI::Webhook.new(:topic => "customers/create", :format => "json", :address => new_customer_callback_url)
       uninstall_webhook = ShopifyAPI::Webhook.new(:topic => "app/uninstalled", :format => "json", :address => uninstall_callback_url)
-      
+
       new_customer_webhook.save
       uninstall_webhook.save
     end
   end
 
-
+  # Why is this method necessary when you have a celebrity model?
   def celebrities
     customers.where(status: "celebrity").where(archived: false).order(created_at: :desc)
   end
@@ -360,7 +365,9 @@ class Shop < ActiveRecord::Base
 
 
   private
-
+  # DM: can you make more of your methods private.
+  # Remember, only those methods that are intended to be used by other
+  # objects should be made public.
   def send_install_notification
     NotificationMailer.install_notification(self).deliver_now
   end

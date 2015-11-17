@@ -11,6 +11,8 @@ class ApplicationController < ActionController::Base
     @_current_shop ||= Shop.where(:shopify_token => @shop_session.token, :shopify_domain => @shop_session.url).first
   end
 
+  # DM: remove commented out code if unecessary
+
   # def trigger_login
   #   ShopifyAPI::Customer.last
   # end
