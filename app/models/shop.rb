@@ -7,7 +7,6 @@ class Shop < ActiveRecord::Base
   has_many :customers, inverse_of: :shop, dependent: :destroy
 
   ## Shop model is where we store sessions
-
   def self.store(session)
     shop = Shop.where(shopify_domain: session.url).first
 
@@ -98,6 +97,9 @@ class Shop < ActiveRecord::Base
     !Plan.social_scans_enabled?(plan) && !teaser_celebrity
   end
 
+
+  #onboard scan runs when store owner first installs the app. It scans up to 750 customers to find a customer
+  # with at least 1000 followers on a social channel. Average is 120 scans to hit.
   def onboard_scan
     return if onboarded
 
@@ -138,6 +140,7 @@ class Shop < ActiveRecord::Base
     @celebrity
   end
 
+  # store owner has the option to re-scan their previously scanned customers
   def bulk_scan(num, include_previously_scanned)
     customers_to_scan = shopify_customers(num, include_previously_scanned)
     scanned_count = customers_to_scan.count
@@ -171,6 +174,8 @@ class Shop < ActiveRecord::Base
     [scanned_count, @celebrities_count]
   end
 
+
+  # step 1 of the shopify recurring charge process. charge must be confirmed by user and then activated by app
   def confirm_charge(shopify_plan)
     if shopify_plan != plan
 
@@ -204,6 +209,8 @@ class Shop < ActiveRecord::Base
     end
   end
 
+
+  # step 2 of shopify recurring charge process
   def activate_charge(charge)
     if charge.status == 'accepted'
       plan = charge.name.split.first
@@ -214,6 +221,9 @@ class Shop < ActiveRecord::Base
     end
   end
 
+
+  # returns X customers from the shopify API. 
+  # option to only get those customers who have not yet been scanned
   def shopify_customers(num, include_previously_scanned)
     if include_previously_scanned
       all_customers(num)
@@ -222,6 +232,8 @@ class Shop < ActiveRecord::Base
     end
   end
 
+  # returns X most recent customers back from Shopify API
+  # Verbose code is because Shopify only allows you to get a max of 250 customers at a time
   def all_customers(num)
     pages = 1
 
@@ -243,6 +255,7 @@ class Shop < ActiveRecord::Base
     @customers.first(num)
   end
 
+  # returns X most recent customers (who have not been scanned by Groupie) back from Shopify API
   def unscanned_customers(num)
     num = basic_scans_remaining if num > basic_scans_remaining
 
@@ -274,6 +287,7 @@ class Shop < ActiveRecord::Base
     @filtered_customers
   end
 
+  # runs on first install to setup webhooks
   def init_webhooks
     unless Rails.env.test?
       new_customer_callback_url = Figaro.env.root_uri + '/hooks/new_customer_callback'
@@ -286,21 +300,25 @@ class Shop < ActiveRecord::Base
       uninstall_webhook.save
     end
   end
-
+  
+  # returns an array of customers who are marked as celebrities
   def celebrities
     customers.where(status: 'celebrity').where(archived: false).order(created_at: :desc)
   end
 
+  # runs when shop is first installed, gets store owners email from the shopify API
   def set_email
     unless Rails.env.test?
       update_attributes(email: ShopifyAPI::Shop.current.email)
     end
   end
 
+
   def twitter_follower_threshold=(followers)
     write_attribute(:twitter_follower_threshold, "#{followers}".gsub(/\D/, ''))
   end
 
+  # sent to store owner whenever a new celebrity is found
   def send_celebrity_notification(celebrity)
     if email_notifications
       NotificationMailer.celebrity_notification(celebrity).deliver_now
@@ -309,6 +327,7 @@ class Shop < ActiveRecord::Base
 
   private
 
+  # sent to app owner whenever new shop installs
   def send_install_notification
     NotificationMailer.install_notification(self).deliver_now
   end

@@ -9,6 +9,8 @@ class Customer < ActiveRecord::Base
   before_create :scans_depleted_notification
   validates_presence_of :shop, on: :create
 
+  # performs a scan on the customer to see if there is a 
+  # IMDB, Wikipedia match or large social following
   def scan
     sanitize
     data = get_external_data
@@ -20,6 +22,10 @@ class Customer < ActiveRecord::Base
     end
   end
 
+  # teaser scans are a method of converting unpaid users
+  # the main difference from the scan method is that fullcontact_data is forced to be called
+  # even when shop has no social scans remaining, so that we can show store owners how the app
+  # works by providing them with a free influencer notification
   def teaser_scan
     return if shop.onboarded
     data = fullcontact_data
@@ -34,6 +40,8 @@ class Customer < ActiveRecord::Base
     end
   end
 
+  # gets all data from external APIs, does not get full contact data unless shop 
+  # has social scans remaining (upgraded plans)
   def get_external_data
     @wikipedia_data = wikipedia_data
     @imdb_data = imdb_data
@@ -41,12 +49,14 @@ class Customer < ActiveRecord::Base
     true if @wikipedia_data || @imdb_data || @fullcontact_data
   end
 
+  # sets external data if it exists
   def get_celebrity_status
     set_imdb if @imdb_data
     set_wikipedia if @wikipedia_data
     set_social_data if @fullcontact_data
   end
 
+  # returns true if customer is a celebrity based on the thresholds set by the store owner
   def celebrity?
     imdb_celebrity? ||
       wikipedia_celebrity? ||
@@ -122,14 +132,16 @@ class Customer < ActiveRecord::Base
   end
 
   def duplicate?
-    true if shop.customers.where(shopify_id: shopify_id).first || shop.celebrities.where(shopify_id: shopify_id).first
+    true if shop.customers.where(shopify_id: shopify_id).first
   end
 
+  # This is what determines a teaser celebrity. Once a teaser celebrity is found, store owner is notified and a flag
+  # is switched in the shop so that no more teaser scans are run
   def teaser_celebrity?
     true if twitter_followers && twitter_followers > 1000 || youtube_subscribers && youtube_subscribers > 1000 || instagram_followers && instagram_followers > 1000
   end
 
-  ## analytics data
+  ## analytics data for app owner. We can see how often certain "celebrities" will occur
 
   def self.percentage_with_imdb_match
     @count ||= Customer.count.to_f
@@ -159,7 +171,8 @@ class Customer < ActiveRecord::Base
     (klout_count).percent_of(customers.count)
   end
 
-  # e.g.  Customer.scans_until_match("followers", {followers:50000})  --> 1200
+  #  How many scans will need to occur before a certain type of match
+  # e.g. Customer.scans_until_match("followers", {followers:50000})  --> 1200
 
   def self.scans_until_match(match_type, options = { score: 0, followers: 0 })
     score = options[:score]
@@ -240,6 +253,7 @@ class Customer < ActiveRecord::Base
 
   private
 
+  # sent out to store owner when they use up their last scan
   def scans_depleted_notification
     shop = self.shop
     NotificationMailer.scans_depleted(shop).deliver_now if shop.social_scans_remaining == 1

@@ -6,6 +6,8 @@ Core features:
 
 * "Celebrity Settings": Store owners can adjust their celebrity settings to determine what they deem a "celebrity". They can adjust follower thresholds for Twitter, Instagram, Youtube, Klout scores, Wikipedia Tracking, or IMDB Tracking.
 
+*Basic Scans vs Social Scans. Plans allow a different number of "basic" scans and "social" scans. A basic scan only searches for a Wikipedia / IMDB match, whereas a social scan performs IMDB, Wikipedia, and all the social channels. Key difference being that a basic scan does not instantiate a FullContact object.
+
 *Wikipedia matches: Groupie checks MediaWiki to see if there is a match with customer name
 
 *IMDB matches: Groupie checks IMDB url to see if there is any returned data for the customers name
