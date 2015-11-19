@@ -1,5 +1,5 @@
 class GetJSON
-   def self.call(source)
+  def self.call(source)
 
     begin
       uri = URI.parse(source)
@@ -11,7 +11,7 @@ class GetJSON
 
     begin
   		res = Net::HTTP.get_response(uri)
-	  rescue Net::ReadTimeout => e
+	  rescue Net::ReadTimeout
       res = nil
 	  end
 

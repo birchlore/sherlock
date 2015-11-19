@@ -21,7 +21,7 @@ module Plan
   end
 
 
-   def self.scans(plan_type)
+  def self.scans(plan_type)
     if plan_type == "free"
       20
     elsif plan_type == "junior"
@@ -37,7 +37,7 @@ module Plan
     end
   end
 
-   def self.basic_scans(plan_type)
+  def self.basic_scans(plan_type)
     if plan_type == "free"
       20
     else

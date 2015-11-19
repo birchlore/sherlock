@@ -118,7 +118,7 @@ class Customer < ActiveRecord::Base
   def wikipedia_data
     return unless first_name.present? && last_name.present? && full_name.ascii_only?
     @wikipedia ||= Wikipedia.new(self)
-    data = @wikipedia.data 
+    @wikipedia.data 
   end
 
   def self.search(search, page)
@@ -197,7 +197,7 @@ class Customer < ActiveRecord::Base
   end
 
   def set_angellist
-    angellist_profile = @fullcontact.profile_hash("angellist")
+    @fullcontact.profile_hash("angellist")
     self.angellist_bio= @fullcontact.profile_data("bio")
     self.angellist_url = @fullcontact.profile_data("url")
   end
@@ -210,28 +210,28 @@ class Customer < ActiveRecord::Base
   end
 
   def set_klout
-    klout_profile = @fullcontact.profile_hash("klout")
+    @fullcontact.profile_hash("klout")
     self.klout_id = @fullcontact.profile_data("id")
     self.klout_url = @fullcontact.profile_data("url")
     klout = Klout.new(self)
     self.klout_score = klout.score
   end
 
-   def set_linkedin
-    linkedin_profile = @fullcontact.profile_hash("linkedin")
+  def set_linkedin
+    @fullcontact.profile_hash("linkedin")
     self.linkedin_bio= @fullcontact.profile_data("bio")
     self.linkedin_url = @fullcontact.profile_data("url")
   end
 
-   def set_twitter
-    twitter_profile = @fullcontact.profile_hash("twitter")
+  def set_twitter
+    @fullcontact.profile_hash("twitter")
     self.twitter_followers = @fullcontact.profile_data("followers")
     self.twitter_url = @fullcontact.profile_data("url")
     self.twitter_bio = @fullcontact.profile_data("bio")
   end
 
   def set_youtube
-    youtube_profile = @fullcontact.profile_hash("youtube")
+    @fullcontact.profile_hash("youtube")
     self.youtube_url = @fullcontact.profile_data("url")
     self.youtube_username = @fullcontact.profile_data("username")
     youtube = Youtube.new(self)

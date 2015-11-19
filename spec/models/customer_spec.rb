@@ -5,47 +5,46 @@ require 'shared_examples'
 describe Customer, :vcr do
 
   include_context "shared examples"
-  # it { should belong_to(:shop) }
 
   it { should respond_to(:shop) }
-  it { should respond_to (:first_name)}
-  it { should respond_to (:last_name)}
-  it { should respond_to (:email)}
-  it { should respond_to (:imdb_url)}
-  it { should respond_to (:wikipedia_url)}
-  it { should respond_to (:twitter_followers)}
-  it { should respond_to (:youtube_subscribers)}
-  it { should respond_to (:instagram_followers)}
-  it { should respond_to (:imdb_bio)}
-  it { should respond_to (:wikipedia_bio)}
-  it { should respond_to (:status)}
-  it { should respond_to (:shopify_url)}
-  it { should respond_to (:created_at)}
-  it { should respond_to (:updated_at)}
-  it { should respond_to (:twitter_bio)}
-  it { should respond_to (:twitter_url)}
-  it { should respond_to (:youtube_bio)}
-  it { should respond_to (:youtube_url)}
-  it { should respond_to (:angellist_bio)}
-  it { should respond_to (:angellist_url)}
-  it { should respond_to (:linkedin_bio)}
-  it { should respond_to (:instagram_id)}
-  it { should respond_to (:klout_id)}
-  it { should respond_to (:klout_score)}
-  it { should respond_to (:klout_url)}
-  it { should respond_to (:full_name)}
-  it { should respond_to (:celebrity?)}
+  it { should respond_to(:first_name)}
+  it { should respond_to(:last_name)}
+  it { should respond_to(:email)}
+  it { should respond_to(:imdb_url)}
+  it { should respond_to(:wikipedia_url)}
+  it { should respond_to(:twitter_followers)}
+  it { should respond_to(:youtube_subscribers)}
+  it { should respond_to(:instagram_followers)}
+  it { should respond_to(:imdb_bio)}
+  it { should respond_to(:wikipedia_bio)}
+  it { should respond_to(:status)}
+  it { should respond_to(:shopify_url)}
+  it { should respond_to(:created_at)}
+  it { should respond_to(:updated_at)}
+  it { should respond_to(:twitter_bio)}
+  it { should respond_to(:twitter_url)}
+  it { should respond_to(:youtube_bio)}
+  it { should respond_to(:youtube_url)}
+  it { should respond_to(:angellist_bio)}
+  it { should respond_to(:angellist_url)}
+  it { should respond_to(:linkedin_bio)}
+  it { should respond_to(:instagram_id)}
+  it { should respond_to(:klout_id)}
+  it { should respond_to(:klout_score)}
+  it { should respond_to(:klout_url)}
+  it { should respond_to(:full_name)}
+  it { should respond_to(:celebrity?)}
 
 
   it "has a valid celebrity factory" do
     expect(customer).to be_valid
   end
 
-   it "has a valid twitter factory" do
+  it "has a valid twitter factory" do
     expect(twitter_celebrity).to be_valid
   end
 
-   it "has a valid wikipedia factory" do
+  it "has a valid wikipedia factory" do
     expect(wikipedia_celebrity).to be_valid
   end
 
@@ -132,7 +131,7 @@ describe Customer, :vcr do
     end
   end
 
- describe "celebrity?" do
+  describe "celebrity?" do
 
     context 'when customer has twitter followers above store threshold' do
       it 'returns true if customer is a twitter celebrity' do

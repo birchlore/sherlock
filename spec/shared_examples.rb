@@ -7,7 +7,7 @@ shared_context "shared examples" do
     "url"=>"https://twitter.com/zino0121",
     "username"=>"zino0121",
     "id"=>"1450305547"}]
-   }
+  }
 
    let(:fullcontact_hash_without_type) {
     {"typeId"=>"twitter",
@@ -121,8 +121,8 @@ shared_context "shared examples" do
    {"type"=>"flickr",
     "typeId"=>"flickr",
     "typeName"=>"Flickr",
-    "following"=>1343,
-    "type"=>"facebook",
+    "following"=>1343},
+    {"type"=>"facebook",
     "typeId"=>"facebook",
     "typeName"=>"Facebook",
     "url"=>"https://www.facebook.com/sleevedaniels",

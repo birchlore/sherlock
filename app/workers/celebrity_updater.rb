@@ -13,10 +13,11 @@ class CelebrityUpdater
 
 	  shop.customers.each do |customer|
 	  	original_status = customer.status
+	  	
 	  	if customer.celebrity?
-      		customer.status = "celebrity"
+      	  customer.status = "celebrity"
       	else
-      		customer.status = "regular"
+      	  customer.status = "regular"
       	end
 
       	customer.save if customer.status != original_status

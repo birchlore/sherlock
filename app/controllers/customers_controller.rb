@@ -93,7 +93,7 @@ class CustomersController < AuthenticatedController
       format.js { 
         flash.now[:success] = "Bulk celebrity scan processing. We'll send you an email in approx #{@time} minutes."
         render :bulk_scan  
-       }
+      }
       format.html {
         flash[:notice] = "Bulk celebrity scan processing. We'll send you an email in approx #{@time} minutes."
         redirect_to customers_path

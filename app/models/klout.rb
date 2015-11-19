@@ -9,7 +9,7 @@ class Klout
     klout_id = customer.klout_id
     return unless klout_id
     source = "http://api.klout.com/v2/user.json/#{klout_id}?key=#{Figaro.env.klout_api_key}"
-    json = GetJSON.call(source)
+    GetJSON.call(source)
   end
 
   def score

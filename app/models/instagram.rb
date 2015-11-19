@@ -15,7 +15,7 @@ class Instagram
     doc = Nokogiri::HTML(uri)
     ig = doc.at_css(".ig")
     return unless ig
-    url = ig.at_css('a').attributes["href"].value
+    ig.at_css('a').attributes["href"].value
   end
 
 

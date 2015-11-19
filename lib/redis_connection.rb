@@ -8,8 +8,6 @@ class RedisConnection
     @connection ||= new_connection
   end
 
-  private
-
   def self.new_connection
     uri = URI.parse(ENV["REDISTOGO_URL"] || "redis://localhost:6379/" )
 

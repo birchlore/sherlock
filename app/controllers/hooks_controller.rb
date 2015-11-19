@@ -20,13 +20,11 @@ class HooksController < ApplicationController
     last_name = data["last_name"]
     email = data["email"]
     shopify_id = data["id"]
-    customer = shop.customers.new(:shopify_id => shopify_id)
 
     Resque.enqueue(HookScanner, shop.id, shopify_id, first_name, last_name, email)
   end
 
   def app_uninstalled_callback
-    data = ActiveSupport::JSON.decode(request.body.read)
     shopify_domain = request.headers["HTTP_X_SHOPIFY_SHOP_DOMAIN"]
     shop = Shop.where(shopify_domain: shopify_domain).first
 

@@ -33,7 +33,7 @@ module CustomersHelper
       link_to customer.full_name, "https://" + customer.shopify_url, :target=>"_blank"
     else
      customer.full_name
-   end
+    end
   end
 
   
