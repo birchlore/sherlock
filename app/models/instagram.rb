@@ -1,5 +1,4 @@
 class Instagram
-
   def initialize(customer)
     @customer = customer
     @url = url
@@ -13,15 +12,14 @@ class Instagram
     return unless klout_url
     uri = HTTParty.get(klout_url)
     doc = Nokogiri::HTML(uri)
-    ig = doc.at_css(".ig")
+    ig = doc.at_css('.ig')
     return unless ig
-    ig.at_css('a').attributes["href"].value
+    ig.at_css('a').attributes['href'].value
   end
 
-
   def username
-    return unless self.url
-    username = self.url.scan(/\/instagram.com\/(\w+)\//)
+    return unless url
+    username = url.scan(/\/instagram.com\/(\w+)\//)
     return unless username
     username = username.first
     return unless username
@@ -32,7 +30,7 @@ class Instagram
     return unless @username
     source = "https://api.instagram.com/v1/users/search?q=#{@username}&client_id=#{Figaro.env.instagram_client_id}"
     json = GetJSON.call(source)
-    json["data"].first["id"]
+    json['data'].first['id']
   end
 
   def data
@@ -41,13 +39,10 @@ class Instagram
     GetJSON.call(source)
   end
 
-  def id
-    @id
-  end
+  attr_reader :id
 
   def followers
     return unless @data
     @data.try(:[], 'data').try(:[], 'counts').try(:[], 'followed_by')
   end
-  
 end

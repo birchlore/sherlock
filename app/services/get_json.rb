@@ -1,6 +1,5 @@
 class GetJSON
   def self.call(source)
-
     begin
       uri = URI.parse(source)
     rescue
@@ -10,10 +9,10 @@ class GetJSON
     return unless uri
 
     begin
-  		res = Net::HTTP.get_response(uri)
-	  rescue Net::ReadTimeout
+      res = Net::HTTP.get_response(uri)
+    rescue Net::ReadTimeout
       res = nil
-	  end
+    end
 
     return unless res && res.is_a?(Net::HTTPSuccess)
     JSON.parse(res.body)

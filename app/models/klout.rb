@@ -1,5 +1,4 @@
 class Klout
-  
   def initialize(customer)
     @customer = customer
     @hash = hash(customer)
@@ -14,7 +13,6 @@ class Klout
 
   def score
     return unless @hash
-    @hash.try(:[],'score').try(:[], 'score').try(:to_i)
+    @hash.try(:[], 'score').try(:[], 'score').try(:to_i)
   end
-
 end

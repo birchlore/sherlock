@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.month, :at => '4:00 pm' do
-	rake 'send_upgrade_reminder_email', :environment => 'production'
+every 1.month, at: '4:00 pm' do
+  rake 'send_upgrade_reminder_email', environment: 'production'
 end

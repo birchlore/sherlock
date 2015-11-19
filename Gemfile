@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
@@ -18,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem "letter_opener", :group => :development
+gem 'letter_opener', group: :development
 gem 'nokogiri'
 gem 'kaminari'
 gem 'gon'
@@ -39,7 +38,7 @@ gem 'therubyracer'
 gem 'fullcontact'
 gem 'pry-rails'
 gem 'figaro'
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
 gem 'pry-nav'
 gem 'responders', '~> 2.0'
 gem 'rails_12factor'
@@ -47,8 +46,8 @@ gem 'rack-ssl-enforcer'
 gem 'httparty'
 gem 'redis'
 gem 'redis-rails'
-gem 'resque', :require => "resque/server"
-gem 'whenever', :require => false
+gem 'resque', require: 'resque/server'
+gem 'whenever', require: false
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -86,8 +85,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'guard-rspec'
   gem 'launchy'
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end
-

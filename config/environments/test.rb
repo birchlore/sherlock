@@ -1,13 +1,13 @@
 Rails.application.configure do
   require 'vcr'
 
-VCR.configure do |c|
-  c.default_cassette_options = { :record => :new_episodes }
-  c.cassette_library_dir = 'fixtures/vcr_cassettes'
-  c.hook_into :webmock # or :fakeweb
-  c.allow_http_connections_when_no_cassette = true 
-  c.configure_rspec_metadata!
-end
+  VCR.configure do |c|
+    c.default_cassette_options = { record: :new_episodes }
+    c.cassette_library_dir = 'fixtures/vcr_cassettes'
+    c.hook_into :webmock # or :fakeweb
+    c.allow_http_connections_when_no_cassette = true
+    c.configure_rspec_metadata!
+  end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
@@ -15,7 +15,7 @@ end
   # your test database is "scratch space" for the test suite and is wiped
   # and recreated between test runs. Don't rely on the data there!
   config.cache_classes = true
-  config.log_level = :debug 
+  config.log_level = :debug
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -46,7 +46,7 @@ end
   # ActionMailer::Base.deliveries array.
   config.action_mailer.perform_deliveries = false
   config.action_mailer.delivery_method = :test
-  config.action_mailer.default_url_options = { :host => "http://localhost:23456" }
+  config.action_mailer.default_url_options = { host: 'http://localhost:23456' }
 
   # Randomize the order test cases are executed.
   config.active_support.test_order = :random

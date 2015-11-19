@@ -4,45 +4,42 @@ require 'pry'
 
 class Customer < ActiveRecord::Base
   belongs_to :shop
-  
+
   before_validation :sanitize
   before_create :scans_depleted_notification
-  validates_presence_of :shop, :on => :create
+  validates_presence_of :shop, on: :create
 
   def scan
-    self.sanitize
-    data = self.get_external_data
+    sanitize
+    data = get_external_data
     return unless data
-    self.get_celebrity_status
+    get_celebrity_status
     if self.celebrity?
-      self.shop.send_celebrity_notification(self) 
-      self.status = "celebrity"
+      shop.send_celebrity_notification(self)
+      self.status = 'celebrity'
     end
   end
 
-
   def teaser_scan
-    return if self.shop.onboarded
+    return if shop.onboarded
     data = fullcontact_data
     return unless data
 
     set_social_data
 
     if self.teaser_celebrity?
-      self.shop.teaser_celebrity = true
-      self.shop.save
+      shop.teaser_celebrity = true
+      shop.save
       NotificationMailer.teaser(self).deliver_now
     end
   end
 
-
   def get_external_data
     @wikipedia_data = wikipedia_data
     @imdb_data = imdb_data
-    @fullcontact_data = fullcontact_data if self.shop.social_scans_remaining > 0
+    @fullcontact_data = fullcontact_data if shop.social_scans_remaining > 0
     true if @wikipedia_data || @imdb_data || @fullcontact_data
   end
-
 
   def get_celebrity_status
     set_imdb if @imdb_data
@@ -50,23 +47,21 @@ class Customer < ActiveRecord::Base
     set_social_data if @fullcontact_data
   end
 
-
   def celebrity?
-    imdb_celebrity? || 
-    wikipedia_celebrity? || 
-    twitter_celebrity? || 
-    instagram_celebrity? || 
-    youtube_celebrity? || 
-    klout_celebrity?
+    imdb_celebrity? ||
+      wikipedia_celebrity? ||
+      twitter_celebrity? ||
+      instagram_celebrity? ||
+      youtube_celebrity? ||
+      klout_celebrity?
   end
 
   def shopify_url
-    shop.shopify_domain + "/admin/customers/" + self.shopify_id.to_s
+    shop.shopify_domain + '/admin/customers/' + shopify_id.to_s
   end
 
-
   def full_name
-    first_name + " " + last_name if first_name.present? && last_name.present?
+    first_name + ' ' + last_name if first_name.present? && last_name.present?
   end
 
   def set_social_data
@@ -83,7 +78,6 @@ class Customer < ActiveRecord::Base
     self.scanned_on_social = true
     fullcontact_data ||= @fullcontact.data
   end
-
 
   def imdb_celebrity?
     imdb_url && shop.imdb_notification
@@ -118,71 +112,69 @@ class Customer < ActiveRecord::Base
   def wikipedia_data
     return unless first_name.present? && last_name.present? && full_name.ascii_only?
     @wikipedia ||= Wikipedia.new(self)
-    @wikipedia.data 
+    @wikipedia.data
   end
 
   def self.search(search, page)
-    paginate :per_page => 10, :page => page,
-           :conditions => ['name like ?', "%#{search}%"],
-           :order => 'name'
+    paginate per_page: 10, page: page,
+             conditions: ['name like ?', "%#{search}%"],
+             order: 'name'
   end
 
   def duplicate?
-   true if self.shop.customers.where(shopify_id: self.shopify_id).first || self.shop.celebrities.where(shopify_id: self.shopify_id).first
+    true if shop.customers.where(shopify_id: shopify_id).first || shop.celebrities.where(shopify_id: shopify_id).first
   end
 
   def teaser_celebrity?
     true if twitter_followers && twitter_followers > 1000 || youtube_subscribers && youtube_subscribers > 1000 || instagram_followers && instagram_followers > 1000
   end
 
-
   ## analytics data
 
   def self.percentage_with_imdb_match
     @count ||= Customer.count.to_f
-    imdb_count = self.where("imdb_url IS NOT NULL").count
+    imdb_count = where('imdb_url IS NOT NULL').count
     (imdb_count).percent_of(@count)
   end
 
   def self.percentage_with_wikipedia_match
     @count ||= Customer.count
-    wikipedia_count = self.where("wikipedia_url IS NOT NULL").count
+    wikipedia_count = where('wikipedia_url IS NOT NULL').count
     (wikipedia_count).percent_of(@count)
   end
 
   def self.percentage_with_followers(num_followers)
-    customers = self.where(scanned_on_social: true).where("created_at > ?", "Sat, 31 Oct 2015").where(freebie_scan: false)
+    customers = where(scanned_on_social: true).where('created_at > ?', 'Sat, 31 Oct 2015').where(freebie_scan: false)
 
-    twitter_followers = customers.where("twitter_followers > ?", num_followers).count
-    instagram_followers = customers.where("instagram_followers > ?", num_followers).count
-    youtube_subscribers = customers.where("youtube_subscribers > ?", num_followers).count
+    twitter_followers = customers.where('twitter_followers > ?', num_followers).count
+    instagram_followers = customers.where('instagram_followers > ?', num_followers).count
+    youtube_subscribers = customers.where('youtube_subscribers > ?', num_followers).count
     followers_count = twitter_followers + instagram_followers + youtube_subscribers
     (followers_count).percent_of(customers.count)
   end
 
   def self.percentage_with_klout_score(score)
-    customers = self.where(scanned_on_social: true).where("created_at > ?", "Sat, 31 Oct 2015").where(freebie_scan: false)
-    klout_count = customers.where("klout_score > ?", score).count
+    customers = where(scanned_on_social: true).where('created_at > ?', 'Sat, 31 Oct 2015').where(freebie_scan: false)
+    klout_count = customers.where('klout_score > ?', score).count
     (klout_count).percent_of(customers.count)
   end
 
-#e.g.  Customer.scans_until_match("followers", {followers:50000})  --> 1200
+  # e.g.  Customer.scans_until_match("followers", {followers:50000})  --> 1200
 
-  def self.scans_until_match(match_type, options = {score: 0, followers: 0})
+  def self.scans_until_match(match_type, options = { score: 0, followers: 0 })
     score = options[:score]
     num_followers = options[:followers]
 
-    if match_type == "imdb"
-      (100 / self.percentage_with_imdb_match).ceil
-    elsif match_type == "wikipedia"
-      (100 / self.percentage_with_wikipedia_match).ceil
-    elsif match_type == "klout"
-      (100 / self.percentage_with_klout_score(score)).ceil
-    elsif match_type == "followers"
-      (100 / self.percentage_with_followers(num_followers)).ceil
+    if match_type == 'imdb'
+      (100 / percentage_with_imdb_match).ceil
+    elsif match_type == 'wikipedia'
+      (100 / percentage_with_wikipedia_match).ceil
+    elsif match_type == 'klout'
+      (100 / percentage_with_klout_score(score)).ceil
+    elsif match_type == 'followers'
+      (100 / percentage_with_followers(num_followers)).ceil
     end
   end
-
 
   protected
 
@@ -197,9 +189,9 @@ class Customer < ActiveRecord::Base
   end
 
   def set_angellist
-    @fullcontact.profile_hash("angellist")
-    self.angellist_bio= @fullcontact.profile_data("bio")
-    self.angellist_url = @fullcontact.profile_data("url")
+    @fullcontact.profile_hash('angellist')
+    self.angellist_bio = @fullcontact.profile_data('bio')
+    self.angellist_url = @fullcontact.profile_data('url')
   end
 
   def set_instagram
@@ -210,41 +202,40 @@ class Customer < ActiveRecord::Base
   end
 
   def set_klout
-    @fullcontact.profile_hash("klout")
-    self.klout_id = @fullcontact.profile_data("id")
-    self.klout_url = @fullcontact.profile_data("url")
+    @fullcontact.profile_hash('klout')
+    self.klout_id = @fullcontact.profile_data('id')
+    self.klout_url = @fullcontact.profile_data('url')
     klout = Klout.new(self)
     self.klout_score = klout.score
   end
 
   def set_linkedin
-    @fullcontact.profile_hash("linkedin")
-    self.linkedin_bio= @fullcontact.profile_data("bio")
-    self.linkedin_url = @fullcontact.profile_data("url")
+    @fullcontact.profile_hash('linkedin')
+    self.linkedin_bio = @fullcontact.profile_data('bio')
+    self.linkedin_url = @fullcontact.profile_data('url')
   end
 
   def set_twitter
-    @fullcontact.profile_hash("twitter")
-    self.twitter_followers = @fullcontact.profile_data("followers")
-    self.twitter_url = @fullcontact.profile_data("url")
-    self.twitter_bio = @fullcontact.profile_data("bio")
+    @fullcontact.profile_hash('twitter')
+    self.twitter_followers = @fullcontact.profile_data('followers')
+    self.twitter_url = @fullcontact.profile_data('url')
+    self.twitter_bio = @fullcontact.profile_data('bio')
   end
 
   def set_youtube
-    @fullcontact.profile_hash("youtube")
-    self.youtube_url = @fullcontact.profile_data("url")
-    self.youtube_username = @fullcontact.profile_data("username")
+    @fullcontact.profile_hash('youtube')
+    self.youtube_url = @fullcontact.profile_data('url')
+    self.youtube_username = @fullcontact.profile_data('username')
     youtube = Youtube.new(self)
 
     self.youtube_subscribers = youtube.subscribers
     self.youtube_views = youtube.views
-
   end
 
   def sanitize
-    self.first_name = self.first_name.sanitize_name if self.first_name.present?
-    self.last_name = self.last_name.sanitize_name if self.last_name.present?
-    self.email = self.email.sanitize_email if self.email.present?
+    self.first_name = first_name.sanitize_name if first_name.present?
+    self.last_name = last_name.sanitize_name if last_name.present?
+    self.email = email.sanitize_email if email.present?
   end
 
   private
@@ -253,6 +244,4 @@ class Customer < ActiveRecord::Base
     shop = self.shop
     NotificationMailer.scans_depleted(shop).deliver_now if shop.social_scans_remaining == 1
   end
-
-	
 end

@@ -1,5 +1,4 @@
 class Youtube
-  
   def initialize(customer)
     @customer = customer
     @social_data = @customer.fullcontact_data
@@ -16,13 +15,11 @@ class Youtube
 
   def subscribers
     return unless @hash
-    @subscribers ||= @hash.try(:[],'subscriberCount').try(:to_i)
+    @subscribers ||= @hash.try(:[], 'subscriberCount').try(:to_i)
   end
 
   def views
     return unless @hash
-    @views ||= @hash.try(:[],'viewCount').try(:to_i)
+    @views ||= @hash.try(:[], 'viewCount').try(:to_i)
   end
-
-
 end

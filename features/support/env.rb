@@ -3,39 +3,36 @@ require 'json'
 
 require 'cucumber/rails'
 
-
 ActionController::Base.allow_rescue = false
-
 
 begin
   DatabaseCleaner.strategy = :transaction
 rescue NameError
-  raise "You need to add database_cleaner to your Gemfile (in the :test group) if you wish to use it."
+  raise 'You need to add database_cleaner to your Gemfile (in the :test group) if you wish to use it.'
 end
 
 include FactoryGirl::Syntax::Methods
 
 Capybara.register_driver :chrome do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 Capybara.javascript_driver = :chrome
 
 Capybara.default_max_wait_time = 5
-Capybara.server_port = 23456
-
+Capybara.server_port = 23_456
 
 def install_app
-  step "I visit the login page"  
-  step "I supply my shopify url"
-  step "I get taken to Oauth page"
-  step "I supply my shopify credentials"
+  step 'I visit the login page'
+  step 'I supply my shopify url'
+  step 'I get taken to Oauth page'
+  step 'I supply my shopify credentials'
   result = unless page.has_content?('Logged in')
-              step "I install the app"
-              step "I skip the onboarding process"
-              step "I get taken to the app index page"
-              true
+             step 'I install the app'
+             step 'I skip the onboarding process'
+             step 'I get taken to the app index page'
+             true
            else
-              false
+             false
            end
   $shopify_token = Shop.last.shopify_token
   $shopify_domain = Shop.last.shopify_domain
@@ -59,7 +56,6 @@ def uninstall_app
   # stub_request(:delete, revoke_url).
   # with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip, deflate', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby', 'X-Shopify-Access-Token'=> access_token}).
   # to_return(:status => 200, :body => "", :headers => {})
-
 end
 
 Before do
@@ -74,7 +70,7 @@ Before do
 end
 
 at_exit do
-  uninstall_app   
+  uninstall_app
 end
 
 # # Given "I am at the homepage" do
@@ -91,8 +87,6 @@ end
 # # Then "I get taken to the app index page" do
 #   expect(page).to have_content("We'll automatically")
 
-
-
 # Before(:all) do
 #   #uninstall (if there)
 #   #do the install process
@@ -103,7 +97,6 @@ end
 #     block.call
 #   end
 # end
-
 
 # You may also want to configure DatabaseCleaner to use different strategies for certain features and scenarios.
 # See the DatabaseCleaner documentation for details. Example:
@@ -125,7 +118,6 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
-
 class ActiveRecord::Base
   mattr_accessor :shared_connection
   @@shared_connection = nil
@@ -135,14 +127,8 @@ class ActiveRecord::Base
   end
 end
 
-
 Before('@javascript') do
   # Forces all threads to share the same connection. This works on
   # Capybara because it starts the web server in a thread.
   ActiveRecord::Base.shared_connection = ActiveRecord::Base.connection
 end
-
-  
-
-
-

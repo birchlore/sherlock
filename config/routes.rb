@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-
-
-  root :to => 'onboarding#index'
+  root to: 'onboarding#index'
   mount ShopifyApp::Engine, at: '/'
-  mount Resque::Server, :at => "/resque"
+  mount Resque::Server, at: '/resque'
 
   get '/welcome' => 'onboarding#index', as: :welcome
   get '/welcome/scan' => 'onboarding#scan', as: :welcome_scan
@@ -12,19 +10,18 @@ Rails.application.routes.draw do
 
   get '/customer/archive/:id' => 'customers#archive', as: :customer_archive
   get '/customer/unarchive/:id' => 'customers#unarchive', as: :customer_unarchive
-  
-  resources :customers, :only=> [:index, :show, :new, :create, :destroy]
-  resource :shop, :only=> [:edit, :update]
+
+  resources :customers, only: [:index, :show, :new, :create, :destroy]
+  resource :shop, only: [:edit, :update]
   get '/shop/plan' => 'shops#plan', as: :plan
   get '/shop/plans/update_plan_step_2' => 'shops#update_plan_step_2', as: :update_plan_step_2
   patch '/shop/plans/update_plan_step_1' => 'shops#update_plan_step_1', as: :update_plan_step_1
   post '/customer/bulk_scan' => 'customers#bulk_scan', as: :bulk_scan
 
-  scope '/hooks', :controller => :hooks do
+  scope '/hooks', controller: :hooks do
     post :new_customer_callback
     post :app_uninstalled_callback
   end
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

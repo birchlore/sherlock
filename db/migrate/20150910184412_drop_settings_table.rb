@@ -1,5 +1,5 @@
 class DropSettingsTable < ActiveRecord::Migration
   def change
-  	drop_table :settings
+    drop_table :settings
   end
 end

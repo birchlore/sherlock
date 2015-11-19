@@ -6,7 +6,7 @@ class CreateCelebrities < ActiveRecord::Migration
       t.string :email
       t.string :imdb_url
       t.string :wikipedia_url
-      t.integer :followers, :default=> 0
+      t.integer :followers, default: 0
       t.string :industry
       t.timestamps null: false
     end

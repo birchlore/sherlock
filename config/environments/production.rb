@@ -13,7 +13,7 @@ Rails.application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-  config.action_mailer.default_url_options = {:host => Figaro.env.root_uri}
+  config.action_mailer.default_url_options = { host: Figaro.env.root_uri }
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -62,15 +62,15 @@ Rails.application.configure do
   # config.action_controller.asset_host = 'http://assets.example.com'
 
   config.action_mailer.delivery_method = :smtp
-    # SMTP settings for mailgun
-    ActionMailer::Base.smtp_settings = {
-      :port           => 587,
-      :address        => "smtp.mailgun.org",
-      :domain         => ENV['mailgun_domain'],
-      :user_name      => ENV['mailgun_username'],
-      :password       => ENV['mailgun_password'],
-      :authentication => :plain,
-    }
+  # SMTP settings for mailgun
+  ActionMailer::Base.smtp_settings = {
+    port: 587,
+    address: 'smtp.mailgun.org',
+    domain: ENV['mailgun_domain'],
+    user_name: ENV['mailgun_username'],
+    password: ENV['mailgun_password'],
+    authentication: :plain
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -88,5 +88,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
 end

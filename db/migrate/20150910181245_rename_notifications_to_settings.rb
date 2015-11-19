@@ -6,5 +6,5 @@ class RenameNotificationsToSettings < ActiveRecord::Migration
     add_column :settings, :wikipedia_notification, :boolean
     add_column :settings, :imdb_notification, :boolean
     add_reference :settings, :shop_id, index: true
-  end 
+  end
 end
