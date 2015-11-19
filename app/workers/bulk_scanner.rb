@@ -26,5 +26,3 @@ class BulkScanner
 	end
 
 end
-
-#commit

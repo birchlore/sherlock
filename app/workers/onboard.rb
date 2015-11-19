@@ -23,5 +23,3 @@ class Onboard
 	end
 
 end
-
-#commit

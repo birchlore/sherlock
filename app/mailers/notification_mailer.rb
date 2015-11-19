@@ -1,23 +1,14 @@
 class NotificationMailer < ApplicationMailer
   helper CustomersHelper
 
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.model_mailer.celebrity_notification.subject
-  #
   def celebrity_notification(celebrity)
-    
     @celebrity = celebrity
-
     mail to: celebrity.shop.email
   end
 
-   def install_notification(shop)
-    
+   def install_notification(shop)  
     @domain = shop.shopify_domain
     @email = shop.email
-
     mail to: "jackson@pixelburst.co"
   end
 
@@ -35,7 +26,6 @@ class NotificationMailer < ApplicationMailer
     @total_found = total_found
     @scans_remaining = shop.social_scans_remaining
     @unscanned_customers = unscanned
-
     mail to: shop.email
   end
 
@@ -44,7 +34,6 @@ class NotificationMailer < ApplicationMailer
     @store = shop.shopify_domain
     @email = shop.email
     @new_plan = shop.plan
-
     mail to: "jackson@pixelburst.co"
   end
 
@@ -67,7 +56,6 @@ class NotificationMailer < ApplicationMailer
   def upgrade_reminder(id)
     shop = Shop.find(id)
     email = shop.email
-  
     mail(to: email, subject: "You're missing out on celebrity customers")
   end
 

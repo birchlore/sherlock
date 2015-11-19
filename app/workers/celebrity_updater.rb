@@ -12,9 +12,7 @@ class CelebrityUpdater
 	  shop = Shop.find(shop_id)
 
 	  shop.customers.each do |customer|
-
 	  	original_status = customer.status
-
 	  	if customer.celebrity?
       		customer.status = "celebrity"
       	else
@@ -22,11 +20,9 @@ class CelebrityUpdater
       	end
 
       	customer.save if customer.status != original_status
-
-    end
-	   
+      end  
 	end
-
+	
 end
 
 

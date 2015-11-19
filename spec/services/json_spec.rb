@@ -19,12 +19,6 @@ describe GetJSON, :vcr do
             end
         end
 
-        # context "when there's a timeout" do
-        #     it "returns nil" do
-        #         source = "http://www.imdb.com/xml/find?json=1&nr=1&nm=on&q=FRED+FREE"
-        #         expect(GetJSON.call(source)).to be nil
-        #     end
-        # end
     end
 
 end

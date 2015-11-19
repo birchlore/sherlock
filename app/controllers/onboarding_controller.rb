@@ -6,8 +6,7 @@ class OnboardingController < AuthenticatedController
 	end
 
 	def scan
-		if !current_shop.onboarded
-			
+		if !current_shop.onboarded	
 			Resque.enqueue(Onboard, current_shop.id)
 			current_shop.update_attributes :onboard_status => "queued"
 		else

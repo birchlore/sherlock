@@ -33,10 +33,6 @@ describe Customer, :vcr do
   it { should respond_to (:klout_id)}
   it { should respond_to (:klout_score)}
   it { should respond_to (:klout_url)}
-
-  # it { should validate_presence_of (:first_name)}
-  # it { should validate_presence_of (:last_name)}
-
   it { should respond_to (:full_name)}
   it { should respond_to (:celebrity?)}
 
@@ -112,37 +108,6 @@ describe Customer, :vcr do
 
   end
 
-  # describe "scan" do 
-
-  #   shop_with_high_standards = build(:shop, :twitter_follower_threshold => 500000, :klout_score_threshold => 99, :instagram_follower_threshold => 100000)
-  #   customer = build(:twitter_celebrity, :shop => shop_with_high_standards)
-  #   customer.scan
-
-  #   twitter_celebrity = build(:twitter_celebrity)
-  #   twitter_celebrity.scan
-
-
-  #   context "when customer's social data does not meet store min threshold" do
-  #     it "saves the data" do
-  #       expect(customer.twitter_followers).to be > 500
-  #     end
-
-  #     it "is not a celebrity" do
-  #       expect(customer.status).to eq("regular")
-  #     end
-  #   end
-
-
-  #   context "when customer's social data does meet store min threshold" do
-  #     it "saves the data" do
-  #       expect(twitter_celebrity.twitter_followers).to be > 500
-  #     end
-
-  #     it "is  a celebrity" do
-  #       expect(twitter_celebrity.status).to eq("celebrity")
-  #     end
-  #   end
-  # end
 
 
   describe "set_social_data" do
@@ -383,48 +348,4 @@ describe Customer, :vcr do
 
 end
 
-#   describe "fullcontact_data" do
-
-#     celebrity = build(:twitter_celebrity)
-
-#     it "instantiates a fullcontact object" do
-#       expect(Fullcontact).to receive(:new)
-#     end
-
-#     it "sets scanned on social to true" do
-#       expect(celebrity.scanned_on_social).to be
-#     end
-#   end
-
-# end
-
-
-
-# context "when customers name has non ascii characters" do 
-#         it "will not call get_imdb" do 
-#           celebrity = build(:imdb_celebrity, first_name: "Sæthlangøy")
-#           expect(celebrity).not_to be_valid
-#         end
-#       end
-
-#       context "when customer has a first name but not a last name" do
-#         it "returns nil" do
-#           celebrity = build(:celebrity, last_name: nil)
-#           expect(GetCelebrityStatus.call(celebrity)).to be nil
-#         end
-#       end
-
-#       context "when customer has a last name but not a first name" do
-#         it "returns nil" do
-#           celebrity = build(:celebrity, first_name: nil)
-#           expect(GetCelebrityStatus.call(celebrity)).to be nil
-#         end
-#       end
-
-#       context "when customer does not have a first name or a last name" do
-#         it "returns nil" do
-#           celebrity = build(:celebrity, first_name: nil, last_name: nil)
-#           expect(GetCelebrityStatus.call(celebrity)).to be nil
-#         end
-#       end
 

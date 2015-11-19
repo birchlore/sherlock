@@ -5,12 +5,9 @@ class Shop < ActiveRecord::Base
   include Plan
   include Rails.application.routes.url_helpers
   has_many :customers, :inverse_of => :shop, dependent: :destroy
-  has_many :celebrities, :inverse_of => :shop, dependent: :destroy
-  # has_many :customers, :inverse_of => :shop, dependent: :destroy 
-  # has_many :customer_records, dependent: :destroy
+
 
   def self.store(session)
-
     shop = Shop.where(:shopify_domain => session.url).first
 
     if shop.present?
@@ -25,11 +22,8 @@ class Shop < ActiveRecord::Base
   end
 
   def self.retrieve(id)
-    
     return unless shop = Shop.where(:id => id).first
-
     ShopifyAPI::Session.new(shop.shopify_domain, shop.shopify_token) 
-  
   end
 
 
@@ -255,14 +249,6 @@ class Shop < ActiveRecord::Base
       unscanned_customers(num)
     end
   end
-
-
-# # returns the number of customers a store has had in last X days from Shopify API
-#   def customers_since(date)
-    
-#   end
-
-
 
 
   def all_customers(num)
