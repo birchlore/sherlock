@@ -32,6 +32,7 @@ class HooksController < ApplicationController
 
     return unless shop
 
+    shop.plan = "free"
     shop.installed = false
     shop.save!
     Resque.enqueue_in(1.hour, SendUninstallFeedbackEmail, shop.id)
