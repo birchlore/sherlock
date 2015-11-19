@@ -6,6 +6,8 @@ class Shop < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   has_many :customers, inverse_of: :shop, dependent: :destroy
 
+  ## Shop model is where we store sessions
+
   def self.store(session)
     shop = Shop.where(shopify_domain: session.url).first
 
@@ -43,6 +45,8 @@ class Shop < ActiveRecord::Base
     save
   end
 
+
+  # we must instantiate a shopify session when we want to make a call to the Shopify API
   def shopify_session
     shop_session = ShopifyAPI::Session.new(shopify_domain, shopify_token)
     ShopifyAPI::Base.activate_session(shop_session)
