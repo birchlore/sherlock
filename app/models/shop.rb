@@ -133,7 +133,6 @@ class Shop < ActiveRecord::Base
 
     end
 
-    self.onboarded = true
     self.email_notifications = true
     save
 
@@ -234,25 +233,27 @@ class Shop < ActiveRecord::Base
 
   # returns X most recent customers back from Shopify API
   # Verbose code is because Shopify only allows you to get a max of 250 customers at a time
-  def all_customers(num)
+  def all_customers(number_of_customers_to_return)
     pages = 1
+    num = number_of_customers_to_return
 
-    if num > 250
+    if number_of_customers_to_return > 250
       num = 250
       total_customers = ShopifyAPI::Customer.count
       pages = (total_customers / 250.to_f).ceil
     end
 
-    @count = 1
+    @count = 0
     @customers = []
 
-    pages.times do
+    until @customers.count == number_of_customers_to_return do
+      @count += 1
       result = ShopifyAPI::Customer.find(:all, params: { limit: num, page: @count })
       @customers += result.to_a
-      @count += 1
+      break if @count == pages    
     end
 
-    @customers.first(num)
+    @customers.first(number_of_customers_to_return)
   end
 
   # returns X most recent customers (who have not been scanned by Groupie) back from Shopify API

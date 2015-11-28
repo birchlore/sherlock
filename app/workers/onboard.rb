@@ -15,7 +15,9 @@ class Onboard
 
     begin
        @celebrity = shop.onboard_scan
-       shop.update_attributes onboard_status: 'success'
+       shop.onboard_status = 'success'
+       shop.onboarded = true
+       shop.save
      rescue Exception => e
        Rollbar.error(e)
        shop.update_attributes onboard_status: 'error'
