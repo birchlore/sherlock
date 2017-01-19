@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20151111162439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "celebrities", force: :cascade do |t|
     t.string   "first_name"
@@ -52,6 +53,12 @@ ActiveRecord::Schema.define(version: 20151111162439) do
   end
 
   add_index "celebrities", ["shop_id"], name: "index_celebrities_on_shop_id", using: :btree
+
+  create_table "customer_records", force: :cascade do |t|
+    t.integer "shop_id"
+    t.integer "count",   default: 0
+    t.date    "date"
+  end
 
   create_table "customers", force: :cascade do |t|
     t.integer  "shopify_id",          limit: 8
