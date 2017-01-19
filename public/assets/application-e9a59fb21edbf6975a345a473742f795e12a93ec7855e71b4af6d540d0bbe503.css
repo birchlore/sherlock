@@ -1,0 +1,423 @@
+/*! ========================================================================
+ * Bootstrap Toggle: bootstrap-toggle.css v2.2.0
+ * http://www.bootstraptoggle.com
+ * ========================================================================
+ * Copyright 2014 Min Hur, The New York Times Company
+ * Licensed under MIT
+ * ======================================================================== */
+
+
+
+.checkbox label .toggle,
+.checkbox-inline .toggle {
+	margin-left: -20px;
+	margin-right: 5px;
+}
+
+.toggle {
+	position: relative;
+	overflow: hidden;
+}
+.toggle input[type="checkbox"] {
+	display: none;
+}
+.toggle-group {
+	position: absolute;
+	width: 200%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	transition: left 0.35s;
+	-webkit-transition: left 0.35s;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.toggle.off .toggle-group {
+	left: -100%;
+}
+.toggle-on {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 50%;
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+}
+.toggle-off {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	right: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 0;
+}
+.toggle-handle {
+	position: relative;
+	margin: 0 auto;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	height: 100%;
+	width: 0px;
+	border-width: 0 1px;
+}
+
+.toggle.btn { min-width: 59px; min-height: 34px; }
+.toggle-on.btn { padding-right: 24px; }
+.toggle-off.btn { padding-left: 24px; }
+
+.toggle.btn-lg { min-width: 79px; min-height: 45px; }
+.toggle-on.btn-lg { padding-right: 31px; }
+.toggle-off.btn-lg { padding-left: 31px; }
+.toggle-handle.btn-lg { width: 40px; }
+
+.toggle.btn-sm { min-width: 50px; min-height: 30px;}
+.toggle-on.btn-sm { padding-right: 20px; }
+.toggle-off.btn-sm { padding-left: 20px; }
+
+.toggle.btn-xs { min-width: 35px; min-height: 22px;}
+.toggle-on.btn-xs { padding-right: 12px; }
+.toggle-off.btn-xs { padding-left: 12px; }
+
+/*
+  require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  require twitter-bootstrap-static/fontawesome
+  */
+/* line 6, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+body {
+  background-color: #EAEDEF;
+  color: #1B1F25;
+  font-weight: 200;
+}
+
+/* line 12, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.small-spacer {
+  margin: 10px 0;
+}
+
+/* line 16, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.spacer {
+  margin: 50px 0;
+}
+
+/* line 20, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+#logo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+/* line 25, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+h1 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+/* line 30, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+h2 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* line 35, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+h4 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+/* line 40, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+h5 {
+  font-weight: 200;
+}
+
+/* line 44, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.headline, .customers-container {
+  background-color: white;
+  border: 1px solid #E1E4E6;
+}
+
+/* line 49, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.nav-tabs li {
+  background-color: #F5F6F7;
+  border-top: 1px solid #E2E5E7;
+  border-right: 1px solid #E2E5E7;
+}
+
+/* line 55, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.nav-tabs li:first-child {
+  border-left: 1px solid #E2E5E7;
+}
+
+/* line 59, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+li.active-tab {
+  background-color: #fff;
+}
+
+/* line 63, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+th {
+  color: #1B1F25;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* line 69, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+tr {
+  height: 50px;
+}
+
+/* line 73, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+/* line 77, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+tbody, tbody a {
+  font-size: 13px;
+  color: #9797A5;
+}
+
+/* line 82, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+label {
+  font-weight: 400;
+}
+
+/* line 86, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.scan {
+  width: 200px;
+  background-color: #429BD1;
+}
+
+/* line 91, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+#bulk-scan {
+  width: 200px;
+  margin: 10px 0;
+}
+
+/* line 96, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.scan:hover {
+  background-color: #4293c2;
+}
+
+/* line 100, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.container {
+  width: 90%;
+}
+
+/* line 104, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.load-ajax, .load-ajax-onboard {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 300px;
+  background: transparent;
+  margin-top: -150px;
+  /* Half the height */
+  margin-left: -200px;
+  /* Half the width */
+}
+
+/* line 118, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.blur {
+  -webkit-filter: blur(5px);
+}
+
+/* line 122, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.invalid {
+  border: 1px solid red;
+}
+
+/* line 126, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.bulk-import {
+  border: 1px dashed #999;
+  padding: 5px 0;
+}
+/* line 131, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.bulk-import p {
+  margin: 3px 0;
+}
+
+@media (min-width: 34em) {
+  /* line 141, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+  .vertical-align {
+    display: flex;
+    align-items: center;
+  }
+}
+/* line 150, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.tooltip-wrapper {
+  text-transform: uppercase;
+  background: #ececec;
+  color: #555;
+  cursor: help;
+  font-family: "Gill Sans", Impact, sans-serif;
+  font-size: 20px;
+  padding: 15px 20px;
+  position: relative;
+  text-align: center;
+  width: 200px;
+  -webkit-transform: translateZ(0);
+  /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased;
+  /* webkit text rendering fix */
+}
+
+/* line 165, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.tooltip-wrapper .tooltip {
+  background: #fff;
+  bottom: 100%;
+  color: #1496bb;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -ms-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+/* line 192, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.tooltip-wrapper .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+/* CSS Triangles - see Trevor's post */
+/* line 203, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.tooltip-wrapper .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #fff 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+
+/* line 216, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.tooltip-wrapper:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+/* line 227, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.lte8 .tooltip-wrapper .tooltip {
+  display: none;
+}
+
+/* line 231, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/celebrities.scss */
+.lte8 .tooltip-wrapper:hover .tooltip {
+  display: block;
+}
+/* line 3, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/kaminari.scss */
+.pagination .next, .pagination .last, .pagination .first, .pagination .prev {
+  display: none;
+}
+/* line 5, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/login.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: proxima-nova, sans-serif;
+}
+
+/* line 11, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/login.scss */
+.logo img {
+  max-height: 200px;
+  margin: 0 auto;
+}
+
+/* line 16, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/login.scss */
+.login h2 {
+  text-align: center;
+  color: #888;
+}
+
+/* line 21, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/login.scss */
+.info {
+  padding-top: 20px;
+}
+
+/* line 25, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/login.scss */
+.screenshot {
+  margin: 100px 0;
+}
+
+/* line 29, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/login.scss */
+.screenshot h2 {
+  text-align: center;
+  margin: 20px;
+}
+
+/* line 34, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/login.scss */
+.screenshot img {
+  border: 1px solid #ccc;
+}
+/* line 5, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/settings.scss */
+.settings .panel-body p {
+  margin: 20px 0;
+}
+
+/* line 9, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/settings.scss */
+.settings .toggle {
+  margin-left: 20px;
+}
+/* line 6, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/shops.scss */
+label {
+  margin-right: 10px;
+}
+
+/* line 10, /Users/jackson/Desktop/sherlock/app/assets/stylesheets/shops.scss */
+.disabled-social-data {
+  opacity: 0.5;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+

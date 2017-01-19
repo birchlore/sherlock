@@ -32,7 +32,7 @@ class ShopsController < AuthenticatedController
     @plan = shop_params[:plan]
     redirect_url = current_shop.confirm_charge(@plan)
     if redirect_url == customers_url
-      flash[:success] = "Groupie Plan Updated! You are now on the #{@plan} plan. Yay!"
+      flash[:success] = "Alpha Club Plan Updated! You are now on the #{@plan} plan. Yay!"
       redirect_to customers_url
     else
       gon.authorization_url = redirect_url
@@ -48,7 +48,7 @@ class ShopsController < AuthenticatedController
 
     if new_plan
       NotificationMailer.plan_change(current_shop, old_plan).deliver_now
-      flash[:notice] = "You are now on the #{new_plan.capitalize} Groupie Plan. Yay!"
+      flash[:notice] = "You are now on the #{new_plan.capitalize} Alpha Club Plan. Yay!"
     else
       flash[:alert] = 'Charge not processed properly, please try again'
        end

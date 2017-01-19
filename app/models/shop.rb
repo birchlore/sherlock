@@ -194,7 +194,7 @@ class Shop < ActiveRecord::Base
 
       else
         price = Plan.cost(shopify_plan)
-        name = shopify_plan + ' Groupie Plan'
+        name = shopify_plan + ' Alpha Club Plan'
         return_url = update_plan_step_2_url(host: Figaro.env.root_uri)
         response = ShopifyAPI::RecurringApplicationCharge.create(name: name,
                                                                  price: price,
@@ -256,7 +256,7 @@ class Shop < ActiveRecord::Base
     @customers.first(number_of_customers_to_return)
   end
 
-  # returns X most recent customers (who have not been scanned by Groupie) back from Shopify API
+  # returns X most recent customers (who have not been scanned by Alpha Club) back from Shopify API
   def unscanned_customers(num)
     num = basic_scans_remaining if num > basic_scans_remaining
 

@@ -1,6 +1,6 @@
 == README
 
-Groupie is a Shopify rails app that scans customers to see if they have a matching Wikipedia page, IMDB page, or large social following. Wikipedia + IMDB matches are solely based on the customer name, whereas social followings are found by matching customer emails to Fullcontact API.
+Alpha Club is a Shopify rails app that scans customers to see if they have a matching Wikipedia page, IMDB page, or large social following. Wikipedia + IMDB matches are solely based on the customer name, whereas social followings are found by matching customer emails to Fullcontact API.
 
 Core features:
 
@@ -8,15 +8,15 @@ Core features:
 
 *Basic Scans vs Social Scans. Plans allow a different number of "basic" scans and "social" scans. A basic scan only searches for a Wikipedia / IMDB match, whereas a social scan performs IMDB, Wikipedia, and all the social channels. Key difference being that a basic scan does not instantiate a FullContact object.
 
-*Wikipedia matches: Groupie checks MediaWiki to see if there is a match with customer name
+*Wikipedia matches: Alpha Club checks MediaWiki to see if there is a match with customer name
 
-*IMDB matches: Groupie checks IMDB url to see if there is any returned data for the customers name
+*IMDB matches: Alpha Club checks IMDB url to see if there is any returned data for the customers name
 
-*Twitter/YouTube/Klout: Groupie uses FullContact API to get follower counts
+*Twitter/YouTube/Klout: Alpha Club uses FullContact API to get follower counts
 
-*Instagram count: Groupie scrapes the customers Klout url if it exists to find Instagram ID, then pings the Instagram API to get Instagram follower count (not included in Fullcontact response)
+*Instagram count: Alpha Club scrapes the customers Klout url if it exists to find Instagram ID, then pings the Instagram API to get Instagram follower count (not included in Fullcontact response)
 
-* Shopify Customer Webhooks: Whenever a new customer is created in Shopify, the object is sent to Groupie hooks controller for us to scan the customer
+* Shopify Customer Webhooks: Whenever a new customer is created in Shopify, the object is sent to Alpha Club hooks controller for us to scan the customer
 
 * Bulk Scans: Store Owners can bulk scan their past X customers using the bulk scan feature
 

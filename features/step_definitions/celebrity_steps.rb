@@ -23,7 +23,7 @@ When 'I supply my shopify credentials' do
 end
 
 Then 'I get taken to the app index page' do
-  expect(page).to have_content('Groupie will automatically')
+  expect(page).to have_content('Alpha Club will automatically')
 end
 
 When 'I skip the onboarding process' do
@@ -38,7 +38,7 @@ When 'I am a logged in user' do
 end
 
 Then 'I install the app' do
-  click_link_or_button 'Install Groupie Test Environment'
+  click_link_or_button 'Install Alpha Club Test Environment'
 end
 
 When 'I have enabled imdb' do
