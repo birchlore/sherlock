@@ -1,7 +1,9 @@
-<% if @shop.plan == "free" %>
-	<%= @basic_scans_remaining %> Wikipedia/IMDB scans remaining (follower counts disabled)</p>
-<% elsif @shop.plan == "junior" %>
-	<p>Unlimited Wikipedia/IMDB scans (follower counts disabled)</p>
-<% else %>
-	<p>Unlimited Wikipedia/IMDB scans and <span id="scans-remaining"><%= @social_scans_remaining %></span> social scans remaining this month</p>
-<% end %>
+<div style="display: none;">
+  <% if @shop.plan == "free" %>
+  	<%= @basic_scans_remaining %> Wikipedia/IMDB scans remaining (follower counts disabled)</p>
+  <% elsif @shop.plan == "junior" %>
+  	<p>Unlimited Wikipedia/IMDB scans (follower counts disabled)</p>
+  <% else %>
+  	<p>Unlimited Wikipedia/IMDB scans and <span id="scans-remaining"><%= @social_scans_remaining %></span> social scans remaining this month</p>
+  <% end %>
+</div>
