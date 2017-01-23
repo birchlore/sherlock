@@ -30,7 +30,7 @@ class Instagram
     return unless @username
     source = "https://api.instagram.com/v1/users/search?q=#{@username}&client_id=#{Figaro.env.instagram_client_id}"
     json = GetJSON.call(source)
-    json['data'].first['id']
+    json['data'].first['id'] if json && json['data'] && json['data'].first
   end
 
   def data
