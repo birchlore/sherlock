@@ -79,13 +79,13 @@ class CustomersController < AuthenticatedController
     num = bulk_scan_params[:quantity].to_f
     # scan_existing = bulk_scan_params[:include_scanned].present?
     scan_existing = true
-
     Resque.enqueue(BulkScanner, current_shop.id, num, scan_existing)
 
     @time = (num / 6).ceil
 
     respond_to do |format|
       format.js do
+        ## polling would go here
         flash.now[:success] = "Bulk influencer scan processing. Refresh to see results."
         render :bulk_scan
       end

@@ -141,6 +141,9 @@ class Shop < ActiveRecord::Base
 
   # store owner has the option to re-scan their previously scanned customers
   def bulk_scan(num, include_previously_scanned)
+    shop_session = Shop.retrieve(self.id)
+    ShopifyAPI::Base.activate_session(shop_session)
+
     customers_to_scan = shopify_customers(num, include_previously_scanned)
     scanned_count = customers_to_scan.count
 
@@ -153,13 +156,23 @@ class Shop < ActiveRecord::Base
       self.email_notifications = false if emails_on
 
       customers_to_scan.each do |shopify_customer|
-        existing_customer = Customer.where(email: shopify_customer.email).first
 
-        if existing_customer
-          customer = existing_customer.clone
+        @cleaned_email = shopify_customer.email.sanitize_email if shopify_customer.email
+
+        if @cleaned_email
+          @existing_customer = Customer.where(email: @cleaned_email).first 
+          @existing_shop_customer = self.customers.where(email: @cleaned_email).first
+        end
+
+        if @existing_shop_customer
+          customer = @existing_shop_customer
+          customer.archived = false
+        elsif @existing_customer
+          customer = @existing_customer.dup
           customer.shop_id = self.id
+          customer.archived = false
         else
-          customer = customers.new(
+          customer = self.customers.new(
           first_name: shopify_customer.first_name,
           last_name: shopify_customer.last_name,
           email: shopify_customer.email,
