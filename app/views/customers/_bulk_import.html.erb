@@ -13,9 +13,9 @@
 	    <% end %>
 	  </div>
 	  <div class="col-sm-8">
-	     <p>Scan your <%= number_field_tag 'quantity', 10, in: 1..@social_scans_remaining %> most recent unscanned customers.</p>
+	     <p>Scan your <%= number_field_tag 'quantity', 50, in: 1..@social_scans_remaining %> most recent unscanned customers.</p>
 	     <%= hidden_field_tag :include_scanned, '' %>
-	     <%= check_box_tag :include_scanned %> <em>Include customers who have already been scanned by Alpha Club</em>
+	    <!--  <%= check_box_tag :include_scanned %> <em>Include customers who have already been scanned by Alpha Club</em> -->
 	  </div>
 	</div>
 <% end %>

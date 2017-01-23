@@ -77,7 +77,8 @@ class CustomersController < AuthenticatedController
     return unless current_shop.basic_scans_remaining > 0 && Plan.bulk_scans_allowed?(current_shop.plan)
 
     num = bulk_scan_params[:quantity].to_f
-    scan_existing = bulk_scan_params[:include_scanned].present?
+    # scan_existing = bulk_scan_params[:include_scanned].present?
+    scan_existing = true
 
     Resque.enqueue(BulkScanner, current_shop.id, num, scan_existing)
 
