@@ -49,6 +49,7 @@ class Customer < ActiveRecord::Base
     true if @wikipedia_data || @imdb_data || @fullcontact_data
   end
 
+
   # sets external data if it exists
   def get_celebrity_status
     set_imdb if @imdb_data

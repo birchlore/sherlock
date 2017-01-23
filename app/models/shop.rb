@@ -153,14 +153,21 @@ class Shop < ActiveRecord::Base
       self.email_notifications = false if emails_on
 
       customers_to_scan.each do |shopify_customer|
-        customer = customers.new(
+        existing_customer = Customer.where(shopify_customer.email).first.present?
+
+        if existing_customer
+          customer = existing_customer.clone
+          customer.shop_id = self.id
+        else
+          customer = customers.new(
           first_name: shopify_customer.first_name,
           last_name: shopify_customer.last_name,
           email: shopify_customer.email,
           shopify_id: shopify_customer.id
         )
+          customer.scan
+        end
 
-        customer.scan
         customer.save
 
         @celebrities_count += 1 if customer.celebrity?
