@@ -1,4 +1,5 @@
 class CustomersController < AuthenticatedController
+  skip_before_action :verify_authenticity_token, :only => :bulk_scan
   layout 'true' == Figaro.env.shopify_embedded_app ? 'embedded_app' : 'application'
 
   def index
