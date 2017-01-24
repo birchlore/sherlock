@@ -13,12 +13,9 @@
 
      <tbody>
 
-     <%= paginate @celebrities %>
-
-        <% @celebrities.each do |celebrity| %>
+        <% celebrities.each do |celebrity| %>
           <%= render 'celebrity_table_row', :celebrity=> celebrity %>
        <% end %>
      </tbody>
     </table> 
-
 

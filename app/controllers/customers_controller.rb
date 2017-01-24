@@ -82,16 +82,25 @@ class CustomersController < AuthenticatedController
     Resque.enqueue(BulkScanner, current_shop.id, num, scan_existing)
 
     @time = (num / 6).ceil
+    @celebrities = current_shop.customers.where(status: "celebrity")
 
     respond_to do |format|
       format.js do
         ## polling would go here
-        flash.now[:success] = "Bulk influencer scan processing. Refresh to see results."
+        flash.now[:success] = "Bulk influencer scan processing."
         render :bulk_scan
       end
       format.html do
         flash[:notice] = "Bulk influencer scan processing. Refresh to see results."
         redirect_to customers_path
+      end
+    end
+  end
+
+  def celebrity_poll
+    respond_to do |format|
+      format.js do
+        render :celebrity_poll
       end
     end
   end

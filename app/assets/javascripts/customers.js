@@ -54,7 +54,7 @@ $(function(){
 
     });
 
-     $('.customers-container').on('click', '.glyphicon-remove', function(){
+     $('.celebs').on('click', '.glyphicon-remove', function(){
         $(this).closest('tr').hide();
      });  
 

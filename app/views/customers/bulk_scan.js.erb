@@ -1,2 +1,8 @@
 
 $('.container').prepend("<%= j render(:partial => 'layouts/flash_messages', :locals=> {:time => @time}) %>")
+
+addBlur();
+setTimeout(function(){  
+  removeBlur();
+  $('.celebs').html("<%= j render(:partial => 'customers/celebrity_table', :locals=> {:celebrities => @celebrities}) %>")
+}, 1500);
